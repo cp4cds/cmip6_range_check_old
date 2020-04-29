@@ -168,7 +168,8 @@ class ScanFile(object):
 class ExecuteByVar(object):
   def __init__(self,mode):
     self.mode = mode
-    self.shelve_template = "sh_ranges/%s_%s_%s_%s_%s"
+    self.shelve_template = "sh_ranges/%s/%s_%s_%s_%s_%s"
+    self.shelve_dir_template = "sh_ranges/%s"
   def run(self,inputFile,shelve_tag,max_files=0):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
@@ -192,7 +193,10 @@ class ExecuteByVar(object):
         sss = that[k3].pop()
       inst,source = k
       ense = k2
-      shelve_file = self.shelve_template % (var,inst,source,expt,shelve_tag)
+      shelve_dir = self.shelve_dir_template % var
+      if not os.path.isdir (shelve_dir):
+        os.mkdir( shelve_dir )
+      shelve_file = self.shelve_template % (var,var,inst,source,expt,shelve_tag)
       sh = shelve.open( shelve_file )
       files = glob.glob( "%s/*.nc" % sss )
       print ( sss, len(files) )
