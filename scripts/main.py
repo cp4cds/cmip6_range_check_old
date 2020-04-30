@@ -1,6 +1,8 @@
 import netCDF4, glob, numpy, shelve, os, traceback, sys, random, time
 import collections
 
+__version__ = "0.1.0"
+
 ##from config import *
 
 class BasicFileStructureException(Exception):
@@ -37,6 +39,9 @@ class ScanFile(object):
     maskerr = 0
     maskok = False
     mskout = False
+    vm = None
+    mskrange = None
+    fill_value = None
     if self.maskAll:
       if vn != 'sic':
         fm = f.replace( '%s_' % vn, 'sic_' )
@@ -100,13 +105,24 @@ class ScanFile(object):
       v = numpy.array( v[:nt,:,:] )
      
 
-    self.processFeature( fname, v, vm, hasfv, mskrange, fill_value, hardLowerBnd, specFnd, maskerr)
+    if len( v.shape ) == 3:
+      tt, am, ap = self.processFeature( v, vm, hasfv, mskout, mskrange, fill_value, hardLowerBnd, specFnd)
+      med,mx,mn,mamx,mamn,fvcount = tt
+
+      self.sh[fname] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
+    elif len( v.shape ) == 4:
+      for l in range( v.shape[1]):
+        tt, am, ap = self.processFeature( v[:,l,:,:], vm, hasfv, mskout, mskrange, fill_value, hardLowerBnd, specFnd)
+        med,mx,mn,mamx,mamn,fvcount = tt
+
+        self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
+        
     nc.close()
     if maskok:
       ncm.close()
     return shp1
 
-  def processFeature( self, skey, v, vm, hasfv, mskrange, fill_value, hardLowerBnd, specFnd, maskerr):
+  def processFeature( self, v, vm, hasfv,mskout,  mskrange, fill_value, hardLowerBnd, specFnd):
     """Process a series of horizontal fields"""
 
     if hasfv or hardLowerBnd != None or (self.maskAll and maskok):
@@ -163,8 +179,8 @@ class ScanFile(object):
     ##counts,bins = numpy.histogram( v, range=(mn,mx) )
     mamx = numpy.max( am )
     mamn = numpy.min( am )
+    return  (med,mx,mn,mamx,mamn,fvcount), am, ap
 
-    self.sh[skey] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
 
 
 ##
@@ -249,5 +265,6 @@ if __name__ == "__main__":
       else:
         shelve_file, data_file = sys.argv[1:]
         sh = shelve.open( shelve_file )
+        sh["__info__"] = {"title":"Scanning single data file: %s" % data_file, "source":"cmip6_range_check.main.ScanFile", "time":time.ctime(), "script_version":__version__}
         vn = data_file.split( "_" )[0].split('/')[-1]
         s = ScanFile(data_file,sh, mode, vn=vn, checkSpecial=False,maskAll=False,maxnt=10000)

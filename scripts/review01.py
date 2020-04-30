@@ -93,9 +93,19 @@ class Review(object):
   def loadShelve(self,file):
     sh = shelve.open( file, 'r' )
 
-    self.info = {"title":"From %s" % file }
+    if "__info__" in sh.keys():
+      self.info = sh["__info__"]
+    else:
+      self.info = {"title":"From %s" % file }
+
     ks = [k for k in sh.keys() if k[0] != "_"]
-    nt = sum( [len(sh[k][5]) for k in ks ] )
+    self.withLevels = ":l=" in ks[0]
+    if self.withLevels:
+      ss = {x.rpartition(":")[-1] for x in ks}
+      sfn = {x.rpartition(":")[0] for x in ks}
+      nl = len(ss)
+      self.levels = [int( x.rpartition("=")[-1] ) for x in sorted( list (ss) )]
+    nt = sum( [len(sh[k][5]) for k in ks] )
     nf = len( ks )
     print (nt)
     self.work = numpy.zeros( (9,nt) )
@@ -142,19 +152,35 @@ class Review(object):
     if not os.path.isdir( odir ):
       os.mkdir( odir )
   
+    if not self.withLevels:
+      summary = [0.]*5
+      percentiles = [0.]*9
+      for k in range(9):
+        percentiles[k] = numpy.median( self.work[k,:] )
 
-    summary = [0.]*5
-    percentiles = [0.]*9
-    for k in range(9):
-      percentiles[k] = numpy.median( self.work[k,:] )
+      summary[0] = numpy.median( self.work02[0,:] )
+      summary[1] = numpy.max( self.work02[1,:] )
+      summary[2] = numpy.min( self.work02[2,:] )
+      summary[3] = numpy.max( self.work02[3,:] )
+      summary[4] = numpy.max( self.work02[4,:] )
+    else:
+      nl = len(self.levels)
+      summary = dict()
+      percentiles = dict()
+      for l in range(nl):
+        summy = [0.]*5
+        perc = [0.]*9
 
-    summary[0] = numpy.median( self.work02[0,:] )
-    summary[1] = numpy.max( self.work02[1,:] )
-    summary[2] = numpy.min( self.work02[2,:] )
-    summary[3] = numpy.max( self.work02[3,:] )
-    summary[4] = numpy.max( self.work02[4,:] )
+        for k in range(9):
+          perc[k] = numpy.median( self.work[k,l::nl] )
 
-    print ( percentiles, summary )
+        summy[0] = numpy.median( self.work02[0,l::nl] )
+        summy[1] = numpy.max( self.work02[1,l::nl] )
+        summy[2] = numpy.min( self.work02[2,l::nl] )
+        summy[3] = numpy.max( self.work02[3,l::nl] )
+        summy[4] = numpy.max( self.work02[4,l::nl] )
+      summary[l] = summy
+      percentiles[l] = perc
 
     this = {'percentiles':percentiles, "summary":summary}
     oo = open( ofile, 'w' )
