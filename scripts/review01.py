@@ -49,13 +49,16 @@ class ConsolidateVar(object):
     drs = self.res['info']['drs']
     ks = sorted( list( data.keys() ) )
     if len( ks ) < 6:
-       print( "WARNING: model count [%s] low for %s" % (len(ks),drs["var"]) )
+       print( "ERROR.cons.00010: model count [%s] sub-critical for %s" % (len(ks),drs["var"]) )
+       return
     elif len( ks ) < 12:
-       print( "ERROR: model count [%s] sub-critical for %s" % (len(ks),drs["var"]) )
-
+       print( "WARNING: model count [%s] low for %s" % (len(ks),drs["var"]) )
+       
     
     medians = {k:x["percentiles"][4] for k,x in data.items()}
     interquartiles = {k:abs(x["percentiles"][3] - x["percentiles"][5]) for k,x in data.items()}
+    self.medians = medians
+    self.intequartiles = interquartiles
     self.this = numpy.percentile( [x for k,x in medians.items()], [75.,50.,25.] )
     self.thisiq = numpy.percentile( [x for k,x in interquartiles.items()], [75.,50.,25.] )
     median_interquartile0 = self.thisiq[1]
@@ -64,9 +67,10 @@ class ConsolidateVar(object):
     out = [k for k,x in medians.items() if abs( x-m) > 4*median_interquartile1 ]
     if len(out) > 0:
       for k in out:
-        print ("ERROR: median outside expected range: %s, %s, %s" % (k,medians[k], self.this[:]) )
-    self.medians = medians
-    self.intequartiles = interquartiles
+        print ("ERROR.cons.00100: Median outside expected range: %s, %s, %s" % (k,medians[k], self.this[:]) )
+      if len(out) > len(ks)/10:
+        print ("ERROR.cons.00110: more than 10%% of models have median out of range" )
+        return
 
   def dumpCsv(self,ofile=None):
     if ofile == None:
