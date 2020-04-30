@@ -1,7 +1,35 @@
-
 import numpy, json, shelve, os, glob
+import collections
+
+__TODO__ = """ADD DRS and TIME RECORDS to INFO"""
+
+print( __TODO__ )
 
 
+class ConsolidateVar(object):
+  def __init__(self):
+    pass
+
+  def run(self,idir):
+    assert os.path.isdir(idir)
+    (root,x,var) = idir.strip('/').rpartition('/')
+    fl = glob.glob( "%s/*.json" % idir )
+    ee = dict()
+    tech= dict()
+    cc = collections.defaultdict( set )
+    for f in fl:
+      fn = f.rpartition('/')[-1]
+      ee[f] = json.load( open( f, 'r' ) )
+      for k in ['summary','percentiles']:
+        cc[k].add( tuple( ee[f]['info']['tech'][k] ) )
+
+    for k in ['summary','percentiles']:
+      assert len(cc[k]) == 1
+      tech[k] = cc[k].pop()
+
+    print( tech )
+      
+    
 class Review(object):
   def __init__(self):
     pass
@@ -87,7 +115,11 @@ r = Review()
 
 if __name__ == "__main__":
   import sys
-  if sys.argv[1] == "-d":
+  print (sys.argv)
+  if sys.argv[1] == "-c":
+    c = ConsolidateVar()
+    c.run( sys.argv[2] )
+  elif sys.argv[1] == "-d":
     idir = sys.argv[2]
     fl = glob.glob( "%s/*.dat" % idir )
     for f in sorted( fl ):
