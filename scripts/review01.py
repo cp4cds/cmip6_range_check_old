@@ -1,5 +1,6 @@
 import numpy, json, shelve, os, glob
 import collections
+from exceptions_lib import *
 
 __TODO__ = """ADD DRS and TIME RECORDS to INFO"""
 
@@ -7,8 +8,8 @@ print( __TODO__ )
 
 
 class ConsolidateVar(object):
-  def __init__(self):
-    pass
+  def __init__(self,lax=True):
+    self.lax = lax
 
   def run(self,idir):
     assert os.path.isdir(idir)
@@ -19,15 +20,66 @@ class ConsolidateVar(object):
     cc = collections.defaultdict( set )
     for f in fl:
       fn = f.rpartition('/')[-1]
-      ee[f] = json.load( open( f, 'r' ) )
+      this = json.load( open( f, 'r' ) )
       for k in ['summary','percentiles']:
-        cc[k].add( tuple( ee[f]['info']['tech'][k] ) )
+        cc[k].add( tuple( this['info']['tech'][k] ) )
+      if "drs" not in this["info"].keys():
+        if not self.lax:
+          raise WorkflowException( "drs record not found in header", file=f, directory=idir)
+        else:
+          inst, model, experiment = fn.split( '_' )[1:4]
+      else:
+          raise WorkflowException( "not programmed to handle drs record", class_name="ConsolidateVar", module="review01.py")
+      ee['%s_%s_%s' % (inst,model,experiment)] = this['data']
 
     for k in ['summary','percentiles']:
       assert len(cc[k]) == 1
       tech[k] = cc[k].pop()
-
+  
+    self.root = root
+    self.drs = {"experiment":experiment,"var":var}
+    self.res = {"data":ee, "info":{"tech":tech, "title":"aggregation across %s" % idir, "drs":self.drs } }
+    oo = open( "%s/%s_%s_consol-var.json" % (root,var,experiment), "w" )
+    json.dump( self.res, oo, indent=4, sort_keys=True )
+    oo.close()
     print( tech )
+
+  def checkConsol(self):
+    data = self.res['data']
+    drs = self.res['info']['drs']
+    ks = sorted( list( data.keys() ) )
+    if len( ks ) < 6:
+       print( "WARNING: model count [%s] low for %s" % (len(ks),drs["var"]) )
+    elif len( ks ) < 12:
+       print( "ERROR: model count [%s] sub-critical for %s" % (len(ks),drs["var"]) )
+
+    
+    medians = {k:x["percentiles"][4] for k,x in data.items()}
+    interquartiles = {k:abs(x["percentiles"][3] - x["percentiles"][5]) for k,x in data.items()}
+    self.this = numpy.percentile( [x for k,x in medians.items()], [75.,50.,25.] )
+    self.thisiq = numpy.percentile( [x for k,x in interquartiles.items()], [75.,50.,25.] )
+    median_interquartile0 = self.thisiq[1]
+    h,m,l = self.this[:]
+    median_interquartile1 = abs(h-l)
+    out = [k for k,x in medians.items() if abs( x-m) > 4*median_interquartile1 ]
+    if len(out) > 0:
+      for k in out:
+        print ("ERROR: median outside expected range: %s, %s, %s" % (k,medians[k], self.this[:]) )
+    self.medians = medians
+    self.intequartiles = interquartiles
+
+  def dumpCsv(self,ofile=None):
+    if ofile == None:
+      ofile = "%(var)s_%(experiment)s_consol-var.csv" % self.drs 
+    oo = open( ofile, "w" )
+    data = self.res["data"]
+    headings = ["Model","Maximum","Minimum",] +  [str(x) for x in self.res["info"]["tech"]["percentiles"]]
+    oo.write( "\t".join( headings ) + "\n" )
+    for k in sorted( list( data.keys() ) ):
+      inst,model,expt = k.split( '_')
+      rec = ['%s %s' % (inst,model),] + [str(x) for x in (data[k]["summary"][1:3] + data[k]["percentiles"]) ]
+      oo.write( "\t".join( rec ) + "\n" )
+    oo.close()
       
     
 class Review(object):
@@ -118,7 +170,15 @@ if __name__ == "__main__":
   print (sys.argv)
   if sys.argv[1] == "-c":
     c = ConsolidateVar()
-    c.run( sys.argv[2] )
+    try:
+      c.run( sys.argv[2] )
+    except WorkflowException as e:
+      print (e.msg)
+      print (e.kwargs)
+      raise
+    except:
+      raise
+    c.dumpCsv()
   elif sys.argv[1] == "-d":
     idir = sys.argv[2]
     fl = glob.glob( "%s/*.dat" % idir )
