@@ -100,6 +100,15 @@ class ScanFile(object):
       v = numpy.array( v[:nt,:,:] )
      
 
+    self.processFeature( fname, v, vm, hasfv, mskrange, fill_value, hardLowerBnd, specFnd, maskerr)
+    nc.close()
+    if maskok:
+      ncm.close()
+    return shp1
+
+  def processFeature( self, skey, v, vm, hasfv, mskrange, fill_value, hardLowerBnd, specFnd, maskerr):
+    """Process a series of horizontal fields"""
+
     if hasfv or hardLowerBnd != None or (self.maskAll and maskok):
       if hasfv:
         if mskout:
@@ -155,12 +164,8 @@ class ScanFile(object):
     mamx = numpy.max( am )
     mamn = numpy.min( am )
 
-    self.sh[fname] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
+    self.sh[skey] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
 
-    nc.close()
-    if maskok:
-      ncm.close()
-    return shp1
 
 ##
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
