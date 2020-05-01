@@ -22,7 +22,6 @@ class ScanFile(object):
 
 
   def scan1(self,f, vn):
-    print ( 'STARTING ',f )
     fname = f.split( '/' )[-1]
     nc = netCDF4.Dataset( f )
     v = nc.variables[vn]
@@ -183,10 +182,12 @@ class ScanFile(object):
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
 ##
 class ExecuteByVar(object):
-  def __init__(self,mode):
+  def __init__(self,mode,log=None):
     self.mode = mode
     self.shelve_template = "sh_ranges/%s/%s_%s_%s_%s_%s"
     self.shelve_dir_template = "sh_ranges/%s"
+    self.log = log
+
   def run(self,inputFile,shelve_tag,max_files=0):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
@@ -219,6 +220,11 @@ class ExecuteByVar(object):
       print ( sss, len(files) )
       try:
         for data_file in files:
+          if self.log != None:
+             self.log.info( 'STARTING %s ' % data_file )
+          else:
+             print ( 'STARTING ',data_file )
+
           try:
             s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000)
           except:
@@ -230,10 +236,10 @@ class ExecuteByVar(object):
 
 ##
 ## deal with any workflow exceptions ...
-      except WorkflowExcetpion as e:
+      except WorkflowException as e:
          trace = traceback.format_exc()
          sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
-	 print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
+         print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
       sh.close()
 
 if __name__ == "__main__":
