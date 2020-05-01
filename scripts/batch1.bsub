@@ -20,6 +20,7 @@ source activate myenv38
 
 ##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_huss_latest.txt
 ##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_tasmax_latest.txt
-##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_tasmin_latest.txt
+##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_tasmin_latest.txt || { echo failed to parse x1_day_tasmin_latest.txt ; }
+##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_hfls_latest.txt || { echo failed to parse x1_day_hfls_latest.txt ; }
 
-python review01.py -d sh_ranges/hur
+python review01.py -d sh_ranges/ta

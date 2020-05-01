@@ -1,5 +1,6 @@
 import netCDF4, glob, numpy, shelve, os, traceback, sys, random, time
-import collections
+import collections, traceback
+from exceptions_lib import *
 
 __version__ = "0.1.0"
 
@@ -221,12 +222,24 @@ class ExecuteByVar(object):
       sh = shelve.open( shelve_file )
       files = glob.glob( "%s/*.nc" % sss )
       print ( sss, len(files) )
-      for data_file in files:
-        s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000)
-        nf += 1
-        if max_files > 0 and nf+1 > max_files:
-          return
+      try:
+        for data_file in files:
+          try:
+            s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000)
+          except:
+            raise WorkflowException( "wfx.001.0001: Failed to scan file", file=data_file, script="main.py")
+          nf += 1
+          if max_files > 0 and nf+1 > max_files:
+            sh.close()
+            return
 
+##
+## deal with any workflow exceptions ...
+      except WorkflowExcetpion as e:
+         trace = traceback.format_exc()
+         sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
+	 print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
+      sh.close()
 
 if __name__ == "__main__":
   import sys

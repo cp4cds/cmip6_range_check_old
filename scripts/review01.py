@@ -112,12 +112,25 @@ class Review(object):
     self.work02 = numpy.zeros( (5,nf) )
     i = 0
     j = 0
-    for k in sorted( ks ):
-      for l in sh[k][6]:
-        self.work[:,i] = l
-        i += 1
-      self.work02[:,j] = sh[k][4][1:6]
-      j += 1
+    if self.withLevels:
+      for k in sorted( list( sfn ) ):
+        nt0 = len( sh[k + ":l=0"][6] )
+        for l in range(nt0):
+          for lev in range( len( self.levels ) ):
+            kk = k + ":l=%s" % lev
+            self.work[:,i] = sh[ kk ][6][l]
+            i += 1
+        for lev in range( len( self.levels ) ):
+          kk = k + ":l=%s" % lev
+          self.work02[:,j] = sh[kk][4][1:6]
+          j += 1
+    else:
+      for k in sorted( ks ):
+        for l in sh[k][6]:
+          self.work[:,i] = l
+          i += 1
+        self.work02[:,j] = sh[k][4][1:6]
+        j += 1
     sh.close()
 
   def loadJson(self,file):
@@ -151,6 +164,7 @@ class Review(object):
     odir = ofile.rpartition( '/' )[0]
     if not os.path.isdir( odir ):
       os.mkdir( odir )
+    tech = {"percentiles":[99.9,99.,95.,75.,50.,25.,5.,1.,.1], "summary":["median","max","min","mean absolute max","mean absolute min"]}
   
     if not self.withLevels:
       summary = [0.]*5
@@ -163,7 +177,9 @@ class Review(object):
       summary[2] = numpy.min( self.work02[2,:] )
       summary[3] = numpy.max( self.work02[3,:] )
       summary[4] = numpy.max( self.work02[4,:] )
+      tech["with_levels"] = False
     else:
+      tech["with_levels"] = True
       nl = len(self.levels)
       summary = dict()
       percentiles = dict()
@@ -179,12 +195,12 @@ class Review(object):
         summy[2] = numpy.min( self.work02[2,l::nl] )
         summy[3] = numpy.max( self.work02[3,l::nl] )
         summy[4] = numpy.max( self.work02[4,l::nl] )
-      summary[l] = summy
-      percentiles[l] = perc
+        summary[l] = summy
+        percentiles[l] = perc
 
     this = {'percentiles':percentiles, "summary":summary}
     oo = open( ofile, 'w' )
-    info_out = {'title':self.info['title'], "tech":{"percentiles":[99.9,99.,95.,75.,50.,25.,5.,1.,.1], "summary":["median","max","min","mean absolute max","mean absolute min"]}}
+    info_out = {'title':self.info['title'], "tech":tech}
     json.dump( {'info':info_out, 'data':this}, oo, indent=4, sort_keys=True )
     oo.close()
 
