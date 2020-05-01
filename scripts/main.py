@@ -238,7 +238,7 @@ class ExecuteByVar(object):
       except WorkflowExcetpion as e:
          trace = traceback.format_exc()
          sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
-	 print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
+         print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
       sh.close()
 
 if __name__ == "__main__":
