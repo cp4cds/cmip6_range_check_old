@@ -6,11 +6,6 @@ __version__ = "0.1.0"
 
 ##from config import *
 
-class BasicFileStructureException(Exception):
-    pass
-
-base = '/badc/cmip5/data/cmip5/output1/'
-##base = '/badc/cmip5/data/cmip5/output1/MOHC/HadGEM2-ES/historical/mon/atmos/Amon/r1i1p1/latest/tasmax/'
 
 class ScanFile(object):
   def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000):
