@@ -177,6 +177,49 @@ class ScanFile(object):
     return  (med,mx,mn,mamx,mamn,fvcount), am, ap
 
 
+##
+## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
+##
+class ShrinkByVar(object):
+  def __init__(self,mode,odir,log=None):
+    self.mode = mode
+    self.log = log
+
+  def run(self,inputFile,odir_tag,max_files=0):
+    """
+    Execute file subsetting
+    *inputFile* should contain a list of ESGF "latest" directories for a single data variable.
+    """
+    ii = open( inputFile ).readlines()
+    cc = collections.defaultdict( lambda: collections.defaultdict( lambda: collections.defaultdict(set) ) )
+    for l in ii:
+      parts = l.strip().split("/")
+      inst, source, expt, ense, tab, var, grid = parts[6:13]
+      cc[(inst,source)][ense][grid].add( l.strip() )
+    nf = 0
+    for k in cc.keys():
+      this = cc[k]
+      k2 = sorted( list( this.keys() ) )[0]
+      that = cc[k][k2]
+      if "gn" in that.keys():
+        sss = that["gn"].pop()
+      else:
+        k3 = sorted( list( that.keys() ) )[0]
+        sss = that[k3].pop()
+      inst,source = k
+      ense = k2
+      odir = self.shelve_dir_template % var
+      if not os.path.isdir (odir):
+        os.mkdir( odir )
+      files = glob.glob( "%s/*.nc" % sss )
+      if max_files > 0 and max_files < len(files):
+        files = files[:max_files]
+      for f in files:
+        fn = f.rpartition("/")[2]
+        fnstem = fn.rpartition( "." )[0]
+        cmd = "cdo samplegrid,10  %s %s/%s__sel.nc" % (f,odir,fnstem)
+        print (cmd)
+        os.popen( cmd ).read()
 
 ##
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest

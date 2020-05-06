@@ -16,7 +16,12 @@ if __name__ == "__main__":
   log_factory =lu.LogFactory(dir="./logs")
   log_global = log_factory( "global", mode="a", logfile="log_global_202004" )
   log_workflow = log_factory( "workflow", mode="a", warnings=True )
-  if sys.argv[1] == "--exptvar":
+  if sys.argv[1] == "--sample":
+    input_file = "../../cmor/inputs/byvar/x1_day_prsn_latest.txt"
+    odir_tag = "sel02"
+    sbv = scan_files.ShrinkByVar(mode)
+    sbv.run(input_file,odir_tag,max_files=0)
+  elif sys.argv[1] == "--exptvar":
     assert len(sys.argv) == 4
     log_global.info( "Starting ExecuteByVar %s" % sys.argv[1:] )
     shelve_tag, input_file = sys.argv[2:]
