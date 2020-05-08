@@ -1,0 +1,30 @@
+#!/bin/bash
+#BSUB -q short-serial
+#BSUB -oo rg-%J-%I.o
+#BSUB -eo rg-%J-%I.e 
+#BSUB -W 8:00
+####BSUB -J R_job[1051-1100]
+
+source activate myenv38
+
+## jaspy loas is faster .. but there is a numpy issue at the moment
+##
+##module load jaspy
+##pwd
+##ls -ltr /badc/cmip6/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/day/mrso/gr/latest/mrso_day_IPSL-CM6A-LR_historical_r2i1p1f1_gr_18500101-20141231.nc
+##/home/users/mjuckes/.local/bin/cfchecks -a area-type-table.xml  -s cf-standard-name-table.xml /badc/cmip6/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/day/mrso/gr/latest/mrso_day_IPSL-CM6A-LR_historical_r2i1p1f1_gr_18500101-20141231.nc > cf_out_b1.txt 2> cf_err_b1.txt
+##python pcf_b1.py ${LSB_JOBID} ${LSB_JOBINDEX}
+
+##python main.py test_hur_sh /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/day/hur/gn/latest/hur_day_UKESM1-0-LL_historical_r1i1p1f2_gn_18500101-18991230.nc
+##python main.py test_sh /badc/cmip6/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/day/mrso/gr/latest/mrso_day_IPSL-CM6A-LR_historical_r2i1p1f1_gr_18500101-20141231.nc
+
+##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_huss_latest.txt
+##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_tasmax_latest.txt
+##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_tasmin_latest.txt || { echo failed to parse x1_day_tasmin_latest.txt ; }
+##python main.py test 00-02 ../../cmor/inputs/byvar/x1_day_hfls_latest.txt || { echo failed to parse x1_day_hfls_latest.txt ; }
+
+####
+#### new syntax
+##\python main.py --single test_sh /badc/cmip6/data/CMIP6/CMIP/IPSL/IPSL-CM6A-LR/historical/r2i1p1f1/day/mrso/gr/latest/mrso_day_IPSL-CM6A-LR_historical_r2i1p1f1_gr_18500101-20141231.nc
+python main.py --sample ../../cmor/inputs/byvar/x1_day_prc_latest.txt
+##python review01.py -d sh_ranges/ta

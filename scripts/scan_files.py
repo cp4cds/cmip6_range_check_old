@@ -181,7 +181,7 @@ class ScanFile(object):
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
 ##
 class ShrinkByVar(object):
-  def __init__(self,mode,odir,log=None):
+  def __init__(self,mode,log=None):
     self.mode = mode
     self.log = log
 
@@ -208,7 +208,7 @@ class ShrinkByVar(object):
         sss = that[k3].pop()
       inst,source = k
       ense = k2
-      odir = self.shelve_dir_template % var
+      odir = odir_tag + var
       if not os.path.isdir (odir):
         os.mkdir( odir )
       files = glob.glob( "%s/*.nc" % sss )
