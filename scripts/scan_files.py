@@ -11,12 +11,14 @@ class ScanFile(object):
   def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000):
     if maskAll:
       checkSpecial=False
-    self.version = "00.01.00b1"
+    self.version = "00.01.02"
+    self.version_message = "Extended percentiles, adding processing and grid info"
     self.mode = mode
     self.sh = sh
     self.checkSpecial = checkSpecial
     self.maskAll = maskAll
     self.maxnt = maxnt
+    self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
 
     self.shp1 = self.scan1( thisfile, vn )
 
@@ -26,6 +28,8 @@ class ScanFile(object):
     nc = netCDF4.Dataset( f )
     v = nc.variables[vn]
     shp1 = v.shape[:]
+
+    self.sh["__tech__"] = (self.percentiles, v.dimensions, shp1 )
 
     if self.mode in ['shape','shp2']:
       nc.close()
@@ -150,7 +154,7 @@ class ScanFile(object):
         am.append( numpy.ma.mean( numpy.ma.abs( vm[k,:] ) ) )
         x = vm[k,:].ravel().compressed()
         if len(x) > 0:
-          ap.append( numpy.percentile( x, [99.9,99.,95.,75.,50.,25.,5.,1.,.1] ) )
+          ap.append( numpy.percentile( x, self.percentiles ) )
         else:
           print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
 
@@ -162,7 +166,7 @@ class ScanFile(object):
       ap = []
       for k in range( v.shape[0] ):
         am.append( numpy.mean( numpy.abs( v[k,:] ) ) )
-        ap.append( numpy.percentile( v[k,:], [99.9,99.,95.,75.,50.,25.,5.,1.,.1] ) )
+        ap.append( numpy.percentile( v[k,:], self.percentiles ) )
 
     if self.checkSpecial:
       m1 = numpy.median( [x[4] for x in ap] )
