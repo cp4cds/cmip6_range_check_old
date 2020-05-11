@@ -99,6 +99,7 @@ class Review(object):
       self.npct = len( self.input_tech["percentiles"] )
     else:
       print( "WARNING: no __tech__ in %s" % file )
+      print (sh.keys() )
       self.input_tech = None
       self.npct = 13
 

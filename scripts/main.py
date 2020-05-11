@@ -43,17 +43,18 @@ if __name__ == "__main__":
     table, ddir, shelve_tag = sys.argv[2:]
     fl = filter_listings( ddir, table=table )
     log_global.info( "Main: Starting filtered listing:: %s" % sys.argv[1:] )
-    print ( fl )
+    print ( "INFO.001.00030: file list: ",fl )
     import scan_files 
 
     if table not in mode_config:
       log_global.warn( "warn.001.00010: table not in mode_config: " % table )
     mode = mode_config.get( table, default_mode )
 
-    for f in fl:
+    for f in fl[3:]:
       log_global.info( "Starting ExecuteByVar %s" %  [shelve_tag, f] )
       ebv = scan_files.ExecuteByVar(mode, log=log_workflow)
       input_file = "%s/%s" % (ddir,f)
+      print (" --> ebv.run: ",input_file)
       ebv.run(input_file,shelve_tag,max_files=0)
 
   elif sys.argv[1] == "--exptvar":
