@@ -33,6 +33,6 @@ source activate myenv38
 
 for var in clt  hfls  hur hurs  huss  pr prc  prsn  rsus  sfcWind  ta  tas  tasmax  tasmin 
   do
-    #python review01.py -d sh_ranges/$var
+    python review01.py -d sh_ranges/$var
     python review01.py -c json_ranges/$var
   done

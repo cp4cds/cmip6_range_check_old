@@ -12,7 +12,7 @@ class ConsolidateVar(object):
     self.lax = lax
 
   def run(self,idir):
-    assert os.path.isdir(idir)
+    assert os.path.isdir(idir), "Directory not found: %s" % idir
     (root,x,var) = idir.strip('/').rpartition('/')
     fl = glob.glob( "%s/*.json" % idir )
     ee = dict()
@@ -94,8 +94,13 @@ class Review(object):
     sh = shelve.open( file, 'r' )
 
 ### percentiles
-    self.input_tech = sh["__tech__"]
-    self.npct = len( self.input_tech["percentiles"] )
+    if "__tech__" in sh.keys():
+      self.input_tech = sh["__tech__"]
+      self.npct = len( self.input_tech["percentiles"] )
+    else:
+      print( "WARNING: no __tech__ in %s" % file )
+      self.input_tech = None
+      self.npct = 13
 
     if "__info__" in sh.keys():
       self.info = sh["__info__"]
@@ -103,6 +108,8 @@ class Review(object):
       self.info = {"title":"From %s" % file }
 
     ks = [k for k in sh.keys() if k[0] != "_"]
+    assert len(ks) > 0, "no data records in %s" % file
+
     self.withLevels = ":l=" in ks[0]
     if self.withLevels:
       ss = {x.rpartition(":")[-1] for x in ks}

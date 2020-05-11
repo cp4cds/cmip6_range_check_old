@@ -271,8 +271,8 @@ class ExecuteByVar(object):
         os.mkdir( shelve_dir )
       shelve_file = self.shelve_template % (var,var,inst,source,expt,shelve_tag)
       sh = shelve.open( shelve_file )
-      sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
       files = glob.glob( "%s/*.nc" % sss )
+      sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
       print ( sss, len(files) )
       try:
         for data_file in files:
