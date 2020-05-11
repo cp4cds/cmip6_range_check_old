@@ -61,9 +61,13 @@ if __name__ == "__main__":
     ebv = scan_files.ExecuteByVar(mode, log=log_workflow)
     ebv.run(input_file,shelve_tag,max_files=0)
   elif sys.argv[1] == "--single":
-    assert len(sys.argv) == 4
-    shelve_file, data_file = sys.argv[2:]
+    assert len(sys.argv) in  [4,5]
+    shelve_file, data_file = sys.argv[2:4]
     sh = shelve.open( shelve_file )
     sh["__info__"] = {"title":"Scanning single data file: %s" % data_file, "source":"cmip6_range_check.main.ScanFile", "time":time.ctime(), "script_version":__version__}
     vn = data_file.split( "_" )[0].split('/')[-1]
     s = scan_files.ScanFile(data_file,sh, mode, vn=vn, checkSpecial=False,maskAll=False,maxnt=10000)
+    if len( sys.argv ) == 5:
+       data_file = sys.argv[4]
+       s = scan_files.ScanFile(data_file,sh, mode, vn=vn, checkSpecial=False,maskAll=False,maxnt=10000)
+    sh.close()

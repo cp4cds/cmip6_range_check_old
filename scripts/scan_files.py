@@ -19,6 +19,7 @@ class ScanFile(object):
     self.maskAll = maskAll
     self.maxnt = maxnt
     self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
+    self.sh["__tech__"] = {  "percentiles":self.percentiles }
 
     self.shp1 = self.scan1( thisfile, vn )
 
@@ -47,7 +48,11 @@ class ScanFile(object):
     vm = None
     maskrange = None
 
-    self.sh["__tech__"] = ((tid,fname),self.percentiles, (vn,units,v.dimensions, shp1), (hasfv, fill_value), (maskout, maskout, maskok,maskrange,maskerr,self.maskAll)  )
+    
+    tech_info = {"file":(tid,fname),
+             "variable":(vn,units,v.dimensions, shp1),
+                 "fill":(hasfv, fill_value),
+              "masking":(maskout, maskout, maskok,maskrange,maskerr,self.maskAll)  }
 
     if self.mode in ['shape','shp2']:
       nc.close()
@@ -110,13 +115,14 @@ class ScanFile(object):
       tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
       med,mx,mn,mamx,mamn,fvcount = tt
 
-      self.sh[fname] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,fvcount,dt0,dt1),am, ap)
+      self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
+
     elif len( v.shape ) == 4:
       for l in range( v.shape[1]):
         tt, am, ap = self.processFeature( v[:,l,:,:], vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
         med,mx,mn,mamx,mamn,fvcount = tt
 
-        self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,fvcount,dt0,dt1),am, ap)
+        self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
         
     nc.close()
     if maskok:
@@ -265,6 +271,7 @@ class ExecuteByVar(object):
         os.mkdir( shelve_dir )
       shelve_file = self.shelve_template % (var,var,inst,source,expt,shelve_tag)
       sh = shelve.open( shelve_file )
+      sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
       files = glob.glob( "%s/*.nc" % sss )
       print ( sss, len(files) )
       try:
