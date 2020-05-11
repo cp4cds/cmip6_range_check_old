@@ -2,7 +2,7 @@ import netCDF4, glob, numpy, shelve, os, traceback, sys, random, time
 import collections, traceback
 from exceptions_lib import *
 
-__version__ = "0.1.0"
+__version__ = "0.1.03"
 
 ##from config import *
 
@@ -29,18 +29,30 @@ class ScanFile(object):
     v = nc.variables[vn]
     shp1 = v.shape[:]
 
-    self.sh["__tech__"] = (self.percentiles, v.dimensions, shp1 )
+    units = v.units
+    tid = nc.tracking_id
+    hasfv =  '_FillValue' in v.ncattrs()
+    hardLowerBnd = None
+    specFnd = False
+
+    fill_value = None
+    if hasfv:
+      fill_value = v._FillValue
+    else:
+      fvcount = 0
+
+    maskerr = 0
+    maskok = False
+    maskout = False
+    vm = None
+    maskrange = None
+
+    self.sh["__tech__"] = ((tid,fname),self.percentiles, (vn,units,v.dimensions, shp1), (hasfv, fill_value), (maskout, maskout, maskok,maskrange,maskerr,self.maskAll)  )
 
     if self.mode in ['shape','shp2']:
       nc.close()
       return shp1
 
-    maskerr = 0
-    maskok = False
-    mskout = False
-    vm = None
-    mskrange = None
-    fill_value = None
     if self.maskAll:
       if vn != 'sic':
         fm = f.replace( '%s_' % vn, 'sic_' )
@@ -61,7 +73,6 @@ class ScanFile(object):
             ##maskok = True
        
     t = nc.variables['time'] 
-    tid = nc.tracking_id
     if t.shape[0] != v.shape[0]:
       print ( 'Unexpected shapes for variable and time' )
       print ( v.shape,t.shape, f )
@@ -75,15 +86,6 @@ class ScanFile(object):
     else:
       dt0 = None
       dt1 = None
-
-    hasfv =  '_FillValue' in v.ncattrs()
-    hardLowerBnd = None
-    specFnd = False
-    units = v.units
-    if hasfv:
-      fill_value = v._FillValue
-    else:
-      fvcount = 0
 
     nt =len(t_array)
     if self.mode == 'firstTimeValue':
@@ -105,29 +107,29 @@ class ScanFile(object):
      
 
     if len( v.shape ) == 3:
-      tt, am, ap = self.processFeature( v, vm, hasfv, mskout, mskrange, fill_value, hardLowerBnd, specFnd)
+      tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
       med,mx,mn,mamx,mamn,fvcount = tt
 
-      self.sh[fname] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
+      self.sh[fname] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,fvcount,dt0,dt1),am, ap)
     elif len( v.shape ) == 4:
       for l in range( v.shape[1]):
-        tt, am, ap = self.processFeature( v[:,l,:,:], vm, hasfv, mskout, mskrange, fill_value, hardLowerBnd, specFnd)
+        tt, am, ap = self.processFeature( v[:,l,:,:], vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
         med,mx,mn,mamx,mamn,fvcount = tt
 
-        self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (v.shape,med,mx,mn,mamx,mamn,fvcount,hasfv,dt0,dt1,units,tid),am, ap)
+        self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,fvcount,dt0,dt1),am, ap)
         
     nc.close()
     if maskok:
       ncm.close()
     return shp1
 
-  def processFeature( self, v, vm, hasfv,mskout,  mskrange, fill_value, hardLowerBnd, specFnd):
+  def processFeature( self, v, vm, hasfv,maskout,  maskrange, fill_value, hardLowerBnd, specFnd):
     """Process a series of horizontal fields"""
 
     if hasfv or hardLowerBnd != None or (self.maskAll and maskok):
       if hasfv:
-        if mskout:
-          vm = numpy.ma.masked_outside( v, mskrange[0], mskrange[1] )
+        if maskout:
+          vm = numpy.ma.masked_outside( v, maskrange[0], maskrange[1] )
         else:
           vm = numpy.ma.masked_values( v, fill_value )
 

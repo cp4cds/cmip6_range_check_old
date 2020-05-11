@@ -15,8 +15,5 @@ def p2var():
         oo.write( l + "\n" )
       oo.close()
  
-
-
-
 p2var()
 print( "DONE" )
