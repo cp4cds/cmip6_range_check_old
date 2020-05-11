@@ -93,6 +93,12 @@ class Review(object):
   def loadShelve(self,file):
     sh = shelve.open( file, 'r' )
 
+### ((tid,fname),self.percentiles, (vn,units,v.dimensions, shp1), (hasfv, fill_value), (maskout, maskout, maskok,maskrange,maskerr,self.maskAll)  )
+    r1 = sh["__tech__"]
+    
+    self.input_tech = {"tid":r1[0][0], "file_name":r1[0][1], "percentiles":r1[1], "fill":r1[2], "mask":r1[3]}
+    self.npct = len(r1[1])
+
     if "__info__" in sh.keys():
       self.info = sh["__info__"]
     else:
@@ -108,7 +114,7 @@ class Review(object):
     nt = sum( [len(sh[k][5]) for k in ks] )
     nf = len( ks )
     print (nt)
-    self.work = numpy.zeros( (9,nt) )
+    self.work = numpy.zeros( (self.npct,nt) )
     self.work02 = numpy.zeros( (5,nf) )
     i = 0
     j = 0
@@ -141,7 +147,7 @@ class Review(object):
     nt = sum( [len(dd[k][5]) for k in dd.keys() ] )
     nf = len( dd.keys() )
     print (nt)
-    self.work = numpy.zeros( (9,nt) )
+    self.work = numpy.zeros( (self.npct,nt) )
     self.work02 = numpy.zeros( (5,nf) )
     i = 0
     j = 0
@@ -164,12 +170,12 @@ class Review(object):
     odir = ofile.rpartition( '/' )[0]
     if not os.path.isdir( odir ):
       os.mkdir( odir )
-    tech = {"percentiles":[99.9,99.,95.,75.,50.,25.,5.,1.,.1], "summary":["median","max","min","mean absolute max","mean absolute min"]}
+    tech = {"percentiles":self.input_tech["percentiles"], "summary":["median","max","min","mean absolute max","mean absolute min"]}
   
     if not self.withLevels:
       summary = [0.]*5
-      percentiles = [0.]*9
-      for k in range(9):
+      percentiles = [0.]*self.npct
+      for k in range(self.npct):
         percentiles[k] = numpy.median( self.work[k,:] )
 
       summary[0] = numpy.median( self.work02[0,:] )
@@ -185,9 +191,9 @@ class Review(object):
       percentiles = dict()
       for l in range(nl):
         summy = [0.]*5
-        perc = [0.]*9
+        perc = [0.]*self.npct
 
-        for k in range(9):
+        for k in range(self.npct):
           perc[k] = numpy.median( self.work[k,l::nl] )
 
         summy[0] = numpy.median( self.work02[0,l::nl] )
@@ -205,6 +211,7 @@ class Review(object):
     oo.close()
 
 ## l0: ['ok','shape','median','mx','mn','mamx','mamn','nfv','hasfv','dt0','dt1','units','tid']
+## l0: ['ok','median','mx','mn','mamx','mamn','nfv','dt0','dt1']
 
 r = Review()
 
