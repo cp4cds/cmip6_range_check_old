@@ -1,0 +1,15 @@
+#!/bin/bash
+#BSUB -q short-serial
+#BSUB -oo rg-%J-%I.o
+#BSUB -eo rg-%J-%I.e 
+#BSUB -W 8:00
+#BSUB -J R_job[0-$1]
+
+##source activate myenv38
+
+vars=($2)
+### table, ddir, shelve-tag
+
+echo table=$3, var=${vars[${LSB_JOBINDEX}]}
+var=${vars[${LSB_JOBINDEX}]}
+python main.py --exptvar 00-03 inputs/byvar/x1_${table}_${var}_latest.txt || { echo failed to parse x1_${table}_${var}_latest.txt ; }

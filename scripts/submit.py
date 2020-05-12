@@ -16,5 +16,22 @@ def filter_listings( ddir, frequency=None, experiment="historical", listing_grou
   json.dump( {'info':{"title":"Table-variable summary"}, 'data':ee}, oo, indent=4, sort_keys=True )
 
 
+def batch_submit(table):
+  ee = json.load( open( "%s/table_var_summary.json" % ddir, "r" ) )
+  assert table in ee, "Table name not recognised: %s" % table
+  vars = ee[table]
+  nv = len(vars)
+  ii = ''.join( open( "batch_scan_template.txt", "r" ).readlines() )
+  res = ii % (nv, " ".join(vars), table )
+  oo = open( "batch_scan_latest.txt", "w" )
+  oo.write(res)
+  oo.close()
+  ##os.popen( "bsub < batch_scan_latest.txt" ).read()
+
 if __name__ == "__main__":
-  filter_listings( "inputs/byvar" )
+  import sys
+  if sys.argv[1] == "-p":
+    filter_listings( "inputs/byvar" )
+  elif sys.argv[1] == "-s":
+    ddir, table = sys.argv[2:4]
+    batch_submit( ddir, table )
