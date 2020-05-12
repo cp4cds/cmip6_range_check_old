@@ -101,14 +101,18 @@ class ScanFile(object):
     elif self.mode == 'sampled' and nt > 20:
       isamp = sorted( random.sample( range(nt), 20 ) )
       v = numpy.array( v[isamp,:,:] )
-    elif self.mode == 'sampledonepercent' and nt > 20:
-      nsamp = nt//100
+    elif self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou'] and nt > 20:
+      nsamp = nt//{'sampledonepercent':100, 'sampledtenpercent':10, 'sampledoneperthou':1000}[self.mode]
       isamp = sorted( random.sample( range(nt), nsamp ) )
+      if len( isamp ) == 0:
+        isamp = [0,]
       
       v = numpy.array( v[isamp,:,:] )
     elif self.maxnt > 0 and self.maxnt < len(t_array):
       nt = self.maxnt
       v = numpy.array( v[:nt,:,:] )
+
+    print( "INFO.001.00020: ", fname, v.shape, nt )
      
 
     if len( v.shape ) == 3:
@@ -251,9 +255,10 @@ class ExecuteByVar(object):
     ii = open( inputFile ).readlines()
     cc = collections.defaultdict( lambda: collections.defaultdict( lambda: collections.defaultdict(set) ) )
     for l in ii:
-      parts = l.strip().split("/")
+      fpath = l.strip().split()[8]
+      parts = fpath.strip().split("/")
       inst, source, expt, ense, tab, var, grid = parts[6:13]
-      cc[(inst,source)][ense][grid].add( l.strip() )
+      cc[(inst,source)][ense][grid].add( fpath.strip() )
     nf = 0
     for k in cc.keys():
       this = cc[k]

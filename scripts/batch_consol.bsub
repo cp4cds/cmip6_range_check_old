@@ -31,8 +31,11 @@ source activate myenv38
 ##python main.py --exptvar 00-02 ../../cmor/inputs/byvar/x1_day_prc_latest.txt || { echo failed to parse x1_day_prc_latest.txt ; }
 ##python main.py --exptvar 00-02 ../../cmor/inputs/byvar/x1_day_prsn_latest.txt || { echo failed to parse x1_day_prsn_latest.txt ; }
 
-for var in clt  hfls  hur hurs  huss  pr prc  prsn  rsus  sfcWind  ta  tas  tasmax  tasmin 
+##for var in clt  hfls  hur hurs  huss  pr prc  prsn  rsus  sfcWind  ta  tas  tasmax  tasmin 
+##for var in ccb  cct  cfc11global
+for var in ccb  cct  cfc11global  cfc12global  ch4  ch4global  ci rsut  rlds  tas  co2mass  clwvi  clivi evspsbl  clt  co2
   do
+    echo STARTING $var 
     python review01.py -d sh_ranges/$var
     python review01.py -c json_ranges/$var
   done

@@ -1,0 +1,16 @@
+#!/bin/bash
+#BSUB -q short-serial
+#BSUB -oo rg-%J-%I.o
+#BSUB -eo rg-%J-%I.e 
+#BSUB -W 8:00
+#BSUB -J R_job[16-62]
+
+source activate myenv38
+
+vars=(ccb cct cfc11global cfc12global ch4 ch4global ci cl cli clivi clt clw clwvi co2 co2mass evspsbl hfls hfss hur hurs hus huss mc n2o n2oglobal o3 pfull phalf pr prc prsn prw ps psl rlds rldscs rlus rlut rlutcs rsds rsdscs rsdt rsus rsuscs rsut rsutcs rtmt sbl sci sfcWind ta tas tasmax tasmin tauu tauv ts ua uas va vas wap zg)
+table=Amon
+### table, ddir, shelve-tag
+
+echo table=$table, var=${vars[${LSB_JOBINDEX}]}
+var=${vars[${LSB_JOBINDEX}]}
+python main.py ${table}_${var} --exptvar 00-03 inputs/byvar/x1_${table}_${var}_latest.txt || { echo failed to parse x1_${table}_${var}_latest.txt ; }
