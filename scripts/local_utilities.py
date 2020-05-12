@@ -1,5 +1,13 @@
 import logging, time, os
 
+class WGIPriority(object):
+  def __init__(self,ifile="AR6_priority_variables_02.csv" ):
+    ii = open( ifile ).readlines()
+    self.ee = dict()
+    for l in ii:
+      id, units = l.split( "\t" )[:2]
+      self.ee[id] = units
+
 class LogFactory(object):
   def __init__(self, dir='.'):
     """

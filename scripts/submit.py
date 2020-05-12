@@ -1,14 +1,19 @@
 import collections, json, glob
+from local_utilities import WGIPriority
 
 
-def filter_listings( ddir, frequency=None, experiment="historical", listing_group = "x1" ):
+def filter_listings( ddir, frequency=None, experiment="historical", listing_group = "x1", bywg1=True ):
   fl = glob.glob( "%s/%s_*_latest.txt" %  (ddir, listing_group) )
   cc = collections.defaultdict( set )
   fnl = [f.rpartition( "/" )[-1] for f in fl]
   assert frequency == None, "Frequency option not yet confiured"
+
+  if bywg1:
+    wg1 = WGIPriority()
   for f in fnl:
     table, var = f.split( "_" )[1:3]
-    cc[table].add( var )
+    if (not bywg1) or "%s.%s" % (table,var) in wg1.ee:
+      cc[table].add( var )
   ee = dict()
   for tab in sorted( list( cc.keys() ) ):
     ee[tab] = sorted( list( cc[tab] ) )

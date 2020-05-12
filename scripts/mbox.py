@@ -1,4 +1,5 @@
 import os
+from local_utilities import WGIPriority
 
 ##
 ## remove LD_LIBRARY_PATH to avoid a configuration issue with the conda installation
@@ -15,14 +16,6 @@ elif "LD_LIBRARY_PATH" in os.environ:
 import matplotlib.pyplot as plt
 import numpy
 from matplotlib.patches import Ellipse, Polygon, Rectangle
-
-class WGIPriority(object):
-  def __init__(self,ifile="AR6_priority_variables_02.csv" ):
-    ii = open( ifile ).readlines()
-    self.ee = dict()
-    for l in ii:
-      id, units = l.split( "\t" )[:2]
-      self.ee[id] = units
 
 class mbox(object):
   def __init__(self, subp, ax ):
