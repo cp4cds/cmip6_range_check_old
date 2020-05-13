@@ -113,19 +113,31 @@ class Review(object):
 
     self.withLevels = ":l=" in ks[0]
     if self.withLevels:
-      ss = {x.rpartition(":")[-1] for x in ks}
-      sfn = {x.rpartition(":")[0] for x in ks}
+      lindx = collections.defaultdict( dict )
+      lindy = collections.defaultdict( dict )
+      ss = set()
+      for x in ks:
+        a,xxx,b = x.rpartition(":")
+        ib = int( b.rpartition("=")[-1] )
+        lindx[a][ib] = x
+        lindy[ib][a] = x
+        ss.add(b)
+      sfn = sorted( list( lindx.keys() ) )
+
       nl = len(ss)
       self.levels = [int( x.rpartition("=")[-1] ) for x in sorted( list (ss) )]
+      print ("LEVELS: ",self.levels,ss)
 
+    nlevels = len(ss)
     ixsum = 5
     ixabs = 6
     ixpct = 7
 
-    nt = sum( [len(sh[k][ixabs]) for k in ks] )
+    nt9 = max( [len(sh[k][ixabs]) for k in ks] )*len(ss)*len(sfn)
+    nt = max( [len(sh[k][ixabs]) for k in ks] )*len(ks)
     nf = len( ks )
-    print (nt)
-    self.work = numpy.zeros( (self.npct,nt) )
+    print ( "INFO: nt=%s [%s]" % (nt, nt9) )
+    self.work = numpy.zeros( (self.npct,nt9) )
     self.work02 = numpy.zeros( (5,nf) )
     i = 0
     j = 0
@@ -133,18 +145,36 @@ class Review(object):
     self.file_summary = []
 
     if self.withLevels:
-      for k in sorted( list( sfn ) ):
-        nt0 = len( sh[k + ":l=0"][ixpct] )
+      for k in sfn:
+        nt0 = len( sh[ lindx[k][0] ][ixpct] )
+        these_levs = sorted( list( lindx[k].keys() ) )
+        self.ntl = collections.defaultdict( int )
+#
+# loop over time slices
+#
         for l in range(nt0):
-          for lev in range( len( self.levels ) ):
-            kk = k + ":l=%s" % lev
-            self.work[:,i] = sh[ kk ][ixpct][l]
-            i += 1
-        for lev in range( len( self.levels ) ):
-          kk = k + ":l=%s" % lev
-          self.work02[:,j] = sh[kk][ixsum][:5]
-          self.file_summary.append( sh[k][ixsum][5:] )
-          j += 1
+#
+# loop over levels present
+#
+          for lev in these_levs:
+            kk = lindx[k][lev]
+            if kk in sh.keys() and l < len( sh[ kk ][ixpct] ):
+              self.work[:,i+lev] = sh[ kk ][ixpct][l]
+              self.ntl[l] += 1
+            elif  kk in sh.keys():
+              print ("WARNING: Short percentile record in %s" % kk  )
+            else:
+              print ("WARNING: record absent: %s" % kk  )
+#
+# increment i .. if a level is missing, work will have zeros ... this is not good
+#
+          i += nlevels
+
+        for lev in these_levs:
+          kk = lindx[k][lev]
+          self.work02[:,j+lev] = sh[kk][ixsum][:5]
+          self.file_summary.append( sh[kk][ixsum][5:] )
+        j += nlevels
 
     else:
       for k in sorted( ks ):
@@ -210,8 +240,12 @@ class Review(object):
         summy = [0.]*5
         perc = [0.]*self.npct
 
+##
+## set upper limit ... to account for the fact that there may be mssing layers
+##
+        nnnx = self.ntl[l]*nl
         for k in range(self.npct):
-          perc[k] = numpy.median( self.work[k,l::nl] )
+          perc[k] = numpy.median( self.work[k,l:nnnx:nl] )
 
         summy[0] = numpy.median( self.work02[0,l::nl] )
         summy[1] = numpy.max( self.work02[1,l::nl] )
