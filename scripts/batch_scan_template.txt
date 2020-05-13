@@ -1,16 +1,16 @@
 #!/bin/bash
 #BSUB -q short-serial
-#BSUB -oo rg-%%J-%%I.o
-#BSUB -eo rg-%%J-%%I.e 
+#BSUB -oo lsf_logs/%(tag)s-%%J-%%I.o
+#BSUB -eo lsf_logs/%(tag)s-%%J-%%I.e 
 #BSUB -W 8:00
-#BSUB -J R_job[0-%s]
+#BSUB -J %(tag)s[1-%(n)s]
 
-##source activate myenv38
+source activate myenv38
 
-vars=(%s)
-table=%s
+vars=(%(vars)s)
+table=%(table)s
 ### table, ddir, shelve-tag
+var=${vars[${LSB_JOBINDEX}-1]}
 
-echo table=$table, var=${vars[${LSB_JOBINDEX}]}
-var=${vars[${LSB_JOBINDEX}]}
-python main.py --exptvar 00-03 inputs/byvar/x1_${table}_${var}_latest.txt || { echo failed to parse x1_${table}_${var}_latest.txt ; }
+echo table=$table, var=${var}
+python main.py ${table}_${var} --exptvar 00-03 inputs/byvar/x1_${table}_${var}_latest.txt || { echo failed to parse x1_${table}_${var}_latest.txt ; }

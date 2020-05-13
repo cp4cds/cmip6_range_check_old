@@ -40,7 +40,7 @@ class LogFactory(object):
       np_log.setLevel(logging.WARN)
       np_log.addHandler(fHdlr)
       self.logs["py.warnings"] = np_log
-      if hasattr( logging, "capture" ):
+      if hasattr( logging, "captureWarnings" ):
         logging.captureWarnings(True)
     return log
 

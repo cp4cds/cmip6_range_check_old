@@ -243,8 +243,8 @@ class ShrinkByVar(object):
 class ExecuteByVar(object):
   def __init__(self,mode,log=None):
     self.mode = mode
-    self.shelve_template = "sh_ranges/%s/%s_%s_%s_%s_%s"
-    self.shelve_dir_template = "sh_ranges/%s"
+    self.shelve_template = "sh_ranges/%s/%s/%s_%s_%s_%s_%s"
+    self.shelve_dir_template = "sh_ranges/%s/%s"
     self.log = log
 
   def run(self,inputFile,shelve_tag,max_files=0):
@@ -271,13 +271,13 @@ class ExecuteByVar(object):
         sss = that[k3].pop()
       inst,source = k
       ense = k2
-      shelve_dir = self.shelve_dir_template % var
+      shelve_dir = self.shelve_dir_template % (tab,var)
       if not os.path.isdir (shelve_dir):
-        os.mkdir( shelve_dir )
-      shelve_file = self.shelve_template % (var,var,inst,source,expt,shelve_tag)
+        os.makedirs( shelve_dir )
+      shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
       sh = shelve.open( shelve_file )
       files = glob.glob( "%s/*.nc" % sss )
-      sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
+      sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
       print ( sss, len(files) )
       try:
         for data_file in files:

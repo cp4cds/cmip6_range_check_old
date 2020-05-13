@@ -21,13 +21,14 @@ def filter_listings( ddir, frequency=None, experiment="historical", listing_grou
   json.dump( {'info':{"title":"Table-variable summary"}, 'data':ee}, oo, indent=4, sort_keys=True )
 
 
-def batch_submit(table):
+def batch_submit(ddir,table):
   ee = json.load( open( "%s/table_var_summary.json" % ddir, "r" ) )
-  assert table in ee, "Table name not recognised: %s" % table
-  vars = ee[table]
+  assert table in ee["data"], "Table name not recognised: %s" % table
+  vars = ee["data"][table]
   nv = len(vars)
   ii = ''.join( open( "batch_scan_template.txt", "r" ).readlines() )
-  res = ii % (nv, " ".join(vars), table )
+  tag = "%s-v1" % table
+  res = ii % {"n":nv+1, "table":table, "vars":" ".join(vars), "tag":tag }
   oo = open( "batch_scan_latest.txt", "w" )
   oo.write(res)
   oo.close()
