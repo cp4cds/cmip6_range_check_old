@@ -134,13 +134,12 @@ def example():
   plt.tight_layout()
   plt.show()
 
-def plot_json(ifile):
-    ee = json.load( open( ifile, "r" ) )
-    ipath = sys.argv[1]
+def plot_json(table,ipath):
+    ee = json.load( open( ipath, "r" ) )
     ifile = ipath.rpartition("/")[-1]
     var = ifile.split("_")[0]
     wg1 =  WGIPriority()
-    units = wg1.ee["Amon.%s" % var]
+    units = wg1.ee["%s.%s" % (table,var)]
     print ( var, units )
     boxplot( ee["data"], var, boxLegend = True, units=units )
 
@@ -150,5 +149,5 @@ if __name__ == "__main__":
     example()
   else:
     import json
-    plot_json( sys.argv[1] )
+    plot_json( sys.argv[1], sys.argv[2] )
 
