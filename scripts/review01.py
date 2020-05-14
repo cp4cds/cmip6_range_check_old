@@ -135,10 +135,10 @@ class Review(object):
 
     nt9 = max( [len(sh[k][ixabs]) for k in ks] )*len(ss)*len(sfn)
     nt = max( [len(sh[k][ixabs]) for k in ks] )*len(ks)
-    nf = len( ks )
+    nf9 = len(ss)*len(sfn)
     print ( "INFO: nt=%s [%s]" % (nt, nt9) )
     self.work = numpy.zeros( (self.npct,nt9) )
-    self.work02 = numpy.zeros( (5,nf) )
+    self.work02 = numpy.zeros( (5,nf9) )
     i = 0
     j = 0
     

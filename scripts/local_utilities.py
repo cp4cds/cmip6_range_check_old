@@ -1,11 +1,27 @@
-import logging, time, os
+import logging, time, os, collections
+
+NT_RangeValue = collections.namedtuple( "range_value", ["value","status"] )
+NT_RangeSet = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min"] )
+null_range_value = NT_RangeValue( None, "NONE" )
 
 class WGIPriority(object):
   def __init__(self,ifile="AR6_priority_variables_02.csv" ):
     ii = open( ifile ).readlines()
     self.ee = dict()
+    self.ranges = dict()
     for l in ii:
-      id, units = l.split( "\t" )[:2]
+      rec = l.split( "\t" )
+      id, units = rec[:2]
+      vt = rec[2:10]
+      if not all( [vt[i] == "-" for i in [1,3,5,7]]):
+        xx = []
+        for i in [0,2,4,6]:
+          if vt[i+1] != "-":
+            xx.append( NT_RangeValue(vt[i],vt[i+1]) )
+          else:
+            xx.append( null_range_value )
+        self.ranges[id] = NT_RangeSet( xx[0], xx[1], xx[2], xx[3] )
+
       self.ee[id] = units
 
 class LogFactory(object):
@@ -47,4 +63,8 @@ class LogFactory(object):
   
 
 
-
+if __name__ == "__main__":
+   wg1 = WGIPriority()
+   print ( wg1.ranges.keys() )
+   k = wg1.ranges.keys().pop()
+   print ( k, wg1.ranges[k] )
