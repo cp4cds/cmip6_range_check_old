@@ -1,0 +1,93 @@
+{
+    "data": {
+        "CNRM-CERFACS_CNRM-CM6-1_historical": {
+            "file_summary": [
+                30.436584133400707,
+                31.0,
+                31.0
+            ],
+            "percentiles": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                3.431091070175171,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "summary": [
+                3.5614938735961914,
+                12.0,
+                0.0,
+                6.083012180145172,
+                5.554279662181978
+            ]
+        },
+        "CNRM-CERFACS_CNRM-ESM2-1_historical": {
+            "file_summary": [
+                30.436584133400707,
+                31.0,
+                31.0
+            ],
+            "percentiles": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "summary": [
+                0.0,
+                12.0,
+                0.0,
+                5.893783451865972,
+                5.367450417919202
+            ]
+        }
+    },
+    "info": {
+        "drs": {
+            "experiment": "historical",
+            "var": "tpf"
+        },
+        "tech": {
+            "percentiles": [
+                99.9,
+                99.5,
+                99.0,
+                95.0,
+                90,
+                75.0,
+                50.0,
+                25.0,
+                10.0,
+                5.0,
+                1.0,
+                0.5,
+                0.1
+            ],
+            "summary": [
+                "median",
+                "max",
+                "min",
+                "mean absolute max",
+                "mean absolute min"
+            ]
+        },
+        "title": "aggregation across json_ranges/LImon/tpf"
+    }
+}
