@@ -28,7 +28,7 @@ def batch_submit(ddir,table):
   nv = len(vars)
   ii = ''.join( open( "batch_scan_template.txt", "r" ).readlines() )
   tag = "%s_v2" % table
-  res = ii % {"n":nv+1, "table":table, "vars":" ".join(vars), "tag":tag }
+  res = ii % {"n":nv, "table":table, "vars":" ".join(vars), "tag":tag }
   oo = open( "batch_scan_latest.txt", "w" )
   oo.write(res)
   oo.close()
