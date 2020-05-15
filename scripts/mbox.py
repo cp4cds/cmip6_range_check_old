@@ -53,7 +53,6 @@ class mbox(object):
     self.subp.plot( [xm,], [yy[i999],], marker='o', color='blue' )
     self.subp.plot( [xm,], [yy[i001],], marker='o', color='red' )
 
-
 def boxplot( dd, var, boxLegend = True, units="1" ): 
    fig, ax = plt.subplots()
    ax.set_xticklabels('')
@@ -69,19 +68,19 @@ def boxplot( dd, var, boxLegend = True, units="1" ):
    m = mbox(plt, ax)
    ii = 0
    for k in ks:
-     rec = dd[k]["percentiles"][:]
+     this = dd[k]["percentiles"]
+     if type( this ) == type( [] ):
+       rec = this[:]
+     else:
+       try:
+         rec = this["0"][:]
+       except:
+         print ("Could not extract percentiles info for %s" % k )
+         print (this.keys() )
+         raise
      rec.reverse()
      m.add( ii +.1, ii+.9, rec )
      ii += 1
-   ##refrec = cc[table][var]
-   ##refv = getRef( refrec, var )
-   ##if refv != False:
-     ##x = ax.get_xlim()
-     ##print 'Trying line plot for CMIP5 ref:',var,x,refv
-     ##plt.plot( x, [refv[0],refv[0]], color='#0000ff', alpha=0.7, linewidth=3 )
-     ##plt.plot( x, [refv[1],refv[1]], color='#ff0000', alpha=0.7, linewidth=3 )
-     ##plt.plot( x, [refv[2],refv[2]], color='#00ff00', alpha=0.7, linewidth=2 )
-     ##plt.plot( x, [refv[3],refv[3]], color='#aa00aa', alpha=0.7, linewidth=2 )
 
    plt.xlabel('Model')
    plt.ylabel(var)
@@ -134,6 +133,42 @@ def example():
   plt.tight_layout()
   plt.show()
 
+def check_json(table,ipath):
+    ifile = ipath.rpartition("/")[-1]
+    var = ifile.split("_")[0]
+    wg1 =  WGIPriority()
+    varid = "%s.%s" % (table,var)
+    print( "check_json",table, ipath, varid )
+    if varid not in wg1.ranges:
+      print ( "No range information for %s" % varid )
+      return None
+    else:
+      ranges = wg1.ranges[varid]
+      ee = json.load( open( ipath, "r" ) )
+      data = ee["data"]
+      rsum = dict()
+      for m in sorted( list( data.keys() ) ):
+        this = data[m]["summary"]
+        range_error_max = this[1] > float(ranges.max.value)
+        range_error_min = this[2] < float(ranges.min.value)
+        if not any( [range_error_max,range_error_min] ):
+           res = (True,"OK")
+        elif all( [range_error_max,range_error_min] ):
+           res = (False, "ERROR: Max and Min range errors: %s > %s and %s < %s" % (this[1],ranges.max.value,this[2],ranges.min.value) )
+        elif range_error_max:
+           res = (False, "ERROR: Max range error: %s > %s" % (this[1],ranges.max.value) )
+        elif range_error_min:
+           res = (False, "ERROR: Min range error: %s < %s" % ( this[2],ranges.min.value) )
+        print ("%s:: %s" % (m,res[1]) )
+        rsum[m] = res[0]
+
+    bad = [k for k,v in rsum.items() if not v]
+    if len( bad) == 0:
+       print ("All models in range")
+    else:
+       print( "WARNING: %s models (from %s) out of range" % (len(bad),len(rsum.keys())) )
+           
+
 def plot_json(table,ipath):
     ee = json.load( open( ipath, "r" ) )
     ifile = ipath.rpartition("/")[-1]
@@ -148,6 +183,12 @@ if __name__ == "__main__":
   if len(sys.argv) == 1:
     example()
   else:
-    import json
-    plot_json( sys.argv[1], sys.argv[2] )
-
+    mode = sys.argv[1]
+    print (sys.argv, mode)
+    if mode in ["-p","-c"]:
+      import json
+      table, file = sys.argv[2:]
+      if mode == "-p":
+        plot_json( table, file )
+      else:
+        check_json( table, file )
