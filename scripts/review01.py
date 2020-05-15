@@ -4,6 +4,8 @@ from exceptions_lib import *
 
 __TODO__ = """ADD DRS and TIME RECORDS to INFO"""
 
+sh_ex01 = "sh_ranges/Emon/hus/hus_AS-RCEC_TaiESM1_historical_00-03"
+
 print( __TODO__ )
 
 
@@ -104,7 +106,11 @@ class Review(object):
       self.npct = 13
 
     if "__info__" in sh.keys():
-      self.info = sh["__info__"]
+      try:
+        self.info = sh["__info__"]
+      except:
+        self.info = {"title":"From %s" % file, "WARNING":"Could not read __info__ record from %s" % file }
+        print ("WARNING:Could not read __info__ record from %s" % file )
     else:
       self.info = {"title":"From %s" % file }
 
@@ -128,61 +134,64 @@ class Review(object):
       self.levels = [int( x.rpartition("=")[-1] ) for x in sorted( list (ss) )]
       print ("LEVELS: ",self.levels,ss)
 
-    nlevels = len(ss)
+      nlevels = len(ss)
+      nfiles = len(sfn)
+    else:
+      nfiles = len(ks)
+
     ixsum = 5
     ixabs = 6
     ixpct = 7
 
-    nt9 = max( [len(sh[k][ixabs]) for k in ks] )*len(ss)*len(sfn)
-    nt = max( [len(sh[k][ixabs]) for k in ks] )*len(ks)
-    nf9 = len(ss)*len(sfn)
-    print ( "INFO: nt=%s [%s]" % (nt, nt9) )
-    self.work = numpy.zeros( (self.npct,nt9) )
-    self.work02 = numpy.zeros( (5,nf9) )
-    i = 0
-    j = 0
     
     self.file_summary = []
 
     if self.withLevels:
-      for k in sfn:
-        nt0 = len( sh[ lindx[k][0] ][ixpct] )
-        these_levs = sorted( list( lindx[k].keys() ) )
-        self.ntl = collections.defaultdict( int )
 #
-# loop over time slices
-#
-        for l in range(nt0):
+# extract numer of time steps available at each level
+      ntime_by_levels = [ sum( [len(sh[v][ixabs]) for k,v in lindy[lev].items()] ) for lev in lindy.keys() ]
+
+      ntime = max( ntime_by_levels )
+      self.work = numpy.ma.zeros( (self.npct,ntime,nlevels) )
+      self.work02 = numpy.ma.zeros( (5,nfiles,nlevels) )
+      i = 0
+      j = 0
 #
 # loop over levels present
 #
-          for lev in these_levs:
-            kk = lindx[k][lev]
-            if kk in sh.keys() and l < len( sh[ kk ][ixpct] ):
-              self.work[:,i+lev] = sh[ kk ][ixpct][l]
-              self.ntl[l] += 1
-            elif  kk in sh.keys():
-              print ("WARNING: Short percentile record in %s" % kk  )
-            else:
-              print ("WARNING: record absent: %s" % kk  )
+      self.ntl = dict()
+      for ilev in range(nlevels):
+        lev = self.levels[ilev]
+        i = 0
+        for k in range(nfiles):
+          fn = sfn[k]
+          if fn in lindy[lev].keys():
+            kk = lindy[lev][fn]
+            rec = sh[kk]
+            self.work02[:,k,ilev] = rec[ixsum][:5]
+            self.file_summary.append( [int(x) for x in rec[ixsum][5:]] )
 #
-# increment i .. if a level is missing, work will have zeros ... this is not good
+# loop over time slices
 #
-          i += nlevels
-
-        for lev in these_levs:
-          kk = lindx[k][lev]
-          self.work02[:,j+lev] = sh[kk][ixsum][:5]
-          self.file_summary.append( sh[kk][ixsum][5:] )
-        j += nlevels
+            for this in rec[ixpct]:
+                print (fn,lev,i,max(this),min(this))
+                self.work[:,i,ilev] = this
+                i += 1
+        self.ntl[lev] = i
 
     else:
+      ntime = sum( [len(sh[k][ixabs]) for k in ks] )
+      print ( "INFO: nt=%s [nf=%s]" % (ntime,nfiles ) )
+      self.work = numpy.ma.zeros( (self.npct,ntime) )
+      self.work02 = numpy.ma.zeros( (5,nfiles) )
+      i = 0
+      j = 0
       for k in sorted( ks ):
         for l in sh[k][ixpct]:
           self.work[:,i] = l
           i += 1
         self.work02[:,j] = sh[k][ixsum][:5]
-        self.file_summary.append( sh[k][ixsum][5:] )
+        self.file_summary.append( [int(x) for x in sh[k][ixsum][5:]] )
         j += 1
     sh.close()
 
@@ -194,8 +203,8 @@ class Review(object):
     nt = sum( [len(dd[k][5]) for k in dd.keys() ] )
     nf = len( dd.keys() )
     print (nt)
-    self.work = numpy.zeros( (self.npct,nt) )
-    self.work02 = numpy.zeros( (5,nf) )
+    self.work = numpy.ma.zeros( (self.npct,nt) )
+    self.work02 = numpy.ma.zeros( (5,nf) )
     i = 0
     j = 0
     for k in sorted( list( dd.keys() ) ):
@@ -233,32 +242,32 @@ class Review(object):
       tech["with_levels"] = False
     else:
       tech["with_levels"] = True
+      tech["levels"] = self.levels
       nl = len(self.levels)
       summary = dict()
       percentiles = dict()
       for l in range(nl):
+        lev = self.levels[l]
         summy = [0.]*5
         perc = [0.]*self.npct
-
 ##
 ## set upper limit ... to account for the fact that there may be mssing layers
 ##
-        nnnx = self.ntl[l]*nl
         for k in range(self.npct):
-          perc[k] = numpy.median( self.work[k,l:nnnx:nl] )
+          perc[k] = numpy.median( self.work[k,:self.ntl[lev],l] )
 
-        summy[0] = numpy.median( self.work02[0,l::nl] )
-        summy[1] = numpy.max( self.work02[1,l::nl] )
-        summy[2] = numpy.min( self.work02[2,l::nl] )
-        summy[3] = numpy.max( self.work02[3,l::nl] )
-        summy[4] = numpy.max( self.work02[4,l::nl] )
-        summary[l] = summy
-        percentiles[l] = perc
+        summy[0] = numpy.median( self.work02[0,:,l] )
+        summy[1] = numpy.max( self.work02[1,:,l] )
+        summy[2] = numpy.min( self.work02[2,:,l] )
+        summy[3] = numpy.max( self.work02[3,:,l] )
+        summy[4] = numpy.max( self.work02[4,:,l] )
+        summary[lev] = summy
+        percentiles[lev] = perc
 
-    this = {'percentiles':percentiles, "summary":summary}
+    self.this = {'percentiles':percentiles, "summary":summary, "file_summary":self.file_summary}
     oo = open( ofile, 'w' )
-    info_out = {'title':self.info['title'], "tech":tech}
-    json.dump( {'info':info_out, 'data':this}, oo, indent=4, sort_keys=True )
+    self.info_out = {'title':self.info['title'], "tech":tech}
+    json.dump( {'info':self.info_out, 'data':self.this}, oo, indent=4, sort_keys=True )
     oo.close()
 
 ## l0: ['ok','shape','median','mx','mn','mamx','mamn','nfv','hasfv','dt0','dt1','units','tid']
