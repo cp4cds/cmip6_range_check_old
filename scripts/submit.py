@@ -1,5 +1,6 @@
-import collections, json, glob
+import collections, json, glob, os
 from local_utilities import WGIPriority
+from utils import table_list, mode_by_table
 
 
 def filter_listings( ddir, frequency=None, experiment="historical", listing_group = "x1", bywg1=True ):
@@ -20,16 +21,29 @@ def filter_listings( ddir, frequency=None, experiment="historical", listing_grou
   oo = open( "%s/table_var_summary.json" % ddir, "w" )
   json.dump( {'info':{"title":"Table-variable summary"}, 'data':ee}, oo, indent=4, sort_keys=True )
 
+def exec_bsub(table):
+  if os.path.isfile( ".bsub_log" ):
+    os.unlink( ".bsub_log" )
+  os.popen( "bsub < BS/batch_scan_%s.txt > .bsub_log" % table ).read()
+  ii = open( ".bsub_log" ).readlines()
+  words = ii[0].split()
+  jobid = words[1][1:-1]
+  print ("batch_scan_%s.txt run as job %s" % (table,jobid) )
+  oo = open( "batch_scan_log.txt", "a" )
+  oo.write( "batch_scan_%s.txt run as job %s\n" % (table,jobid) )
+  oo.close()
+  
 
 def batch_submit(ddir,table):
   ee = json.load( open( "%s/table_var_summary.json" % ddir, "r" ) )
   assert table in ee["data"], "Table name not recognised: %s" % table
   vars = ee["data"][table]
+  mode = mode_by_table[table]
   nv = len(vars)
   ii = ''.join( open( "batch_scan_template.txt", "r" ).readlines() )
   tag = "%s_v2" % table
-  res = ii % {"n":nv, "table":table, "vars":" ".join(vars), "tag":tag }
-  oo = open( "batch_scan_latest.txt", "w" )
+  res = ii % {"n":nv, "table":table, "mode":mode, "experiment":"historical", "vars":" ".join(vars), "tag":tag }
+  oo = open( "BS/batch_scan_%s.txt" % table, "w" )
   oo.write(res)
   oo.close()
   ##os.popen( "bsub < batch_scan_latest.txt" ).read()
@@ -37,7 +51,22 @@ def batch_submit(ddir,table):
 if __name__ == "__main__":
   import sys
   if sys.argv[1] == "-p":
-    filter_listings( "inputs/byvar" )
+    filter_listings( "inputs/historical/byvar" )
+  elif sys.argv[1] == "-x":
+    table = sys.argv[2]
+    if table in table_list:
+      exec_bsub( table )
+    elif table == "ALL":
+      for table in table_list:
+        exec_bsub( table )
+    else:
+      print( "ERROR: table not recognised: %s" % table )
   elif sys.argv[1] == "-s":
     ddir, table = sys.argv[2:4]
-    batch_submit( ddir, table )
+    if table in table_list:
+      batch_submit( ddir, table )
+    elif table == "ALL":
+      for table in table_list:
+        batch_submit( ddir, table )
+    else:
+      print( "ERROR: table not recognised: %s" % table )

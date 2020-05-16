@@ -9,8 +9,10 @@ source activate myenv38
 
 vars=(%(vars)s)
 table=%(table)s
+experiment=%(experiment)s
+mode=%(mode)s
 ### table, ddir, shelve-tag
 var=${vars[${LSB_JOBINDEX}-1]}
 
 echo table=$table, var=${var}
-python main.py ${table}_${var} --exptvar 00-03 inputs/byvar/x1_${table}_${var}_latest.txt || { echo failed to parse x1_${table}_${var}_latest.txt ; }
+python main.py ${table}_${var} --exptvar 00-04 ${mode} inputs/${experiment}/byvar/x1_${table}_${var}_latest.txt || { echo failed to parse x1_${table}_${var}_latest.txt ; }

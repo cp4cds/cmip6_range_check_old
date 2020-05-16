@@ -1,0 +1,5 @@
+Saturday: Oyr, Ofx, fx run ... with new mode setting via utils
+NEED to check what is happening with fx files ....  all failing in scan_files ... probably looking for time axis.
+batch_scan_Oday.txt run as job 669361 ## failed ... insufficient memory
+batch_scan_Ofx.txt run as job 669410
+batch_scan_Oday.txt run as job 669412: Expanded memory ... edited bsub script manually to increase allocation to 8GB.
