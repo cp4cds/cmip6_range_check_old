@@ -1,7 +1,7 @@
 # Overview for <table>.<variable>
 
 
-![Spread of LImon.snc](box_snc.jpg) *Spread*
+![Spread of LImon.snc](box_snc.png) *Spread*
 
 | Model |  Min |  Median | Max |
 | :---  |  --- | -----  |  ---  |
