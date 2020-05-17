@@ -8,12 +8,13 @@ __version__ = "0.1.03"
 
 
 class ScanFile(object):
-  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000):
+  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True):
     if maskAll:
       checkSpecial=False
     self.version = "00.01.02"
     self.version_message = "Extended percentiles, adding processing and grid info"
     self.mode = mode
+    self.with_time = with_time
     self.sh = sh
     self.checkSpecial = checkSpecial
     self.maskAll = maskAll
@@ -77,45 +78,47 @@ class ScanFile(object):
           ##else:
             ##maskok = True
        
-    t = nc.variables['time'] 
-    if t.shape[0] != v.shape[0]:
-      print ( 'Unexpected shapes for variable and time' )
-      print ( v.shape,t.shape, f )
-      raise BasicFileStructureException
+    dt0 = None
+    dt1 = None
+    nt = 0
+    if self.with_time:
+      t = nc.variables['time'] 
+      if t.shape[0] != v.shape[0]:
+        print ( 'Unexpected shapes for variable and time' )
+        print ( v.shape,t.shape, f )
+        raise BasicFileStructureException
 
-    t_array = t[:]
-    if len(t_array) > 1:
-      dt = t_array[1:] - t_array[:-1]
-      dt0 = numpy.mean( dt )
-      dt1 = numpy.max( dt )
-    else:
-      dt0 = None
-      dt1 = None
+      t_array = t[:]
+      if len(t_array) > 1:
+        dt = t_array[1:] - t_array[:-1]
+        dt0 = numpy.mean( dt )
+        dt1 = numpy.max( dt )
 
-    nt =len(t_array)
-    if self.mode == 'firstTimeValue':
-      nt = min( [12,len(t_array)] )
-      v = numpy.array( v[:nt,:,:] )
-      if self.maskAll and maskok:
-        vmsk = numpy.array( vmsk[:nt,:,:] )
-    elif self.mode == 'sampled' and nt > 20:
-      isamp = sorted( random.sample( range(nt), 20 ) )
-      v = numpy.array( v[isamp,:,:] )
-    elif self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou'] and nt > 20:
-      nsamp = nt//{'sampledonepercent':100, 'sampledtenpercent':10, 'sampledoneperthou':1000}[self.mode]
-      isamp = sorted( random.sample( range(nt), nsamp ) )
-      if len( isamp ) == 0:
-        isamp = [0,]
+      nt =len(t_array)
+
+      if self.mode == 'firstTimeValue':
+        nt = min( [12,len(t_array)] )
+        v = numpy.array( v[:nt,:,:] )
+        if self.maskAll and maskok:
+          vmsk = numpy.array( vmsk[:nt,:,:] )
+      elif self.mode == 'sampled' and nt > 20:
+        isamp = sorted( random.sample( range(nt), 20 ) )
+        v = numpy.array( v[isamp,:,:] )
+      elif self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou'] and nt > 20:
+        nsamp = nt//{'sampledonepercent':100, 'sampledtenpercent':10, 'sampledoneperthou':1000}[self.mode]
+        isamp = sorted( random.sample( range(nt), nsamp ) )
+        if len( isamp ) == 0:
+          isamp = [0,]
       
-      v = numpy.array( v[isamp,:,:] )
-    elif self.maxnt > 0 and self.maxnt < len(t_array):
-      nt = self.maxnt
-      v = numpy.array( v[:nt,:,:] )
+        v = numpy.array( v[isamp,:,:] )
+      elif self.maxnt > 0 and self.maxnt < len(t_array):
+        nt = self.maxnt
+        v = numpy.array( v[:nt,:,:] )
 
     print( "INFO.001.00020: ", fname, v.shape, nt )
      
 
-    if len( v.shape ) == 3:
+    if len( v.shape ) == 3 or (not self.with_time and len(v.shape) == 2):
       tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
       med,mx,mn,mamx,mamn,fvcount = tt
 
@@ -135,6 +138,11 @@ class ScanFile(object):
 
   def processFeature( self, v, vm, hasfv,maskout,  maskrange, fill_value, hardLowerBnd, specFnd):
     """Process a series of horizontal fields"""
+    am = []
+    ap = []
+    meds = []
+    mxs = []
+    mns = []
 
     if hasfv or hardLowerBnd != None or (self.maskAll and maskok):
       if hasfv:
@@ -156,29 +164,43 @@ class ScanFile(object):
         fvcount = v.size - vm.count()
       else:
         fvcount = v.size() - vm.count()
-      med = numpy.ma.median( vm )
-      mx = numpy.ma.max( vm )
-      mn = numpy.ma.min( vm )
-      am = []
-      ap = []
  
-      for k in range( v.shape[0] ):
-        am.append( numpy.ma.mean( numpy.ma.abs( vm[k,:] ) ) )
-        x = vm[k,:].ravel().compressed()
+      if len(v.shape) == 3:
+        for k in range( v.shape[0] ):
+          am.append( numpy.ma.mean( numpy.ma.abs( vm[k,:] ) ) )
+          x = vm[k,:].ravel().compressed()
+          if len(x) > 0:
+            ap.append( numpy.percentile( x, self.percentiles ) )
+          else:
+            print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
+          meds.append( numpy.ma.median( vm[k,:] ) )
+          mxs.append( numpy.ma.max( vm[k,:] ) )
+          mns.append( numpy.ma.min( vm[k,:] ) )
+      else:
+        am.append( numpy.ma.mean( numpy.ma.abs( vm ) ) )
+        x = vm.ravel().compressed()
         if len(x) > 0:
-          ap.append( numpy.percentile( x, self.percentiles ) )
+            ap.append( numpy.percentile( x, self.percentiles ) )
         else:
-          print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
+            print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
+        meds.append( numpy.ma.median( vm ) )
+        mxs.append( numpy.ma.max( vm ) )
+        mns.append( numpy.ma.min( vm ) )
 
     else:
-      med = numpy.median( v )
-      mx = numpy.max( v )
-      mn = numpy.min( v )
-      am = []
-      ap = []
-      for k in range( v.shape[0] ):
-        am.append( numpy.mean( numpy.abs( v[k,:] ) ) )
-        ap.append( numpy.percentile( v[k,:], self.percentiles ) )
+      if len(v.shape) == 3:
+        for k in range( v.shape[0] ):
+          am.append( numpy.mean( numpy.abs( v[k,:] ) ) )
+          ap.append( numpy.percentile( v[k,:], self.percentiles ) )
+          meds.append( numpy.median( v[k,:] ) )
+          mxs.append( numpy.max( v[k,:] ) )
+          mns.append( numpy.min( v[k,:] ) )
+      else:
+          am.append( numpy.mean( numpy.abs( v ) ) )
+          ap.append( numpy.percentile( v, self.percentiles ) )
+          meds.append( numpy.median( v ) )
+          mxs.append( numpy.max( v ) )
+          mns.append( numpy.min( v ) )
 
     if self.checkSpecial:
       m1 = numpy.median( [x[4] for x in ap] )
@@ -190,6 +212,9 @@ class ScanFile(object):
     ##counts,bins = numpy.histogram( v, range=(mn,mx) )
     mamx = numpy.max( am )
     mamn = numpy.min( am )
+    med = numpy.median( meds )
+    mx = max( mns )
+    mn = max( mns )
     return  (med,mx,mn,mamx,mamn,fvcount), am, ap
 
 
@@ -259,6 +284,8 @@ class ExecuteByVar(object):
       parts = fpath.strip().split("/")
       inst, source, expt, ense, tab, var, grid = parts[6:13]
       cc[(inst,source)][ense][grid].add( fpath.strip() )
+
+    with_time = tab not in ["Ofx", "fx"]
     nf = 0
     for k in cc.keys():
       this = cc[k]
@@ -287,7 +314,7 @@ class ExecuteByVar(object):
              print ( 'STARTING ',data_file )
 
           try:
-            s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000)
+            s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000,with_time=with_time)
           except:
             raise WorkflowException( "wfx.001.0001: Failed to scan file", file=data_file, script="main.py")
           nf += 1
@@ -300,7 +327,10 @@ class ExecuteByVar(object):
       except WorkflowException as e:
          trace = traceback.format_exc()
          sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
+         if self.log != None:
+           self.log.error( "WorkflowException: %s {%s}\n%s" % (e.msg,e.kwargs,trace) )
          print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
+         print( trace )
       sh.close()
 
 if __name__ == "__main__":

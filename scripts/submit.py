@@ -21,7 +21,7 @@ def filter_listings( ddir, frequency=None, experiment="historical", listing_grou
   oo = open( "%s/table_var_summary.json" % ddir, "w" )
   json.dump( {'info':{"title":"Table-variable summary"}, 'data':ee}, oo, indent=4, sort_keys=True )
 
-def exec_bsub(table):
+def exec_bsub(table, comment):
   if os.path.isfile( ".bsub_log" ):
     os.unlink( ".bsub_log" )
   os.popen( "bsub < BS/batch_scan_%s.txt > .bsub_log" % table ).read()
@@ -30,7 +30,7 @@ def exec_bsub(table):
   jobid = words[1][1:-1]
   print ("batch_scan_%s.txt run as job %s" % (table,jobid) )
   oo = open( "batch_scan_log.txt", "a" )
-  oo.write( "batch_scan_%s.txt run as job %s\n" % (table,jobid) )
+  oo.write( "batch_scan_%s.txt run as job %s: %s\n" % (table,jobid,comment) )
   oo.close()
   
 
@@ -53,12 +53,12 @@ if __name__ == "__main__":
   if sys.argv[1] == "-p":
     filter_listings( "inputs/historical/byvar" )
   elif sys.argv[1] == "-x":
-    table = sys.argv[2]
+    table, comment = sys.argv[2:4]
     if table in table_list:
-      exec_bsub( table )
+      exec_bsub( table, comment )
     elif table == "ALL":
       for table in table_list:
-        exec_bsub( table )
+        exec_bsub( table, comment )
     else:
       print( "ERROR: table not recognised: %s" % table )
   elif sys.argv[1] == "-s":
