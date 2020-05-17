@@ -1,4 +1,4 @@
-import os
+import os, glob
 from local_utilities import WGIPriority
 
 ##
@@ -53,7 +53,7 @@ class mbox(object):
     self.subp.plot( [xm,], [yy[i999],], marker='o', color='blue' )
     self.subp.plot( [xm,], [yy[i001],], marker='o', color='red' )
 
-def boxplot( dd, var, boxLegend = True, units="1" ): 
+def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ): 
    fig, ax = plt.subplots()
    ax.set_xticklabels('')
    ax.set_yticklabels('')
@@ -118,8 +118,8 @@ def boxplot( dd, var, boxLegend = True, units="1" ):
    else:
      v1 = var
      dpith=20
-   plt.savefig( 'box_%s.png' % v1, dpi=150)
-   plt.savefig( 'th_box_%s.png' % v1, dpi=dpith)
+   plt.savefig( '%s/box_%s.png' % (image_dir,v1), dpi=150)
+   plt.savefig( '%s/th_box_%s.png' % (image_dir,v1), dpi=dpith)
 
     
 def example():
@@ -172,11 +172,20 @@ def check_json(table,ipath):
 def plot_json(table,ipath):
     ee = json.load( open( ipath, "r" ) )
     ifile = ipath.rpartition("/")[-1]
+    image_dir = "images/%s" % table
+    if not os.path.isdir( image_dir ):
+      os.mkdir( image_dir )
+
     var = ifile.split("_")[0]
     wg1 =  WGIPriority()
     units = wg1.ee["%s.%s" % (table,var)]
     print ( var, units )
-    boxplot( ee["data"], var, boxLegend = True, units=units )
+    boxplot( ee["data"], var, boxLegend = True, units=units, image_dir=image_dir )
+
+def plot_files(table):
+    fl = glob.glob( "json_ranges/%s/*.json" % table )
+    for f in fl:
+      plot_json( table, f )
 
 if __name__ == "__main__":
   import sys
@@ -192,3 +201,7 @@ if __name__ == "__main__":
         plot_json( table, file )
       else:
         check_json( table, file )
+    elif mode == "-px":
+      import json
+      table = sys.argv[2]
+      plot_files( table )
