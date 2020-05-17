@@ -73,7 +73,7 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
    for k in ks:
      this = dd[k]["percentiles"]
      thissum = dd[k]["summary"]
-     table_records.append( [str(x) for x in [k,thissum[2],this[3],this[6],this[9],thissum[1] ]] )
+     table_records.append( [str(x) for x in [k,thissum[2],this[9],this[6],this[3],thissum[1] ]] )
 
      if type( this ) == type( [] ):
        rec = this[:]
