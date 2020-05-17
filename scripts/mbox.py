@@ -67,8 +67,14 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
    opacity = 0.8
    m = mbox(plt, ax)
    ii = 0
+   table_records = [ ["Model","Minimum","5th pct","Median","95th pct","Maximum"],
+                     [ " :--",  " :--: ",  " :--: ", " :--: ", " :--: ", " :--: "   ] ]
+
    for k in ks:
      this = dd[k]["percentiles"]
+     thissum = dd[k]["summary"]
+     table_records.append( [str(x) for x in [k,thissum[2],this[3],this[6],this[9],thissum[1] ]] )
+
      if type( this ) == type( [] ):
        rec = this[:]
      else:
@@ -81,6 +87,12 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
      rec.reverse()
      m.add( ii +.1, ii+.9, rec )
      ii += 1
+
+   oo = open( '%s/Overview_%s.md' % (image_dir,var), "w" )
+   for record in table_records:
+     oo.write( ' | '.join( record ) + "\n" )
+   oo.close()
+
 
    plt.xlabel('Model')
    plt.ylabel(var)
