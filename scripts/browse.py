@@ -1,5 +1,6 @@
 import cmd, glob, json
 import utils
+from dreqPy import dreq
 
 class Variables(dict):
   def __init__(self,data_dir = "json_ranges" ):
@@ -9,8 +10,6 @@ class Variables(dict):
         fname = f.rpartition( "/" )[-1]
         var = fname.split("_")[0]
         self["%s.%s" % (table,var)] = (0,f,None)
-     
-       
 
 class Test(cmd.Cmd):
   def __init__(self):
@@ -32,11 +31,25 @@ class Test(cmd.Cmd):
     else:
       cmd.Cmd.default(self,line)
 
+  def do_eval(self,line):
+    """Evaluate the line in python session."""
+    try:
+      eval ( line )
+    except:
+      print ( "Failed to execute %s" % line )
+
   def do_exit(self,line):
     return True
 
+class TestRq(Test):
+  def __init__(self):
+    self.dq = dreq.loadDreq()
+    super(TestRq, self).__init__()
 
+    self.CMORvar_by_id = dict()
+    for i in self.dq.coll["CMORvar"].items:
+      self.CMORvar_by_id["%s.%s" % (i.mipTable,i.label) ] = i
 
-t = Test()
+t = TestRq()
 t.cmdloop()
     
