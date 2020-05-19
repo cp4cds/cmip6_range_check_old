@@ -1,5 +1,5 @@
 import os, glob
-from local_utilities import WGIPriority
+from local_utilities import WGIPriority, check_json
 
 ##
 ## remove LD_LIBRARY_PATH to avoid a configuration issue with the conda installation
@@ -9,8 +9,9 @@ import sys
 if "--RESTART" in sys.argv:
   sys.argv.pop( sys.argv.index( "--RESTART" ) )
 elif "LD_LIBRARY_PATH" in os.environ:
-  cmd = " ".join( sys.argv )
-  os.popen( "(unset LD_LIBRARY_PATH;python %s --RESTART)" % cmd )
+  ##cmd = " ".join( sys.argv )
+  ##os.popen( "(unset LD_LIBRARY_PATH;python %s --RESTART)" % cmd )
+  print ("You need to: unset LD_LIBRARY_PATH and rerun" )
   sys.exit(0)
 
 import matplotlib.pyplot as plt
@@ -144,43 +145,7 @@ def example():
   ##plt.legend( ('label','l2'), numpoints=0 )
   plt.tight_layout()
   plt.show()
-
-def check_json(table,ipath):
-    ifile = ipath.rpartition("/")[-1]
-    var = ifile.split("_")[0]
-    wg1 =  WGIPriority()
-    varid = "%s.%s" % (table,var)
-    print( "check_json",table, ipath, varid )
-    if varid not in wg1.ranges:
-      print ( "No range information for %s" % varid )
-      return None
-    else:
-      ranges = wg1.ranges[varid]
-      ee = json.load( open( ipath, "r" ) )
-      data = ee["data"]
-      rsum = dict()
-      for m in sorted( list( data.keys() ) ):
-        this = data[m]["summary"]
-        range_error_max = this[1] > float(ranges.max.value)
-        range_error_min = this[2] < float(ranges.min.value)
-        if not any( [range_error_max,range_error_min] ):
-           res = (True,"OK")
-        elif all( [range_error_max,range_error_min] ):
-           res = (False, "ERROR: Max and Min range errors: %s > %s and %s < %s" % (this[1],ranges.max.value,this[2],ranges.min.value) )
-        elif range_error_max:
-           res = (False, "ERROR: Max range error: %s > %s" % (this[1],ranges.max.value) )
-        elif range_error_min:
-           res = (False, "ERROR: Min range error: %s < %s" % ( this[2],ranges.min.value) )
-        print ("%s:: %s" % (m,res[1]) )
-        rsum[m] = res[0]
-
-    bad = [k for k,v in rsum.items() if not v]
-    if len( bad) == 0:
-       print ("All models in range")
-    else:
-       print( "WARNING: %s models (from %s) out of range" % (len(bad),len(rsum.keys())) )
            
-
 def plot_json(table,ipath):
     ee = json.load( open( ipath, "r" ) )
     ifile = ipath.rpartition("/")[-1]

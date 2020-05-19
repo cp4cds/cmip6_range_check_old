@@ -2,6 +2,8 @@ import cmd, glob, json
 import utils
 from dreqPy import dreq
 
+import local_utilities
+
 class Variables(dict):
   def __init__(self,data_dir = "json_ranges" ):
     for table in utils.table_list:
@@ -14,7 +16,9 @@ class Variables(dict):
 class Test(cmd.Cmd):
   def __init__(self):
     self.vars = Variables()
+    self.check_json = local_utilities.check_json
     super(Test, self).__init__()
+
 
   def do_x(self,line):
     print ("x", line )
@@ -30,6 +34,11 @@ class Test(cmd.Cmd):
       print ("bang" )
     else:
       cmd.Cmd.default(self,line)
+
+  def do_check(self,line):
+    words = line.split()
+    table, var = words[0].split( "." )
+    self.check_json( table, var=var )
 
   def do_eval(self,line):
     """Evaluate the line in python session."""
