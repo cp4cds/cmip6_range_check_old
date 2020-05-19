@@ -4,6 +4,21 @@ NT_RangeValue = collections.namedtuple( "range_value", ["value","status"] )
 NT_RangeSet = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min"] )
 null_range_value = NT_RangeValue( None, "NONE" )
 
+def stn(x,nd=2):
+  if type(x) in [type(''),type( u'')]:
+    return x
+
+  ax = abs(x)
+  if ax > 1. and ax < 1000.:
+    vv = '%7.1f' % x
+  elif ax > 0.01 and ax < 1.0001:
+    vv = '%7.4f' % x
+  else:
+    vv = '%9.2e' % x
+    if len(vv) > 7 and vv[-8:] == '0.00e+00':
+      vv = '0.0'
+  return vv
+
 class WGIPriority(object):
   def __init__(self,ifile="AR6_priority_variables_02.csv" ):
     ii = open( ifile ).readlines()
@@ -16,7 +31,7 @@ class WGIPriority(object):
       if not all( [vt[i] == "-" for i in [1,3,5,7]]):
         xx = []
         for i in [0,2,4,6]:
-          if vt[i+1] != "-":
+          if vt[i+1] not in ["-",""]:
             xx.append( NT_RangeValue(vt[i],vt[i+1]) )
           else:
             xx.append( null_range_value )
@@ -85,6 +100,20 @@ class CheckJson(object):
     wg1 =  WGIPriority()
     varid = "%s.%s" % (table,var)
     print( "check_json",table, ipath, varid )
+    ee = json.load( open( ipath, "r" ) )
+    data = ee["data"]
+    percentiles = ee["info"]["tech"]["percentiles"]
+    pmx = [max( [data[m]["percentiles"][j] for m in sorted( list( data.keys() ) )] ) for j in range(len(percentiles)) ]
+    pmn = [min( [data[m]["percentiles"][j] for m in sorted( list( data.keys() ) )] ) for j in range(len(percentiles)) ]
+    pctcomp = [pmx[i+1] < pmn[i] for i in range( len(percentiles) -1 )] 
+    print ( pctcomp )
+    print ("pmx", pmx)
+    print ("pmn", pmn)
+    clean = all( [pmn[i] > pmx[i+1] for i in range( len(percentiles) -1 )] )
+    if clean:
+         print ("COMPACT DISTRIBUTION")
+    else:
+       print ("overlapping distributions")
     if varid not in wg1.ranges and varid not in self.new["data"]:
       print ( "No range information for %s" % varid )
       return None
@@ -93,27 +122,41 @@ class CheckJson(object):
         ranges = self.get_range( varid )
       else:
         ranges = wg1.ranges[varid]
-      ee = json.load( open( ipath, "r" ) )
-      data = ee["data"]
       rsum = dict()
       for m in sorted( list( data.keys() ) ):
         this = data[m]["summary"]
         range_error_max = this[1] > float(ranges.max.value)
         range_error_min = this[2] < float(ranges.min.value)
-        if not any( [range_error_max,range_error_min] ):
+        try:
+          range_error_ma_max = (ranges.ma_max != null_range_value) and this[3] > float(ranges.ma_max.value)
+        except:
+          print (ranges.ma_max)
+          raise
+        try:
+          range_error_ma_min = (ranges.ma_min != null_range_value) and this[4] < float(ranges.ma_min.value)
+        except:
+          print (ranges.ma_min)
+          raise
+
+        if not any( [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] ):
            res = (True,"OK")
-        elif all( [range_error_max,range_error_min] ):
-           res = (False, "ERROR: Max and Min range errors: %s > %s and %s < %s" % (this[1],ranges.max.value,this[2],ranges.min.value) )
-        elif range_error_max:
-           res = (False, "ERROR: Max range error: %s > %s" % (this[1],ranges.max.value) )
-        elif range_error_min:
-           res = (False, "ERROR: Min range error: %s < %s" % ( this[2],ranges.min.value) )
+        else:
+          for k in range(4):
+            errs = []
+            if [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min][k]:
+              elab = ["Max","Min","MA Max","MA Min"][k]
+              targ = [float(ranges.max.value), float(ranges.min.value), float(ranges.ma_max.value), float(ranges.ma_min.value)][k]
+              msg = "%s: %s -- %s" % (elab, this[k+1], targ)
+              errs.append( msg)
+          res = (False,"; ".join( errs ))
+              
         print ("%s:: %s" % (m,res[1]) )
         rsum[m] = res[0]
 
     bad = [k for k,v in rsum.items() if not v]
     if len( bad) == 0:
        print ("All models in range")
+       print (ranges)
     else:
        print( "WARNING: %s models (from %s) out of range" % (len(bad),len(rsum.keys())) )
 

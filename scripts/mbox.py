@@ -1,5 +1,5 @@
 import os, glob
-from local_utilities import WGIPriority, check_json
+from local_utilities import WGIPriority, check_json, stn
 
 ##
 ## remove LD_LIBRARY_PATH to avoid a configuration issue with the conda installation
@@ -68,13 +68,13 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
    opacity = 0.8
    m = mbox(plt, ax)
    ii = 0
-   table_records = [ ["Model","Minimum","5th pct","Median","95th pct","Maximum"],
-                     [ " :--",  " :--: ",  " :--: ", " :--: ", " :--: ", " :--: "   ] ]
+   table_records = [ ["Model","Minimum","5th pct","25th","Median","75th", "95th pct","Maximum"],
+                     [ " :--",  " :--: ",  " :--: ", " :--: "," :--: ", " :--: ", " :--: ", " :--: "   ] ]
 
    for k in ks:
      this = dd[k]["percentiles"]
      thissum = dd[k]["summary"]
-     table_records.append( [str(x) for x in [k,thissum[2],this[9],this[6],this[3],thissum[1] ]] )
+     table_records.append( [stn(x) for x in [k,thissum[2],this[9],this[7],this[6],this[5],this[3],thissum[1] ]] )
 
      if type( this ) == type( [] ):
        rec = this[:]
