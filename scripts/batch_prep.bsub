@@ -5,15 +5,14 @@
 #BSUB -W 8:00
 ####BSUB -J R_job[1051-1100]
 
-
-
 source activate myenv38
 
 mkdir -p inputs/byvar inputs/lsout
 
-for tab in Oyr Omon AERmon Amon CFmon LImon SImon Emon EmonZ ImonGre AERmonZ ImonAnt day Oday CFday Eday EdayZ 3hr E3hr CF3hr 6hrPlev Ofx fx
+##for tab in Oyr Omon AERmon Amon CFmon LImon SImon Emon EmonZ ImonGre AERmonZ ImonAnt day Oday CFday Eday EdayZ 3hr E3hr CF3hr 6hrPlev Ofx fx
+for tab in Lmon
   do
-    ls -1l /badc/cmip6/data/CMIP6/CMIP/*/*/historical/*/${tab}/*/*/latest > inputs/lsout/files_x1_${tab}.txt
+    ls -1l /badc/cmip6/data/CMIP6/CMIP/*/*/historical/*/${tab}/*/*/latest > inputs/historical/lsout/files_x1_${tab}.txt
   done
 
 python parse_to_byvar.py

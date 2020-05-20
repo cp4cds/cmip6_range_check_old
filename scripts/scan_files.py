@@ -1,10 +1,12 @@
-import netCDF4, glob, numpy, shelve, os, traceback, sys, random, time
+import netCDF4, numpy
+import glob, shelve, os, traceback, sys, random, time
 import collections, traceback
 from exceptions_lib import *
 
 __version__ = "0.1.03"
 
 ##from config import *
+
 
 class ScanFile(object):
   def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True):
@@ -48,6 +50,7 @@ class ScanFile(object):
     vm = None
     maskrange = None
 
+    
     tech_info = {"file":(tid,fname),
              "variable":(vn,units,v.dimensions, shp1),
                  "fill":(hasfv, fill_value),
@@ -270,7 +273,7 @@ class ExecuteByVar(object):
     self.shelve_dir_template = "sh_ranges/%s/%s"
     self.log = log
 
-  def run(self,inputFile,shelve_tag,max_files=0):
+  def run(self,inputFile,shelve_tag,max_files=0,overwrite=False):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
     *inputFile* should contain a list of ESGF "latest" directories for a single data variable.
@@ -300,36 +303,38 @@ class ExecuteByVar(object):
       if not os.path.isdir (shelve_dir):
         os.makedirs( shelve_dir )
       shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
-      sh = shelve.open( shelve_file )
-      files = glob.glob( "%s/*.nc" % sss )
-      sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
-      print ( sss, len(files) )
-      try:
-        for data_file in files:
-          if self.log != None:
-             self.log.info( 'STARTING %s ' % data_file )
-          else:
-             print ( 'STARTING ',data_file )
+      if overwrite or not os.path.isfile( "%s.dat" % shelve_file ):
+        sh = shelve.open( shelve_file )
+        files = glob.glob( "%s/*.nc" % sss )
+        sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
+        print ( sss, len(files) )
+        try:
+          for data_file in files:
+            if self.log != None:
+               self.log.info( 'STARTING %s ' % data_file )
+            else:
+               print ( 'STARTING ',data_file )
 
-          try:
-            s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000,with_time=with_time)
-          except:
-            raise WorkflowException( "wfx.001.0001: Failed to scan file", file=data_file, script="main.py")
-          nf += 1
-          if max_files > 0 and nf+1 > max_files:
-            sh.close()
-            return
+            try:
+              s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000,with_time=with_time)
+            except:
+              raise WorkflowException( "wfx.001.0001: Failed to scan file", file=data_file, script="main.py")
+            nf += 1
+            if max_files > 0 and nf+1 > max_files:
+              sh.close()
+              return
 
 ##
 ## deal with any workflow exceptions ...
-      except WorkflowException as e:
-         trace = traceback.format_exc()
-         sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
-         if self.log != None:
-           self.log.error( "WorkflowException: %s {%s}\n%s" % (e.msg,e.kwargs,trace) )
-         print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
-         print( trace )
-      sh.close()
+        except WorkflowException as e:
+          trace = traceback.format_exc()
+          sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
+          if self.log != None:
+            self.log.error( "WorkflowException: %s {%s}\n%s" % (e.msg,e.kwargs,trace) )
+          print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
+          print( trace )
+        sh.close()
+
 
 def find_mask(data_file):
   ##orog_fx_GISS-E2-1-G_piControl_r1i1p5f1_gn.nc
@@ -343,8 +348,6 @@ def find_mask(data_file):
       return None
     return ml[0]
   return None
-     
-
 
 if __name__ == "__main__":
   import sys
@@ -385,6 +388,7 @@ if __name__ == "__main__":
         mask = find_mask( data_file )
         print ( mask )
         sys.exit(0)
+        shelve_file, data_file = sys.argv[1:]
         sh = shelve.open( shelve_file )
         sh["__info__"] = {"title":"Scanning single data file: %s" % data_file, "source":"cmip6_range_check.main.ScanFile", "time":time.ctime(), "script_version":__version__}
         vn = data_file.split( "_" )[0].split('/')[-1]

@@ -1,10 +1,9 @@
 import collections, os, glob
 
-
 ## see batch_prep.bsub
 
 def p2var():
-    fl = glob.glob( "inputs/lsout/files_x1*.txt"  )
+    fl = glob.glob( "inputs/historical/lsout/files_x1*.txt"  )
     cc = collections.defaultdict( set )
     for f in fl:
       ii = open( f ).readlines()
@@ -13,7 +12,7 @@ def p2var():
         tab, var = parts[ 10:12 ]
         cc[ (tab,var) ].add( l.strip() )
     for k in cc.keys():
-      oo = open( "inputs/byvar/x1_%s_%s_latest.txt" % k, "w" )
+      oo = open( "inputs/historical/byvar/x1_%s_%s_latest.txt" % k, "w" )
       for l in sorted( list( cc[k] ) ):
         oo.write( l + "\n" )
       oo.close()
