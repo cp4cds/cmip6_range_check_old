@@ -1,9 +1,18 @@
 import os, glob
 from local_utilities import WGIPriority, check_json, stn
+'''
+ -p, --plot [optional flag]: plot range values in a json file
+'''
 
 ##
 ## remove LD_LIBRARY_PATH to avoid a configuration issue with the conda installation
 ##
+
+class RecordException(Exception):
+  def __init__(self,file,key,**kwargs):
+    self.file = file
+    self.key = key
+    self.kwargs = kwargs
 
 import sys
 if "--RESTART" in sys.argv:
@@ -74,6 +83,22 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
    for k in ks:
      this = dd[k]["percentiles"]
      thissum = dd[k]["summary"]
+
+     isDict = type(this) == type( {} )
+     if isDict:
+       this = this["0"]
+
+     isDict = type(thissum) == type( {} )
+     if isDict:
+       thissum = thissum["0"]
+
+     isList = type(this) in [type([]), type(())] and len(this) == 13
+     if not ( isList or isDict ):
+       raise RecordException("not known",k,this=this)
+
+     if not ( type(thissum) in [type([]), type(())] and len(thissum) == 5 ):
+       raise RecordException("not known",k,thissum=thissum)
+
      table_records.append( [stn(x) for x in [k,thissum[2],this[9],this[7],this[6],this[5],this[3],thissum[1] ]] )
 
      if type( this ) == type( [] ):
@@ -162,23 +187,58 @@ def plot_json(table,ipath):
 def plot_files(table):
     fl = glob.glob( "json_ranges/%s/*.json" % table )
     for f in fl:
-      plot_json( table, f )
+      try:
+        plot_json( table, f )
+      except RecordException as e:
+        print ("====== ERROR WHILE PROCESSING %s\n====================================\n" % f )
+        print ("key: %s, kwargs: %s" % (e.key,e.kwargs) )
+        raise
+      except:
+        print ("====== ERROR WHILE PROCESSING %s\n====================================\n" % f )
+        raise
 
 if __name__ == "__main__":
-  import sys
+  __version__ = "0.0.1"
+  import sys, argparse
   if len(sys.argv) == 1:
     example()
-  else:
-    mode = sys.argv[1]
-    print (sys.argv, mode)
-    if mode in ["-p","-c"]:
+    sys.exit(1)
+  parser = argparse.ArgumentParser()
+  parser.add_argument( '-p','--plot', dest='mode', action='append_const', const='plot', help='plot range values in a json file' )
+  parser.add_argument( '-px','--plot_dir', dest='mode', action='append_const', const='plot_dir', help='plot for all matching files in a directory' )
+  parser.add_argument( '-c','--check', dest='mode', action='append_const', const='check', help='check range values' )
+  parser.add_argument( '-v', '--version', action='version', version=__version__)
+  parser.add_argument( 'table', type=str, help='MIP table name')
+  parser.add_argument( 'file', type=str, help='name of file or directory, required for options -p or -c', nargs='?' )
+  ##parser.add_argument( 'trailing', metavar='word', type=str, nargs='+',
+                     ##help="[table] and name of file or directory" )
+##
+## this does not fit well with the structure below ... in which positional argument options vary according to mode
+##
+## best to move -px ....?
+##
+## this will give this.mode as a list ....
+##   -- makes for simple parsing.
+##
+## run( file, plot=None, 
+## run_parsed( this )
+  this = parser.parse_args( sys.argv[1:] )
+  if len(this.mode) != 1:
+    print (" At most one mode must be specified from %s" % " ".join( ['-p','-px','-c'] ) )
+    sys.exit(0)
+  mode = this.mode[0]
+  if mode in ['plot','check'] and this.table == None:
+    print ("Positional argument table must be given when mode if plot or check" )
+    sys.exit(0)
+    
+  print (sys.argv, mode)
+  if mode in ["plot","check"]:
       import json
       table, file = sys.argv[2:]
-      if mode == "-p":
-        plot_json( table, file )
+      if mode == "plot":
+        plot_json( this.table, this.file )
       else:
-        check_json( table, file )
-    elif mode == "-px":
+        check_json( this.table, this.file )
+  elif mode == "plot_dir":
       import json
-      table = sys.argv[2]
-      plot_files( table )
+      plot_files( this.table )

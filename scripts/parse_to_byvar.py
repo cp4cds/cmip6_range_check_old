@@ -1,5 +1,8 @@
 import collections, os, glob
 
+
+## see batch_prep.bsub
+
 def p2var():
     fl = glob.glob( "inputs/lsout/files_x1*.txt"  )
     cc = collections.defaultdict( set )

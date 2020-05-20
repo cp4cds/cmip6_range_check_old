@@ -6,7 +6,6 @@ __version__ = "0.1.03"
 
 ##from config import *
 
-
 class ScanFile(object):
   def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True):
     if maskAll:
@@ -49,7 +48,6 @@ class ScanFile(object):
     vm = None
     maskrange = None
 
-    
     tech_info = {"file":(tid,fname),
              "variable":(vn,units,v.dimensions, shp1),
                  "fill":(hasfv, fill_value),
