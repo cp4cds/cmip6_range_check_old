@@ -331,6 +331,21 @@ class ExecuteByVar(object):
          print( trace )
       sh.close()
 
+def find_mask(data_file):
+  ##orog_fx_GISS-E2-1-G_piControl_r1i1p5f1_gn.nc
+  fn = data_file.rpartition("/")[-1]
+  var, table, model, expt, variant, grid = fn.rpartition( "." )[0].split("_")[:6]
+  if var == "gpp":
+    mask_template = "sftlf_fx_%s_*_*_%s.nc" % (model,grid)
+    ml = glob.glob( "data_files/%s" % mask_template )
+    if len(ml) == 0:
+      print ("WARNING: no mask found for gpp, %s, %s" % (model, grid) )
+      return None
+    return ml[0]
+  return None
+     
+
+
 if __name__ == "__main__":
   import sys
   mode = 'all'
@@ -367,6 +382,9 @@ if __name__ == "__main__":
         oo.close()
       else:
         shelve_file, data_file = sys.argv[1:]
+        mask = find_mask( data_file )
+        print ( mask )
+        sys.exit(0)
         sh = shelve.open( shelve_file )
         sh["__info__"] = {"title":"Scanning single data file: %s" % data_file, "source":"cmip6_range_check.main.ScanFile", "time":time.ctime(), "script_version":__version__}
         vn = data_file.split( "_" )[0].split('/')[-1]
