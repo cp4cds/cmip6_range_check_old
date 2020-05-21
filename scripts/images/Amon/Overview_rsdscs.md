@@ -1,0 +1,22 @@
+Model | Minimum | 5th pct | 25th | Median | 75th | 95th pct | Maximum
+ :-- |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--: 
+BCC_BCC-CSM2-MR_historical |     7.8 |  0.0110 |   111.4 |   263.3 |   312.0 |   337.9 |     7.8
+BCC_BCC-ESM1_historical |     9.5 |  0.0629 |   115.1 |   262.4 |   312.2 |   337.0 |     9.5
+CCCma_CanESM5_historical |    10.0 |  0.0788 |   115.6 |   266.4 |   315.4 |   340.2 |    10.0
+CNRM-CERFACS_CNRM-CM6-1_historical |    12.8 |  0.0149 |   117.1 |   269.0 |   323.5 |   343.6 |    12.8
+CNRM-CERFACS_CNRM-ESM2-1_historical |    12.7 |  0.0149 |   116.5 |   269.1 |   321.7 |   343.2 |    12.7
+CSIRO-ARCCSS_ACCESS-CM2_historical |    11.0 |  8.99e-03 |   111.0 |   261.9 |   311.4 |   337.2 |    11.0
+CSIRO_ACCESS-ESM1-5_historical |    12.0 |  3.84e-04 |   111.6 |   264.9 |   316.3 |   341.0 |    12.0
+IPSL_IPSL-CM6A-LR_historical |    12.3 |  3.11e-03 |   109.4 |   267.1 |   317.3 |   341.6 |    12.3
+MIROC_MIROC6_historical |     9.6 |  8.44e-03 |   114.4 |   265.3 |   320.2 |   344.2 |     9.6
+MOHC_HadGEM3-GC31-LL_historical |    10.0 |  7.13e-03 |   111.7 |   263.3 |   314.2 |   339.2 |    10.5
+MOHC_HadGEM3-GC31-MM_historical |     9.4 |  3.10e-03 |   111.5 |   262.8 |   314.3 |   339.2 |    10.3
+MOHC_UKESM1-0-LL_historical |    10.3 |  6.89e-03 |   111.3 |   264.0 |   314.3 |   339.4 |    10.4
+MRI_MRI-ESM2-0_historical |     9.6 |  7.51e-03 |   112.9 |   263.0 |   312.8 |   338.4 |     9.6
+NASA-GISS_GISS-E2-1-G_historical |     8.2 | 0.0 |   107.4 |   261.2 |   310.9 |   335.5 |     8.4
+NASA-GISS_GISS-E2-1-H_historical |     8.0 | 0.0 |   107.5 |   260.6 |   309.5 |   335.1 |     8.5
+NCAR_CESM2-WACCM_historical |     8.1 | 0.0 |   111.1 |   263.6 |   312.9 |   338.7 |     8.1
+NCAR_CESM2_historical |     7.9 | 0.0 |   110.6 |   263.3 |   312.6 |   338.4 |     8.1
+NIMS-KMA_UKESM1-0-LL_historical |    10.2 |  6.97e-03 |   111.6 |   262.6 |   314.7 |   339.5 |    10.3
+NOAA-GFDL_GFDL-CM4_historical |     8.6 |  9.35e-03 |   111.0 |   262.9 |   313.2 |   338.0 |     9.4
+SNU_SAM0-UNICON_historical |     7.8 | 0.0 |   113.4 |   264.9 |   316.9 |   340.1 |     8.3

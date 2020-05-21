@@ -1,0 +1,29 @@
+Model | Minimum | 5th pct | 25th | Median | 75th | 95th pct | Maximum
+ :-- |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--: 
+AWI_AWI-CM-1-1-MR_historical |   234.9 |   241.6 |   273.4 |   287.7 |   299.7 |   306.5 |   245.5
+BCC_BCC-CSM2-MR_historical |   242.5 |   236.4 |   268.1 |   283.7 |   298.8 |   303.9 |   242.5
+BCC_BCC-ESM1_historical |   242.1 |   235.2 |   266.8 |   284.2 |   299.0 |   303.5 |   242.1
+CAS_FGOALS-g3_historical |   229.2 |   238.3 |   271.6 |   286.8 |   298.4 |   304.5 |   233.1
+CCCma_CanESM5_historical |   222.4 |   234.6 |   266.2 |   283.7 |   297.9 |   303.2 |   222.4
+CNRM-CERFACS_CNRM-CM6-1_historical |   237.6 |   230.8 |   266.9 |   283.6 |   296.9 |   301.6 |   237.6
+CNRM-CERFACS_CNRM-ESM2-1_historical |   239.3 |   232.0 |   268.4 |   284.3 |   297.4 |   302.3 |   239.3
+CSIRO-ARCCSS_ACCESS-CM2_historical |   240.5 |   231.9 |   267.2 |   283.5 |   297.5 |   302.9 |   240.5
+CSIRO_ACCESS-ESM1-5_historical |   241.5 |   234.8 |   267.6 |   284.7 |   297.7 |   303.2 |   241.5
+HAMMOZ-Consortium_MPI-ESM-1-2-HAM_historical |   235.0 |   234.2 |   268.3 |   283.8 |   297.1 |   301.8 |   237.4
+INM_INM-CM4-8_historical |   234.3 |   230.3 |   268.6 |   284.3 |   297.2 |   301.9 |   236.1
+INM_INM-CM5-0_historical |   236.9 |   230.1 |   268.6 |   283.9 |   297.0 |   301.8 |   237.0
+IPSL_IPSL-CM6A-LR_historical |   238.0 |   228.7 |   267.3 |   282.8 |   296.6 |   300.8 |   238.0
+MIROC_MIROC6_historical |   244.8 |   237.7 |   270.4 |   285.5 |   298.2 |   306.3 |   244.8
+MOHC_HadGEM3-GC31-LL_historical |   238.9 |   230.6 |   266.8 |   283.8 |   297.4 |   302.8 |   240.4
+MOHC_HadGEM3-GC31-MM_historical |   237.1 |   233.8 |   267.7 |   284.1 |   297.6 |   303.0 |   239.9
+MOHC_UKESM1-0-LL_historical |   237.9 |   230.3 |   265.6 |   283.5 |   297.3 |   302.9 |   238.1
+MPI-M_MPI-ESM1-2-HR_historical |   233.7 |   232.2 |   267.7 |   283.5 |   298.0 |   302.7 |   237.7
+MPI-M_MPI-ESM1-2-LR_historical |   234.5 |   232.9 |   268.2 |   283.3 |   297.3 |   301.9 |   236.6
+MRI_MRI-ESM2-0_historical |   242.7 |   230.8 |   267.3 |   283.4 |   297.7 |   302.9 |   242.7
+NASA-GISS_GISS-E2-1-G-CC_historical |   235.1 |   230.8 |   265.3 |   283.6 |   298.1 |   303.4 |   236.8
+NASA-GISS_GISS-E2-1-G_historical |   234.7 |   230.8 |   265.4 |   283.6 |   298.2 |   303.5 |   238.0
+NASA-GISS_GISS-E2-1-H_historical |   237.1 |   232.8 |   265.9 |   284.4 |   298.1 |   303.7 |   237.4
+NIMS-KMA_UKESM1-0-LL_historical |   232.1 |   230.1 |   265.4 |   283.6 |   297.2 |   302.7 |   236.3
+NOAA-GFDL_GFDL-CM4_historical |   237.6 |   230.7 |   266.1 |   283.0 |   296.3 |   301.3 |   238.6
+NUIST_NESM3_historical |   233.9 |   230.6 |   265.5 |   282.2 |   296.8 |   300.9 |   233.9
+SNU_SAM0-UNICON_historical |   231.7 |   226.6 |   263.5 |   283.9 |   297.2 |   301.6 |   237.1
