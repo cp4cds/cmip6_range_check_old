@@ -34,6 +34,7 @@ class ScanFile(object):
 
     units = v.units
     tid = nc.tracking_id
+    contact = nc.contact
     hasfv =  '_FillValue' in v.ncattrs()
     hardLowerBnd = None
     specFnd = False
@@ -50,8 +51,7 @@ class ScanFile(object):
     vm = None
     maskrange = None
 
-    
-    tech_info = {"file":(tid,fname),
+    tech_info = {"file":(tid,fname,contact),
              "variable":(vn,units,v.dimensions, shp1),
                  "fill":(hasfv, fill_value),
               "masking":(maskout, maskout, maskok,maskrange,maskerr,self.maskAll)  }
