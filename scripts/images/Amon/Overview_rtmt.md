@@ -1,0 +1,34 @@
+Model | Minimum | 5th pct | 25th | Median | 75th | 95th pct | Maximum
+ :-- |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--: 
+AS-RCEC_TaiESM1_historical |  -150.3 |  -170.2 |  -114.3 |   -29.5 |    55.9 |   103.5 |  -150.3
+BCC_BCC-CSM2-MR_historical |  -150.9 |  -167.1 |  -115.6 |   -28.4 |    53.8 |   104.9 |  -150.9
+BCC_BCC-ESM1_historical |  -148.8 |  -162.9 |  -113.4 |   -25.7 |    53.9 |   100.5 |  -148.8
+CAS_FGOALS-g3_historical |  -147.2 |  -163.2 |  -102.4 |   -10.9 |    60.6 |    99.8 |  -143.1
+CCCma_CanESM5_historical |  -145.9 |  -166.8 |  -115.1 |   -30.5 |    58.5 |   104.0 |  -145.9
+CSIRO-ARCCSS_ACCESS-CM2_historical |  -148.0 |  -167.3 |  -113.4 |   -29.9 |    57.0 |   100.1 |  -148.0
+CSIRO_ACCESS-ESM1-5_historical |  -149.7 |  -168.4 |  -114.8 |   -32.4 |    54.3 |   101.7 |  -149.7
+E3SM-Project_E3SM-1-0_historical |  -162.5 |  -171.7 |  -118.2 |   -31.4 |    58.3 |   104.9 |  -155.9
+E3SM-Project_E3SM-1-1-ECA_historical |  -162.8 |  -171.1 |  -117.6 |   -32.4 |    58.0 |   105.1 | 0.0
+E3SM-Project_E3SM-1-1_historical |  -164.1 |  -171.5 |  -118.3 |   -32.4 |    57.2 |   105.6 |  -154.6
+INM_INM-CM4-8_historical |  -150.4 |  -164.1 |  -109.8 |   -20.4 |    54.4 |    96.3 |  -148.7
+INM_INM-CM5-0_historical |  -153.0 |  -167.9 |  -110.9 |   -21.2 |    55.5 |    98.1 |  -152.6
+IPSL_IPSL-CM6A-LR_historical |  -159.0 |  -175.2 |  -117.0 |   -33.1 |    60.3 |   103.5 |  -159.0
+MIROC_MIROC6_historical |  -152.6 |  -169.0 |  -111.9 |   -20.4 |    58.6 |    96.6 |  -151.9
+MOHC_HadGEM3-GC31-LL_historical |  -150.8 |  -166.9 |  -114.3 |   -30.1 |    57.2 |   101.0 |  -148.5
+MOHC_HadGEM3-GC31-MM_historical |  -159.8 |  -170.0 |  -115.5 |   -28.7 |    58.9 |   102.6 |  -153.3
+MOHC_UKESM1-0-LL_historical |  -148.2 |  -165.2 |  -114.5 |   -31.7 |    56.6 |   102.3 |  -147.7
+NASA-GISS_GISS-E2-1-G-CC_historical |  -165.6 |  -172.6 |  -118.5 |   -28.9 |    57.7 |   100.7 |  -163.4
+NASA-GISS_GISS-E2-1-G_historical |  -164.6 |  -172.8 |  -118.8 |   -28.7 |    57.6 |   100.7 |  -162.2
+NASA-GISS_GISS-E2-1-H_historical |  -168.5 |  -174.8 |  -120.8 |   -29.5 |    58.8 |   100.7 |  -164.6
+NCAR_CESM2-FV2_historical |  -159.2 |  -168.5 |  -114.8 |   -34.2 |    53.2 |   110.6 |  -149.1
+NCAR_CESM2-WACCM-FV2_historical |  -161.9 |  -170.4 |  -115.8 |   -33.9 |    53.8 |   110.7 |  -153.4
+NCAR_CESM2-WACCM_historical |  -154.4 |  -170.0 |  -117.3 |   -33.9 |    54.1 |   112.5 |  -154.4
+NCAR_CESM2_historical |  -156.7 |  -168.7 |  -116.2 |   -33.5 |    53.6 |   111.2 |  -152.0
+NCC_NorCPM1_historical |  -151.4 |  -161.9 |  -111.8 |   -31.6 |    54.4 |   100.5 |  -143.8
+NCC_NorESM2-LM_historical |  -160.7 |  -169.2 |  -115.0 |   -34.9 |    52.5 |   108.6 |  -151.8
+NCC_NorESM2-MM_historical |  -161.9 |  -169.0 |  -116.0 |   -33.0 |    52.5 |   109.1 |  -153.3
+NIMS-KMA_UKESM1-0-LL_historical |  -149.2 |  -165.2 |  -114.5 |   -31.5 |    56.4 |   102.7 |  -148.1
+NOAA-GFDL_GFDL-CM4_historical |  -156.4 |  -169.9 |  -116.3 |   -31.2 |    56.9 |   106.2 |  -155.5
+NOAA-GFDL_GFDL-ESM4_historical |  -158.2 |  -173.2 |  -118.5 |   -30.0 |    57.3 |   105.7 |  -158.0
+SNU_SAM0-UNICON_historical |  -154.8 |  -166.5 |  -113.0 |   -31.1 |    55.0 |   104.1 |  -148.5
+UA_MCM-UA-1-0_historical |  -153.0 |  -166.8 |  -119.8 |   -27.6 |    60.7 |   109.6 |  -153.0
