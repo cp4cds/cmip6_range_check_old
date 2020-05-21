@@ -9,7 +9,7 @@ __version__ = "0.1.04"
 
 
 class ScanFile(object):
-  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True):
+  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None):
     if maskAll:
       checkSpecial=False
     self.version = __version__
@@ -19,6 +19,7 @@ class ScanFile(object):
     self.sh = sh
     self.checkSpecial = checkSpecial
     self.maskAll = maskAll
+    self.log = log
     self.maxnt = maxnt
     self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
     self.sh["__tech__"] = {  "percentiles":self.percentiles,
@@ -36,7 +37,11 @@ class ScanFile(object):
 
     units = v.units
     tid = nc.tracking_id
-    contact = nc.contact
+    if "contact" in nc.ncattrs():
+      contact = nc.contact
+    else:
+      contact = None
+
     hasfv =  '_FillValue' in v.ncattrs()
     hardLowerBnd = None
     specFnd = False
@@ -124,6 +129,8 @@ class ScanFile(object):
     if len( v.shape ) == 3 or (not self.with_time and len(v.shape) == 2):
       tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
       med,mx,mn,mamx,mamn,fvcount = tt
+      if self.log != None:
+        self.log.info( "File summary: %s" % list(tt) )
 
       self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
 
@@ -217,7 +224,7 @@ class ScanFile(object):
     mamn = numpy.min( am )
     med = numpy.median( meds )
     mx = max( mxs )
-    mn = max( mns )
+    mn = min( mns )
     return  (med,mx,mn,mamx,mamn,fvcount), am, ap
 
 
@@ -318,7 +325,7 @@ class ExecuteByVar(object):
                print ( 'STARTING ',data_file )
 
             try:
-              s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000,with_time=with_time)
+              s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000,with_time=with_time,log=self.log)
             except:
               raise WorkflowException( "wfx.001.0001: Failed to scan file", file=data_file, script="main.py")
             nf += 1

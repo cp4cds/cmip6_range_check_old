@@ -1,4 +1,4 @@
-import collections, json, glob, os
+import collections, json, glob, os, time
 from local_utilities import WGIPriority
 from utils import table_list, mode_by_table
 
@@ -30,7 +30,7 @@ def exec_bsub(table, comment):
   jobid = words[1][1:-1]
   print ("batch_scan_%s.txt run as job %s" % (table,jobid) )
   oo = open( "batch_scan_log.txt", "a" )
-  oo.write( "batch_scan_%s.txt run as job %s: %s\n" % (table,jobid,comment) )
+  oo.write( "%s: batch_scan_%s.txt run as job %s: %s\n" % (time.ctime(),table,jobid,comment) )
   oo.close()
   
 

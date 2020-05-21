@@ -248,9 +248,11 @@ class Review(object):
       self.loadShelve(file)
       ofile = file + "_summary.json"
       ofile = ofile.replace('sh_ranges','json_ranges')
+
     odir = ofile.rpartition( '/' )[0]
     if not os.path.isdir( odir ):
-      os.mkdir( odir )
+      os.makedirs( odir )
+
     tech = {"percentiles":self.input_tech["percentiles"], "summary":["median","max","min","mean absolute max","mean absolute min"]}
   
     if not self.withLevels:
@@ -263,7 +265,7 @@ class Review(object):
       summary[1] = numpy.max( self.work02[1,:] )
       summary[2] = numpy.min( self.work02[2,:] )
       summary[3] = numpy.max( self.work02[3,:] )
-      summary[4] = numpy.max( self.work02[4,:] )
+      summary[4] = numpy.min( self.work02[4,:] )
       tech["with_levels"] = False
     else:
       tech["with_levels"] = True
@@ -285,7 +287,7 @@ class Review(object):
         summy[1] = numpy.max( self.work02[1,:,l] )
         summy[2] = numpy.min( self.work02[2,:,l] )
         summy[3] = numpy.max( self.work02[3,:,l] )
-        summy[4] = numpy.max( self.work02[4,:,l] )
+        summy[4] = numpy.min( self.work02[4,:,l] )
         summary[lev] = summy
         percentiles[lev] = perc
 
