@@ -12,7 +12,7 @@ class ScanFile(object):
   def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True):
     if maskAll:
       checkSpecial=False
-    self.version = "00.01.02"
+    self.version = __version__
     self.version_message = "Extended percentiles, adding processing and grid info"
     self.mode = mode
     self.with_time = with_time
@@ -21,7 +21,9 @@ class ScanFile(object):
     self.maskAll = maskAll
     self.maxnt = maxnt
     self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
-    self.sh["__tech__"] = {  "percentiles":self.percentiles }
+    self.sh["__tech__"] = {  "percentiles":self.percentiles,
+                             "time":time.ctime(),
+                             "source":{"class":"scan_files.ScanFIle", "version":self.version} }
 
     self.shp1 = self.scan1( thisfile, vn )
 
