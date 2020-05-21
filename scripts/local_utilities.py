@@ -88,7 +88,7 @@ class CheckJson(object):
       self.new_modified.add( varid )
      
    
-  def __call__(self, table,ipath=None,var=None):
+  def __call__(self, table,ipath=None,var=None,verbose=True):
     if ipath == None:
       assert var !=None, "check_json: either ipath or var must be set"
       ipath = "json_ranges/%s/%s_historical_consol-var.json" % (table,var)
@@ -99,24 +99,46 @@ class CheckJson(object):
     var = ifile.split("_")[0]
     wg1 =  WGIPriority()
     varid = "%s.%s" % (table,var)
-    print( "check_json",table, ipath, varid )
+    if verbose: print( "check_json",table, ipath, varid )
     ee = json.load( open( ipath, "r" ) )
     data = ee["data"]
     percentiles = ee["info"]["tech"]["percentiles"]
-    pmx = [max( [data[m]["percentiles"][j] for m in sorted( list( data.keys() ) )] ) for j in range(len(percentiles)) ]
-    pmn = [min( [data[m]["percentiles"][j] for m in sorted( list( data.keys() ) )] ) for j in range(len(percentiles)) ]
-    pctcomp = [pmx[i+1] < pmn[i] for i in range( len(percentiles) -1 )] 
-    print ( pctcomp )
-    print ("pmx", pmx)
-    print ("pmn", pmn)
-    clean = all( [pmn[i] > pmx[i+1] for i in range( len(percentiles) -1 )] )
-    if clean:
-         print ("COMPACT DISTRIBUTION")
+    assert len(percentiles) == 13,  "This code assumes 13 percentiles"
+    models = sorted( list( data.keys() ) )
+    p0 = data[models[0]]["percentiles"]
+    isDict = type(p0) == type( {} )
+    if isDict:
+      pmx = [max( [data[m]["percentiles"]["0"][j] for m in models] ) for j in range(len(percentiles)) ]
+      pmn = [min( [data[m]["percentiles"]["0"][j] for m in models] ) for j in range(len(percentiles)) ]
     else:
-       print ("overlapping distributions")
+      pmx = [max( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
+      pmn = [min( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
+    pctcomp = [pmx[i+1] < pmn[i] for i in range(4,8) ] 
+    if verbose:
+      print ( pctcomp, pmx[5:9], pmn[4:8] )
+      print ("pmx", pmx)
+      print ("pmn", pmn)
+    clean = all( pctcomp )
+    if clean:
+      distmsg = "COMPACT DISTRIBUTION"
+    else:
+      distmsg =  "overlapping distributions"
+    if verbose:
+      print (distmsg)
+    agg_this = dict()
+
+    for m in sorted( list( data.keys() ) ):
+        errs = []
+        if isDict:
+          this = data[m]["summary"]["0"]
+        else:
+          this = data[m]["summary"]
+        agg_this[m] = this
+
     if varid not in wg1.ranges and varid not in self.new["data"]:
-      print ( "No range information for %s" % varid )
-      return None
+      if verbose:
+        print ( "No range information for %s" % varid )
+      rangemsg = "No Range Set"
     else:
       if varid in self.new["data"]:
         ranges = self.get_range( varid )
@@ -124,8 +146,10 @@ class CheckJson(object):
         ranges = wg1.ranges[varid]
       rsum = dict()
       for m in sorted( list( data.keys() ) ):
-        this = data[m]["summary"]
-        range_error_max = this[1] > float(ranges.max.value)
+        errs = []
+        this = agg_this[m]
+        
+        range_error_max = this[0] > float(ranges.max.value)
         range_error_min = this[2] < float(ranges.min.value)
         try:
           range_error_ma_max = (ranges.ma_max != null_range_value) and this[3] > float(ranges.ma_max.value)
@@ -141,24 +165,37 @@ class CheckJson(object):
         if not any( [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] ):
            res = (True,"OK")
         else:
+          if verbose:
+            print( m, [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] )
           for k in range(4):
-            errs = []
             if [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min][k]:
               elab = ["Max","Min","MA Max","MA Min"][k]
-              targ = [float(ranges.max.value), float(ranges.min.value), float(ranges.ma_max.value), float(ranges.ma_min.value)][k]
+              ##targ = [float(ranges.max.value), float(ranges.min.value), float(ranges.ma_max.value), float(ranges.ma_min.value)][k]
+              targ = [ranges.max.value, ranges.min.value, ranges.ma_max.value, ranges.ma_min.value][k]
               msg = "%s: %s -- %s" % (elab, this[k+1], targ)
               errs.append( msg)
           res = (False,"; ".join( errs ))
               
-        print ("%s:: %s" % (m,res[1]) )
-        rsum[m] = res[0]
+        if verbose:
+          print ("%s:: %s/%s" % (m,res,errs) )
+        rsum[m] = res
 
-    bad = [k for k,v in rsum.items() if not v]
-    if len( bad) == 0:
-       print ("All models in range")
-       print (ranges)
-    else:
-       print( "WARNING: %s models (from %s) out of range" % (len(bad),len(rsum.keys())) )
+      bad = [k for k,v in rsum.items() if not v[0]]
+      if verbose:
+        for k in bad:
+           print ("ERROR: %s:: %s" % (k,rsum[k][1]) )
+        print ("Targets:", [ranges.max.value, ranges.min.value, ranges.ma_max.value, ranges.ma_min.value] )
+      if len( bad) == 0:
+         rangemsg = "All models in range"
+      else:
+         rangemsg = "Range errors: %s [of %s]" % (len(bad),len(rsum.keys()))
+    if verbose:
+        maxval = max( [x[1] for k,x in agg_this.items()] )
+        minval = min( [x[2] for k,x in agg_this.items()] )
+        ma_maxval = max( [x[3] for k,x in agg_this.items()] )
+        ma_minval = min( [x[4] for k,x in agg_this.items()] )
+        print ( "Actual: ",[maxval,minval,ma_maxval,ma_minval] )
+    print (var,distmsg,rangemsg)
 
 check_json = CheckJson()
 

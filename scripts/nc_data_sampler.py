@@ -208,7 +208,7 @@ class NcDataSampler(object):
     mamx = numpy.max( am )
     mamn = numpy.min( am )
     med = numpy.median( meds )
-    mx = max( mns )
+    mx = max( mxs )
     mn = max( mns )
     return  (med,mx,mn,mamx,mamn,fvcount), am, ap
 
