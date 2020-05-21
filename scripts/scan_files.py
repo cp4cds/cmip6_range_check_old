@@ -3,7 +3,7 @@ import glob, shelve, os, traceback, sys, random, time
 import collections, traceback
 from exceptions_lib import *
 
-__version__ = "0.1.03"
+__version__ = "0.1.04"
 
 ##from config import *
 
