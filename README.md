@@ -1,4 +1,4 @@
-# Checking the Range of Data Values in CMIP6 Model Output
+# CMKIP6 Data Range Checks
 
 Extract end evaluate information about range of data values in CMIP6 datasets.
 
