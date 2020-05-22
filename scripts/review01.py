@@ -297,7 +297,7 @@ class Review(object):
 
     self.this = {'percentiles':percentiles, "summary":summary, "file_summary":self.file_summary_brief}
     oo = open( ofile, 'w' )
-    self.info_out = {'title':self.info['title'], "tech":tech}
+    self.info["tech"] = tech
     json.dump( {'info':self.info_out, 'data':self.this}, oo, indent=4, sort_keys=True )
     oo.close()
 
