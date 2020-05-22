@@ -56,6 +56,38 @@ class CheckJson(object):
     self.new = json.load( open( "data/new_limits.json", "r" ) )
     self.new_modified = set()
 
+    ii = open( "data/new_limits.csv", "r", encoding = "ISO-8859-1" )
+    for l in ii.readlines()[1:]:
+      words = l.strip().split('\t')
+      print (words )
+      tab,var,directive = [x.strip() for x in words[:3]]
+      directive = directive.lower()
+      if directive != '':
+        id = "%s.%s" % (tab,var)
+        if directive[:5] == "valid":
+          this = self.new["data"].get( id, {"ranges":{}} )
+          if words[3] != '':
+            this["ranges"]["max"] = (float( words[3] ), words[6] )
+          if words[4] != '':
+            this["ranges"]["min"] = (float( words[4] ), words[6] )
+          self.new["data"][id] = this
+        elif directive[:4] == "mean":
+          this = self.new["data"].get( id, {"ranges":{}} )
+          if words[3] != '':
+            this["ranges"]["ma_max"] = (float( words[3] ), words[6] )
+          if words[4] != '':
+            this["ranges"]["ma_min"] = (float( words[4] ), words[6] )
+          self.new["data"][id] = this
+    ii.close()
+
+  def range_merge(self, a, b):
+    this = list( a )
+    
+    for k in range(4):
+      if this[k] == null_range_value and b[k] != null_range_value:
+        this[k] = b[k]
+    return NT_RangeSet( this[0], this[1], this[2], this[3] )
+
   def get_range(self,varid):
     xx = []
     this = self.new["data"][varid]["ranges"]
@@ -154,6 +186,8 @@ class CheckJson(object):
     else:
       if varid in self.new["data"]:
         ranges = self.get_range( varid )
+        if varid in wg1.ranges:
+          ranges = self.range_merge( ranges, wg1.ranges[varid] )
       else:
         ranges = wg1.ranges[varid]
       rsum = dict()
@@ -161,8 +195,8 @@ class CheckJson(object):
         errs = []
         this = agg_this[m]
         
-        range_error_max = this[1] > float(ranges.max.value)
-        range_error_min = this[2] < float(ranges.min.value)
+        range_error_max = (ranges.max != null_range_value) and this[1] > float(ranges.max.value)
+        range_error_min = (ranges.min != null_range_value) and this[2] < float(ranges.min.value)
         try:
           range_error_ma_max = (ranges.ma_max != null_range_value) and this[3] > float(ranges.ma_max.value)
         except:
@@ -201,12 +235,14 @@ class CheckJson(object):
          rangemsg = "All models in range"
       else:
          rangemsg = "Range errors: %s [of %s]" % (len(bad),len(rsum.keys()))
+
     if verbose:
         maxval = max( [x[1] for k,x in agg_this.items()] )
         minval = min( [x[2] for k,x in agg_this.items()] )
         ma_maxval = max( [x[3] for k,x in agg_this.items()] )
         ma_minval = min( [x[4] for k,x in agg_this.items()] )
         print ( "Actual: ",[maxval,minval,ma_maxval,ma_minval] )
+
     print (var,distmsg,rangemsg)
 
 check_json = CheckJson()
