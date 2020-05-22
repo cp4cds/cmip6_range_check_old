@@ -42,7 +42,8 @@ class ConsolidateVar(object):
         else:
           inst, model, experiment = fn.split( '_' )[1:4]
       else:
-          raise WorkflowException( "not programmed to handle drs record", class_name="ConsolidateVar", module="review01.py")
+          tab,var_xx,inst,model,experiment,grid,this_version = this["info"]["drs"]
+          assert var == var_xx
       ee['%s_%s_%s' % (inst,model,experiment)] = this['data']
 
     for k in ['summary','percentiles']:
@@ -298,7 +299,7 @@ class Review(object):
     self.this = {'percentiles':percentiles, "summary":summary, "file_summary":self.file_summary_brief}
     oo = open( ofile, 'w' )
     self.info["tech"] = tech
-    json.dump( {'info':self.info_out, 'data':self.this}, oo, indent=4, sort_keys=True )
+    json.dump( {'info':self.info, 'data':self.this}, oo, indent=4, sort_keys=True )
     oo.close()
 
 ## l0: ['ok','shape','median','mx','mn','mamx','mamn','nfv','hasfv','dt0','dt1','units','tid']
