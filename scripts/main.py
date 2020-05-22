@@ -60,11 +60,10 @@ if __name__ == "__main__":
       ebv.run(input_file,shelve_tag,max_files=0)
 
   elif opt == "--exptvar":
-    assert len(sys.argv) == 5
+    assert len(sys.argv) == 6
     log_global.info( "Starting ExecuteByVar %s" % sys.argv[1:] )
-    shelve_tag, input_file = sys.argv[3:]
+    mode, shelve_tag, input_file = sys.argv[3:]
     import scan_files 
-    mode = "sampledtenpercent"
     ebv = scan_files.ExecuteByVar(mode, log=log_workflow)
     ebv.run(input_file,shelve_tag,max_files=0)
 

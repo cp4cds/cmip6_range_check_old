@@ -290,10 +290,12 @@ class ExecuteByVar(object):
     ii = open( inputFile ).readlines()
     cc = collections.defaultdict( lambda: collections.defaultdict( lambda: collections.defaultdict(set) ) )
     for l in ii:
-      fpath = l.strip().split()[8]
+      words = l.strip().split()
+      fpath = words[8]
+      ds_version = words[-1]
       parts = fpath.strip().split("/")
       inst, source, expt, ense, tab, var, grid = parts[6:13]
-      cc[(inst,source)][ense][grid].add( fpath.strip() )
+      cc[(inst,source)][ense][grid].add( (fpath.strip(), ds_version) )
 
     with_time = tab not in ["Ofx", "fx"]
     nf = 0
@@ -302,10 +304,10 @@ class ExecuteByVar(object):
       k2 = sorted( list( this.keys() ) )[0]
       that = cc[k][k2]
       if "gn" in that.keys():
-        sss = that["gn"].pop()
+        this_path, this_version = that["gn"].pop()
       else:
         k3 = sorted( list( that.keys() ) )[0]
-        sss = that[k3].pop()
+        this_path, this_version = that[k3].pop()
       inst,source = k
       ense = k2
       shelve_dir = self.shelve_dir_template % (tab,var)
@@ -314,9 +316,9 @@ class ExecuteByVar(object):
       shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
       if overwrite or not os.path.isfile( "%s.dat" % shelve_file ):
         sh = shelve.open( shelve_file )
-        files = glob.glob( "%s/*.nc" % sss )
-        sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt]), "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
-        print ( sss, len(files) )
+        files = glob.glob( "%s/*.nc" % this_path )
+        sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt,this_version]), "drs":[tab,var,inst,source,expt,grid,this_version], "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
+        print ( this_path, len(files) )
         try:
           for data_file in files:
             if self.log != None:
