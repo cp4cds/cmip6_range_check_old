@@ -1,0 +1,22 @@
+Model | Minimum | 5th pct | 25th | Median | 75th | 95th pct | Maximum
+ :-- |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--: 
+AWI_AWI-CM-1-1-MR_historical |     2.2 |    44.3 |    73.8 |    80.9 |    89.6 |    95.9 |   106.3
+BCC_BCC-CSM2-MR_historical |     4.0 |    45.4 |    74.3 |    80.1 |    88.9 |    96.0 |    99.9
+BCC_BCC-ESM1_historical |     4.8 |    47.7 |    76.7 |    81.7 |    90.0 |    96.2 |   100.0
+CAMS_CAMS-CSM1-0_historical |    -2.1 |    53.0 |    77.0 |    82.0 |    89.1 |    95.6 |   100.0
+CCCma_CanESM5_historical |     1.7 |    46.9 |    77.0 |    83.1 |    88.9 |    94.7 |   100.0
+CNRM-CERFACS_CNRM-CM6-1_historical | 0.0 |    66.1 |    77.0 |    81.5 |    85.8 |    92.1 |   100.0
+CNRM-CERFACS_CNRM-ESM2-1_historical | 0.0 |    65.7 |    77.3 |    81.7 |    86.1 |    92.3 |   100.0
+IPSL_IPSL-CM6A-LR_historical |     5.5 |    66.8 |    76.2 |    81.8 |    88.9 |    96.9 |   113.4
+MIROC_MIROC6_historical |     2.1 |    61.7 |    71.2 |    76.8 |    84.8 |   102.2 |   183.8
+MOHC_HadGEM3-GC31-LL_historical |     1.5 |    63.6 |    73.2 |    77.6 |    84.9 |    98.1 |   170.3
+MOHC_HadGEM3-GC31-MM_historical |     1.8 |    63.7 |    73.2 |    77.6 |    84.8 |    97.8 |   166.7
+MOHC_UKESM1-0-LL_historical |     1.6 |    63.1 |    73.2 |    77.6 |    84.9 |    98.7 |   170.6
+MRI_MRI-ESM2-0_historical |     3.4 |    72.2 |    81.3 |    84.7 |    88.7 |    98.2 |   169.6
+NASA-GISS_GISS-E2-1-G_historical |     2.5 |    71.2 |    80.7 |    84.2 |    89.1 |   103.5 |   230.4
+NASA-GISS_GISS-E2-1-H_historical |     2.3 |    67.9 |    79.9 |    83.6 |    89.2 |   105.7 |   188.8
+NCAR_CESM2-WACCM_historical |     7.0 |    70.7 |    78.5 |    82.2 |    86.9 |   105.7 |   137.5
+NCAR_CESM2_historical |     6.6 |    70.6 |    78.4 |    82.1 |    86.4 |   102.7 |   137.1
+NIMS-KMA_UKESM1-0-LL_historical |  0.5273 |    63.0 |    73.2 |    77.6 |    84.9 |    98.8 |   175.1
+NOAA-GFDL_GFDL-CM4_historical |     4.7 |    66.4 |    75.9 |    79.8 |    84.7 |    96.1 |   102.9
+SNU_SAM0-UNICON_historical |     4.9 |    69.3 |    75.5 |    79.2 |    84.5 |   103.2 |   150.7

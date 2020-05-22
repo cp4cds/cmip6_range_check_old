@@ -1,6 +1,6 @@
 Model | Minimum | 5th pct | 25th | Median | 75th | 95th pct | Maximum
  :-- |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--:  |  :--: 
-AS-RCEC_TaiESM1_historical |  1.28e-04 |  6.36e-05 |  1.55e-03 |  4.92e-03 |  0.0118 |  0.0177 |  1.28e-04
+AS-RCEC_TaiESM1_historical |  1.28e-04 |  6.36e-05 |  1.55e-03 |  4.92e-03 |  0.0118 |  0.0177 |  0.0264
 AWI_AWI-CM-1-1-MR_historical |  8.94e-05 |  1.14e-04 |  1.91e-03 |  4.92e-03 |  0.0113 |  0.0161 |  2.55e-04
 BCC_BCC-CSM2-MR_historical |  2.08e-04 |  1.49e-04 |  1.95e-03 |  4.92e-03 |  0.0116 |  0.0173 |  3.10e-04
 BCC_BCC-ESM1_historical |  2.36e-04 |  1.25e-04 |  1.83e-03 |  5.26e-03 |  0.0123 |  0.0177 |  2.36e-04
