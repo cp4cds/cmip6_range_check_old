@@ -1,8 +1,17 @@
 import logging, time, os, collections, json, inspect
+from dreqPy import dreq
 
 NT_RangeValue = collections.namedtuple( "range_value", ["value","status"] )
 NT_RangeSet = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min"] )
 null_range_value = NT_RangeValue( None, "NONE" )
+
+class Dq(object):
+  def __init__(self):
+    self.dq = dreq.loadDreq()
+
+    self.CMORvar_by_id = dict()
+    for i in self.dq.coll["CMORvar"].items:
+      self.CMORvar_by_id["%s.%s" % (i.mipTable,i.label) ] = i
 
 def stn(x,nd=2):
   if type(x) in [type(''),type( u'')]:
@@ -22,11 +31,14 @@ def stn(x,nd=2):
 class WGIPriority(object):
   def __init__(self,ifile="AR6_priority_variables_02.csv" ):
     ii = open( ifile ).readlines()
+    dq = Dq()
     self.ee = dict()
+    self.title = dict()
     self.ranges = dict()
     for l in ii:
       rec = l.split( "\t" )
       id, units = rec[:2]
+      self.title[id] = dq.CMORvar_by_id[id].title
       vt = rec[2:10]
       if not all( [vt[i] == "-" for i in [1,3,5,7]]):
         xx = []
@@ -149,7 +161,7 @@ class CheckJson(object):
         errs = []
         this = agg_this[m]
         
-        range_error_max = this[0] > float(ranges.max.value)
+        range_error_max = this[1] > float(ranges.max.value)
         range_error_min = this[2] < float(ranges.min.value)
         try:
           range_error_ma_max = (ranges.ma_max != null_range_value) and this[3] > float(ranges.ma_max.value)

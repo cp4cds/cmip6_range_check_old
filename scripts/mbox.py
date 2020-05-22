@@ -63,7 +63,7 @@ class mbox(object):
     self.subp.plot( [xm,], [yy[i999],], marker='o', color='blue' )
     self.subp.plot( [xm,], [yy[i001],], marker='o', color='red' )
 
-def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ): 
+def boxplot( dd, var, title, boxLegend = True, units="1", image_dir="images" ): 
    fig, ax = plt.subplots()
    ax.set_xticklabels('')
    ax.set_yticklabels('')
@@ -126,7 +126,7 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
    if boxLegend:
      leg = plt.legend( (leg1,leg1,leg1,leg1), ('boxes: quartiles','first bar: 5%, 95%','2nd bar: 1%,99%', 'circles: 0.1%,99.9%'), fontsize = 'x-small')
      leg.get_frame().set_alpha(0.5)
-   plt.title('Ranges for %s historical CMIP6' % var )
+   plt.title('%s [%s] historical' % (title,var) )
    xt = ["%s %s" % tuple(x.split("_")[:2]) for x in ks]
    if len(ks) > 28:
      plt.xticks(index + bar_width, xt, rotation=40, ha='right', fontsize=8)
@@ -158,6 +158,7 @@ def boxplot( dd, var, boxLegend = True, units="1", image_dir="images" ):
      dpith=20
    plt.savefig( '%s/box_%s.png' % (image_dir,v1), dpi=150)
    plt.savefig( '%s/th_box_%s.png' % (image_dir,v1), dpi=dpith)
+   plt.close()
 
     
 def example():
@@ -181,14 +182,18 @@ def plot_json(table,ipath):
     var = ifile.split("_")[0]
     wg1 =  WGIPriority()
     units = wg1.ee["%s.%s" % (table,var)]
+    title = wg1.title["%s.%s" % (table,var)]
     print ( var, units )
-    boxplot( ee["data"], var, boxLegend = True, units=units, image_dir=image_dir )
+    boxplot( ee["data"], var, title, boxLegend = True, units=units, image_dir=image_dir )
 
-def plot_files(table):
+def all_files(table,mode="plot.x"):
     fl = glob.glob( "json_ranges/%s/*.json" % table )
-    for f in fl:
+    for f in sorted(fl):
       try:
-        plot_json( table, f )
+        if mode == "plot.x":
+          plot_json( table, f )
+        else:
+          check_json( table, f, verbose=False )
       except RecordException as e:
         print ("====== ERROR WHILE PROCESSING %s\n====================================\n" % f )
         print ("key: %s, kwargs: %s" % (e.key,e.kwargs) )
@@ -205,7 +210,8 @@ if __name__ == "__main__":
     sys.exit(1)
   parser = argparse.ArgumentParser()
   parser.add_argument( '-p','--plot', dest='mode', action='append_const', const='plot', help='plot range values in a json file' )
-  parser.add_argument( '-px','--plot_dir', dest='mode', action='append_const', const='plot_dir', help='plot for all matching files in a directory' )
+  parser.add_argument( '-px','--plot_dir', dest='mode', action='append_const', const='plot.x', help='plot for all matching files in a directory' )
+  parser.add_argument( '-cx','--check_dir', dest='mode', action='append_const', const='check.x', help='plot for all matching files in a directory' )
   parser.add_argument( '-c','--check', dest='mode', action='append_const', const='check', help='check range values' )
   parser.add_argument( '-v', '--version', action='version', version=__version__)
   parser.add_argument( 'table', type=str, help='MIP table name')
@@ -223,8 +229,8 @@ if __name__ == "__main__":
 ## run( file, plot=None, 
 ## run_parsed( this )
   this = parser.parse_args( sys.argv[1:] )
-  if len(this.mode) != 1:
-    print (" At most one mode must be specified from %s" % " ".join( ['-p','-px','-c'] ) )
+  if this.mode == None or len(this.mode) != 1:
+    print (" At most one mode must be specified from %s" % " ".join( ['-p','-px','-c','-cx'] ) )
     sys.exit(0)
   mode = this.mode[0]
   if mode in ['plot','check'] and this.table == None:
@@ -238,7 +244,7 @@ if __name__ == "__main__":
       if mode == "plot":
         plot_json( this.table, this.file )
       else:
-        check_json( this.table, this.file )
-  elif mode == "plot_dir":
+        check_json( this.table, this.file)
+  elif mode in ["plot.x","check.x"]:
       import json
-      plot_files( this.table )
+      all_files( this.table, mode=mode )
