@@ -1,5 +1,4 @@
 import logging, time, os, collections, json, inspect
-from dreqPy import dreq
 
 NT_RangeValue = collections.namedtuple( "range_value", ["value","status"] )
 NT_RangeSet = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min"] )
@@ -7,6 +6,7 @@ null_range_value = NT_RangeValue( None, "NONE" )
 
 class Dq(object):
   def __init__(self):
+    from dreqPy import dreq
     self.dq = dreq.loadDreq()
 
     self.CMORvar_by_id = dict()
@@ -31,14 +31,19 @@ def stn(x,nd=2):
 class WGIPriority(object):
   def __init__(self,ifile="AR6_priority_variables_02.csv" ):
     ii = open( ifile ).readlines()
-    dq = Dq()
+    try:
+      dq = Dq()
+    except:
+      dq = None
+
     self.ee = dict()
     self.title = dict()
     self.ranges = dict()
     for l in ii:
       rec = l.split( "\t" )
       id, units = rec[:2]
-      self.title[id] = dq.CMORvar_by_id[id].title
+      if dq != None:
+        self.title[id] = dq.CMORvar_by_id[id].title
       vt = rec[2:10]
       if not all( [vt[i] == "-" for i in [1,3,5,7]]):
         xx = []
