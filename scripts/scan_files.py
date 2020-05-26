@@ -28,7 +28,6 @@ class ScanFile(object):
 
     self.shp1 = self.scan1( thisfile, vn )
 
-
   def scan1(self,f, vn):
     fname = f.split( '/' )[-1]
     nc = netCDF4.Dataset( f )
@@ -282,6 +281,16 @@ class ExecuteByVar(object):
     self.shelve_dir_template = "sh_ranges/%s/%s"
     self.log = log
 
+  def _check_shelve( self, shelve_file ):
+    """Return true if shelve is complete and credible size"""
+
+    if all( [os.path.isfile( "%s.%s" % (shelve_file,x) ) for x in ["dat","bak","dir"] ] ):
+      s = os.stat( "%s.%s" % (shelve_file,'dat') )
+      if s[stat.ST_SIZE] > 10000:
+        return True
+    return False
+
+
   def run(self,inputFile,shelve_tag,max_files=0,overwrite=False):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
@@ -314,7 +323,7 @@ class ExecuteByVar(object):
       if not os.path.isdir (shelve_dir):
         os.makedirs( shelve_dir )
       shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
-      if overwrite or not os.path.isfile( "%s.dat" % shelve_file ):
+      if overwrite or not self._check_shelve( shelve_file ):
         sh = shelve.open( shelve_file )
         files = glob.glob( "%s/*.nc" % this_path )
         sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt,this_version]), "drs":[tab,var,inst,source,expt,ense,grid,this_version], "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
