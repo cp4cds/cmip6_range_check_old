@@ -64,25 +64,25 @@ class CheckJson(object):
     ii = open( "data/new_limits.csv", "r", encoding = "ISO-8859-1" )
     for l in ii.readlines()[1:]:
       words = l.strip().split('\t')
-      print (words )
-      tab,var,directive = [x.strip() for x in words[:3]]
-      directive = directive.lower()
-      if directive != '':
-        id = "%s.%s" % (tab,var)
-        if directive[:5] == "valid":
-          this = self.new["data"].get( id, {"ranges":{}} )
-          if words[3] != '':
-            this["ranges"]["max"] = (float( words[3] ), words[6] )
-          if words[4] != '':
-            this["ranges"]["min"] = (float( words[4] ), words[6] )
-          self.new["data"][id] = this
-        elif directive[:4] == "mean":
-          this = self.new["data"].get( id, {"ranges":{}} )
-          if words[3] != '':
-            this["ranges"]["ma_max"] = (float( words[3] ), words[6] )
-          if words[4] != '':
-            this["ranges"]["ma_min"] = (float( words[4] ), words[6] )
-          self.new["data"][id] = this
+      if len(words) >3:
+        tab,var,directive = [x.strip() for x in words[:3]]
+        directive = directive.lower()
+        if directive != '':
+          id = "%s.%s" % (tab,var)
+          if directive[:5] == "valid":
+            this = self.new["data"].get( id, {"ranges":{}} )
+            if words[3] != '':
+              this["ranges"]["max"] = (float( words[3] ), words[6] )
+            if words[4] != '':
+              this["ranges"]["min"] = (float( words[4] ), words[6] )
+            self.new["data"][id] = this
+          elif directive[:4] == "mean":
+            this = self.new["data"].get( id, {"ranges":{}} )
+            if words[3] != '':
+              this["ranges"]["ma_max"] = (float( words[3] ), words[6] )
+            if words[4] != '':
+              this["ranges"]["ma_min"] = (float( words[4] ), words[6] )
+            self.new["data"][id] = this
     ii.close()
 
   def range_merge(self, a, b):

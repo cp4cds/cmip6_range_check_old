@@ -1,5 +1,5 @@
 import netCDF4, numpy
-import glob, shelve, os, traceback, sys, random, time, gc
+import glob, shelve, os, traceback, sys, random, time, gc, stat
 import collections, traceback
 from exceptions_lib import *
 import utils_test
@@ -148,7 +148,7 @@ class ScanFile(object):
 
     elif len( v.shape ) == 4:
       for l in range( v.shape[1]):
-        tt, am, ap = self.processFeature( v[:,l,:,:], vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd, isamp=isamp)
+        tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd, isamp=isamp, ix2=l)
         med,mx,mn,mamx,mamn,fvcount = tt
 
         self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
@@ -163,7 +163,7 @@ class ScanFile(object):
       ncm.close()
     return shp1
 
-  def processFeature( self, v, vm, hasfv,maskout,  maskrange, fill_value, hardLowerBnd, specFnd, isamp=None):
+  def processFeature( self, v, vm, hasfv,maskout,  maskrange, fill_value, hardLowerBnd, specFnd, isamp=None,ix2=None):
     """Process a series of horizontal fields"""
     am = []
     ap = []
@@ -187,23 +187,37 @@ class ScanFile(object):
       elif self.maskAll and maskok:
           vm = numpy.ma.masked_where( vmsk < 0.1, v )
         
-      if type( v.size ) == type( 1 ):
-        fvcount = v.size - vm.count()
-      else:
-        fvcount = v.size() - vm.count()
+      fvc = 0
+      if fvc == 1:
+        if type( v.size ) == type( 1 ):
+          fvcount = v.size - vm.count()
+        else:
+          fvcount = v.size() - vm.count()
+      else:  
+        fvcount = 0
  
-      if len(v.shape) == 3:
+      
+      if len(v.shape) in [3,4]:
         for k in isamp:
-          am.append( numpy.ma.mean( numpy.ma.abs( vm[k,:] ) ) )
-          x = vm[k,:].ravel().compressed()
+          if len(v.shape) == 3:
+            thisv = vm[k,:]
+          else:
+            thisv = vm[k,ix2,:]
+        
+          if fvc == 0:
+            fvcount += thisv.size - thisv.count()
+          am.append( numpy.ma.mean( numpy.ma.abs( thisv ) ) )
+          x = thisv.ravel().compressed()
           if len(x) > 0:
             ap.append( numpy.percentile( x, self.percentiles ) )
           else:
             print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
-          meds.append( numpy.ma.median( vm[k,:] ) )
-          mxs.append( numpy.ma.max( vm[k,:] ) )
-          mns.append( numpy.ma.min( vm[k,:] ) )
+          meds.append( numpy.ma.median( thisv ) )
+          mxs.append( numpy.ma.max( thisv ) )
+          mns.append( numpy.ma.min( thisv ) )
       else:
+        if fvc == 0:
+            fvcount = vm.size - vm.count()
         am.append( numpy.ma.mean( numpy.ma.abs( vm ) ) )
         x = vm.ravel().compressed()
         if len(x) > 0:
@@ -215,14 +229,18 @@ class ScanFile(object):
         mns.append( numpy.ma.min( vm ) )
 
     else:
-      if len(v.shape) == 3:
+      if len(v.shape) in [3,4]:
+        if len(v.shape) == 3:
+          thisv = v[k,:]
+        else:
+          thisv = v[k,ix2,:]
         ##for k in range( v.shape[0] ):
         for k in isamp:
-          am.append( numpy.mean( numpy.abs( v[k,:] ) ) )
-          ap.append( numpy.percentile( v[k,:], self.percentiles ) )
-          meds.append( numpy.median( v[k,:] ) )
-          mxs.append( numpy.max( v[k,:] ) )
-          mns.append( numpy.min( v[k,:] ) )
+          am.append( numpy.mean( numpy.abs( thisv ) ) )
+          ap.append( numpy.percentile( thisv, self.percentiles ) )
+          meds.append( numpy.median( thisv ) )
+          mxs.append( numpy.max( thisv ) )
+          mns.append( numpy.min( thisv ) )
       else:
           am.append( numpy.mean( numpy.abs( v ) ) )
           ap.append( numpy.percentile( v, self.percentiles ) )
@@ -300,6 +318,15 @@ class ExecuteByVar(object):
     self.log = log
     self.trace_log = trace_log
 
+  def _check_shelve( self, shelve_file ):
+    """Return true if shelve is complete and credible size"""
+    
+    if all( [os.path.isfile( "%s.%s" % (shelve_file,x) ) for x in ["dat","bak","dir"] ] ):
+      s = os.stat( "%s.%s" % (shelve_file,'dat')  )
+      if s[stat.ST_SIZE] > 10000:
+        return True
+    return False
+  
   def run(self,inputFile,shelve_tag,max_files=0,overwrite=False):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
@@ -332,7 +359,7 @@ class ExecuteByVar(object):
       if not os.path.isdir (shelve_dir):
         os.makedirs( shelve_dir )
       shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
-      if overwrite or not os.path.isfile( "%s.dat" % shelve_file ):
+      if overwrite or not self._check_shelve( shelve_file ):
         sh = shelve.open( shelve_file )
         files = glob.glob( "%s/*.nc" % this_path )
         sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt,this_version]), "drs":[tab,var,inst,source,expt,ense,grid,this_version], "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
