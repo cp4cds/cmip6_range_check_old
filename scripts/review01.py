@@ -37,6 +37,11 @@ class ConsolidateVar(object):
       fcc = collections.defaultdict( set )
       for k in ['summary','percentiles']:
         cc[k].add( tuple( this['info']['tech'][k] ) )
+
+      cc['dimensions'].add( tuple( this['info']['tech']['variable']['dimensions'] ) )
+      cc['units'].add(  this['info']['tech']['variable']['units'] )
+
+      fcc["shape"] = this['info']['tech']['variable']["shape"]
       for nc,file_info in this['info']['tech']['files'].items():
         for c in file_info['contact']:
           fcc["contacts"].add(str(c))
@@ -54,7 +59,7 @@ class ConsolidateVar(object):
           assert var == var_xx
 
      
-      model_info = {"drs":drs, "contact":sorted( list( fcc['contacts'] ) ) }
+      model_info = {"drs":drs, "contact":sorted( list( fcc['contacts'] ) ), "shape":fcc["shape"] }
       
 
 ## "CMIP6.%(mip)s.%(inst)s.%(model)s.%(experiment)s.%(variant_id)s.%(tab)s.%(grid)s.%(version)s ...
@@ -63,7 +68,7 @@ class ConsolidateVar(object):
       this['data']['model_info'] = model_info
       ee['%s_%s_%s' % (inst,model,experiment)] = this['data']
 
-    for k in ['summary','percentiles']:
+    for k in ['summary','percentiles','dimensions','units']:
       assert len(cc[k]) == 1
       tech[k] = cc[k].pop()
   
@@ -210,9 +215,15 @@ class Review(object):
             rec = sh[kk]
             tech_info = rec[3]
             tf = tech_info["file"]
+            vi = tech_info["variable"]
+
             assert tf[1] == fn
             cc_files[fn]["tid"].add( tf[0] )
             cc_files[fn]["contact"].add( tf[2] )
+            cc_files[fn]["units"].add( vi[1] )
+            cc_files[fn]["dimensions"].add( tuple( vi[2] ) )
+            cc_files[fn]["shape"].add( tuple( vi[3] ) )
+
             self.work02[:,k,ilev] = rec[ixsum][:5]
 
             if tab not in ["fx","Ofx"]:
@@ -252,7 +263,7 @@ class Review(object):
         cc_files[k]["tid"].add( tf[0] )
         cc_files[k]["contact"].add( tf[2] )
         cc_files[k]["shape"].add( tuple( vi[3] ) )
-        cc_files[k]["units"].add( tuple( vi[1] ) )
+        cc_files[k]["units"].add( vi[1] )
         cc_files[k]["dimensions"].add( tuple( vi[2] ) )
         self.work02[:,j] = rec[ixsum][:5]
         if tab not in ["fx","Ofx"]:
@@ -267,11 +278,12 @@ class Review(object):
     nce = 0
     for kk in ["tid","shape","units","dimensions"]:
       if not all( [len( cc_files[x][kk] ) == 1 for x in cc_files.keys()] ):
-        nce += 1
         if self.logging:
           ks = [x for x in cc_files.keys() if len( cc_files[x][kk] ) != 1 ]
           self.log_workflow.error( 'CORE METADATA ERROR: %s not unique in %s' % (kk,ks) )
           self.log_workflow.error( 'CORE METEDATA -- : %s' %  [(x,cc_files[x][kk]) for x in ks] )
+##
+        nce += 1
     assert nce == 0
 
     shp = {cc_files[x]["shape"].pop()[1:] for x in cc_files.keys()}
