@@ -3,11 +3,9 @@ import collections
 from exceptions_lib import *
 import local_utilities
 
-__TODO__ = """ADD DRS and TIME RECORDS to INFO"""
 
 sh_ex01 = "sh_ranges/Emon/hus/hus_AS-RCEC_TaiESM1_historical_00-03"
 
-print( __TODO__ )
 
 log_factory =local_utilities.LogFactory(dir="./logs")
 
@@ -31,23 +29,38 @@ class ConsolidateVar(object):
     ee = dict()
     tech= dict()
     cc = collections.defaultdict( set )
+    model_info = dict()
     for f in fl:
       fn = f.rpartition('/')[-1]
       this = json.load( open( f, 'r' ) )
+
+      fcc = collections.defaultdict( set )
       for k in ['summary','percentiles']:
         cc[k].add( tuple( this['info']['tech'][k] ) )
+      for nc,file_info in this['info']['tech']['files'].items():
+        for c in file_info['contact']:
+          fcc["contacts"].add(str(c))
+
+
       if "drs" not in this["info"].keys():
         if not self.lax:
           raise WorkflowException( "drs record not found in header", file=f, directory=idir)
         else:
           inst, model, experiment = fn.split( '_' )[1:4]
+          drs = None
       else:
           tab,var_xx,inst,model,experiment,variant_id,grid,this_version = this["info"]["drs"]
+          drs = this["info"]["drs"]
           assert var == var_xx
+
+     
+      model_info = {"drs":drs, "contact":sorted( list( fcc['contacts'] ) ) }
+      
 
 ## "CMIP6.%(mip)s.%(inst)s.%(model)s.%(experiment)s.%(variant_id)s.%(tab)s.%(grid)s.%(version)s ...
 
 ## CMIP6.CMIP.NCC.NorESM1-F.piControl.r1i1p1f1.Amon.rsds.gn.v20190920
+      this['data']['model_info'] = model_info
       ee['%s_%s_%s' % (inst,model,experiment)] = this['data']
 
     for k in ['summary','percentiles']:
