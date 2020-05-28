@@ -44,6 +44,10 @@ class ConsolidateVar(object):
       else:
           tab,var_xx,inst,model,experiment,variant_id,grid,this_version = this["info"]["drs"]
           assert var == var_xx
+
+## "CMIP6.%(mip)s.%(inst)s.%(model)s.%(experiment)s.%(variant_id)s.%(tab)s.%(grid)s.%(version)s ...
+
+## CMIP6.CMIP.NCC.NorESM1-F.piControl.r1i1p1f1.Amon.rsds.gn.v20190920
       ee['%s_%s_%s' % (inst,model,experiment)] = this['data']
 
     for k in ['summary','percentiles']:
@@ -167,6 +171,7 @@ class Review(object):
     
     self.file_summary = []
 
+    cc_files = collections.defaultdict(lambda : collections.defaultdict( set ) )
     if self.withLevels:
 #
 # extract numer of time steps available at each level
@@ -181,6 +186,7 @@ class Review(object):
 # loop over levels present
 #
       self.ntl = dict()
+      
       for ilev in range(nlevels):
         lev = self.levels[ilev]
         i = 0
@@ -189,6 +195,11 @@ class Review(object):
           if fn in lindy[lev].keys():
             kk = lindy[lev][fn]
             rec = sh[kk]
+            tech_info = rec[3]
+            tf = tech_info["file"]
+            assert tf[1] == fn
+            cc_files[fn]["tid"].add( tf[0] )
+            cc_files[fn]["contact"].add( tf[2] )
             self.work02[:,k,ilev] = rec[ixsum][:5]
 
             if tab not in ["fx","Ofx"]:
@@ -220,6 +231,16 @@ class Review(object):
           i += 1
 
         rec = sh[k]
+        tech_info = rec[3]
+        tf = tech_info["file"]
+        vi = tech_info["variable"]
+            ### "variable":(vn,units,v.dimensions, shp1)
+        assert tf[1] == k, "k = %s -- tf = %s" % (k, tf )
+        cc_files[k]["tid"].add( tf[0] )
+        cc_files[k]["contact"].add( tf[2] )
+        cc_files[k]["shape"].add( tuple( vi[3] ) )
+        cc_files[k]["units"].add( tuple( vi[1] ) )
+        cc_files[k]["dimensions"].add( tuple( vi[2] ) )
         self.work02[:,j] = rec[ixsum][:5]
         if tab not in ["fx","Ofx"]:
           dt0, dt1 = [float(x) for x in rec[ixsum][5:7]]
@@ -229,6 +250,31 @@ class Review(object):
         fvcount = int( rec[ixsum][7] )
         self.file_summary.append( [dt0, dt1, fvcount] )
         j += 1
+
+    nce = 0
+    for kk in ["tid","shape","units","dimensions"]:
+      if not all( [len( cc_files[x][kk] ) == 1 for x in cc_files.keys()] ):
+        nce += 1
+        if self.logging:
+          ks = [x for x in cc_files.keys() if len( cc_files[x][kk] ) != 1 ]
+          self.log_workflow.error( 'CORE METADATA ERROR: %s not unique in %s' % (kk,ks) )
+          self.log_workflow.error( 'CORE METEDATA -- : %s' %  [(x,cc_files[x][kk]) for x in ks] )
+    assert nce == 0
+
+    shp = {cc_files[x]["shape"].pop()[1:] for x in cc_files.keys()}
+    units = {cc_files[x]["units"].pop() for x in cc_files.keys()}
+    dimensions = {cc_files[x]["dimensions"].pop() for x in cc_files.keys()}
+    assert len(shp) == 1, "Unexpected multiple shape values: %s" % shp
+    assert len(units) == 1, "Unexpected multiple units values: %s" % units
+    assert len(dimensions) == 1, "Unexpected multiple dimensions values: %s" % dimensions
+    this_shape = shp.pop()
+    self.files_info = { }
+    self.var_info = { "shape":this_shape, "units":units.pop(), "dimensions":dimensions.pop() }
+
+    for fn in cc_files:
+      tid = cc_files[fn]["tid"].pop()
+      contact = sorted( list(  cc_files[fn]["contact"] ) )
+      self.files_info[fn] = {"tid":tid, "contact":contact }
     sh.close()
 
   def loadJson(self,file):
@@ -264,7 +310,11 @@ class Review(object):
     if not os.path.isdir( odir ):
       os.makedirs( odir )
 
-    tech = {"percentiles":self.input_tech["percentiles"], "summary":["median","max","min","mean absolute max","mean absolute min"]}
+    tech = {"percentiles":self.input_tech["percentiles"],
+            "files":self.files_info,
+            "variable":self.var_info,
+            "summary":["median","max","min","mean absolute max","mean absolute min"]}
+    
   
     if not self.withLevels:
       summary = [0.]*5
@@ -348,5 +398,6 @@ if __name__ == "__main__":
       r.run( f[:-4] )
   else:
     ifile = sys.argv[1]
+    r = Review()
     r.run( ifile )
     ##r.run( 'hurs_AS-RCEC_TaiESM1_historical_00-01.json' )

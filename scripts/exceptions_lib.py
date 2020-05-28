@@ -8,3 +8,8 @@ class WorkflowException(Exception):
     self.msg = msg
     self.kwargs = kwargs
   
+class InstantiationValueException(ValueError):
+  def __init__(self,msg,**kwargs):
+    self.msg = msg
+    self.kwargs = kwargs
+  

@@ -62,12 +62,21 @@ if __name__ == "__main__":
       print (" --> ebv.run: ",input_file)
       ebv.run(input_file,shelve_tag,max_files=0)
 
-  elif opt == "--exptvar":
+  elif opt in ["--exptvar","--exptvar-extra"]:
     assert len(sys.argv) == 6
     log_global.info( "Starting ExecuteByVar %s" % sys.argv[1:] )
     mode, shelve_tag, input_file = sys.argv[3:]
     import scan_files_dev 
-    ebv = scan_files_dev.ExecuteByVar(mode, log=log_workflow, trace_log=trace_log)
+
+##
+## the "extra" mode extends to including 29 percentiles ... to capture the long tail seen in some variables
+## .. intention is to use this selectively ...
+##
+    if opt == "--exptvar-extra":
+      ebv = scan_files_dev.ExecuteByVar(mode, log=log_workflow, trace_log=trace_log, shelve_root = "sh_ranges_extra")
+      ebv.npct = 29
+    else:
+      ebv = scan_files_dev.ExecuteByVar(mode, log=log_workflow, trace_log=trace_log)
     ebv.run(input_file,shelve_tag,max_files=0)
 
   elif opt == "--single":

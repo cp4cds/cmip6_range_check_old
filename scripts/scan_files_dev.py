@@ -11,7 +11,7 @@ __version__ = "0.1.04"
 
 
 class ScanFile(object):
-  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None,trace_log=None):
+  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None,trace_log=None,npct=13):
     if maskAll:
       checkSpecial=False
     self.version = __version__
@@ -24,7 +24,14 @@ class ScanFile(object):
     self.log = log
     self.trace_log = trace_log
     self.maxnt = maxnt
-    self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
+    if npct == 13:
+      self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
+    elif npct == 29:
+      xx = [.001,.002,.005,.01,.02,.05,.1,.2,.5,1.,2.,5.]
+      self.percentiles = [100. - x for x in xx] + [90,75.,50.,25.,10.] + xx[::-1]
+    else:
+      raise InstantiationValueException("ScanFile must be instantiated with npct=13 or 29", npct=npct)
+      
     self.sh["__tech__"] = {  "percentiles":self.percentiles,
                              "time":time.ctime(),
                              "source":{"class":"scan_files.ScanFIle", "version":self.version} }
@@ -311,12 +318,13 @@ class ShrinkByVar(object):
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
 ##
 class ExecuteByVar(object):
-  def __init__(self,mode,log=None,trace_log=None):
+  def __init__(self,mode,log=None,trace_log=None,shelve_root="sh_ranges"):
     self.mode = mode
-    self.shelve_template = "sh_ranges/%s/%s/%s_%s_%s_%s_%s"
-    self.shelve_dir_template = "sh_ranges/%s/%s"
+    self.shelve_template = shelve_root + "/%s/%s/%s_%s_%s_%s_%s"
+    self.shelve_dir_template = shelve_root + "/%s/%s"
     self.log = log
     self.trace_log = trace_log
+    self.npct = 13
 
   def _check_shelve( self, shelve_file ):
     """Return true if shelve is complete and credible size"""
@@ -377,7 +385,7 @@ class ExecuteByVar(object):
 
             try:
               s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000, \
-                                 with_time=with_time,log=self.log, trace_log=self.trace_log)
+                                 with_time=with_time,log=self.log, trace_log=self.trace_log, npct=self.npct)
               del s
               gc.collect()
             except:
