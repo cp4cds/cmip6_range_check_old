@@ -63,9 +63,9 @@ if __name__ == "__main__":
       ebv.run(input_file,shelve_tag,max_files=0)
 
   elif opt in ["--exptvar","--exptvar-extra"]:
-    assert len(sys.argv) == 6
+    assert len(sys.argv) == 5
     log_global.info( "Starting ExecuteByVar %s" % sys.argv[1:] )
-    mode, shelve_tag, input_file = sys.argv[3:]
+    mode, input_file = sys.argv[3:]
     import scan_files_dev 
 
 ##
@@ -75,9 +75,10 @@ if __name__ == "__main__":
     if opt == "--exptvar-extra":
       ebv = scan_files_dev.ExecuteByVar(mode, log=log_workflow, trace_log=trace_log, shelve_root = "sh_ranges_extra")
       ebv.npct = 29
+      ebv.nextremes = 10
     else:
       ebv = scan_files_dev.ExecuteByVar(mode, log=log_workflow, trace_log=trace_log)
-    ebv.run(input_file,shelve_tag,max_files=0)
+    ebv.run(input_file)
 
   elif opt == "--single":
     assert len(sys.argv) in  [5,6]

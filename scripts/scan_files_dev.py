@@ -11,7 +11,7 @@ __version__ = "0.1.04"
 
 
 class ScanFile(object):
-  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None,trace_log=None,npct=13):
+  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None,trace_log=None,npct=13,nextremes=-1):
     if maskAll:
       checkSpecial=False
     self.version = __version__
@@ -24,6 +24,7 @@ class ScanFile(object):
     self.log = log
     self.trace_log = trace_log
     self.maxnt = maxnt
+    self.nextremes = nextremes
     if npct == 13:
       self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
     elif npct == 29:
@@ -31,6 +32,7 @@ class ScanFile(object):
       self.percentiles = [100. - x for x in xx] + [90,75.,50.,25.,10.] + xx[::-1]
     else:
       raise InstantiationValueException("ScanFile must be instantiated with npct=13 or 29", npct=npct)
+
       
     self.sh["__tech__"] = {  "percentiles":self.percentiles,
                              "time":time.ctime(),
@@ -130,7 +132,7 @@ class ScanFile(object):
       elif self.mode == 'sampled' and nt > 20:
         isamp = sorted( random.sample( range(nt), 20 ) )
         ##v = numpy.array( v[isamp,:,:] )
-      elif self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou'] and nt > 20:
+      elif (self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou']) and nt > 20:
         nsamp = nt//{'sampledonepercent':100, 'sampledtenpercent':10, 'sampledoneperthou':1000}[self.mode]
         isamp = sorted( random.sample( range(nt), nsamp ) )
         if len( isamp ) == 0:
@@ -142,16 +144,21 @@ class ScanFile(object):
         isamp = range(nt)
         ##v = numpy.array( v[:nt,:,:] )
 
-    print( "INFO.001.00020: ", fname, v.shape, nt )
-     
+    print( "INFO.001.00020: ", fname, self.mode, v.shape, nt, len(isamp) )
 
     if len( v.shape ) == 3 or (not self.with_time and len(v.shape) == 2):
+      if self.nextremes > 0:
+        self.extremes = []
+
       tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd, isamp=isamp)
       med,mx,mn,mamx,mamn,fvcount = tt
       if self.log != None:
         self.log.info( "File summary: %s" % list(tt) )
 
-      self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
+      if self.nextremes > 0:
+        self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap, self.extremes)
+      else:
+        self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
 
     elif len( v.shape ) == 4:
       for l in range( v.shape[1]):
@@ -217,6 +224,10 @@ class ScanFile(object):
           x = thisv.ravel().compressed()
           if len(x) > 0:
             ap.append( numpy.percentile( x, self.percentiles ) )
+            if self.nextremes > 0:
+              exr = numpy.partition( x, -self.nextremes, axis=None )[-self.nextremes:]
+              exl = numpy.partition( x, self.nextremes, axis=None )[:self.nextremes]
+              self.extremes.append( (exl,exr) )
           else:
             print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
           meds.append( numpy.ma.median( thisv ) )
@@ -278,6 +289,7 @@ class ShrinkByVar(object):
     self.mode = mode
     self.log = log
 
+
   def run(self,inputFile,odir_tag,max_files=0):
     """
     Execute file subsetting
@@ -325,6 +337,7 @@ class ExecuteByVar(object):
     self.log = log
     self.trace_log = trace_log
     self.npct = 13
+    self.nextremes = -1
 
   def _check_shelve( self, shelve_file ):
     """Return true if shelve is complete and credible size"""
@@ -335,7 +348,7 @@ class ExecuteByVar(object):
         return True
     return False
   
-  def run(self,inputFile,shelve_tag,max_files=0,overwrite=False):
+  def run(self,inputFile,max_files=0,overwrite=False):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
     *inputFile* should contain a list of ESGF "latest" directories for a single data variable.
@@ -366,7 +379,7 @@ class ExecuteByVar(object):
       shelve_dir = self.shelve_dir_template % (tab,var)
       if not os.path.isdir (shelve_dir):
         os.makedirs( shelve_dir )
-      shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
+      shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,self.mode)
       if overwrite or not self._check_shelve( shelve_file ):
         sh = shelve.open( shelve_file )
         files = glob.glob( "%s/*.nc" % this_path )
@@ -385,7 +398,7 @@ class ExecuteByVar(object):
 
             try:
               s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000, \
-                                 with_time=with_time,log=self.log, trace_log=self.trace_log, npct=self.npct)
+                                 with_time=with_time,log=self.log, trace_log=self.trace_log, npct=self.npct, nextremes=self.nextremes)
               del s
               gc.collect()
             except:
@@ -427,7 +440,7 @@ if __name__ == "__main__":
   if len(sys.argv) == 4:
     xxx, shelve_tag, input_file = sys.argv[1:]
     ebv = ExecuteByVar(mode)
-    ebv.run(input_file,shelve_tag,max_files=0)
+    ebv.run(input_file,max_files=0)
   else:
     if len(sys.argv) == 3:
       if sys.argv[1] == "--json":
