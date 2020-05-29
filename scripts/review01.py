@@ -69,8 +69,14 @@ class ConsolidateVar(object):
       ee['%s_%s_%s' % (inst,model,experiment)] = this['data']
 
     for k in ['summary','percentiles','dimensions','units']:
-      assert len(cc[k]) == 1
-      tech[k] = cc[k].pop()
+      if len(cc[k]) == 1:
+         tech[k] = cc[k].pop()
+      else:
+         msg =  "Unexpected muitple values: %s: %s" % (k, cc[k] )
+         print (msg )
+         if self.logging:
+           self.log_workflow.error( msg )
+         tech['_%s' % k] = tuple( sorted( list( cc[k] ) ) )
   
     self.root = root
     self.drs = {"experiment":experiment,"var":var}
@@ -133,6 +139,7 @@ class Review(object):
 
   def loadShelve(self,file):
     sh = shelve.open( file, 'r' )
+    self.shelve_file = file
     if self.logging:
       self.log_workflow.info( "%s:: loadShelve ( file = %s )" % (time.ctime(),file) )
 
@@ -185,7 +192,6 @@ class Review(object):
     ixsum = 5
     ixabs = 6
     ixpct = 7
-
     
     self.file_summary = []
 
@@ -271,6 +277,8 @@ class Review(object):
         else:
           dt0 = dt1 = 0.
 
+        if len(rec) == 9:
+           print( "extremes: %s" % rec[8] )
         fvcount = int( rec[ixsum][7] )
         self.file_summary.append( [dt0, dt1, fvcount] )
         j += 1
@@ -291,7 +299,12 @@ class Review(object):
     dimensions = {cc_files[x]["dimensions"].pop() for x in cc_files.keys()}
     assert len(shp) == 1, "Unexpected multiple shape values: %s" % shp
     assert len(units) == 1, "Unexpected multiple units values: %s" % units
-    assert len(dimensions) == 1, "Unexpected multiple dimensions values: %s" % dimensions
+    if len(dimensions) != 1:
+      msg =  "Unexpected multiple dimensions values: %s" % dimensions
+      if self.logging:
+        self.log_workflow.error( "ERROR: %s" % msg )
+      print ( self.shelve_file, msg )
+
     this_shape = shp.pop()
     self.files_info = { }
     self.var_info = { "shape":this_shape, "units":units.pop(), "dimensions":dimensions.pop() }
