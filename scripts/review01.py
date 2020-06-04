@@ -55,7 +55,15 @@ class ConsolidateVar(object):
           drs = None
       else:
           tab,var_xx,inst,model,experiment,variant_id,grid,this_version = this["info"]["drs"]
+          f0 = sorted( list( this['info']['tech']['files'].keys() ))[0]
+  ## ta_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-185912.nc
+          bits = f0.rpartition('.')[0].split( '_' )
+          grid_from_fn = bits[5]
+          if grid_from_fn != grid:
+            print( "WARNING: adjusting grid to match filename" )
+          grid = grid_from_fn
           drs = this["info"]["drs"]
+          drs[6] = grid
           assert var == var_xx
 
      
