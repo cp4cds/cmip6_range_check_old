@@ -15,13 +15,15 @@ class RecordException(Exception):
     self.kwargs = kwargs
 
 import sys
-if "--RESTART" in sys.argv:
-  sys.argv.pop( sys.argv.index( "--RESTART" ) )
-elif "LD_LIBRARY_PATH" in os.environ:
+##
+## this fix not needed with upgrade to ubuntu 18.04
+##if "--RESTART" in sys.argv:
+  ##sys.argv.pop( sys.argv.index( "--RESTART" ) )
+##elif "LD_LIBRARY_PATH" in os.environ:
   ##cmd = " ".join( sys.argv )
   ##os.popen( "(unset LD_LIBRARY_PATH;python %s --RESTART)" % cmd )
-  print ("You need to: unset LD_LIBRARY_PATH and rerun" )
-  sys.exit(0)
+  ##print ("You need to: unset LD_LIBRARY_PATH and rerun" )
+  ##sys.exit(0)
 
 import matplotlib.pyplot as plt
 import numpy
@@ -33,17 +35,18 @@ class mbox(object):
     self.ax = ax
 
   def add(self, xl, xh, yy):
-    assert len(yy) in [9,13], 'Set up for 9 or 13 percentiles'
+    assert len(yy) in [9,13,29], 'Set up for 9 or 13 percentiles'
     if len(yy) == 9:
       q1 = yy[3]
       q3 = yy[5]
       me = yy[4]
       i999, i99, i95, i001, i01, i05 = (0,1,2,8,7,6)
-    else:
-      q1 = yy[5]
-      q3 = yy[7]
-      me = yy[6]
-      i999, i99, i95, i001, i01, i05 = (0,2,3,12,10,9)
+    elif len(yy) in [13,29]:
+      i0 = (len(yy) - 13)//2
+      q1 = yy[5] + i0
+      q3 = yy[7] + i0
+      me = yy[6] + i0
+      i999, i99, i95, i001, i01, i05 = [i0 + x for x in (0,2,3,12,10,9)]
 
     xm = (xl+xh)*.5
     xl1 = xm + 0.75*(xl-xm)
@@ -63,7 +66,7 @@ class mbox(object):
     self.subp.plot( [xm,], [yy[i999],], marker='o', color='blue' )
     self.subp.plot( [xm,], [yy[i001],], marker='o', color='red' )
 
-def boxplot( dd, var, title, boxLegend = True, units="1", image_dir="images" ): 
+def boxplot( dd, var, title, percentiles,boxLegend = True, units="1", image_dir="images" ): 
    fig, ax = plt.subplots()
    ax.set_xticklabels('')
    ax.set_yticklabels('')
@@ -77,8 +80,9 @@ def boxplot( dd, var, title, boxLegend = True, units="1", image_dir="images" ):
    opacity = 0.8
    m = mbox(plt, ax)
    ii = 0
-   table_records = [ ["Model","Minimum","5th pct","25th","Median","75th", "95th pct","Maximum"],
-                     [ " :--",  " :--: ",  " :--: ", " :--: "," :--: ", " :--: ", " :--: ", " :--: "   ] ]
+   hh = ["Q(%s)" % stn(x) for x in percentiles]
+   table_records = [ ["Model","Minimum"] + hh + ["Maximum",],
+                     [ " :--",  ] + [" :--: ", ]*( len(percentiles) + 2 ) ]
 
    for k in ks:
      this = dd[k]["percentiles"]
@@ -92,14 +96,16 @@ def boxplot( dd, var, title, boxLegend = True, units="1", image_dir="images" ):
      if isDict:
        thissum = thissum["0"]
 
-     isList = type(this) in [type([]), type(())] and len(this) == 13
+     isList = type(this) in [type([]), type(())] 
+### and len(this) == 13
      if not ( isList or isDict ):
        raise RecordException("not known",k,this=this)
 
      if not ( type(thissum) in [type([]), type(())] and len(thissum) == 5 ):
        raise RecordException("not known",k,thissum=thissum)
 
-     table_records.append( [stn(x) for x in [k,thissum[2],this[9],this[7],this[6],this[5],this[3],thissum[1] ]] )
+     tr0 = [k,thissum[2]] + this[::-1] + [thissum[1]]
+     table_records.append( [stn(x) for x in tr0 ] )
 
      if type( this ) == type( [] ):
        rec = this[:]
@@ -184,7 +190,8 @@ def plot_json(table,ipath):
     units = wg1.ee["%s.%s" % (table,var)]
     title = wg1.title["%s.%s" % (table,var)]
     print ( var, units )
-    boxplot( ee["data"], var, title, boxLegend = True, units=units, image_dir=image_dir )
+    pcts = ee["info"]["tech"]["percentiles"]
+    boxplot( ee["data"], var, title, pcts, boxLegend = True, units=units, image_dir=image_dir )
 
 def all_files(table,mode="plot.x"):
     fl = glob.glob( "json_ranges/%s/*.json" % table )
