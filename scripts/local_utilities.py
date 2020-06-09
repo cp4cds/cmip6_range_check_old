@@ -41,10 +41,10 @@ class WGIPriority(object):
     self.ranges = dict()
     for l in ii:
       rec = l.split( "\t" )
-      id, units = rec[:2]
+      id, units = rec[1:3]
       if dq != None:
         self.title[id] = dq.CMORvar_by_id[id].title
-      vt = rec[2:10]
+      vt = rec[3:11]
       if not all( [vt[i] == "-" for i in [1,3,5,7]]):
         xx = []
         for i in [0,2,4,6]:
@@ -60,6 +60,21 @@ class CheckJson(object):
   def __init__(self):
     self.new = json.load( open( "data/new_limits.json", "r" ) )
     self.new_modified = set()
+    self.pid_lookup = dict()
+    self.known_errors = collections.defaultdict( set )
+
+    for fn in ['datasets_with_checksum_errs.txt', 'datasets_with_missing_files.txt', 'master_issues.txt']:
+      ii = open( 'data/%s' % fn )
+      for l in ii.readlines():
+          this = l.strip()
+          if this != '':
+              self.known_errors[this].add( fn )
+      ii.close()
+    
+    ii = open( "../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv", 'r' )
+    for l in ii.readlines()[1:]:
+       esgf_id,pid = [x.strip() for x in l.split(',') ]
+       self.pid_lookup[esgf_id] = pid
 
     ii = open( "data/new_limits.csv", "r", encoding = "ISO-8859-1" )
     for l in ii.readlines()[1:]:
@@ -152,32 +167,48 @@ class CheckJson(object):
     ee = json.load( open( ipath, "r" ) )
     data = ee["data"]
     percentiles = ee["info"]["tech"]["percentiles"]
-    assert len(percentiles) == 13,  "This code assumes 13 percentiles"
     models = sorted( list( data.keys() ) )
     p0 = data[models[0]]["percentiles"]
     isDict = type(p0) == type( {} )
-    if isDict:
-      pmx = [max( [data[m]["percentiles"]["0"][j] for m in models] ) for j in range(len(percentiles)) ]
-      pmn = [min( [data[m]["percentiles"]["0"][j] for m in models] ) for j in range(len(percentiles)) ]
+
+    if len(percentiles) == 13:
+  ## "This code assumes 13 percentiles"
+      if isDict:
+        pmx = [max( [data[m]["percentiles"]["0"][j] for m in models] ) for j in range(len(percentiles)) ]
+        pmn = [min( [data[m]["percentiles"]["0"][j] for m in models] ) for j in range(len(percentiles)) ]
+      else:
+        pmx = [max( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
+        pmn = [min( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
+      pctcomp = [pmx[i+1] < pmn[i] for i in range(4,8) ] 
+      if verbose:
+        print ( pctcomp, pmx[5:9], pmn[4:8] )
+        print ("pmx", pmx)
+        print ("pmn", pmn)
+      clean = all( pctcomp )
+      if clean:
+        distmsg = "COMPACT DISTRIBUTION"
+      else:
+        distmsg =  "overlapping distributions"
+      if verbose:
+        print (distmsg)
     else:
-      pmx = [max( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
-      pmn = [min( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
-    pctcomp = [pmx[i+1] < pmn[i] for i in range(4,8) ] 
-    if verbose:
-      print ( pctcomp, pmx[5:9], pmn[4:8] )
-      print ("pmx", pmx)
-      print ("pmn", pmn)
-    clean = all( pctcomp )
-    if clean:
-      distmsg = "COMPACT DISTRIBUTION"
-    else:
-      distmsg =  "overlapping distributions"
-    if verbose:
-      print (distmsg)
+      distmsg =  "__na__"
     agg_this = dict()
 
+    metam = dict()
     for m in sorted( list( data.keys() ) ):
         errs = []
+        minfo = data[m]["model_info"]
+        table,var,inst,model,expt,variant_id,grid_id,version = minfo["drs"]
+        ##CMIP6.OMIP.NOAA-GFDL.GFDL-OM4p5B.omip1.r1i1p1f1.Omon.volcello.gn.v20180701
+        if expt != "historical":
+            print ("need to add some code here ...")
+            raise
+        esgf_ds_id = "CMIP6.CMIP.%s.%s.%s.%s.%s.%s.%s.%s" % (inst,model,expt,variant_id,table,var,grid_id,version)
+        pid = self.pid_lookup.get(esgf_ds_id,'__not_found__')
+        contact = ";".join( minfo["contact"] )
+        known_error = self.known_errors.get( esgf_ds_id, 'none')
+        metam[m] = (esgf_ds_id, pid, contact, known_error)
         if isDict:
           this = data[m]["summary"]["0"]
         else:
@@ -197,7 +228,6 @@ class CheckJson(object):
         ranges = wg1.ranges[varid]
       rsum = dict()
       for m in sorted( list( data.keys() ) ):
-        errs = []
         this = agg_this[m]
         
         range_error_max = (ranges.max != null_range_value) and this[1] > float(ranges.max.value)
@@ -218,6 +248,8 @@ class CheckJson(object):
         else:
           if verbose:
             print( m, [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] )
+
+          errs = []
           for k in range(4):
             if [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min][k]:
               elab = ["Max","Min","MA Max","MA Min"][k]
@@ -240,6 +272,18 @@ class CheckJson(object):
          rangemsg = "All models in range"
       else:
          rangemsg = "Range errors: %s [of %s]" % (len(bad),len(rsum.keys()))
+         oo = open( "test.md", 'w')
+         oo.write( "ERROR SUMMARY\n=============\n\n" )
+         for m in sorted( list( rsum.keys() ) ):
+            if not rsum[m][0]:
+                esgf_ds_id, pid, contact, known = metam[m]
+                pid_link = "[%s](http://hdl.handle.net/%s)" % (pid,pid[4:])
+                oo.write( '%s :: %s\n' % (m,contact) )
+                if known != 'none':
+                    oo.write( 'Known errors: see %s\n' % known )
+                oo.write( '%s\n' % rsum[m][1] )
+                oo.write( '%s -- %s\n\n' % (esgf_ds_id,pid_link) )
+         oo.close()
 
     if verbose:
         maxval = max( [x[1] for k,x in agg_this.items()] )
@@ -250,7 +294,6 @@ class CheckJson(object):
 
     print (var,distmsg,rangemsg)
 
-check_json = CheckJson()
 
 class LogFactory(object):
   def __init__(self, dir='.'):
@@ -292,6 +335,7 @@ class LogFactory(object):
 
 
 if __name__ == "__main__":
+   check_json = CheckJson()
    wg1 = WGIPriority()
    print ( wg1.ranges.keys() )
    k = wg1.ranges.keys().pop()
