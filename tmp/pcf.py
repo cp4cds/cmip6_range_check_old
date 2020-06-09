@@ -99,17 +99,23 @@ class Parse(object):
            oo.write( ' | '.join(rec) + '\n' )
            ee.append( (k,fp) )
 
+       oos = open( 'ffetch.sh', 'w' )
        for k,fp in ee:
-           if os.path.isfile( fp ):
-               fn = fp.rpartition('/')[-1]
+           oos.write( 'jcpfx 5 %s\n' % fp )
+           fn = fp.rpartition('/')[-1]
+           if os.path.isfile( fp ) or os.path.isfile( fn ):
                var = fn.split('_')[0]
-               os.popen( 'ncdump %s | grep %s[\(:] > .ncdump' % (fp,var) ).read()
+               if os.path.isfile( fp ):
+                 os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fp,var) ).read()
+               else:
+                 os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fn,var) ).read()
                oo.write( "%s\n%s\n\n'''\n" % (k,"="*len(k)) )
                for l in open( '.ncdump' ).readlines():
                    oo.write( l + '\n' )
                oo.write( "'''\n\n" )
 
        oo.close()
+       oos.close()
 
 
 
