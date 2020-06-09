@@ -68,11 +68,18 @@ class Parse(object):
 
 
    def write_md(self):
+       ksn = [k for k in self.cc3.keys() if k.find( 'standard_name' ) != -1]
+       kcm = [k for k in self.cc3.keys() if k.find( 'cell_methods' ) != -1]
+       self.write_md_file( 'standard_name_errors.md', 'Standard Name Errors', ksn )
+       self.write_md_file( 'cell_methods_errors.md', 'Cell Methods Errors', kcm )
+       self.write_md_file( 'miscellaneous_errors.md', 'Miscellaneous Errors', [k for k in self.cc3.keys() if (k not in ksn) and (k not in kcm)] )
+
+   def write_md_file(self, mdfile, title, key_list):
        ifp = self.head.index( 'filepath' )
-       oo = open( 'standard_name_errors.md', 'w' )
-       oo.write( 'Standard Name Errors\n====================\n\n' )
-       oo.write( 'Overview\n=======\n\n' )
-       ks = sorted( [k for k in self.cc3.keys() if k.find( 'standard_name' ) != -1] )
+       oo = open( mdfile, 'w' )
+       oo.write( '%s\n%s\n\n' % (title,'='*len(title)) )
+       oo.write( 'Overview\n========\n\n' )
+       ks = sorted( key_list )
        rec = ['Message','Model/variable','Count','Example']
        align = [" :--: ", ]*4
        oo.write( ' | '.join(rec) + '\n' )
@@ -88,6 +95,7 @@ class Parse(object):
            fp = r0[ifp]
            rec.append(fp)
            rec = [mcl(x) for x in rec]
+
            oo.write( ' | '.join(rec) + '\n' )
            ee.append( (k,fp) )
 
