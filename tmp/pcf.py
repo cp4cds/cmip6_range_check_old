@@ -1,6 +1,6 @@
 import collections
 import csv
-import sys
+import sys, os
 sys.path.append('../scripts')
 import local_utilities as lu
 
