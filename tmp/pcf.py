@@ -111,7 +111,7 @@ class Parse(object):
                  os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fn,var) ).read()
                oo.write( "%s\n%s\n\n```\n" % (k,"="*len(k)) )
                for l in open( '.ncdump' ).readlines():
-                   oo.write( l + '\n' )
+                   oo.write( l )
                oo.write( "```\n\n" )
 
        oo.close()
