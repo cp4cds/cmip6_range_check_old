@@ -70,9 +70,60 @@ class Parse(object):
    def write_md(self):
        ksn = [k for k in self.cc3.keys() if k.find( 'standard_name' ) != -1]
        kcm = [k for k in self.cc3.keys() if k.find( 'cell_methods' ) != -1]
-       self.write_md_file( 'standard_name_errors.md', 'Standard Name Errors', ksn )
-       self.write_md_file( 'cell_methods_errors.md', 'Cell Methods Errors', kcm )
-       self.write_md_file( 'miscellaneous_errors.md', 'Miscellaneous Errors', [k for k in self.cc3.keys() if (k not in ksn) and (k not in kcm)] )
+       self.write_md_file2( 'standard_name_errors.md', 'Standard Name Errors', ksn )
+       self.write_md_file2( 'cell_methods_errors.md', 'Cell Methods Errors', kcm )
+       self.write_md_file2( 'miscellaneous_errors.md', 'Miscellaneous Errors', [k for k in self.cc3.keys() if (k not in ksn) and (k not in kcm)] )
+
+   def write_md_file2(self, mdfile, title, key_list):
+       ifp = self.head.index( 'filepath' )
+       oo = open( mdfile, 'w' )
+       oo.write( '%s\n%s\n\n' % (title,'='*len(title)) )
+       oo.write( 'Overview\n========\n\n' )
+       ks = sorted( key_list )
+       rec = ['Message','Model/variable','Count','Example']
+
+       ee = []
+       ik = 0 
+       for k in ks:
+           ik += 1
+           kk = mcl( ', '.join( eval( k ) ) )
+           oo.write( '%s - %s\n%s\n\n' % (title,ik,'-'*( len(title) + 4 ) ) )
+
+           oo.write( ' - Message: %s\n' % kk )
+
+
+           this  = self.cc3[k]
+           cc = collections.defaultdict( set )
+           for m,v in this:
+               cc[m].add(v)
+           l1 = []
+           for m in sorted(list(cc.keys())):
+               vv = sorted(list(cc[m]))
+               if len(cc[m]) > 4:
+                   l1.append( '%s: %s, .. [%s]' % (m,vv[0],len(vv)))
+               else:
+                   l1.append( '%s: %s' % (m,','.join(vv)))
+
+           oo.write( ' - Models and Vars: %s\n' % mcl(', '.join(l1)) )
+
+           nf = str( sum( [ len(self.cc2[model][vid]) for model, vid in this ] ) )
+           oo.write( ' - Files affected: %s\n' % nf)
+
+           model, vid = this.pop()
+           r0 = self.cc2[model][vid].pop()
+           fp = r0[ifp]
+           fn = fp.rpartition('/')[-1]
+           oo.write( ' - Example: %s\n\n' % mcl(fn))
+             
+           self._ncdump(fp,oo)
+           ee.append( (k,fp) )
+
+       oos = open( 'ffetch.sh', 'w' )
+       for k,fp in ee:
+           oos.write( 'jcpfx 5 %s\n' % fp )
+
+       oo.close()
+       oos.close()
 
    def write_md_file(self, mdfile, title, key_list):
        ifp = self.head.index( 'filepath' )
@@ -102,20 +153,24 @@ class Parse(object):
        oos = open( 'ffetch.sh', 'w' )
        for k,fp in ee:
            oos.write( 'jcpfx 5 %s\n' % fp )
+           self._ncdump(fp,oo)
+
+       oo.close()
+       oos.close()
+
+   def _ncdump(self,fp,oo):
            fn = fp.rpartition('/')[-1]
+           ttl = 'ncdump sample'
            if os.path.isfile( fp ) or os.path.isfile( fn ):
                var = fn.split('_')[0]
                if os.path.isfile( fp ):
                  os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fp,var) ).read()
                else:
                  os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fn,var) ).read()
-               oo.write( "%s\n%s\n\n```\n" % (k,"="*len(k)) )
+               oo.write( "%s\n%s\n\n```\n" % (ttl,"="*len(ttl)) )
                for l in open( '.ncdump' ).readlines():
                    oo.write( l )
                oo.write( "```\n\n" )
-
-       oo.close()
-       oos.close()
 
 
 
