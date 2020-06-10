@@ -76,9 +76,10 @@ class Parse(object):
 
    def write_md_file2(self, mdfile, title, key_list):
        ifp = self.head.index( 'filepath' )
+       ipid = self.head.index( 'pid' )
        oo = open( mdfile, 'w' )
-       oo.write( '%s\n%s\n\n' % (title,'='*len(title)) )
-       oo.write( 'Overview\n========\n\n' )
+       ##oo.write( '%s\n%s\n\n' % (title,'='*len(title)) )
+       oo.write( '# %s\n\n' % (title) )
        ks = sorted( key_list )
        rec = ['Message','Model/variable','Count','Example']
 
@@ -87,7 +88,7 @@ class Parse(object):
        for k in ks:
            ik += 1
            kk = mcl( ', '.join( eval( k ) ) )
-           oo.write( '%s - %s\n%s\n\n' % (title,ik,'-'*( len(title) + 4 ) ) )
+           oo.write( '## %s - %s\n\n' % (title,ik) )
 
            oo.write( ' - Message: %s\n' % kk )
 
@@ -112,8 +113,11 @@ class Parse(object):
            model, vid = this.pop()
            r0 = self.cc2[model][vid].pop()
            fp = r0[ifp]
+           pid = r0[ipid]
+           pid_link = "[%s](http://hdl.handle.net/%s)" % (pid,pid[4:])
            fn = fp.rpartition('/')[-1]
            oo.write( ' - Example: %s\n\n' % mcl(fn))
+           oo.write( ' - PID: %s\n\n' % pid_link)
              
            self._ncdump(fp,oo)
            ee.append( (k,fp) )
@@ -128,7 +132,8 @@ class Parse(object):
    def write_md_file(self, mdfile, title, key_list):
        ifp = self.head.index( 'filepath' )
        oo = open( mdfile, 'w' )
-       oo.write( '%s\n%s\n\n' % (title,'='*len(title)) )
+       ##oo.write( '%s\n%s\n\n' % (title,'='*len(title)) )
+       oo.write( '# %s\n\n' % (title) )
        oo.write( 'Overview\n========\n\n' )
        ks = sorted( key_list )
        rec = ['Message','Model/variable','Count','Example']
@@ -167,7 +172,7 @@ class Parse(object):
                  os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fp,var) ).read()
                else:
                  os.popen( 'ncdump -h %s | grep %s[\(:] > .ncdump' % (fn,var) ).read()
-               oo.write( "%s\n%s\n\n```\n" % (ttl,"="*len(ttl)) )
+               oo.write( "### %s\n\n```\n" % (ttl) )
                for l in open( '.ncdump' ).readlines():
                    oo.write( l )
                oo.write( "```\n\n" )

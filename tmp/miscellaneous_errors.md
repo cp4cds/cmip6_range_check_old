@@ -1,56 +1,52 @@
-Miscellaneous Errors
-====================
+# Miscellaneous Errors
 
-Overview
-========
-
-Miscellaneous Errors - 1
-------------------------
+## Miscellaneous Errors - 1
 
  - Message: Attribute missing\_value of incorrect type (expecting 'Data Variable' type, got 'Numeric' type), (7.2): Invalid cell\_measures syntax
  - Models and Vars: CESM2: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo, CESM2-FV2: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo, CESM2-WACCM: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo, CESM2-WACCM-FV2: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo
  - Files affected: 438
- - Example: uo\_Omon\_CESM2-WACCM-FV2\_historical\_r1i1p1f1\_gn\_190001-194912.nc
+ - Example: vo\_Omon\_CESM2\_1pctCO2\_r1i1p1f1\_gn\_005101-010012.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/8783a205-d2aa-4e4f-abe5-34cd92adb2a8](http://hdl.handle.net/21.14100/8783a205-d2aa-4e4f-abe5-34cd92adb2a8)
+
+### ncdump sample
 
 ```
-	float uo(time, lev, nlat, nlon) ;
-		uo:_FillValue = 1.e+20f ;
-		uo:cell_measures = "--OPT" ;
-		uo:cell_methods = "time: mean" ;
-		uo:comment = "UVEL" ;
-		uo:coordinates = "time lev lat lon" ;
-		uo:description = "Prognostic x-ward velocity component resolved by the model." ;
-		uo:frequency = "mon" ;
-		uo:id = "uo" ;
-		uo:long_name = "Sea Water X Velocity" ;
-		uo:mipTable = "Omon" ;
-		uo:missing_value = 1.e+20 ;
-		uo:out_name = "uo" ;
-		uo:prov = "Omon ((isd.003))" ;
-		uo:realm = "ocean" ;
-		uo:standard_name = "sea_water_x_velocity" ;
-		uo:time = "time" ;
-		uo:time_label = "time-mean" ;
-		uo:time_title = "Temporal mean" ;
-		uo:title = "Sea Water X Velocity" ;
-		uo:type = "real" ;
-		uo:units = "m s-1" ;
-		uo:variable_id = "uo" ;
+	float vo(time, lev, nlat, nlon) ;
+		vo:_FillValue = 1.e+20f ;
+		vo:cell_measures = "--OPT" ;
+		vo:cell_methods = "time: mean" ;
+		vo:comment = "Prognostic y-ward velocity component resolved by the model." ;
+		vo:coordinates = "time lev lat lon" ;
+		vo:description = "Prognostic y-ward velocity component resolved by the model." ;
+		vo:frequency = "mon" ;
+		vo:id = "vo" ;
+		vo:long_name = "Sea Water Y Velocity" ;
+		vo:mipTable = "Omon" ;
+		vo:missing_value = 1.e+20 ;
+		vo:out_name = "vo" ;
+		vo:prov = "Omon ((isd.003))" ;
+		vo:realm = "ocean" ;
+		vo:standard_name = "sea_water_y_velocity" ;
+		vo:time = "time" ;
+		vo:time_label = "time-mean" ;
+		vo:time_title = "Temporal mean" ;
+		vo:title = "Sea Water Y Velocity" ;
+		vo:type = "real" ;
+		vo:units = "m s-1" ;
+		vo:variable_id = "vo" ;
 ```
 
-Miscellaneous Errors - 2
-------------------------
+## Miscellaneous Errors - 2
 
  - Message: Attribute missing\_value of incorrect type (expecting 'Data Variable' type, got 'Numeric' type), (7.3): Invalid type1: sector - must be a variable name or valid area\_type
  - Models and Vars: CESM2: Emon.sweLut, CESM2-FV2: Emon.sweLut, CESM2-WACCM-FV2: Emon.sweLut
  - Files affected: 7
- - Example: sweLut\_Emon\_CESM2\_esm-hist\_r2i1p1f1\_gn\_185001-189912.nc
+ - Example: sweLut\_Emon\_CESM2\_esm-hist\_r2i1p1f1\_gn\_200001-201412.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/412deb76-94d7-41a8-a0fb-e9a838c1ee3d](http://hdl.handle.net/21.14100/412deb76-94d7-41a8-a0fb-e9a838c1ee3d)
+
+### ncdump sample
 
 ```
 	float sweLut(time, landuse, lat, lon) ;
@@ -78,102 +74,101 @@ ncdump sample
 		sweLut:variable_id = "sweLut" ;
 ```
 
-Miscellaneous Errors - 3
-------------------------
+## Miscellaneous Errors - 3
 
  - Message: Attribute missing\_value of incorrect type (expecting 'Data Variable' type, got 'Numeric' type)
  - Models and Vars: CESM2: 3hr.huss, .. [164], CESM2-FV2: AERmon.abs550aer, .. [149], CESM2-WACCM: AERmon.abs550aer, .. [131], CESM2-WACCM-FV2: AERmon.abs550aer, .. [159], MCM-UA-1-0: Ofx.deptho
  - Files affected: 37409
- - Example: hus\_Amon\_CESM2\_pdSST-futAntSIC\_r39i1p1f1\_gn\_200006-200105.nc
+ - Example: mmrbc\_AERmon\_CESM2-WACCM\_ssp126\_r1i1p1f1\_gn\_206501-210012.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/d1d42ac9-36dc-4cc5-acae-a469314f8631](http://hdl.handle.net/21.14100/d1d42ac9-36dc-4cc5-acae-a469314f8631)
+
+### ncdump sample
 
 ```
-	float hus(time, plev, lat, lon) ;
-		hus:_FillValue = 1.e+20f ;
-		hus:cell_measures = "area: areacella" ;
-		hus:cell_methods = "time: mean" ;
-		hus:comment = "vinth2p(Q,hyam, hybm, plev, PS, P0)" ;
-		hus:coordinates = "time plev lat lon" ;
-		hus:description = "Specific humidity is the mass fraction of water vapor in (moist) air." ;
-		hus:frequency = "mon" ;
-		hus:id = "hus" ;
-		hus:long_name = "Specific Humidity" ;
-		hus:mipTable = "Amon" ;
-		hus:missing_value = 1.e+20 ;
-		hus:out_name = "hus" ;
-		hus:prov = "Amon ((isd.003))" ;
-		hus:realm = "atmos" ;
-		hus:standard_name = "specific_humidity" ;
-		hus:time = "time" ;
-		hus:time_label = "time-mean" ;
-		hus:time_title = "Temporal mean" ;
-		hus:title = "Specific Humidity" ;
-		hus:type = "real" ;
-		hus:units = "1" ;
-		hus:variable_id = "hus" ;
+	float mmrbc(time, lev, lat, lon) ;
+		mmrbc:_FillValue = 1.e+20f ;
+		mmrbc:cell_measures = "area: areacella" ;
+		mmrbc:cell_methods = "area: time: mean" ;
+		mmrbc:comment = "bc_a1 + bc_a4" ;
+		mmrbc:coordinates = "time lev lat lon" ;
+		mmrbc:description = "Dry mass fraction of black carbon aerosol particles in air." ;
+		mmrbc:frequency = "mon" ;
+		mmrbc:id = "mmrbc" ;
+		mmrbc:long_name = "Elemental Carbon Mass Mixing Ratio" ;
+		mmrbc:mipTable = "AERmon" ;
+		mmrbc:missing_value = 1.e+20 ;
+		mmrbc:out_name = "mmrbc" ;
+		mmrbc:prov = "AERmon ((isd.003))" ;
+		mmrbc:realm = "aerosol" ;
+		mmrbc:standard_name = "mass_fraction_of_elemental_carbon_dry_aerosol_particles_in_air" ;
+		mmrbc:time = "time" ;
+		mmrbc:time_label = "time-mean" ;
+		mmrbc:time_title = "Temporal mean" ;
+		mmrbc:title = "Elemental Carbon Mass Mixing Ratio" ;
+		mmrbc:type = "real" ;
+		mmrbc:units = "kg kg-1" ;
+		mmrbc:variable_id = "mmrbc" ;
 ```
 
-Miscellaneous Errors - 4
-------------------------
+## Miscellaneous Errors - 4
 
  - Message: (7.2): Invalid cell\_measures syntax
  - Models and Vars: AWI-CM-1-1-MR: Omon.tauuo, .. [10], AWI-ESM-1-1-LR: Omon.thetaoga, GFDL-CM4: AERmonZ.ta,AERmonZ.ua,EdayZ.ua,EdayZ.zg, GFDL-ESM4: AERmonZ.ta,AERmonZ.ua,EdayZ.ua,EdayZ.zg, MPI-ESM1-2-HR: Omon.tauuo, .. [6]
  - Files affected: 1509
- - Example: ua\_EdayZ\_GFDL-CM4\_ssp585\_r1i1p1f1\_gr2z\_20610101-20801231.nc
+ - Example: uo\_Omon\_MPI-ESM1-2-HR\_control-1950\_r1i1p1f1\_gn\_203601-203612.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/0eb6c95c-3f56-4ee2-ba6a-f5331c1f471f](http://hdl.handle.net/21.14100/0eb6c95c-3f56-4ee2-ba6a-f5331c1f471f)
+
+### ncdump sample
 
 ```
-	float ua(time, plev, lat) ;
-		ua:long_name = "Eastward Wind" ;
-		ua:units = "m s-1" ;
-		ua:missing_value = 1.e+20f ;
-		ua:cell_methods = "longitude: mean time: mean" ;
-		ua:cell_measures = " " ;
-		ua:standard_name = "eastward_wind" ;
-		ua:interp_method = "conserve_order2" ;
-		ua:_FillValue = 1.e+20f ;
-		ua:original_name = "ua" ;
+	float uo(time, depth, y_2, x_2) ;
+		uo:standard_name = "sea_water_x_velocity" ;
+		uo:long_name = "Sea Water X Velocity" ;
+		uo:units = "m s-1" ;
+		uo:code = 3 ;
+		uo:coordinates = "lat_2 lon_2" ;
+		uo:_FillValue = 1.e+20f ;
+		uo:missing_value = 1.e+20f ;
+		uo:cell_methods = "time: mean" ;
+		uo:cell_measures = "--OPT" ;
+		uo:comment = "Prognostic x-ward velocity component resolved by the model." ;
 ```
 
-Miscellaneous Errors - 5
-------------------------
+## Miscellaneous Errors - 5
 
  - Message: (7.2): cell\_measures variable areacella must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-ESM-1-1-LR: Amon.prsn, GFDL-AM4: Amon.clt, .. [36], GISS-E2-1-G: SImon.sithick, GISS-E2-1-G-CC: SImon.sithick, GISS-E2-1-H: SImon.sithick, IPSL-CM6A-LR: fx.mrsofc, MPI-ESM1-2-HR: Amon.clt, .. [52], MPI-ESM1-2-XR: Amon.clt, .. [52]
  - Files affected: 6902
- - Example: tasmin\_Amon\_MPI-ESM1-2-XR\_highresSST-present\_r1i1p1f1\_gn\_199801-199812.nc
+ - Example: rsutcs\_Amon\_MPI-ESM1-2-HR\_highresSST-present\_r1i1p1f1\_gn\_198201-198212.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/42118a87-7b4e-419d-9b00-2faedca28a6a](http://hdl.handle.net/21.14100/42118a87-7b4e-419d-9b00-2faedca28a6a)
+
+### ncdump sample
 
 ```
-	float tasmin(time, lat, lon) ;
-		tasmin:standard_name = "air_temperature" ;
-		tasmin:long_name = "Daily Minimum Near-Surface Air Temperature" ;
-		tasmin:units = "K" ;
-		tasmin:code = 202 ;
-		tasmin:table = 128 ;
-		tasmin:_FillValue = 1.e+20f ;
-		tasmin:missing_value = 1.e+20f ;
-		tasmin:cell_measures = "area: areacella" ;
-		tasmin:comment = "minimum near-surface (usually, 2 meter) air temperature (add cell_method attribute \'time: min\')" ;
-		tasmin:cell_methods = "area: mean time: minimum within days time: mean over days" ;
+	float rsutcs(time, lat, lon) ;
+		rsutcs:standard_name = "toa_outgoing_shortwave_flux_assuming_clear_sky" ;
+		rsutcs:long_name = "TOA Outgoing Clear-Sky Shortwave Radiation" ;
+		rsutcs:units = "W m-2" ;
+		rsutcs:_FillValue = 1.e+20f ;
+		rsutcs:missing_value = 1.e+20f ;
+		rsutcs:cell_measures = "area: areacella" ;
+		rsutcs:comment = "Calculated in the absence of clouds." ;
+		rsutcs:cell_methods = "area: time: mean" ;
 ```
 
-Miscellaneous Errors - 6
-------------------------
+## Miscellaneous Errors - 6
 
  - Message: (7.2): cell\_measures variable areacellg must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-ESM-1-1-LR: ImonAnt.prsn,ImonGre.prsn
  - Files affected: 22
  - Example: prsn\_ImonGre\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_190101-191012.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/26be2e49-7641-48d7-97a8-78a79414d10e](http://hdl.handle.net/21.14100/26be2e49-7641-48d7-97a8-78a79414d10e)
+
+### ncdump sample
 
 ```
 	float prsn(time, ncells) ;
@@ -188,16 +183,16 @@ ncdump sample
 		prsn:cell_measures = "area: areacellg" ;
 ```
 
-Miscellaneous Errors - 7
-------------------------
+## Miscellaneous Errors - 7
 
  - Message: (7.2): cell\_measures variable areacello must either exist in this netCDF file or be named by the external\_variables attribute, (7.2): cell\_measures variable volcello must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-CM-1-1-MR: Omon.so,Omon.thetao, AWI-ESM-1-1-LR: Omon.thetao
  - Files affected: 373
  - Example: thetao\_Omon\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_188101-189012.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/e3213373-10ae-47cc-8eea-dab4d021d9f6](http://hdl.handle.net/21.14100/e3213373-10ae-47cc-8eea-dab4d021d9f6)
+
+### ncdump sample
 
 ```
 	float thetao(time, depth, ncells) ;
@@ -212,40 +207,40 @@ ncdump sample
 		thetao:cell_measures = "area: areacello volume: volcello" ;
 ```
 
-Miscellaneous Errors - 8
-------------------------
+## Miscellaneous Errors - 8
 
  - Message: (7.2): cell\_measures variable areacello must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-CM-1-1-MR: Oday.tos, .. [8], AWI-ESM-1-1-LR: Oday.tos, .. [5], CNRM-ESM2-1: Ofx.deptho
  - Files affected: 1051
- - Example: tos\_Omon\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_194101-195012.nc
+ - Example: prsn\_Omon\_AWI-CM-1-1-MR\_ssp370\_r4i1p1f1\_gn\_205101-206012.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/045b7cff-dfc3-4068-8110-60726bfff4de](http://hdl.handle.net/21.14100/045b7cff-dfc3-4068-8110-60726bfff4de)
+
+### ncdump sample
 
 ```
-	float tos(time, ncells) ;
-		tos:units = "degC" ;
-		tos:CDI_grid_type = "unstructured" ;
-		tos:_FillValue = 1.e+30f ;
-		tos:missing_value = 1.e+30f ;
-		tos:description = "Temperature of upper boundary of the liquid ocean, including temperatures below sea-ice and floating ice shelves." ;
-		tos:coordinates = "lat lon" ;
-		tos:standard_name = "sea_surface_temperature" ;
-		tos:cell_methods = "area: mean where sea time: mean" ;
-		tos:cell_measures = "area: areacello" ;
+	float prsn(time, ncells) ;
+		prsn:units = "kg m-2 s-1" ;
+		prsn:CDI_grid_type = "unstructured" ;
+		prsn:_FillValue = 1.e+30f ;
+		prsn:missing_value = 1.e+30f ;
+		prsn:description = "at surface; includes precipitation of all forms of water in the solid phase" ;
+		prsn:coordinates = "lat lon" ;
+		prsn:standard_name = "snowfall_flux" ;
+		prsn:cell_methods = "area: mean where ice_free_sea over sea time: mean" ;
+		prsn:cell_measures = "area: areacello" ;
 ```
 
-Miscellaneous Errors - 9
-------------------------
+## Miscellaneous Errors - 9
 
  - Message: (7.3): Invalid type1: landuse - must be a variable name or valid area\_type
  - Models and Vars: CNRM-ESM2-1: Emon.sweLut
  - Files affected: 1
  - Example: sweLut\_Emon\_CNRM-ESM2-1\_esm-hist\_r1i1p1f2\_gr\_185001-201412.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/c5be1142-4d24-4ae5-bff9-8dbf073c81cc](http://hdl.handle.net/21.14100/c5be1142-4d24-4ae5-bff9-8dbf073c81cc)
+
+### ncdump sample
 
 ```
 	float sweLut(time, landUse, lat, lon) ;
@@ -264,16 +259,16 @@ ncdump sample
 		sweLut:standard_name = "lwe_thickness_of_surface_snow_amount" ;
 ```
 
-Miscellaneous Errors - 10
-------------------------
+## Miscellaneous Errors - 10
 
  - Message: (7.3): Invalid type1: sector - must be a variable name or valid area\_type
  - Models and Vars: UKESM1-0-LL: Emon.sweLut
  - Files affected: 41
- - Example: sweLut\_Emon\_UKESM1-0-LL\_historical\_r10i1p1f2\_gn\_195001-201412.nc
+ - Example: sweLut\_Emon\_UKESM1-0-LL\_esm-1pct-brch-2000PgC\_r1i1p1f2\_gn\_205001-206112.nc
 
-ncdump sample
-=============
+ - PID: [hdl:21.14100/bc4919e8-c8d6-4a8f-b0fe-b693621f9eef](http://hdl.handle.net/21.14100/bc4919e8-c8d6-4a8f-b0fe-b693621f9eef)
+
+### ncdump sample
 
 ```
 	float sweLut(time, landuse, lat, lon) ;
@@ -284,7 +279,7 @@ ncdump sample
 		sweLut:original_name = "mo: land_use_tile_mean( (stash: m01s08i236, lbproc: 128) / (FRESHWATER_DENSITY: 1000.), (stash: m01s03i317, lbproc: 128))" ;
 		sweLut:cell_methods = "area: time: mean where sector" ;
 		sweLut:cell_measures = "area: areacella" ;
-		sweLut:history = "2019-12-09T15:26:51Z altered by CMOR: Reordered dimensions, original order: landuse time lat lon. 2019-12-09T15:26:51Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20)." ;
+		sweLut:history = "2019-11-28T10:25:27Z altered by CMOR: Reordered dimensions, original order: landuse time lat lon. 2019-11-28T10:25:27Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20)." ;
 		sweLut:missing_value = 1.e+20f ;
 		sweLut:_FillValue = 1.e+20f ;
 		sweLut:coordinates = "sector" ;
