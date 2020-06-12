@@ -5,46 +5,18 @@
  - Message: Attribute missing\_value of incorrect type (expecting 'Data Variable' type, got 'Numeric' type), (7.2): Invalid cell\_measures syntax
  - Models and Vars: CESM2: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo, CESM2-FV2: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo, CESM2-WACCM: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo, CESM2-WACCM-FV2: Omon.tauuo,Omon.tauvo,Omon.uo,Omon.vo
  - Files affected: 438
- - Example: vo\_Omon\_CESM2\_1pctCO2\_r1i1p1f1\_gn\_005101-010012.nc
+ - Example: [tauvo\_Omon\_CESM2-WACCM\_ssp245\_r1i1p1f1\_gr\_201501-206412.nc](http://esgf-data.ucar.edu/thredds/dodsC/esg_dataroot/CMIP6/ScenarioMIP/NCAR/CESM2-WACCM/ssp245/r1i1p1f1/Omon/tauvo/gr/v20190815/tauvo_Omon_CESM2-WACCM_ssp245_r1i1p1f1_gr_201501-206412.nc.html)
 
- - PID: [hdl:21.14100/8783a205-d2aa-4e4f-abe5-34cd92adb2a8](http://hdl.handle.net/21.14100/8783a205-d2aa-4e4f-abe5-34cd92adb2a8)
-
-### ncdump sample
-
-```
-	float vo(time, lev, nlat, nlon) ;
-		vo:_FillValue = 1.e+20f ;
-		vo:cell_measures = "--OPT" ;
-		vo:cell_methods = "time: mean" ;
-		vo:comment = "Prognostic y-ward velocity component resolved by the model." ;
-		vo:coordinates = "time lev lat lon" ;
-		vo:description = "Prognostic y-ward velocity component resolved by the model." ;
-		vo:frequency = "mon" ;
-		vo:id = "vo" ;
-		vo:long_name = "Sea Water Y Velocity" ;
-		vo:mipTable = "Omon" ;
-		vo:missing_value = 1.e+20 ;
-		vo:out_name = "vo" ;
-		vo:prov = "Omon ((isd.003))" ;
-		vo:realm = "ocean" ;
-		vo:standard_name = "sea_water_y_velocity" ;
-		vo:time = "time" ;
-		vo:time_label = "time-mean" ;
-		vo:time_title = "Temporal mean" ;
-		vo:title = "Sea Water Y Velocity" ;
-		vo:type = "real" ;
-		vo:units = "m s-1" ;
-		vo:variable_id = "vo" ;
-```
+ - PID: [hdl:21.14100/8a4a4e79-e228-4f12-947e-20b469bd728a](http://hdl.handle.net/21.14100/8a4a4e79-e228-4f12-947e-20b469bd728a)
 
 ## Miscellaneous Errors - 2
 
  - Message: Attribute missing\_value of incorrect type (expecting 'Data Variable' type, got 'Numeric' type), (7.3): Invalid type1: sector - must be a variable name or valid area\_type
  - Models and Vars: CESM2: Emon.sweLut, CESM2-FV2: Emon.sweLut, CESM2-WACCM-FV2: Emon.sweLut
  - Files affected: 7
- - Example: sweLut\_Emon\_CESM2\_esm-hist\_r2i1p1f1\_gn\_200001-201412.nc
+ - Example: [sweLut\_Emon\_CESM2-FV2\_historical\_r1i1p1f1\_gn\_190001-194912.nc](http://esgf-data.ucar.edu/thredds/dodsC/esg_dataroot/CMIP6/CMIP/NCAR/CESM2-FV2/historical/r1i1p1f1/Emon/sweLut/gn/v20191120/sweLut_Emon_CESM2-FV2_historical_r1i1p1f1_gn_200001-201412.nc.html)
 
- - PID: [hdl:21.14100/412deb76-94d7-41a8-a0fb-e9a838c1ee3d](http://hdl.handle.net/21.14100/412deb76-94d7-41a8-a0fb-e9a838c1ee3d)
+ - PID: [hdl:21.14100/dc2a75bb-be49-40dc-8651-33ee04a44b9d](http://hdl.handle.net/21.14100/dc2a75bb-be49-40dc-8651-33ee04a44b9d)
 
 ### ncdump sample
 
@@ -79,164 +51,61 @@
  - Message: Attribute missing\_value of incorrect type (expecting 'Data Variable' type, got 'Numeric' type)
  - Models and Vars: CESM2: 3hr.huss, .. [164], CESM2-FV2: AERmon.abs550aer, .. [149], CESM2-WACCM: AERmon.abs550aer, .. [131], CESM2-WACCM-FV2: AERmon.abs550aer, .. [159], MCM-UA-1-0: Ofx.deptho
  - Files affected: 37409
- - Example: mmrbc\_AERmon\_CESM2-WACCM\_ssp126\_r1i1p1f1\_gn\_206501-210012.nc
+ - Example: [snc\_LImon\_CESM2-WACCM-FV2\_historical\_r1i1p1f1\_gn\_195001-199912.nc](http://esgf-data.ucar.edu/thredds/dodsC/esg_dataroot/CMIP6/CMIP/NCAR/CESM2-WACCM-FV2/historical/r1i1p1f1/LImon/snc/gn/v20191120/snc_LImon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_200001-201412.nc.html)
 
- - PID: [hdl:21.14100/d1d42ac9-36dc-4cc5-acae-a469314f8631](http://hdl.handle.net/21.14100/d1d42ac9-36dc-4cc5-acae-a469314f8631)
-
-### ncdump sample
-
-```
-	float mmrbc(time, lev, lat, lon) ;
-		mmrbc:_FillValue = 1.e+20f ;
-		mmrbc:cell_measures = "area: areacella" ;
-		mmrbc:cell_methods = "area: time: mean" ;
-		mmrbc:comment = "bc_a1 + bc_a4" ;
-		mmrbc:coordinates = "time lev lat lon" ;
-		mmrbc:description = "Dry mass fraction of black carbon aerosol particles in air." ;
-		mmrbc:frequency = "mon" ;
-		mmrbc:id = "mmrbc" ;
-		mmrbc:long_name = "Elemental Carbon Mass Mixing Ratio" ;
-		mmrbc:mipTable = "AERmon" ;
-		mmrbc:missing_value = 1.e+20 ;
-		mmrbc:out_name = "mmrbc" ;
-		mmrbc:prov = "AERmon ((isd.003))" ;
-		mmrbc:realm = "aerosol" ;
-		mmrbc:standard_name = "mass_fraction_of_elemental_carbon_dry_aerosol_particles_in_air" ;
-		mmrbc:time = "time" ;
-		mmrbc:time_label = "time-mean" ;
-		mmrbc:time_title = "Temporal mean" ;
-		mmrbc:title = "Elemental Carbon Mass Mixing Ratio" ;
-		mmrbc:type = "real" ;
-		mmrbc:units = "kg kg-1" ;
-		mmrbc:variable_id = "mmrbc" ;
-```
+ - PID: [hdl:21.14100/96bd17f8-70b4-44a4-88b9-e17db54ab478](http://hdl.handle.net/21.14100/96bd17f8-70b4-44a4-88b9-e17db54ab478)
 
 ## Miscellaneous Errors - 4
 
  - Message: (7.2): Invalid cell\_measures syntax
  - Models and Vars: AWI-CM-1-1-MR: Omon.tauuo, .. [10], AWI-ESM-1-1-LR: Omon.thetaoga, GFDL-CM4: AERmonZ.ta,AERmonZ.ua,EdayZ.ua,EdayZ.zg, GFDL-ESM4: AERmonZ.ta,AERmonZ.ua,EdayZ.ua,EdayZ.zg, MPI-ESM1-2-HR: Omon.tauuo, .. [6]
  - Files affected: 1509
- - Example: uo\_Omon\_MPI-ESM1-2-HR\_control-1950\_r1i1p1f1\_gn\_203601-203612.nc
+ - Example: [zg\_EdayZ\_GFDL-ESM4\_piControl\_r1i1p1f1\_gr1z\_04210101-04401231.nc](http://esgdata.gfdl.noaa.gov/thredds/dodsC/gfdl_dataroot4/CMIP/NOAA-GFDL/GFDL-ESM4/piControl/r1i1p1f1/EdayZ/zg/gr1z/v20180701/zg_EdayZ_GFDL-ESM4_piControl_r1i1p1f1_gr1z_04210101-04401231.nc.html)
 
- - PID: [hdl:21.14100/0eb6c95c-3f56-4ee2-ba6a-f5331c1f471f](http://hdl.handle.net/21.14100/0eb6c95c-3f56-4ee2-ba6a-f5331c1f471f)
-
-### ncdump sample
-
-```
-	float uo(time, depth, y_2, x_2) ;
-		uo:standard_name = "sea_water_x_velocity" ;
-		uo:long_name = "Sea Water X Velocity" ;
-		uo:units = "m s-1" ;
-		uo:code = 3 ;
-		uo:coordinates = "lat_2 lon_2" ;
-		uo:_FillValue = 1.e+20f ;
-		uo:missing_value = 1.e+20f ;
-		uo:cell_methods = "time: mean" ;
-		uo:cell_measures = "--OPT" ;
-		uo:comment = "Prognostic x-ward velocity component resolved by the model." ;
-```
+ - PID: [hdl:21.14100/7d3d22b0-b6a3-47c1-ab78-4bd477746d9f](http://hdl.handle.net/21.14100/7d3d22b0-b6a3-47c1-ab78-4bd477746d9f)
 
 ## Miscellaneous Errors - 5
 
  - Message: (7.2): cell\_measures variable areacella must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-ESM-1-1-LR: Amon.prsn, GFDL-AM4: Amon.clt, .. [36], GISS-E2-1-G: SImon.sithick, GISS-E2-1-G-CC: SImon.sithick, GISS-E2-1-H: SImon.sithick, IPSL-CM6A-LR: fx.mrsofc, MPI-ESM1-2-HR: Amon.clt, .. [52], MPI-ESM1-2-XR: Amon.clt, .. [52]
  - Files affected: 6902
- - Example: rsutcs\_Amon\_MPI-ESM1-2-HR\_highresSST-present\_r1i1p1f1\_gn\_198201-198212.nc
+ - Example: [rsdt\_Amon\_GFDL-AM4\_amip\_r1i1p1f1\_gr1\_198001-201412.nc](http://esgdata.gfdl.noaa.gov/thredds/dodsC/gfdl_dataroot3/CMIP/NOAA-GFDL/GFDL-AM4/amip/r1i1p1f1/Amon/rsdt/gr1/v20180807/rsdt_Amon_GFDL-AM4_amip_r1i1p1f1_gr1_198001-201412.nc.html)
 
- - PID: [hdl:21.14100/42118a87-7b4e-419d-9b00-2faedca28a6a](http://hdl.handle.net/21.14100/42118a87-7b4e-419d-9b00-2faedca28a6a)
-
-### ncdump sample
-
-```
-	float rsutcs(time, lat, lon) ;
-		rsutcs:standard_name = "toa_outgoing_shortwave_flux_assuming_clear_sky" ;
-		rsutcs:long_name = "TOA Outgoing Clear-Sky Shortwave Radiation" ;
-		rsutcs:units = "W m-2" ;
-		rsutcs:_FillValue = 1.e+20f ;
-		rsutcs:missing_value = 1.e+20f ;
-		rsutcs:cell_measures = "area: areacella" ;
-		rsutcs:comment = "Calculated in the absence of clouds." ;
-		rsutcs:cell_methods = "area: time: mean" ;
-```
+ - PID: [hdl:21.14100/d2cf5aaf-e060-4eb7-8033-1e9c33477eb4](http://hdl.handle.net/21.14100/d2cf5aaf-e060-4eb7-8033-1e9c33477eb4)
 
 ## Miscellaneous Errors - 6
 
  - Message: (7.2): cell\_measures variable areacellg must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-ESM-1-1-LR: ImonAnt.prsn,ImonGre.prsn
  - Files affected: 22
- - Example: prsn\_ImonGre\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_190101-191012.nc
+ - Example: [prsn\_ImonAnt\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_187101-188012.nc](http://esgf3.dkrz.de/thredds/dodsC/cmip6/CMIP/AWI/AWI-ESM-1-1-LR/piControl/r1i1p1f1/ImonAnt/prsn/gn/v20200212/prsn_ImonAnt_AWI-ESM-1-1-LR_piControl_r1i1p1f1_gn_187101-188012.nc.html)
 
- - PID: [hdl:21.14100/26be2e49-7641-48d7-97a8-78a79414d10e](http://hdl.handle.net/21.14100/26be2e49-7641-48d7-97a8-78a79414d10e)
-
-### ncdump sample
-
-```
-	float prsn(time, ncells) ;
-		prsn:units = "kg m-2 s-1" ;
-		prsn:CDI_grid_type = "unstructured" ;
-		prsn:_FillValue = 1.e+30f ;
-		prsn:missing_value = 1.e+30f ;
-		prsn:description = "At surface; includes precipitation of all forms of water in the solid phase" ;
-		prsn:coordinates = "lat lon" ;
-		prsn:standard_name = "snowfall_flux" ;
-		prsn:cell_methods = "area: time: mean where ice_sheet" ;
-		prsn:cell_measures = "area: areacellg" ;
-```
+ - PID: [hdl:21.14100/31848572-4897-4e8e-b963-eaf166de7d8b](http://hdl.handle.net/21.14100/31848572-4897-4e8e-b963-eaf166de7d8b)
 
 ## Miscellaneous Errors - 7
 
  - Message: (7.2): cell\_measures variable areacello must either exist in this netCDF file or be named by the external\_variables attribute, (7.2): cell\_measures variable volcello must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-CM-1-1-MR: Omon.so,Omon.thetao, AWI-ESM-1-1-LR: Omon.thetao
  - Files affected: 373
- - Example: thetao\_Omon\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_188101-189012.nc
+ - Example: [thetao\_Omon\_AWI-CM-1-1-MR\_piControl\_r1i1p1f1\_gn\_286101-287012.nc](http://esgf3.dkrz.de/thredds/dodsC/cmip6/CMIP/AWI/AWI-CM-1-1-MR/piControl/r1i1p1f1/Omon/thetao/gn/v20181218/thetao_Omon_AWI-CM-1-1-MR_piControl_r1i1p1f1_gn_286101-287012.nc.html)
 
- - PID: [hdl:21.14100/e3213373-10ae-47cc-8eea-dab4d021d9f6](http://hdl.handle.net/21.14100/e3213373-10ae-47cc-8eea-dab4d021d9f6)
-
-### ncdump sample
-
-```
-	float thetao(time, depth, ncells) ;
-		thetao:units = "degC" ;
-		thetao:CDI_grid_type = "unstructured" ;
-		thetao:_FillValue = 1.e+30f ;
-		thetao:missing_value = 1.e+30f ;
-		thetao:description = "Diagnostic should be contributed even for models using conservative temperature as prognostic field." ;
-		thetao:coordinates = "lat lon" ;
-		thetao:standard_name = "sea_water_potential_temperature" ;
-		thetao:cell_methods = "area: mean where sea time: mean" ;
-		thetao:cell_measures = "area: areacello volume: volcello" ;
-```
+ - PID: [hdl:21.14100/39df4eea-58c7-466a-9280-8f9bfa22f9fa](http://hdl.handle.net/21.14100/39df4eea-58c7-466a-9280-8f9bfa22f9fa)
 
 ## Miscellaneous Errors - 8
 
  - Message: (7.2): cell\_measures variable areacello must either exist in this netCDF file or be named by the external\_variables attribute
  - Models and Vars: AWI-CM-1-1-MR: Oday.tos, .. [8], AWI-ESM-1-1-LR: Oday.tos, .. [5], CNRM-ESM2-1: Ofx.deptho
  - Files affected: 1051
- - Example: prsn\_Omon\_AWI-CM-1-1-MR\_ssp370\_r4i1p1f1\_gn\_205101-206012.nc
+ - Example: [tos\_Oday\_AWI-ESM-1-1-LR\_piControl\_r1i1p1f1\_gn\_18710101-18801231.nc](http://esgf3.dkrz.de/thredds/dodsC/cmip6/CMIP/AWI/AWI-ESM-1-1-LR/piControl/r1i1p1f1/Oday/tos/gn/v20200212/tos_Oday_AWI-ESM-1-1-LR_piControl_r1i1p1f1_gn_18710101-18801231.nc.html)
 
- - PID: [hdl:21.14100/045b7cff-dfc3-4068-8110-60726bfff4de](http://hdl.handle.net/21.14100/045b7cff-dfc3-4068-8110-60726bfff4de)
-
-### ncdump sample
-
-```
-	float prsn(time, ncells) ;
-		prsn:units = "kg m-2 s-1" ;
-		prsn:CDI_grid_type = "unstructured" ;
-		prsn:_FillValue = 1.e+30f ;
-		prsn:missing_value = 1.e+30f ;
-		prsn:description = "at surface; includes precipitation of all forms of water in the solid phase" ;
-		prsn:coordinates = "lat lon" ;
-		prsn:standard_name = "snowfall_flux" ;
-		prsn:cell_methods = "area: mean where ice_free_sea over sea time: mean" ;
-		prsn:cell_measures = "area: areacello" ;
-```
+ - PID: [hdl:21.14100/678c9db2-924e-4571-a5f4-0c1f5dd908f9](http://hdl.handle.net/21.14100/678c9db2-924e-4571-a5f4-0c1f5dd908f9)
 
 ## Miscellaneous Errors - 9
 
  - Message: (7.3): Invalid type1: landuse - must be a variable name or valid area\_type
  - Models and Vars: CNRM-ESM2-1: Emon.sweLut
  - Files affected: 1
- - Example: sweLut\_Emon\_CNRM-ESM2-1\_esm-hist\_r1i1p1f2\_gr\_185001-201412.nc
+ - Example: [sweLut\_Emon\_CNRM-ESM2-1\_esm-hist\_r1i1p1f2\_gr\_185001-201412.nc](http://esg1.umr-cnrm.fr/thredds/dodsC/CMIP6_CNRM/CMIP/CNRM-CERFACS/CNRM-ESM2-1/esm-hist/r1i1p1f2/Emon/sweLut/gr/v20190215/sweLut_Emon_CNRM-ESM2-1_esm-hist_r1i1p1f2_gr_185001-201412.nc.html)
 
  - PID: [hdl:21.14100/c5be1142-4d24-4ae5-bff9-8dbf073c81cc](http://hdl.handle.net/21.14100/c5be1142-4d24-4ae5-bff9-8dbf073c81cc)
 
@@ -264,24 +133,7 @@
  - Message: (7.3): Invalid type1: sector - must be a variable name or valid area\_type
  - Models and Vars: UKESM1-0-LL: Emon.sweLut
  - Files affected: 41
- - Example: sweLut\_Emon\_UKESM1-0-LL\_esm-1pct-brch-2000PgC\_r1i1p1f2\_gn\_205001-206112.nc
+ - Example: [sweLut\_Emon\_UKESM1-0-LL\_ssp534-over-bgc\_r4i1p1f2\_gn\_205001-210012.nc](http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/C4MIP/MOHC/UKESM1-0-LL/ssp534-over-bgc/r4i1p1f2/Emon/sweLut/gn/v20200501/sweLut_Emon_UKESM1-0-LL_ssp534-over-bgc_r4i1p1f2_gn_205001-210012.nc.html)
 
- - PID: [hdl:21.14100/bc4919e8-c8d6-4a8f-b0fe-b693621f9eef](http://hdl.handle.net/21.14100/bc4919e8-c8d6-4a8f-b0fe-b693621f9eef)
-
-### ncdump sample
-
-```
-	float sweLut(time, landuse, lat, lon) ;
-		sweLut:standard_name = "lwe_thickness_of_surface_snow_amount" ;
-		sweLut:long_name = "Snow Water Equivalent on Land-Use Tile" ;
-		sweLut:comment = "The surface called \'surface\' means the lower boundary of the atmosphere. \'lwe\' means liquid water equivalent. \'Amount\' means mass per unit area. The construction lwe_thickness_of_X_amount or _content means the vertical extent of a layer of liquid water having the same mass per unit area. Surface amount refers to the amount on the ground, excluding that on the plant or vegetation canopy." ;
-		sweLut:units = "m" ;
-		sweLut:original_name = "mo: land_use_tile_mean( (stash: m01s08i236, lbproc: 128) / (FRESHWATER_DENSITY: 1000.), (stash: m01s03i317, lbproc: 128))" ;
-		sweLut:cell_methods = "area: time: mean where sector" ;
-		sweLut:cell_measures = "area: areacella" ;
-		sweLut:history = "2019-11-28T10:25:27Z altered by CMOR: Reordered dimensions, original order: landuse time lat lon. 2019-11-28T10:25:27Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20)." ;
-		sweLut:missing_value = 1.e+20f ;
-		sweLut:_FillValue = 1.e+20f ;
-		sweLut:coordinates = "sector" ;
-```
+ - PID: [hdl:21.14100/7fa028c6-8993-4c49-93af-32b11f0886b6](http://hdl.handle.net/21.14100/7fa028c6-8993-4c49-93af-32b11f0886b6)
 

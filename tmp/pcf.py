@@ -3,6 +3,7 @@ import csv
 import sys, os
 sys.path.append('../scripts')
 import local_utilities as lu
+import hddump
 
 
 ## path example; /badc/cmip6/data/CMIP6/AerChemMIP/BCC/BCC-ESM1/hist-piNTCF/r1i1p1f1/Amon/ch4/gn/v20190621/ch4_Amon_BCC-ESM1_hist-piNTCF_r1i1p1f1_gn_185001-201412.nc
@@ -85,6 +86,8 @@ class Parse(object):
 
        ee = []
        ik = 0 
+       hddump_main = hddump.Main([])
+       hddump_main.res = dict()
        for k in ks:
            ik += 1
            kk = mcl( ', '.join( eval( k ) ) )
@@ -116,8 +119,19 @@ class Parse(object):
            pid = r0[ipid]
            pid_link = "[%s](http://hdl.handle.net/%s)" % (pid,pid[4:])
            fn = fp.rpartition('/')[-1]
-           oo.write( ' - Example: %s\n\n' % mcl(fn))
+
+           hdl = hddump.Open( pid ) 
+           hdl.get()
+           hddump_main._extractFileURL(hdl)
+           if 'href' in hddump_main.res:
+             url = hddump_main.res['href'].replace( 'fileServer', 'dodsC' ) + '.html'
+             oo.write( ' - Example: [%s](%s)\n\n' % (mcl(fn),url))
+           else:
+             print( "No url for %s" % pid )
+             oo.write( ' - Example: %s\n\n' % mcl(fn))
+
            oo.write( ' - PID: %s\n\n' % pid_link)
+
              
            self._ncdump(fp,oo)
            ee.append( (k,fp) )
