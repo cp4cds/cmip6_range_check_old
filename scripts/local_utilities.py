@@ -40,12 +40,16 @@ class WGIPriority(object):
     self.ee = dict()
     self.title = dict()
     self.ranges = dict()
+    self.masks = dict()
     for l in ii:
       rec = l[2:]
       id, units = rec[:2]
       if dq != None:
         self.title[id] = dq.CMORvar_by_id[id].title
-      vt = rec[2:10]
+      vt = rec[3:11]
+      if rec[2].strip() != '':
+          self.masks[id] = rec[2].strip()
+
       if not all( [vt[i] == "-" for i in [1,3,5,7]]):
         xx = []
         for i in [0,2,4,6]:
