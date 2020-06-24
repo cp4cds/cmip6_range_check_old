@@ -1,7 +1,9 @@
 import netCDF4, numpy
-import glob, shelve, os, traceback, sys, random, time, gc
+import glob, shelve, os, traceback, sys, random, time, gc, stat
 import collections, traceback
 from exceptions_lib import *
+import utils_test
+import tracemalloc
 
 __version__ = "0.1.04"
 
@@ -9,7 +11,7 @@ __version__ = "0.1.04"
 
 
 class ScanFile(object):
-  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None):
+  def __init__(self,thisfile,sh, mode, vn='tas', checkSpecial=False,maskAll=False,maxnt=10000, with_time=True,log=None,trace_log=None,npct=13,nextremes=-1):
     if maskAll:
       checkSpecial=False
     self.version = __version__
@@ -20,13 +22,24 @@ class ScanFile(object):
     self.checkSpecial = checkSpecial
     self.maskAll = maskAll
     self.log = log
+    self.trace_log = trace_log
     self.maxnt = maxnt
-    self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
+    self.nextremes = nextremes
+    if npct == 13:
+      self.percentiles = [99.9,99.5,99.,95.,90,75.,50.,25.,10.,5.,1.,.5,.1] 
+    elif npct == 29:
+      xx = [.001,.002,.005,.01,.02,.05,.1,.2,.5,1.,2.,5.]
+      self.percentiles = [100. - x for x in xx] + [90,75.,50.,25.,10.] + xx[::-1]
+    else:
+      raise InstantiationValueException("ScanFile must be instantiated with npct=13 or 29", npct=npct)
+
+      
     self.sh["__tech__"] = {  "percentiles":self.percentiles,
                              "time":time.ctime(),
                              "source":{"class":"scan_files.ScanFIle", "version":self.version} }
 
     self.shp1 = self.scan1( thisfile, vn )
+
 
   def scan1(self,f, vn):
     fname = f.split( '/' )[-1]
@@ -96,6 +109,7 @@ class ScanFile(object):
         raise BasicFileStructureException
 
       t_array = t[:]
+      isamp = range(len(t_array))
       if len(t_array) > 1:
         dt = t_array[1:] - t_array[:-1]
         dt0 = numpy.mean( dt )
@@ -103,49 +117,67 @@ class ScanFile(object):
 
       nt =len(t_array)
 
+##
+## swith to passing list of time indices, rather than sliced array, to reduce memory usage
+## taking slice eats memory (at least when using random sample)
+##
+## this is a change in function ... as fvcount is now over whole file .....
+##
       if self.mode == 'firstTimeValue':
         nt = min( [12,len(t_array)] )
-        v = numpy.array( v[:nt,:,:] )
-        if self.maskAll and maskok:
-          vmsk = numpy.array( vmsk[:nt,:,:] )
+        isamp = range(nt)
+        ##v = numpy.array( v[:nt,:,:] )
+        ##if self.maskAll and maskok:
+          ##vmsk = numpy.array( vmsk[:nt,:,:] )
       elif self.mode == 'sampled' and nt > 20:
         isamp = sorted( random.sample( range(nt), 20 ) )
-        v = numpy.array( v[isamp,:,:] )
-      elif self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou'] and nt > 20:
+        ##v = numpy.array( v[isamp,:,:] )
+      elif (self.mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou']) and nt > 20:
         nsamp = nt//{'sampledonepercent':100, 'sampledtenpercent':10, 'sampledoneperthou':1000}[self.mode]
         isamp = sorted( random.sample( range(nt), nsamp ) )
         if len( isamp ) == 0:
           isamp = [0,]
       
-        v = numpy.array( v[isamp,:,:] )
+        ###v = numpy.array( v[isamp,:,:] )
       elif self.maxnt > 0 and self.maxnt < len(t_array):
         nt = self.maxnt
-        v = numpy.array( v[:nt,:,:] )
+        isamp = range(nt)
+        ##v = numpy.array( v[:nt,:,:] )
 
-    print( "INFO.001.00020: ", fname, v.shape, nt )
-     
+    print( "INFO.001.00020: ", fname, self.mode, v.shape, nt, len(isamp) )
 
     if len( v.shape ) == 3 or (not self.with_time and len(v.shape) == 2):
-      tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
+      if self.nextremes > 0:
+        self.extremes = []
+
+      tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd, isamp=isamp)
       med,mx,mn,mamx,mamn,fvcount = tt
       if self.log != None:
         self.log.info( "File summary: %s" % list(tt) )
 
-      self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
+      if self.nextremes > 0:
+        self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap, self.extremes)
+      else:
+        self.sh[fname] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
 
     elif len( v.shape ) == 4:
       for l in range( v.shape[1]):
-        tt, am, ap = self.processFeature( v[:,l,:,:], vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd)
+        tt, am, ap = self.processFeature( v, vm, hasfv, maskout, maskrange, fill_value, hardLowerBnd, specFnd, isamp=isamp, ix2=l)
         med,mx,mn,mamx,mamn,fvcount = tt
 
         self.sh["%s:l=%s" % (fname,l)] = (True,self.version, time.ctime(), tech_info, (self.checkSpecial,specFnd,maskerr), (med,mx,mn,mamx,mamn,dt0,dt1,fvcount),am, ap)
         
+
+    if self.trace_log != None:
+       snapshot = tracemalloc.take_snapshot()
+       self.trace_log.info( "File %s" % f )
+       utils_test.display_top(snapshot,log=self.trace_log)
     nc.close()
     if maskok:
       ncm.close()
     return shp1
 
-  def processFeature( self, v, vm, hasfv,maskout,  maskrange, fill_value, hardLowerBnd, specFnd):
+  def processFeature( self, v, vm, hasfv,maskout,  maskrange, fill_value, hardLowerBnd, specFnd, isamp=None,ix2=None):
     """Process a series of horizontal fields"""
     am = []
     ap = []
@@ -169,23 +201,46 @@ class ScanFile(object):
       elif self.maskAll and maskok:
           vm = numpy.ma.masked_where( vmsk < 0.1, v )
         
-      if type( v.size ) == type( 1 ):
-        fvcount = v.size - vm.count()
-      else:
-        fvcount = v.size() - vm.count()
+      fvc = 0
+      if fvc == 1:
+        if type( v.size ) == type( 1 ):
+          fvcount = v.size - vm.count()
+        else:
+          fvcount = v.size() - vm.count()
+      else:  
+        fvcount = 0
  
-      if len(v.shape) == 3:
-        for k in range( v.shape[0] ):
-          am.append( numpy.ma.mean( numpy.ma.abs( vm[k,:] ) ) )
-          x = vm[k,:].ravel().compressed()
+      if len(v.shape) in [3,4]:
+        for k in isamp:
+          if len(v.shape) == 3:
+            thisv = vm[k,:]
+          else:
+            thisv = vm[k,ix2,:]
+        
+          if fvc == 0:
+            fvcount += thisv.size - thisv.count()
+          am.append( numpy.ma.mean( numpy.ma.abs( thisv ) ) )
+          x = thisv.ravel()
           if len(x) > 0:
             ap.append( numpy.percentile( x, self.percentiles ) )
+            if self.nextremes > 0:
+              flat_indices_min = numpy.argpartition(x, self.nextremes-1)[:self.nextremes]
+              flat_indices_max = numpy.argpartition(-x, self.nextremes-1)[:self.nextremes]
+
+              row_indices_min, col_indices_min = numpy.unravel_index(flat_indices_min, x.shape())
+              min_elements = array[row_indices, col_indices]
+              row_indices_max, col_indices_max = numpy.unravel_index(flat_indices_max, x.shape())
+              max_elements = array[row_indices, col_indices]
+
+              self.extremes.append( ((row_indices_min, col_indices_min,min_elements), (row_indices_max, col_indices_max,max_elements) ) )
           else:
             print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
-          meds.append( numpy.ma.median( vm[k,:] ) )
-          mxs.append( numpy.ma.max( vm[k,:] ) )
-          mns.append( numpy.ma.min( vm[k,:] ) )
+          meds.append( numpy.ma.median( thisv ) )
+          mxs.append( numpy.ma.max( thisv ) )
+          mns.append( numpy.ma.min( thisv ) )
       else:
+        if fvc == 0:
+            fvcount = vm.size - vm.count()
         am.append( numpy.ma.mean( numpy.ma.abs( vm ) ) )
         x = vm.ravel().compressed()
         if len(x) > 0:
@@ -197,13 +252,18 @@ class ScanFile(object):
         mns.append( numpy.ma.min( vm ) )
 
     else:
-      if len(v.shape) == 3:
-        for k in range( v.shape[0] ):
-          am.append( numpy.mean( numpy.abs( v[k,:] ) ) )
-          ap.append( numpy.percentile( v[k,:], self.percentiles ) )
-          meds.append( numpy.median( v[k,:] ) )
-          mxs.append( numpy.max( v[k,:] ) )
-          mns.append( numpy.min( v[k,:] ) )
+      if len(v.shape) in [3,4]:
+        if len(v.shape) == 3:
+          thisv = v[k,:]
+        else:
+          thisv = v[k,ix2,:]
+        ##for k in range( v.shape[0] ):
+        for k in isamp:
+          am.append( numpy.mean( numpy.abs( thisv ) ) )
+          ap.append( numpy.percentile( thisv, self.percentiles ) )
+          meds.append( numpy.median( thisv ) )
+          mxs.append( numpy.max( thisv ) )
+          mns.append( numpy.min( thisv ) )
       else:
           am.append( numpy.mean( numpy.abs( v ) ) )
           ap.append( numpy.percentile( v, self.percentiles ) )
@@ -224,8 +284,7 @@ class ScanFile(object):
     med = numpy.median( meds )
     mx = max( mxs )
     mn = min( mns )
-    return  (med,mx,mn,mamx,mamn,fvcount), am, ap
-
+    return  (med,mx,mn,mamx,mamn,fvcount), (isamp, am, ap, self.extremes )
 
 ##
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
@@ -234,6 +293,7 @@ class ShrinkByVar(object):
   def __init__(self,mode,log=None):
     self.mode = mode
     self.log = log
+
 
   def run(self,inputFile,odir_tag,max_files=0):
     """
@@ -275,23 +335,25 @@ class ShrinkByVar(object):
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
 ##
 class ExecuteByVar(object):
-  def __init__(self,mode,log=None):
+  def __init__(self,mode,log=None,trace_log=None,shelve_root="sh_ranges"):
     self.mode = mode
-    self.shelve_template = "sh_ranges/%s/%s/%s_%s_%s_%s_%s"
-    self.shelve_dir_template = "sh_ranges/%s/%s"
+    self.shelve_template = shelve_root + "/%s/%s/%s_%s_%s_%s_%s"
+    self.shelve_dir_template = shelve_root + "/%s/%s"
     self.log = log
+    self.trace_log = trace_log
+    self.npct = 13
+    self.nextremes = -1
 
   def _check_shelve( self, shelve_file ):
     """Return true if shelve is complete and credible size"""
-
+    
     if all( [os.path.isfile( "%s.%s" % (shelve_file,x) ) for x in ["dat","bak","dir"] ] ):
-      s = os.stat( "%s.%s" % (shelve_file,'dat') )
+      s = os.stat( "%s.%s" % (shelve_file,'dat')  )
       if s[stat.ST_SIZE] > 10000:
         return True
     return False
-
-
-  def run(self,inputFile,shelve_tag,max_files=0,overwrite=False):
+  
+  def run(self,inputFile,max_files=0,overwrite=False):
     """
     Execute range extraction for a set of files identified by a listing of directories given in *inputFile*.
     *inputFile* should contain a list of ESGF "latest" directories for a single data variable.
@@ -322,28 +384,33 @@ class ExecuteByVar(object):
       shelve_dir = self.shelve_dir_template % (tab,var)
       if not os.path.isdir (shelve_dir):
         os.makedirs( shelve_dir )
-      shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,shelve_tag)
+      shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,self.mode)
       if overwrite or not self._check_shelve( shelve_file ):
         sh = shelve.open( shelve_file )
         files = glob.glob( "%s/*.nc" % this_path )
         sh["__info__"] = {"title":"Scanning set of data files: %s, %s" % (len(files),[tab,var,inst,source,expt,this_version]), "drs":[tab,var,inst,source,expt,ense,grid,this_version], "source":"cmip6_range_check.scan_files.ExecuteByVar", "time":time.ctime(), "script_version":__version__}
         print ( this_path, len(files) )
+        sh.close()
         try:
           for data_file in files:
+            sh = shelve.open( shelve_file )
+            if self.trace_log != None:
+               self.trace_log.info( '%s: STARTING %s ' % (time.ctime(),data_file) )
             if self.log != None:
                self.log.info( 'STARTING %s ' % data_file )
             else:
                print ( 'STARTING ',data_file )
 
             try:
-              s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000,with_time=with_time,log=self.log)
+              s = ScanFile(data_file,sh, self.mode, vn=var, checkSpecial=False,maskAll=False,maxnt=10000, \
+                                 with_time=with_time,log=self.log, trace_log=self.trace_log, npct=self.npct, nextremes=self.nextremes)
               del s
               gc.collect()
             except:
               raise WorkflowException( "wfx.001.0001: Failed to scan file", file=data_file, script="main.py")
             nf += 1
+            sh.close()
             if max_files > 0 and nf+1 > max_files:
-              sh.close()
               return
 
 ##
@@ -351,11 +418,11 @@ class ExecuteByVar(object):
         except WorkflowException as e:
           trace = traceback.format_exc()
           sh["__EXCEPTION__"] = ("WorkflowException",(e.msg,e.kwargs),trace)
+          sh.close()
           if self.log != None:
             self.log.error( "WorkflowException: %s {%s}\n%s" % (e.msg,e.kwargs,trace) )
           print( "EXCEPTION: WorkflowException: %s, %s" % (e.msg,e.kwargs) )
           print( trace )
-        sh.close()
 
 
 def find_mask(data_file):
@@ -378,7 +445,7 @@ if __name__ == "__main__":
   if len(sys.argv) == 4:
     xxx, shelve_tag, input_file = sys.argv[1:]
     ebv = ExecuteByVar(mode)
-    ebv.run(input_file,shelve_tag,max_files=0)
+    ebv.run(input_file,max_files=0)
   else:
     if len(sys.argv) == 3:
       if sys.argv[1] == "--json":

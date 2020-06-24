@@ -1,9 +1,273 @@
-import logging, time, os, collections, json, inspect
+import logging, time, os, collections, json, inspect, glob, warnings, numpy
 import csv
+from local_pytest_utils import BaseClassTS
+
+NT__scope = collections.namedtuple( 'scope', ['overview','identifier','description','priority','traceability'] )
+NT__test_case_spec = collections.namedtuple( 'test_case_spec', ['ov', 'id', 'obj', 'p', 'tr', 'prec', 'i', 'expected'])
 
 NT_RangeValue = collections.namedtuple( "range_value", ["value","status"] )
 NT_RangeSet = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min"] )
 null_range_value = NT_RangeValue( None, "NONE" )
+
+__overview__ = "Testing the local utilities module"
+__identifier__ = "scope01"
+__description__ = """Test of local utilities module, local_utilities.py, which contains functions and classes used in other modules"""
+__priority__ = "MUST"
+__traceability__ = "documentation is tbd"
+test_scope = NT__scope( overview = __overview__, priority=__priority__,identifier=__identifier__, description=__description__, traceability=__traceability__)
+
+
+def matching( result, expected):
+    if type(expected) == type('') and expected.find(':') != -1 and expected.split( ':' )[0] in ['lt','gt','le','ge']:
+        exp = eval( expected[3:] )
+        op = expected[:2]
+        assert op in ['lt','gt','le','ge']
+        return operator.__dict__[ op ](result,exp)
+    else:
+        return result == expected
+
+
+
+
+class TCBuild(BaseClassTS):
+    """
+    BaseClassTS: brings in a standard report function which assumes a spec attribute which is an instance of NT__scope
+    """
+    scope = test_scope
+    def __init__(self, function ):
+      ret = function.__annotations__['return']
+      if type(ret) == type(dict()):
+        self.spec = NT__test_case_spec( **ret )
+      elif isinstance(ret,NT__test_case_spec):
+        self.spec = ret
+
+      self.function = function
+      expected = self.spec.expected
+      if type(expected) == type('') and expected.find( 'regex:' ) == 0:
+         self.conformance_mode = 'match'
+      else:
+         self.conformance_mode = 'equals'
+
+      self.ov = self.spec.ov
+
+    def __call__(self,*args,**kwargs):
+        self.result = self.function(*args,**kwargs)
+        return self.result
+
+    def conforms( self, result ):
+      self.result = result
+      if self.conformance_mode == 'equals':
+          return self.equals( )
+
+    def equals(self):
+        self.fail_msg = 'Result [%s] does not match expected [%s]' % (self.result, self.spec.expected)
+        return self.result == self.spec.expected
+
+def maketest(f):
+    def this(*args,**kwargs) -> TCBuild(f):
+        result = f(*args,**kwargs)
+        this.__annotations__['result'] = result
+        if not hasattr(this.__annotations__['return'], "spec" ):
+                warnings.warn("Test-case function lacks specification of expected: %s" % f.__name__,UserWarning)
+        expected = this.__annotations__['return'].spec.expected
+        assert matching(result, expected), 'Result [%s] does not match expected [%s]' % (result,expected)
+
+    return this
+
+
+def get_mask( table, var, source,expt,grid):
+          import netCDF4, numpy
+          this_mask = None
+          if table in ['fx','Ofx']:
+              fp = '%s_%s_%s_%s*_%s.nc' % (var,table,source,expt,grid)
+              fcands = glob.glob( '../esgf_fetch/data_files/%s' % fp )
+              if len( fcands ) == 0:
+                   print ('ERROR: maskfile matching %s not found' % fp )
+              else:
+                mask_file_path = fcands[0]
+                ncm = netCDF4.Dataset( mask_file_path, 'r' )
+                vm = ncm.variables[var]
+                if var in ['sftlf','sftof','sftif']:
+                     this = numpy.ma.masked_equal( vm, 0. )
+                     this_mask = this.mask
+          else:
+              print ( "NOT READY FOR THIS YET ... varying mask" )
+          return this_mask
+
+
+class SampleReturn(object):
+    pass
+
+def get_sample_from_mode(mode,nt,maxnt):
+      if mode == 'firstTimeValue':
+        nt1 = min( [12,nt] )
+        isamp = range(nt1)
+
+      elif mode == 'sampled' and nt > 20:
+        isamp = sorted( random.sample( range(nt), 20 ) )
+        
+      elif (mode in ['sampledonepercent','sampledtenpercent','sampledoneperthou']) and nt > 20:
+        nsamp = nt//{'sampledonepercent':100, 'sampledtenpercent':10, 'sampledoneperthou':1000}[mode]
+        isamp = sorted( random.sample( range(nt), nsamp ) )
+        if len( isamp ) == 0:
+          isamp = [0,]
+
+      elif maxnt > 0 and maxnt < nt:
+        isamp = range(maxnt)
+
+      else:
+        isamp = range(nt)
+
+      return isamp
+
+class VariableSampler(object):
+    def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000):
+        """
+          var : numpy array object
+          sampler : Sampler instance
+        """
+        assert isinstance( var, numpy.ndarray), 'Expected instance of numpy.ndarray, got %s' % type( var )
+
+        self.var = var
+        self.ref_mask = ref_mask
+        self.fill_value = fill_value
+        self.maxnt = maxnt
+        self.sampler = sampler
+        self.rank = len(var.shape)
+        self.mode = mode
+        self.with_time = with_time
+        self.sr_dict = dict()
+
+    def scan(self,isamp=None):
+
+        if self.rank == 2:
+            self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask )
+            self.sampler.apply(  )
+            self.sr = self.sampler.sr
+
+        elif self.rank == 3:
+            if isamp == None:
+                isamp = get_sample_from_mode( self.mode, self.var.shape[0], self.maxnt )
+
+            for k in isamp:
+                self.sampler.load( self.var[k,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
+                self.sampler.apply( )
+                self.sr_dict[k] = self.sampler.sr
+
+class Sampler(object):
+    def __init__(self,extremes=0,quantiles=None):
+        import numpy 
+
+        self.nextremes=extremes
+        self.quantiles=quantiles
+        self.q = quantiles != None
+        self.ext = extremes > 0
+
+    def load(self,array,fill_value=None,ref_mask=None):
+        self.ref_mask=ref_mask
+        self.fill_value=fill_value
+
+        self.has_fv = fill_value != None
+
+        self.has_msk = type( self.ref_mask ) != type( None )
+        if self.has_msk:
+            assert hasattr( self.ref_mask, 'mask' )
+
+        if self.has_fv:
+            self.get_basic = self._get_basic_ma
+            self.array = numpy.ma.masked_equal( array, fill_value )
+
+            if self.ext or self.q:
+                self.farray = self.array.ravel().compressed()
+        else:
+            self.get_basic = self._get_basic
+            self.array=array
+            if self.ext or self.q:
+                self.farray = self.array.ravel()
+
+    def apply(self):
+        self.sr = SampleReturn()
+        self.sr.basic = self.get_basic()
+        if self.q: self.sr.quantiles = self.get_quantiles()
+        if self.ext: self.sr.extremes = self.get_extremes()
+        if self.has_msk: self.sr.mask_ok = self.check_mask()
+
+    def check_mask(self):
+        import numpy
+
+        n1 = self.ref_mask.count()
+        if not hasattr( self.array, 'mask' ):
+            self.mask_rep = ('no_mask_defined',n1,0,0,0,0)
+        elif not self.array.shape == self.ref_mask.shape:
+            self.mask_rep = ('mask_has_wrong_shape',n1,self.ref_mask.shape,self.array.shape,0,0)
+        elif numpy.array_equal( self.ref_mask.mask, self.array.mask):
+            self.mask_rep = ('masks_match',n1,n1,n1,0,0)
+        else:
+            n1 = self.ref_mask.count()
+            n2 = self.array.count()
+            c0 = numpy.count_nonzero( ~self.ref_mask.mask & ~self.array.mask )
+            c1 = numpy.count_nonzero( ~self.ref_mask.mask & self.array.mask )
+            c2 = numpy.count_nonzero( self.ref_mask.mask & ~self.array.mask )
+            self.mask_rep = ('mask_mismatch',n1,n2,c0,c1,c2)
+        return self.mask_rep[0]
+
+    def _get_basic_ma(self):
+        """Return min, max, mean absolute value and number of filled values for masked array"""
+        import numpy
+        basic = (numpy.ma.min( self.array ),
+                 numpy.ma.max( self.array ),
+                 numpy.ma.mean( numpy.ma.abs( self.array ) ),
+                 self.array.size - self.array.count() )
+        return basic
+
+    def _get_basic(self):
+        """Return min, max, mean absolute value and number of filled values for unmasked array"""
+        basic = (numpy.min( self.array ),
+                 numpy.max( self.array ),
+                 numpy.mean( numpy.abs( self.array ) ),
+                 0 )
+        return basic
+
+    def get_quantiles(self):
+        """Return quantiles specified in self.quantiles.
+           Array is first flattened and then stripped of missing values"""
+        import numpy
+        return numpy.quantile( self.farray, self.quantiles ).tolist()
+
+    def get_extremes(self):
+        """
+        For a masked array, the negation has to be conditional .. or perhaps done before the ravel ...
+        Passing "-x" to argpartition results in fillValues being identifed as extreme data, as numpy.partition is not
+        recognising the mask.
+        """
+        import numpy
+
+        # ravel to flatten.
+        # masked set to large positive ....
+        if self.has_fv:
+            x = numpy.where( self.array.mask, 1.e20, self.array ).ravel()
+            xm = numpy.where( self.array.mask, 1.e20, -self.array ).ravel()
+        else:
+            x = self.farray
+            xm = -x
+
+        print ( 'INFO.extremes.01: ', type(x), self.has_fv )
+
+        if len(x) > 0:
+            if self.nextremes > 0:
+              flat_indices_min = numpy.argpartition(x, self.nextremes-1)[:self.nextremes]
+              flat_indices_max = numpy.argpartition(xm, self.nextremes-1)[:self.nextremes]
+
+              row_indices_min, col_indices_min = numpy.unravel_index(flat_indices_min, self.array.shape)
+              min_elements = self.array[row_indices_min, col_indices_min]
+
+              row_indices_max, col_indices_max = numpy.unravel_index(flat_indices_max, self.array.shape)
+              max_elements = self.array[row_indices_max, col_indices_max]
+
+              self.extremes = ((row_indices_min.tolist(), col_indices_min.tolist(), min_elements.tolist()),
+                               (row_indices_max.tolist(), col_indices_max.tolist(), max_elements.tolist()) )
+              return self.extremes
+
 
 class Dq(object):
   def __init__(self):
@@ -82,13 +346,16 @@ class CheckJson(object):
        self.pid_lookup[esgf_id] = pid
 
     ii = open( "data/new_limits.csv", "r", encoding = "ISO-8859-1" )
-    for l in ii.readlines()[1:]:
-      words = l.strip().split('\t')
+    nd = self.new["data"]
+    for l in csv.reader( ii.readlines()[1:] ):
+      ##words = l.strip().split('\t')
+      words = l
       if len(words) >3:
         tab,var,directive = [x.strip() for x in words[:3]]
         directive = directive.lower()
         if directive != '':
           id = "%s.%s" % (tab,var)
+          print (directive, id)
           if directive[:5] == "valid":
             this = self.new["data"].get( id, {"ranges":{}} )
             if words[3] != '':
@@ -102,7 +369,8 @@ class CheckJson(object):
               this["ranges"]["ma_max"] = (float( words[3] ), words[6] )
             if words[4] != '':
               this["ranges"]["ma_min"] = (float( words[4] ), words[6] )
-            self.new["data"][id] = this
+            nd[id] = this
+    self.new["data"] = nd
     ii.close()
 
   def range_merge(self, a, b):

@@ -79,6 +79,9 @@ class ScanFile(object):
       nc.close()
       return shp1
 
+    quantiles = [x*0.01 for x in self.percentiles]
+    self.samp = local_utilities.Sampler( quantiles=quantiles, extremes=10 )
+
     if self.maskAll:
       if vn != 'sic':
         fm = f.replace( '%s_' % vn, 'sic_' )
@@ -210,7 +213,6 @@ class ScanFile(object):
       else:  
         fvcount = 0
  
-      
       if len(v.shape) in [3,4]:
         for k in isamp:
           if len(v.shape) == 3:
@@ -221,13 +223,19 @@ class ScanFile(object):
           if fvc == 0:
             fvcount += thisv.size - thisv.count()
           am.append( numpy.ma.mean( numpy.ma.abs( thisv ) ) )
-          x = thisv.ravel().compressed()
+          x = thisv.ravel()
           if len(x) > 0:
             ap.append( numpy.percentile( x, self.percentiles ) )
             if self.nextremes > 0:
-              exr = numpy.partition( x, -self.nextremes, axis=None )[-self.nextremes:]
-              exl = numpy.partition( x, self.nextremes, axis=None )[:self.nextremes]
-              self.extremes.append( (exl,exr) )
+              flat_indices_min = numpy.argpartition(x, self.nextremes-1)[:self.nextremes]
+              flat_indices_max = numpy.argpartition(-x, self.nextremes-1)[:self.nextremes]
+
+              row_indices_min, col_indices_min = numpy.unravel_index(flat_indices_min, x.shape())
+              min_elements = array[row_indices, col_indices]
+              row_indices_max, col_indices_max = numpy.unravel_index(flat_indices_max, x.shape())
+              max_elements = array[row_indices, col_indices]
+
+              self.extremes.append( ((row_indices_min, col_indices_min,min_elements), (row_indices_max, col_indices_max,max_elements) ) )
           else:
             print ( 'WARN.005.00005: layer contains only missing data: %s' % k )
           meds.append( numpy.ma.median( thisv ) )
@@ -279,7 +287,7 @@ class ScanFile(object):
     med = numpy.median( meds )
     mx = max( mxs )
     mn = min( mns )
-    return  (med,mx,mn,mamx,mamn,fvcount), am, ap
+    return  (med,mx,mn,mamx,mamn,fvcount), (isamp, am, ap, self.extremes )
 
 ##
 ## /badc/cmip6/data/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r5i1p1f3/day/sfcWindmax/gn/latest
@@ -338,6 +346,7 @@ class ExecuteByVar(object):
     self.trace_log = trace_log
     self.npct = 13
     self.nextremes = -1
+    self.ar6 = local_utilities.WGIPriority()
 
   def _check_shelve( self, shelve_file ):
     """Return true if shelve is complete and credible size"""
@@ -380,6 +389,16 @@ class ExecuteByVar(object):
       if not os.path.isdir (shelve_dir):
         os.makedirs( shelve_dir )
       shelve_file = self.shelve_template % (tab,var,var,inst,source,expt,self.mode)
+      cmv = '%s.%s' % (tab,var)
+      this_mask = None
+      if cmv in self.ar6.masks:
+          this_mask = local_utilities.get_mask( self.mask[0], self.mask[1], source,expt,grid )
+
+      self.samp = local_utilities.Sampler( quantiles=self.quantiles, extremes=self.nextremes, ref_mask_bool=this_mask, fvcount=True )
+      ##
+      ## want to update ScanFile to use samp.apply, and then apply tests to the instants of SamplerReturn.
+
+
       if overwrite or not self._check_shelve( shelve_file ):
         sh = shelve.open( shelve_file )
         files = glob.glob( "%s/*.nc" % this_path )
