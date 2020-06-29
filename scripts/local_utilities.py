@@ -27,6 +27,21 @@ def matching( result, expected):
         return result == expected
 
 
+def get_quantiles_and_summary(ddk):
+     this = ddk["percentiles"]
+     thissum = ddk["summary"]
+
+     isDict = type(this) == type( {} )
+     if isDict:
+       this = this["0"]
+
+     isDict = type(thissum) == type( {} )
+     if isDict:
+       thissum = thissum["0"]
+     return this, thissum
+
+
+
 
 
 class TCBuild(BaseClassTS):
@@ -540,6 +555,10 @@ class CheckJson(object):
       distmsg =  "__na__"
     agg_this = dict()
 
+    hh = ["Q(%s)" % stn(x) for x in percentiles[::-1]]
+    table_records = [ ["Model","Minimum"] + hh + ["Maximum",],
+                     [ " :--",  ] + [" :--: ", ]*( len(percentiles) + 2 ) ]
+
     metam = dict()
     for m in sorted( list( data.keys() ) ):
         errs = []
@@ -554,11 +573,15 @@ class CheckJson(object):
         contact = ";".join( minfo["contact"] )
         known_error = self.known_errors.get( esgf_ds_id, 'none')
         metam[m] = (esgf_ds_id, pid, contact, known_error)
-        if isDict:
-          this = data[m]["summary"]["0"]
-        else:
-          this = data[m]["summary"]
-        agg_this[m] = this
+        this, this_sum = get_quantiles_and_summary( data[m] )
+        ##if isDict:
+          ##this = data[m]["summary"]["0"]
+        ##else:
+          ##this = data[m]["summary"]
+        agg_this[m] = this_sum
+
+        tr0 = [m,this_sum[2]] + this[::-1] + [this_sum[1]]
+        table_records.append( [stn(x) for x in tr0 ] )
 
     if varid not in wg1.ranges and varid not in self.new["data"]:
       if verbose:
@@ -629,6 +652,28 @@ class CheckJson(object):
                 oo.write( '%s\n' % rsum[m][1] )
                 oo.write( '%s -- %s\n\n' % (esgf_ds_id,pid_link) )
          oo.close()
+
+    image_dir = "images/%s" % table
+    oo = open( '%s/Overview_%s.md' % (image_dir,var), "w" )
+    for record in table_records:
+       oo.write( ' | '.join( record ) + "\n" )
+    oo.write( '\n\n' )
+    for m in sorted( list( rsum.keys() ) ):
+            esgf_ds_id, pid, contact, known = metam[m]
+            if pid[:4] == 'hdl:':
+              pid_link = "[%s](http://hdl.handle.net/%s)" % (pid,pid[4:])
+            elif pid == '__not_found__':
+              pid_link = '[DS PID not found]'
+            else:
+              pid_link = '["%s"?]' % pid
+              
+            oo.write( ' - %s :: %s\n' % (m.replace( '_', '\_') ,contact) )
+            if known != 'none':
+                    oo.write( 'Known errors: see %s\n' % known )
+            if not rsum[m][0]:
+                oo.write( '  - %s\n' % rsum[m][1] )
+            oo.write( '  - %s -- %s\n\n' % (esgf_ds_id,pid_link) )
+    oo.close()
 
     if verbose:
         maxval = max( [x[1] for k,x in agg_this.items()] )
