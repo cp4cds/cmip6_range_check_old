@@ -120,6 +120,20 @@ def get_sample_from_mode(mode,nt,maxnt):
 
       return isamp
 
+class CMIPFileSample(object):
+    def __init__(self,files,sampler,input_dir=None,mode='all',sh_file=None):
+        ##
+        ## TODO : add check on files, loop over files, extraction of variable and call to VariableSampler
+        ##
+        if type(files) == type(''):
+            files = [files,]
+        if input_dir != None:
+            assert os.path.isdir( input_dir ), 'Input directory not found: %s' % input_dir
+            if input_dir[-1] == '/':
+                input_dir = input_dir[:-1]
+            files = ['%s/%s' % (input_dir, f) for f in files]
+
+
 class VariableSampler(object):
     def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000):
         """
@@ -145,14 +159,20 @@ class VariableSampler(object):
             self.sampler.apply(  )
             self.sr = self.sampler.sr
 
-        elif self.rank == 3:
+        else:
             if isamp == None:
                 isamp = get_sample_from_mode( self.mode, self.var.shape[0], self.maxnt )
-
-            for k in isamp:
+            if self.rank == 3:
+              for k in isamp:
                 self.sampler.load( self.var[k,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
                 self.sampler.apply( )
                 self.sr_dict[k] = self.sampler.sr
+            elif self.rank == 4:
+              for k in isamp:
+                  for l in range(self.var.shape[1] ):
+                     self.sampler.load( self.var[k,l,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
+                     self.sampler.apply( )
+                     self.sr_dict[(k,l)] = self.sampler.sr
 
 class Sampler(object):
     def __init__(self,extremes=0,quantiles=None):
@@ -251,8 +271,6 @@ class Sampler(object):
             x = self.farray
             xm = -x
 
-        print ( 'INFO.extremes.01: ', type(x), self.has_fv )
-
         if len(x) > 0:
             if self.nextremes > 0:
               flat_indices_min = numpy.argpartition(x, self.nextremes-1)[:self.nextremes]
@@ -318,12 +336,66 @@ class WGIPriority(object):
         xx = []
         for i in [0,2,4,6]:
           if vt[i+1] not in ["-",""]:
-            xx.append( NT_RangeValue(vt[i],vt[i+1]) )
+            xx.append( NT_RangeValue(float(vt[i]),vt[i+1]) )
           else:
             xx.append( null_range_value )
         self.ranges[id] = NT_RangeSet( xx[0], xx[1], xx[2], xx[3] )
 
       self.ee[id] = units
+
+def range_merge(a, b):
+    this = list( a )
+
+    for k in range(4):
+      if this[k] == null_range_value and b[k] != null_range_value:
+        this[k] = b[k]
+    return NT_RangeSet( this[0], this[1], this[2], this[3] )
+
+
+def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_limits.csv", merge=True ):
+    ee = json.load( open( input_json, "r" ) )
+    new_data = ee['data']
+    ii = open( input_csv, "r", encoding = "ISO-8859-1" )
+    for l in csv.reader( ii.readlines()[1:] ):
+      ##words = l.strip().split('\t')
+      words = l
+      if len(words) >3:
+        tab,var,directive = [x.strip() for x in words[:3]]
+        directive = directive.lower()
+        if directive != '':
+          id = "%s.%s" % (tab,var)
+          print (directive, id)
+          if directive[:5] == "valid":
+            this = new_data.get( id, {"ranges":{}} )
+            if words[3] != '':
+              this["ranges"]["max"] = NT_RangeValue(float( words[3] ), words[6] )
+            if words[4] != '':
+              this["ranges"]["min"] = NT_RangeValue(float( words[4] ), words[6] )
+            new_data[id] = this
+          elif directive[:4] == "mean":
+            this = new_data.get( id, {"ranges":{}} )
+            if words[3] != '':
+              this["ranges"]["ma_max"] = NT_RangeValue(float( words[3] ), words[6] )
+            if words[4] != '':
+              this["ranges"]["ma_min"] = NT_RangeValue(float( words[4] ), words[6] )
+            new_data[id] = this
+
+    if merge:
+        ar6 = WGIPriority()
+        md = ar6.ranges
+        for id in md:
+            if id in new_data:
+                ntr = NT_RangeSet( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min']] )
+                new_data[id] = range_merge( md[id], ntr  )
+            else:
+                new_data[id] = md[id]
+
+        for id in new_data.keys():
+            if id not in md:
+                ntr = NT_RangeSet( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min']] )
+                new_data[id] = ntr
+            
+    return new_data
 
 class CheckJson(object):
   def __init__(self):
@@ -355,7 +427,7 @@ class CheckJson(object):
         directive = directive.lower()
         if directive != '':
           id = "%s.%s" % (tab,var)
-          print (directive, id)
+          print ('xxx012: ',directive, id)
           if directive[:5] == "valid":
             this = self.new["data"].get( id, {"ranges":{}} )
             if words[3] != '':
@@ -404,7 +476,7 @@ class CheckJson(object):
         elif type(val) in [type( 1. ),type( 1 )]:
           ee[k] = (val,"provisional")
         else:
-          print ("value for arg %s not recognised" % k )
+          print ('xxx002: ',"value for arg %s not recognised" % k )
           raise
 
     if varid in self.new["data"]:
@@ -436,7 +508,7 @@ class CheckJson(object):
     var = ifile.split("_")[0]
     wg1 =  WGIPriority()
     varid = "%s.%s" % (table,var)
-    if verbose: print( "check_json",table, ipath, varid )
+    if verbose: print( 'xxx003: ',"check_json",table, ipath, varid )
     ee = json.load( open( ipath, "r" ) )
     data = ee["data"]
     percentiles = ee["info"]["tech"]["percentiles"]
@@ -454,7 +526,7 @@ class CheckJson(object):
         pmn = [min( [data[m]["percentiles"][j] for m in models] ) for j in range(len(percentiles)) ]
       pctcomp = [pmx[i+1] < pmn[i] for i in range(4,8) ] 
       if verbose:
-        print ( pctcomp, pmx[5:9], pmn[4:8] )
+        print ( 'xxx004: ',pctcomp, pmx[5:9], pmn[4:8] )
         print ("pmx", pmx)
         print ("pmn", pmn)
       clean = all( pctcomp )
@@ -463,7 +535,7 @@ class CheckJson(object):
       else:
         distmsg =  "overlapping distributions"
       if verbose:
-        print (distmsg)
+          print ('info.check.005: %s' % distmsg)
     else:
       distmsg =  "__na__"
     agg_this = dict()
@@ -505,24 +577,24 @@ class CheckJson(object):
         
         range_error_max = (ranges.max != null_range_value) and this[1] > float(ranges.max.value)
         range_error_min = (ranges.min != null_range_value) and this[2] < float(ranges.min.value)
+        errs = []
         try:
           range_error_ma_max = (ranges.ma_max != null_range_value) and this[3] > float(ranges.ma_max.value)
         except:
-          print (ranges.ma_max)
+          print ('xxx006: ',ranges.ma_max)
           raise
         try:
           range_error_ma_min = (ranges.ma_min != null_range_value) and this[4] < float(ranges.ma_min.value)
         except:
-          print (ranges.ma_min)
+          print ('xxx007: ',ranges.ma_min)
           raise
 
         if not any( [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] ):
            res = (True,"OK")
         else:
           if verbose:
-            print( m, [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] )
+              print('xxx008: ', m, [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min] )
 
-          errs = []
           for k in range(4):
             if [range_error_max,range_error_min, range_error_ma_max, range_error_ma_min][k]:
               elab = ["Max","Min","MA Max","MA Min"][k]
@@ -533,14 +605,14 @@ class CheckJson(object):
           res = (False,"; ".join( errs ))
               
         if verbose:
-          print ("%s:: %s/%s" % (m,res,errs) )
+            print ('xxx009: ',"%s:: %s/%s" % (m,res,errs) )
         rsum[m] = res
 
       bad = [k for k,v in rsum.items() if not v[0]]
       if verbose:
         for k in bad:
-           print ("ERROR: %s:: %s" % (k,rsum[k][1]) )
-        print ("Targets:", [ranges.max.value, ranges.min.value, ranges.ma_max.value, ranges.ma_min.value] )
+            print ('xxx010: ',"ERROR: %s:: %s" % (k,rsum[k][1]) )
+        print ('xxx011: ',"Targets:", [ranges.max.value, ranges.min.value, ranges.ma_max.value, ranges.ma_min.value] )
       if len( bad) == 0:
          rangemsg = "All models in range"
       else:

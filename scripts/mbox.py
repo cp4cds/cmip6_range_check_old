@@ -1,5 +1,5 @@
 import os, glob
-from local_utilities import WGIPriority, check_json, stn
+from local_utilities import WGIPriority, CheckJson, stn
 '''
  -p, --plot [optional flag]: plot range values in a json file
 '''
@@ -80,7 +80,7 @@ def boxplot( dd, var, title, percentiles,boxLegend = True, units="1", image_dir=
    opacity = 0.8
    m = mbox(plt, ax)
    ii = 0
-   hh = ["Q(%s)" % stn(x) for x in percentiles]
+   hh = ["Q(%s)" % stn(x) for x in percentiles[::-1]]
    table_records = [ ["Model","Minimum"] + hh + ["Maximum",],
                      [ " :--",  ] + [" :--: ", ]*( len(percentiles) + 2 ) ]
 
@@ -200,6 +200,7 @@ def all_files(table,mode="plot.x"):
         if mode == "plot.x":
           plot_json( table, f )
         else:
+          check_json = CheckJson()
           check_json( table, f, verbose=False )
       except RecordException as e:
         print ("====== ERROR WHILE PROCESSING %s\n====================================\n" % f )
@@ -245,13 +246,16 @@ if __name__ == "__main__":
     sys.exit(0)
     
   print (sys.argv, mode)
+  print ('STARTING: ', mode)
   if mode in ["plot","check"]:
       import json
       table, file = sys.argv[2:]
+      print ('STARTING: ', table, file, this.table, this.file )
       if mode == "plot":
         plot_json( this.table, this.file )
       else:
-        check_json( this.table, this.file)
+        check_json = CheckJson()
+        check_json( this.table, ipath=this.file)
   elif mode in ["plot.x","check.x"]:
       import json
       all_files( this.table, mode=mode )
