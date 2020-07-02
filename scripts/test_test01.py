@@ -1,6 +1,6 @@
 import pytest
 import collections
-from local_pytest_utils import MakeTest, TCBuild, TestReporter
+from local_pytest_utils import MakeTest, TCBuild, TestReporter, Check3
 import _pytest
 from _pytest.runner import TestReport as TstReport
 
@@ -48,7 +48,7 @@ class Check2(object):
         self.function.__annotations__['tc'].result = value
         assert value == self.ee['expected'], '%s: result [%s] does not match expected [%s]' % (self.test_name,value,self.ee['expected'])
 
-class Check3(object):
+class Check3_xx(object):
     def __init__(self,func,sfx='Check3'):
         self.ee = dict()
         self.function = func
