@@ -1,7 +1,10 @@
-import logging, time, os, collections, json, inspect, glob, warnings, numpy
+import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re
 import csv
 from local_pytest_utils import BaseClassTS
 from generic_utils import LogFactory
+import hddump
+
+__version__ = '0.1.0'
 
 NT__scope = collections.namedtuple( 'scope', ['overview','identifier','description','priority','traceability'] )
 NT__test_case_spec = collections.namedtuple( 'test_case_spec', ['ov', 'id', 'obj', 'p', 'tr', 'prec', 'i', 'expected'])
@@ -40,8 +43,6 @@ def get_quantiles_and_summary(ddk):
      if isDict:
        thissum = thissum["0"]
      return this, thissum
-
-
 
 
 
@@ -136,8 +137,115 @@ def get_sample_from_mode(mode,nt,maxnt):
 
       return isamp
 
+re2 = re.compile( '<location(.*?)/>' )
+re_href = re.compile( '%s="(.*?)"' % 'href' )
+
+class CMIPDatasetSample(object):
+    def __init__(self,dsids,id_mode='hdl',drs_base='/badc/cmip6/data/CMIP6/'):
+        self.dsids = dsids
+        self.id_mode = id_mode
+        self.drs_base = drs_base
+
+    def review(self):
+        nobs = 0
+        kk = 0
+        oo = open('hdl-reviewed_datasets.csv','w')
+        for ds, eid, ev in self.dsids:
+            h = hddump.Open( ds )
+            h.get()
+            drs_id = h.rec['DRS_ID']
+            era,activity,inst,model,expt,variant,table,var,grid = drs_id.split('.')
+            fncomps = [var,table,model,expt,variant,grid]
+            ## CMIP6.CMIP.AS-RCEC.TaiESM1.historical.r1i1p1f1.Lmon.mrso.gn
+            ## http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/OMIP/NOAA-GFDL/GFDL-OM4p5B/omip1/r1i1p1f1/Omon/volcello/gn/v20180701/volcello_Omon_GFDL-OM4p5B_omip1_r1i1p1f1_gn_180801-182712.nc
+            if h.obsolete:
+                print ( '%s: ds %s is obsolete [%s]' % (kk,ds,h.rec['DRS_ID']) )
+                oo.write( '\t'.join( [ds,drs_id,ev,'OBSOLETE'] ) + '\n' )
+                nobs += 1
+            else:
+                err = None
+                vns = set()
+                fns = set()
+                cc = collections.defaultdict( set  )
+                for f in h.rec['HAS_PARTS']:
+                  f.get()
+                  if 'URL_ORIGINAL_DATA' not in f.rec:
+                        print ('ERROR.ds.0040: URL_ORIGINAL_DATA missing from file hdl record %s :: %s' % (drs_id,f.rec.get('URL','__NO__URL__')))
+                        err = 'ERROR.ds.0040: URL_ORIGINAL_DATA missing from file hdl record'
+                  else:    
+                    this = f.rec['URL_ORIGINAL_DATA']
+                    locs = re2.findall( this )
+                    vnss = set()
+                    fnss = set()
+                    for loc in locs:
+                      href = re_href.findall( loc )[0]
+                      vn,fn = href.split( '/' )[-2:]
+                      vnss.add(vn)
+                      fnss.add(fn)
+                    if len( fnss ) != 1:
+                       print ('ERROR.ds.0030: too many files in file record: (%s) %s' % (fnss,f.rec['URL']) )
+                       err = 'ERROR.ds.0030: too many files in file record'
+                    fn = fnss.pop()
+                    if ev not in vnss:
+                       print ('ERROR.ds.0020: expected version not in file record original data: (%s) %s' % (vnss,f.rec['URL']) )
+                       err = 'ERROR.ds.0020: expected version not in file record original data'
+                       vn = vnss.pop()
+                    else:
+                       vn = ev
+                    tt = fn.rpartition('.')[0].split('_')
+                    cc['l'].add( len(tt) )
+                    for k in range(len(tt)):
+                        cc[k].add(tt[k])
+                    vns.add(vn)
+                    fns.add(fn)
+
+                if len(cc['l']) == 0:
+                    print ('ERROR.ds.0101: empty cc["l"] %s' % (drs_id) )
+                    if err == None:
+                      err = 'ERROR.ds.0101: empty cc["l"]'
+                elif len(cc['l']) > 1:
+                    print ('ERROR.ds.0001: Too many file naming patterns in dataset: (%s) %s' % (fns,drs_id) )
+                    err = 'ERROR.ds.0001: Too many file naming patterns in dataset'
+
+                if len(vns) != 1:
+                    print ('ERROR.ds.0002: Too many versions in dataset: (%s) %s' % (vns,drs_id) )
+                    err = 'ERROR.ds.0002: Too many versions in dataset'
+
+                if ev not in vns:
+                    print( 'ERROR.ds.0002b: version inconsistency: %s - %s : %s' % (ev,vns,drs_id) )
+                    err = 'ERROR.ds.0002b: version inconsistency'
+                version = ev
+
+                if len( cc['l'] ) > 0:
+                  l = cc['l'].pop()
+                  is_fixed =  table in ['Ofx','fx']
+                  if not is_fixed:
+                    l += -1
+                  for k in range(l):
+                    if len(cc[k]) != 1:
+                      print ('ERROR.ds.0003: Too many elements at %s in file name: (%s) %s' % (k,cc[k],drs_id) )
+                      err = 'ERROR.ds.0003: Too many elements at %s in file name'
+                  for k in range(l):
+                    this = cc[k].pop()
+                    if this != fncomps[k]:
+                      print ('ERROR.ds.0004: file name element inconsistency [%s]: (%s) %s' % (this,fns,drs_id) )
+                      err = 'ERROR.ds.0004: file name element inconsistency'
+
+                if err != None:
+                  oo.write( '\t'.join( [ds,drs_id,ev,err] ) + '\n' )
+                elif is_fixed:
+                  oo.write( '\t'.join( [ds,drs_id,ev,'OK',] ) + '\n' )
+                else:
+                  oo.write( '\t'.join( [ds,drs_id,ev,'OK',str(len(fns)),str(sorted(list(cc[l]))) ] ) + '\n' )
+
+
+            kk += 1
+        oo.close()
+        print ('%s reviewed, %s obsolete' % (len(self.dsids),nobs))
+
+
 class CMIPFileSample(object):
-    def __init__(self,files,sampler,input_dir=None,mode='all',sh_file=None):
+    def __init__(self,files,input_dir=None,mode='all',sh_file=None):
         ##
         ## TODO : add check on files, loop over files, extraction of variable and call to VariableSampler
         ##
@@ -148,10 +256,34 @@ class CMIPFileSample(object):
             if input_dir[-1] == '/':
                 input_dir = input_dir[:-1]
             files = ['%s/%s' % (input_dir, f) for f in files]
+        self.files = sorted( files )
+
+    def get_samples(self,sampler,var_name_mode='CMIP'):
+        """
+        Sample a list of files
+        """
+        assert var_name_mode == 'CMIP', 'Currently only supporting one variable name identification mode: CMIP'
+        self.samples = {}
+        for data_path in self.files:
+            fn = data_path.rpartition('/')[-1]
+            if var_name_mode == 'CMIP':
+               var_name = fn.split( '_' )[0]
+
+            nc = netCDF4.Dataset( data_path )
+            this_var = nc.variables[vname]
+            if hasattr( this_var, '_FillValue' ):
+              fill_value = this_var._FillValue
+            else:
+              fill_value = None
+            print ("fill value = %s" % fill_value )
+            vs = VariableSampler( this_var[:], sampler, fill_value=fill_value )
+            vs.scan()
+        return (vs, this_var, nc )
+
 
 
 class VariableSampler(object):
-    def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000):
+    def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000,ref_mask_file=None):
         """
           var : numpy array object
           sampler : Sampler instance
@@ -160,6 +292,7 @@ class VariableSampler(object):
 
         self.var = var
         self.ref_mask = ref_mask
+        self.ref_mask_file = ref_mask_file
         self.fill_value = fill_value
         self.maxnt = maxnt
         self.sampler = sampler
@@ -168,8 +301,43 @@ class VariableSampler(object):
         self.with_time = with_time
         self.sr_dict = dict()
 
+    def dump_shelve(self,sname,kprefx,mode='c',context=None):
+
+        ### might be better to move this up to calling object .....
+
+        tech = {'extremes':self.sampler.nextremes, 'quantiles':self.sampler.quantiles, 'with_time':self.with_time, 'fill_value':float(self.fill_value), 'shape':self.var.shape }
+        info = {"title":"Scanning set of data files", "source":"local_utilities.VariableSampler", "time":time.ctime(), "script_version":__version__}
+        if context != None:
+            info['context'] = context
+        if self.ref_mask != None:
+            if self.ref_mask_file != None:
+                tech['ref_mask_file'] = self.ref_mask_file
+            else:
+                tech['ref_mask_file'] = 'UNKNOWN'
+        sh = shelve.open( sname, flag=mode )
+        sh['__tech__'] = tech
+        sh['__info__'] = info
+        l1 = len( str( self.kmax ) )
+        l2 = len( str( self.klmax ) )
+        fmt1 = '%s:%' + '%si' % l1
+        fmt2 = '%s:%' + ( '%si' % l2 ) + '-' + '%si' % l2
+        for k,rec in self.sr_dict.items():
+            if type(k) == type( 'x' ):
+                ko = k
+            elif type(k) == type( 1 ):
+                ko = fmt1 % (kprefx,k)
+            elif type(k) == type( () ):
+                ko = fmt2 % (kprefx,k[0],k[1])
+            sh[ko] = rec
+        sh.close()
+
     def scan(self,isamp=None):
 
+
+        self.kmax = 0
+        self.klmax = 0
+        kl = set()
+        kl2 = set()
         if self.rank == 2:
             self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask )
             self.sampler.apply(  )
@@ -183,12 +351,19 @@ class VariableSampler(object):
                 self.sampler.load( self.var[k,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
                 self.sampler.apply( )
                 self.sr_dict[k] = self.sampler.sr
+                kl.add(k)
             elif self.rank == 4:
               for k in isamp:
+                  kl2.add(k)
                   for l in range(self.var.shape[1] ):
+                     kl2.add(l)
                      self.sampler.load( self.var[k,l,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
                      self.sampler.apply( )
                      self.sr_dict[(k,l)] = self.sampler.sr
+        if len(kl) > 0:
+          self.kmax = max( kl )
+        if len(kl2) > 0:
+          self.klmax = max( kl2 )
 
 class Sampler(object):
     def __init__(self,extremes=0,quantiles=None):
@@ -221,12 +396,19 @@ class Sampler(object):
             if self.ext or self.q:
                 self.farray = self.array.ravel()
 
-    def apply(self):
-        self.sr = SampleReturn()
-        self.sr.basic = self.get_basic()
-        if self.q: self.sr.quantiles = self.get_quantiles()
-        if self.ext: self.sr.extremes = self.get_extremes()
-        if self.has_msk: self.sr.mask_ok = self.check_mask()
+    def apply(self,as_dict=True):
+        if as_dict:
+          self.sr = dict()
+          self.sr['basic'] = self.get_basic()
+          if self.q: self.sr['quantiles'] = self.get_quantiles()
+          if self.ext: self.sr['extremes'] = self.get_extremes()
+          if self.has_msk: self.sr['mask_ok'] = self.check_mask()
+        else:
+          self.sr = SampleReturn()
+          self.sr.basic = self.get_basic()
+          if self.q: self.sr.quantiles = self.get_quantiles()
+          if self.ext: self.sr.extremes = self.get_extremes()
+          if self.has_msk: self.sr.mask_ok = self.check_mask()
 
     def check_mask(self):
         import numpy
@@ -688,8 +870,29 @@ class CheckJson(object):
 
 
 if __name__ == "__main__":
-   check_json = CheckJson()
-   wg1 = WGIPriority()
-   print ( wg1.ranges.keys() )
-   k = wg1.ranges.keys().pop()
-   print ( k, wg1.ranges[k] )
+   mm = 'ds'
+   if mm == 'ds':
+       ii = open( '../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv').readlines()
+       dsl = []
+       ne = 0
+       for l in ii[1:]:
+           esgf_id,h = [x.strip() for x in l.split(',')[:2]]
+           #CMIP6.CMIP.NCC.NorESM2-LM.esm-hist.r1i1p1f1.Lmon.cSoilFast.gn
+           ttt = esgf_id.split('.')
+           if len(ttt) != 10:
+               ne +=1 
+               if ne < 100:
+                 print( "unexpected length of dataset split: %s" % esgf_id )
+           else:
+             era, mip, inst, model, expt, variant, table, var, grid, version = ttt
+             if mip in ['CMIP','ScenarioMIP'] and table in ['Amon']:
+               dsl.append((h,'.'.join( [era, mip, inst, model, expt, variant, table, var, grid] ), version) )
+       print ("Reviewing %s datasets" % len(dsl) )
+       dss = CMIPDatasetSample(dsl)
+       dss.review()
+   else:
+     check_json = CheckJson()
+     wg1 = WGIPriority()
+     print ( wg1.ranges.keys() )
+     k = wg1.ranges.keys().pop()
+     print ( k, wg1.ranges[k] )
