@@ -21,18 +21,20 @@ class LogFactory(object):
     else:
       self.log_file = '%s/log_%s_%s.txt' % (dir,name,self.tstring2)
 
+    existing_log =  name in logging.root.manager.loggerDict
     log = logging.getLogger(name)
-    fHdlr = logging.FileHandler(self.log_file,mode=mode)
-    fileFormatter = logging.Formatter('%(message)s')
-    fHdlr.setFormatter(fileFormatter)
-    log.addHandler(fHdlr)
-    log.setLevel(logging.INFO)
+    if not existing_log:
+      fHdlr = logging.FileHandler(self.log_file,mode=mode)
+      fileFormatter = logging.Formatter('%(message)s')
+      fHdlr.setFormatter(fileFormatter)
+      log.addHandler(fHdlr)
+      log.setLevel(logging.INFO)
+      if warnings:
+        np_log = logging.getLogger("py.warnings")
+        np_log.setLevel(logging.WARN)
+        np_log.addHandler(fHdlr)
+        self.logs["py.warnings"] = np_log
+        if hasattr( logging, "captureWarnings" ):
+          logging.captureWarnings(True)
     self.logs[name] = log
-    if warnings:
-      np_log = logging.getLogger("py.warnings")
-      np_log.setLevel(logging.WARN)
-      np_log.addHandler(fHdlr)
-      self.logs["py.warnings"] = np_log
-      if hasattr( logging, "captureWarnings" ):
-        logging.captureWarnings(True)
     return log
