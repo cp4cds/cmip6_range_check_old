@@ -203,20 +203,21 @@ class CMIPDatasetSample(object):
                     print ('ERROR.ds.0101: empty cc["l"] %s' % (drs_id) )
                     if err == None:
                       err = 'ERROR.ds.0101: empty cc["l"]'
-                elif len(cc['l']) > 1:
+                else:
+                  if len(cc['l']) > 1:
                     print ('ERROR.ds.0001: Too many file naming patterns in dataset: (%s) %s' % (fns,drs_id) )
                     err = 'ERROR.ds.0001: Too many file naming patterns in dataset'
 
-                if len(vns) != 1:
+                  if len(vns) != 1:
                     print ('ERROR.ds.0002: Too many versions in dataset: (%s) %s' % (vns,drs_id) )
                     err = 'ERROR.ds.0002: Too many versions in dataset'
 
-                if ev not in vns:
+                  if ev not in vns:
                     print( 'ERROR.ds.0002b: version inconsistency: %s - %s : %s' % (ev,vns,drs_id) )
                     err = 'ERROR.ds.0002b: version inconsistency'
-                version = ev
+                  version = ev
 
-                if len( cc['l'] ) > 0:
+              
                   l = cc['l'].pop()
                   is_fixed =  table in ['Ofx','fx']
                   if not is_fixed:
@@ -510,6 +511,7 @@ def stn(x,nd=2):
   return vv
 
 class WGIPriority(object):
+  known_masks = ['fx.sftlf', 'Ofx.sftof', 'Simon.siconc', 'fx.sftgif']
   def __init__(self,ifile="AR6_priority_variables_02.csv" ):
     ii = csv.reader( open( ifile ), delimiter='\t' )
     try:
@@ -528,7 +530,7 @@ class WGIPriority(object):
         self.title[id] = dq.CMORvar_by_id[id].title
       vt = rec[3:11]
       if rec[2].strip() != '':
-          self.masks[id] = rec[2].strip()
+          self.masks[id] = rec[1].strip()
 
       if not all( [vt[i] == "-" for i in [1,3,5,7]]):
         xx = []
@@ -540,6 +542,24 @@ class WGIPriority(object):
         self.ranges[id] = NT_RangeSet( xx[0], xx[1], xx[2], xx[3] )
 
       self.ee[id] = units
+
+  @staticmethod
+  def _has_mask(fpath):
+      fn = fpath.rpartition( '/')[-1]
+      var,tab = fn.split('_')[:2]
+      return '%s.%s' % (tab,var) in self.known_masks
+
+  def review_masks(self,data_dir='../esgf_fetch/data_files_2/'):
+      fl = [f for f in glob.glob( '%s/*.nc' ) if self._has_mask(f)]
+      fl = glob.glob( '%s/*.nc' % data_dir )
+      print ('review ... ',len(fl) )
+      self.mask_pool = collections.defaultdict( lambda: collections.defaultdict( set ) )
+      for fpath in fl:
+          fn = fpath.rpartition( '/')[-1]
+          var,tab,model = fn.split('_')[:3]
+          var_id = '%s.%s' % (tab,var)
+          if var_id in self.known_masks:
+              self.mask_pool[var_id][model].add( fpath )
 
 def range_merge(a, b):
     this = list( a )
@@ -850,7 +870,7 @@ class CheckJson(object):
             else:
               pid_link = '["%s"?]' % pid
               
-            oo.write( ' - %s :: %s\n' % (m.replace( '_', '\_') ,contact) )
+            oo.write( ' - %s :: %s\n' % (m.replace( '_', '\\_') ,contact) )
             if known != 'none':
                     oo.write( 'Known errors: see %s\n' % known )
             if not rsum[m][0]:
