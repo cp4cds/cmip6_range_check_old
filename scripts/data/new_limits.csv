@@ -1,32 +1,44 @@
-table	var	limit name	Max	Min	kind	status	basis
-Amon	rsds	mean_absolute_valid ..	220		update	robust	Range set was too narrow, one model exceded by 0.08 W m-2.
-Amon	rlds	mean_absolute_valid ..	360		update	robust	Range set was too narrow, one model exceded by 5 W m-2. 40 models examined have a compact distribution.
-Amon	rsdt	mean_absolute_valid ..	400		update	robust	Range set was too narrow. This was also a problem in CMIP5, but nor corrcected at that stage.
-Amon	rlds	mean_absolute_valid ..	400		update	robust	Range set was too narrow, two models exceded by less than 5 W m-2. 40 models examined have a compact distribution.
-Amon	rsdscs	copy Amon.rsds			new		No range set .. variable is equivalent to rsds.
-Lmon	cCwd	valid_min	200	-0.01	new	proposed	
-Lmon	cLeaf	valid_min	200	-0.01	new	proposed	
-Lmon	cLitterAbove	valid_min	200	-0.01	new	proposed	
-Lmon	cLitterBelow	valid_min	200	-0.01	new	proposed	
-Lmon	cProduct	valid_min	200	-0.01	new	proposed	
-Lmon	cRoot	valid_min	200	-0.01	new	proposed	
-Lmon	cSoilFast	valid_min	200	-0.01	new	proposed	
-Lmon	cSoilMedium	valid_min	200	-0.01	new	proposed	
-Lmon	cSoilSlow	valid_min	200	-0.01	new	proposed	
-Lmon	burntAreaFraction	valid_min	100.001	-0.001	new	proposed	Area fraction
-Lmon	gpp	Valid_max	1E-06	-1E-09	new	proposed	
-Lmon	lai	valid_min	16	0		proposed	Based on 6 models (3 institutions), but physical reasoning is against significantly larger values.
-Lmon	landCoverFrac	valid_min	100.001	-0.001		proposed	Area fraction
-Lmon	nbp	valid_min	1E-06	-1E-06		proposed	Based on only 3 models
-Lmon	ra	valid_min	1E-06	-1E-09		proposed	
-Lmon	rh	valid_min	1E-06	-1E-09		proposed	
-Lmon	tsl	--------------					
-Amon	clt	valid_max	100.2	-0.001	update	robust	Two models exceed the CMIP6 limit fo 100.001, with values up to 100.034%.
-Amon	co2	Valid_max	0.005	5E-05	new	proposed	generous limits É for troposphere.
-Amon	evspsbl	Valid_max	0.002	-0.0001	new	proposed 	
-Amon	pr	Valid_max	0.02			proposed	Upper limit set was 0.0015 Ð highest model was double this. Log-normal distribution makes the upper limit a moving target.
-Amon	pr	mean_absolute_valid ..	0.0001			proposed	Upper limit of mean absolute was OK for historical .. but models got close.
-Amon	prsn	Valid_max	0.002			proposed	OK, but close
-Amon	prw	Valid_max	120			proposed	OK, but close
-Amon	prw	mean_absolute_valid ..	35			proposed	OK, but close
-Amon	tauu	Valid_max	25	-25	new	proposed	Range set was too narrow.            
+table,var,limit name,Max,Min,kind,status,basis
+Amon,rsds,mean_absolute_valid ..,220,,update,robust,"Range set was too narrow, one model exceded by 0.08 W m-2."
+Amon,rlds,mean_absolute_valid ..,360,,update,robust,"Range set was too narrow, one model exceded by 5 W m-2. 40 models examined have a compact distribution."
+Amon,rsdt,mean_absolute_valid ..,400,,update,robust,"Range set was too narrow. This was also a problem in CMIP5, but nor corrcected at that stage."
+Amon,rlds,mean_absolute_valid ..,400,,update,robust,"Range set was too narrow, two models exceded by less than 5 W m-2. 40 models examined have a compact distribution."
+Amon,rsdscs,copy Amon.rsds,,,new,,No range set .. variable is equivalent to rsds.
+Lmon,cCwd,valid_min,200,-0.01,new,proposed,
+Lmon,cLeaf,valid_min,200,-0.01,new,proposed,
+Lmon,cLitterAbove,valid_min,200,-0.01,new,proposed,
+Lmon,cLitterBelow,valid_min,200,-0.01,new,proposed,
+Lmon,cProduct,valid_min,200,-0.01,new,proposed,
+Lmon,cRoot,valid_min,200,-0.01,new,proposed,
+Lmon,cSoilFast,valid_min,200,-0.01,new,proposed,
+Lmon,cSoilMedium,valid_min,200,-0.01,new,proposed,
+Lmon,cSoilSlow,valid_min,200,-0.01,new,proposed,
+Lmon,burntAreaFraction,valid_min,100.001,-0.001,new,proposed,Area fraction
+Lmon,gpp,Valid_max,1E-06,-1E-09,new,proposed,
+Lmon,lai,valid_min,16,0,,proposed,"Based on 6 models (3 institutions), but physical reasoning is against significantly larger values."
+Lmon,landCoverFrac,valid_min,100.001,-0.001,,proposed,Area fraction
+Lmon,nbp,valid_min,1E-06,-1E-06,,proposed,Based on only 3 models
+Lmon,ra,valid_min,1E-06,-1E-09,,proposed,
+Lmon,rh,valid_min,1E-06,-1E-09,,proposed,
+Lmon,mrsos,valid_min,2.00E-03,-1.00E-09,new,proposed,
+Lmon,tsl,--------------,,,,,
+Amon,clt,valid_max,100.2,-0.001,update,robust,"Two models exceed the CMIP6 limit fo 100.001, with values up to 100.034%."
+Amon,co2,Valid_max,0.005,5E-05,new,proposed,generous limits … for troposphere.
+Amon,evspsbl,Valid_max,0.002,-0.0001,new,proposed ,
+Amon,pr,Valid_max,0.02,,,proposed,Upper limit set was 0.0015 – highest model was double this. Log-normal distribution makes the upper limit a moving target.
+Amon,pr,mean_absolute_valid ..,0.0001,,,proposed,Upper limit of mean absolute was OK for historical .. but models got close.
+Amon,prsn,Valid_max,0.002,,,proposed,"OK, but close"
+Amon,prw,Valid_max,120,,,proposed,"OK, but close"
+Amon,prw,mean_absolute_valid ..,35,,,proposed,"OK, but close"
+Amon,tauu,Valid_max,25,-25,new,proposed,Range set was too narrow.            
+day,hurs,valid_max,110,-0.01,new,proposed,
+day,hurs,mean_absolute_valid ..,95,10,new,proposed,
+day,huss,valid_max,0.04,-0.01,new,proposed,
+day,huss,mean_absolute_valid ..,0.02,0.001,new,proposed,
+day,va,valid_max,100,-100,new,proposed,
+day,uas,valid_max,80,-80,new,proposed,
+day,ua,valid_max,100,-100,new,proposed,
+day,vas,valid_max,80,-80,new,proposed,
+day,tas,valid_max,350,140,new,proposed,
+day,tasmin,valid_max,350,160,new,proposed,
+day,tasmax,valid_max,350,140,new,proposed,
