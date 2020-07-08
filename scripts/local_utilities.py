@@ -1,4 +1,4 @@
-import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re
+import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re, netCDF4
 import csv
 from local_pytest_utils import BaseClassTS
 from generic_utils import LogFactory
@@ -105,7 +105,8 @@ def get_mask( table, var, source,expt,grid):
                 ncm = netCDF4.Dataset( mask_file_path, 'r' )
                 vm = ncm.variables[var]
                 if var in ['sftlf','sftof','sftif']:
-                     this = numpy.ma.masked_equal( vm, 0. )
+                     ##this = numpy.ma.masked_equal( vm, 0. )
+                     this = numpy.ma.masked_less( vm, 50. )
                      this_mask = this.mask
           else:
               print ( "NOT READY FOR THIS YET ... varying mask" )
@@ -301,6 +302,15 @@ class VariableSampler(object):
         self.mode = mode
         self.with_time = with_time
         self.sr_dict = dict()
+        if self.ref_mask_file != None:
+             rmfn = self.ref_mask_file.rpartition('/')[-1]
+             mvar = rmfn.split('_')[0]
+             nc = netCDF4.Dataset( self.ref_mask_file  )
+             assert mvar in ['sftlf','sftof','sftif'], 'Unrecognised mask definition variable: %s' % mvar
+             if mvar in ['sftlf','sftof','sftif']:
+                   this = nc.variables[mvar]
+                   ##self.ref_mask = numpy.ma.masked_equal( this, 0. )
+                   self.ref_mask = numpy.ma.masked_less( this, 50. )
 
     def dump_shelve(self,sname,kprefx,mode='c',context=None):
 
@@ -310,7 +320,7 @@ class VariableSampler(object):
         info = {"title":"Scanning set of data files", "source":"local_utilities.VariableSampler", "time":time.ctime(), "script_version":__version__}
         if context != None:
             info['context'] = context
-        if self.ref_mask != None:
+        if type( self.ref_mask ) != type( None ):
             if self.ref_mask_file != None:
                 tech['ref_mask_file'] = self.ref_mask_file
             else:
@@ -403,15 +413,15 @@ class Sampler(object):
           self.sr['basic'] = self.get_basic()
           if self.q: self.sr['quantiles'] = self.get_quantiles()
           if self.ext: self.sr['extremes'] = self.get_extremes()
-          if self.has_msk: self.sr['mask_ok'] = self.check_mask()
+          if self.has_msk: self.sr['mask_ok'] = self.check_mask(rmode='full')
         else:
           self.sr = SampleReturn()
           self.sr.basic = self.get_basic()
           if self.q: self.sr.quantiles = self.get_quantiles()
           if self.ext: self.sr.extremes = self.get_extremes()
-          if self.has_msk: self.sr.mask_ok = self.check_mask()
+          if self.has_msk: self.sr.mask_ok = self.check_mask(rmode='full')
 
-    def check_mask(self):
+    def check_mask(self,rmode='short'):
         import numpy
 
         n1 = self.ref_mask.count()
@@ -428,7 +438,12 @@ class Sampler(object):
             c1 = numpy.count_nonzero( ~self.ref_mask.mask & self.array.mask )
             c2 = numpy.count_nonzero( self.ref_mask.mask & ~self.array.mask )
             self.mask_rep = ('mask_mismatch',n1,n2,c0,c1,c2)
-        return self.mask_rep[0]
+
+        print ( self.mask_rep )
+        if rmode == 'short':
+           return self.mask_rep[0]
+        else:
+           return self.mask_rep
 
     def _get_basic_ma(self):
         """Return min, max, mean absolute value and number of filled values for masked array"""
@@ -613,6 +628,7 @@ def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_lim
                 ntr = NT_RangeSet( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min']] )
                 new_data[id] = ntr
             
+    assert 'Lmon.mrsos' in new_data
     return new_data
 
 class CheckJson(object):

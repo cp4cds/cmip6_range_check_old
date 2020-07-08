@@ -29,7 +29,7 @@ class BaseClassCheck(object):
         cls.config = NT__config( project=project, scope=scope, log_name=log_name )
     
 class Check3(BaseClassCheck):
-    def __init__(self,func,sfx='Check3'):
+    def __init__(self,func,sfx=''):
         self.ee = dict()
         self.function = func
         fid = func.__name__
@@ -45,8 +45,8 @@ class Check3(BaseClassCheck):
             v = ret.get(k, defaults.get(k) )
             self.ee[k] = v
 
-    def __call__(self,value):
-        self.function.__annotations__['tc'].result = value
+    def __call__(self,value,cmt=None):
+        self.function.__annotations__['tc'].result = (value,cmt)
         assert value == self.ee['expected'], '%s: result [%s] does not match expected [%s]' % (self.test_name,value,self.ee['expected'])
 
 class NoCallback(Exception):
@@ -72,6 +72,7 @@ class TestReporter(BaseClassISOReports):
         self.sfx = sfx
 
     def __call__(self, pytest_report=None,test_case=None,sfx=None, cls=None):
+        cmt = None
         if pytest_report != None and hasattr( pytest_report, 'failed' ) and pytest_report.failed in [True,False]:
            tag = {True:'OK', False:'ERROR'}[not pytest_report.failed]
         else:
@@ -89,14 +90,18 @@ class TestReporter(BaseClassISOReports):
         else:
                 self.report_line =  '%s:%s.%s: %s' % (tag, cid, test_case.spec.id, test_case.spec.ov)   
                 if hasattr( test_case, 'result' ):
-                    result = str(test_case.result)
+                    if type( test_case.result ) == type( () ) and len( test_case.result ) == 2:
+                        result, cmt  = [str( x) for x in test_case.result] 
+                    else:
+                        result = str( test_case.result )
                 else:
                     result = "****"
+                cmt_item = cmt if cmt != None else ''
 
                 if pytest_report.failed:
-                  self.report_line = '\t'.join( ['FAIL',] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,] )
+                  self.report_line = '\t'.join( ['FAIL',] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,cmt_item] )
                 else:
-                  self.report_line = '\t'.join( ['PASS',] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,] )
+                  self.report_line = '\t'.join( ['PASS',] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,cmt_item] )
 
 
         if sfx != None:
@@ -197,6 +202,7 @@ def pytest_runtest_makereport(item, call):
     if rep.when == "call":
            lr = None
            if any( [x in item.function.__annotations__.keys() for x in ['return','tc']] ) or 'tc' in item.funcargs:
+        
                 if 'tc' in item.function.__annotations__.keys():
                   src = 'tc'
                   ret = item.function.__annotations__['tc']
