@@ -55,8 +55,8 @@ class Jprep(object):
         abstract = 'Results from a review of handle records, provided as a dictionary for each handle identifier. Error level 0 indicates no errors found. The report also includes a check on the availability of mask files '
         date = '%4.4i%2.2i%2.2i' % time.gmtime()[:3]
         jf = jfile % date
-        oo = open( jf, 'w' )
         ee = {}
+        ee2 = {}
         for h,r in self.aa.items():
             dsidv = '%s.%s' % r[1:3]
             if r[0]:
@@ -71,7 +71,12 @@ class Jprep(object):
                         msg += '; '
                     msg += f2
                 this = {'qc_status':'ERROR', 'error_level':2, 'dset_id':dsidv, 'qc_message':msg}
+            that = this.copy()
+            if that['error_level'] == 0 and r[5] != 'na':
+               that['mask']= r[5]
+               print (that['mask'])
             ee[h] = this
+            ee2[h] = that
             
         n = len(ee)
         nf = len( [h for h,e in ee.items() if e['error_level'] == 0] )
@@ -84,7 +89,12 @@ class Jprep(object):
                   contact='support@ceda.ac.uk (ref C3S 34g,Martin Juckes)' )
 
 
+        oo = open( jf, 'w' )
         json.dump( {'header':info, 'results':ee}, oo, indent=4, sort_keys=True )
+        oo.close()
+        jf = jfile % ('extended_%s' % date )
+        oo = open( jf, 'w' )
+        json.dump( {'header':info, 'results':ee2}, oo, indent=4, sort_keys=True )
         oo.close()
 
 
