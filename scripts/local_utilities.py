@@ -3,6 +3,7 @@ import csv
 from local_pytest_utils import BaseClassTS
 from generic_utils import LogFactory
 import hddump
+from local_utilities_dataset import CMIPDatasetSample
 
 __version__ = '0.1.0'
 
@@ -141,7 +142,7 @@ def get_sample_from_mode(mode,nt,maxnt):
 re2 = re.compile( '<location(.*?)/>' )
 re_href = re.compile( '%s="(.*?)"' % 'href' )
 
-class CMIPDatasetSample(object):
+class OBSOLETE__CMIPDatasetSample(object):
     def __init__(self,dsids,id_mode='hdl',drs_base='/badc/cmip6/data/CMIP6/'):
         self.dsids = dsids
         self.id_mode = id_mode
@@ -272,7 +273,7 @@ class CMIPFileSample(object):
                var_name = fn.split( '_' )[0]
 
             nc = netCDF4.Dataset( data_path )
-            this_var = nc.variables[vname]
+            this_var = nc.variables[var_name]
             if hasattr( this_var, '_FillValue' ):
               fill_value = this_var._FillValue
             else:
@@ -283,6 +284,17 @@ class CMIPFileSample(object):
         return (vs, this_var, nc )
 
 
+class MaskLookUp(dict):
+    def __init__(self):
+        ii = open( 'handle_scan_report_extended_20200713.json','r')
+        new = json.load( ii )
+        for k,item in new['results'].items():
+            if 'mask' in item:
+                id = item["dset_id"]
+                ###CMIP6.ScenarioMIP.CCCma.CanESM5.ssp126.r1i1p1f1.AERmon.od550aer.gn.v20190429
+                era,mip,inst,source,expt,variant,table,var,grid, version = id.split('.')
+                ko = '.'.join( [var,table,source,expt,grid] )
+                self[ko] = item['mask']
 
 class VariableSampler(object):
     def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000,ref_mask_file=None):
@@ -306,11 +318,13 @@ class VariableSampler(object):
              rmfn = self.ref_mask_file.rpartition('/')[-1]
              mvar = rmfn.split('_')[0]
              nc = netCDF4.Dataset( self.ref_mask_file  )
-             assert mvar in ['sftlf','sftof','sftif'], 'Unrecognised mask definition variable: %s' % mvar
-             if mvar in ['sftlf','sftof','sftif']:
-                   this = nc.variables[mvar]
+             assert mvar in ['sftlf','sftof','sftgif'], 'Unrecognised mask definition variable: %s' % mvar
+             if mvar in ['sftlf','sftof','sftgif']:
+                   self.ref_fraction = nc.variables[mvar]
                    ##self.ref_mask = numpy.ma.masked_equal( this, 0. )
-                   self.ref_mask = numpy.ma.masked_less( this, 50. )
+                   ##
+                   ## this does not work ... 
+                   self.ref_mask = numpy.ma.masked_less( self.ref_fraction, 50. )
 
     def dump_shelve(self,sname,kprefx,mode='c',context=None):
 
@@ -350,9 +364,11 @@ class VariableSampler(object):
         kl = set()
         kl2 = set()
         if self.rank == 2:
-            self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask )
+            self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fracton=self.ref_fraction )
             self.sampler.apply(  )
             self.sr = self.sampler.sr
+            self.sr_dict[0] = self.sampler.sr
+            kl.add(0)
 
         else:
             if isamp == None:
@@ -368,7 +384,7 @@ class VariableSampler(object):
                   kl2.add(k)
                   for l in range(self.var.shape[1] ):
                      kl2.add(l)
-                     self.sampler.load( self.var[k,l,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
+                     self.sampler.load( self.var[k,l,:], fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fraction=self.ref_fraction)
                      self.sampler.apply( )
                      self.sr_dict[(k,l)] = self.sampler.sr
         if len(kl) > 0:
@@ -385,16 +401,19 @@ class Sampler(object):
         self.q = quantiles != None
         self.ext = extremes > 0
 
-    def load(self,array,fill_value=None,ref_mask=None):
+    def load(self,array,fill_value=None,ref_mask=None,ref_fraction=None):
         self.ref_mask=ref_mask
+        self.ref_fraction=ref_fraction
         self.fill_value=fill_value
 
         self.has_fv = fill_value != None
 
+        self.has_frac = type( self.ref_fraction ) != type( None )
         self.has_msk = type( self.ref_mask ) != type( None )
         if self.has_msk:
             assert hasattr( self.ref_mask, 'mask' )
 
+        print ( 'load ...',self.has_fv )
         if self.has_fv:
             self.get_basic = self._get_basic_ma
             self.array = numpy.ma.masked_equal( array, fill_value )
@@ -408,18 +427,39 @@ class Sampler(object):
                 self.farray = self.array.ravel()
 
     def apply(self,as_dict=True):
+        print ('sampler: apply' )
         if as_dict:
           self.sr = dict()
           self.sr['basic'] = self.get_basic()
           if self.q: self.sr['quantiles'] = self.get_quantiles()
           if self.ext: self.sr['extremes'] = self.get_extremes()
           if self.has_msk: self.sr['mask_ok'] = self.check_mask(rmode='full')
+          if self.has_frac: self.sr['fraction'] = self.check_fraction(rmode='full')
         else:
           self.sr = SampleReturn()
           self.sr.basic = self.get_basic()
           if self.q: self.sr.quantiles = self.get_quantiles()
           if self.ext: self.sr.extremes = self.get_extremes()
           if self.has_msk: self.sr.mask_ok = self.check_mask(rmode='full')
+
+    def check_fraction(self,rmode='short'):
+        import numpy
+
+        n1 = self.ref_mask.count()
+
+        a1 = numpy.ma( self.ref_fraction, mask=self.array.mask )
+        a2 = numpy.ma( self.ref_fraction, mask=~self.array.mask )
+        min1 = numpy.ma.min( a1 )
+        max1 = numpy.ma.max( a1 )
+        min2 = numpy.ma.min( a2 )
+        max2 = numpy.ma.max( a2 )
+        self.fraction_report = ('fraction_rep',min1,max1,min2,max2)
+
+        print ( self.fraction_rep )
+        if rmode == 'short':
+           return self.fraction_rep[0]
+        else:
+           return self.fraction_rep
 
     def check_mask(self,rmode='short'):
         import numpy
@@ -452,6 +492,7 @@ class Sampler(object):
                  numpy.ma.max( self.array ),
                  numpy.ma.mean( numpy.ma.abs( self.array ) ),
                  self.array.size - self.array.count() )
+        print ('basic_ma',basic)
         return basic
 
     def _get_basic(self):
@@ -906,7 +947,7 @@ class CheckJson(object):
 
 
 if __name__ == "__main__":
-   mm = 'ds'
+   mm = 'fx'
    if mm == 'ds':
        ii = open( '../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv').readlines()
        dsl = []
@@ -921,11 +962,20 @@ if __name__ == "__main__":
                  print( "unexpected length of dataset split: %s" % esgf_id )
            else:
              era, mip, inst, model, expt, variant, table, var, grid, version = ttt
-             if mip in ['CMIP','ScenarioMIP'] and table in ['Amon']:
+             this_table = 'Lmon'
+             if mip in ['CMIP','ScenarioMIP'] and table == this_table:
                dsl.append((h,'.'.join( [era, mip, inst, model, expt, variant, table, var, grid] ), version) )
        print ("Reviewing %s datasets" % len(dsl) )
        dss = CMIPDatasetSample(dsl)
        dss.review()
+   elif mm == 'fx':
+       fs = CMIPFileSample( '../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-1-ECA_piControl_r1i1p1f1_gr.nc' )
+       sample_config = dict(extremes=10, quantiles=[.1,.25,.5,.75,.9] )
+
+       this_sampler = Sampler( **sample_config )
+       vs, this_var, nc = fs.get_samples( this_sampler )
+       print (vs.sr_dict )
+
    else:
      check_json = CheckJson()
      wg1 = WGIPriority()
