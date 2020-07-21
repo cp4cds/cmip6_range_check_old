@@ -5,6 +5,12 @@ import numpy, netCDF4, pytest, sys, os
 from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges, MaskLookUp
 
 LOG_NAME = 'log0001'
+CMIP_FILE = os.environ['CMIP_FILE']
+
+fname = CMIP_FILE.rpartition('/')[-1]
+log_file_name = fname.replace('.nc','_qc-ranges.log')
+vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
+SHELVE_FILE_NAME = 'sh/%s' % fname.replace('.nc','_qc-ranges')
 
 BaseClassCheck.configure( 'cmip6', 'test_file', LOG_NAME )
 
@@ -213,11 +219,15 @@ class TestCmipFile:
 
       Check3( self.test_fraction )( res, cmt=cmt )
 
+  @pytest.mark.wrapup
+  def test_wrapup(self) -> dict( ov='Summary of tests', id='tc900',
+                                  obj='Provide quick overview', p='SHOULD', tr='tbd', prec='None', i='None', expected=True ):
+      Check3( self.test_wrapup )( True, cmt=Check3.review() )
+
 class ConcTestCmipFile(TestCmipFile):
     def __init__(self):
         pass
 
 if __name__ == "__main__":
-
     t = ConcTestCmipFile()
     t.test_file()
