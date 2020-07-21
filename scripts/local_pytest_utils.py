@@ -2,6 +2,13 @@ import pytest, os
 import warnings, collections, operator, logging
 import generic_utils
 
+## see https://docs.pytest.org/en/latest/example/simple.html#incremental-testing-test-steps
+from typing import Dict, Tuple
+
+# store history of failures per test class name and per index in parametrize (if parametrize used)
+##_test_failed_incremental: Dict[str, Dict[Tuple[int, ...], str]] = {}
+_test_failed_incremental = {}
+
 RAISE_NO_CALLBACK_EXCEPTION = False
 
 
@@ -23,13 +30,17 @@ scope_id = 'sc001'
 
 class BaseClassCheck(object):
     config = NT__config( project='default_project', scope='default_scope', log_name='test01' )
+    reporter = None
+    review_template = 'Failed tests: %s, passed tests: %s'
 
     @classmethod
-    def configure(cls,project,scope,log_name):
+    def configure(cls,project,scope,log_name,reporter=None):
         cls.config = NT__config( project=project, scope=scope, log_name=log_name )
+        if reporter != None:
+          cls.reporter = reporter
     
 class Check3(BaseClassCheck):
-    def __init__(self,func,sfx=''):
+    def __init__(self,func,sfx='',reset=False,blocking=False):
         self.ee = dict()
         self.function = func
         fid = func.__name__
@@ -37,13 +48,36 @@ class Check3(BaseClassCheck):
         tr = '%s:%s:%s' % (self.config.project,self.config.scope,fid)
         defaults = {'prec':'None', 'i':'None', 'tr':tr, 'id':fid }
         ret = func.__annotations__['return']
+        if BaseClassCheck.reporter == None:
+            BaseClassCheck.reporter = LogReporter(self.config.log_name,sfx=sfx)
+
         for k,v in defaults.items():
             if k not in ret:
                 ret[k] = v
-        func.__annotations__['tc'] = TCBuild( func, TestReporter(self.config.log_name,sfx=sfx), ret=ret )
+        func.__annotations__['tc'] = TCBuild( func, BaseClassCheck.reporter, ret=ret )
+        if blocking:
+            func.__annotations__['tc'].is_blocking = True
+
         for k in ['ov','obj','p','tr','prec','i','expected','id']:
             v = ret.get(k, defaults.get(k) )
             self.ee[k] = v
+
+        if reset:
+            self._reset()
+      ####  print ('FAIL COUNT: %s' % fid, self.reporter.fails )
+      #### Note that the mark.incremental approach was tried,  but did not work with hooks implemented
+        if self.reporter.blocking_fails > 0 and fid.find( 'wrapup' ) == -1:
+            pytest.skip( 'blocking_fail count > 0' )
+
+    @classmethod
+    def _reset(cls):
+         BaseClassCheck.reporter.fails = 0
+         BaseClassCheck.reporter.passes = 0
+
+    @classmethod
+    def review(cls):
+         return BaseClassCheck.review_template % (BaseClassCheck.reporter.fails,BaseClassCheck.reporter.passes)
+
 
     def __call__(self,value,cmt=None):
         self.function.__annotations__['tc'].result = (value,cmt)
@@ -61,7 +95,7 @@ class BaseClassTS(object):
     pass
     
 
-class TestReporter(BaseClassISOReports):
+class LogReporter(BaseClassISOReports):
     def __init__(self,log_name,log_file=None,log_dir='./logs',sfx=None):
         self.log_name = log_name
         if log_file == None:
@@ -70,11 +104,16 @@ class TestReporter(BaseClassISOReports):
         log_factory = generic_utils.LogFactory(dir=log_dir)
         log_pytest  = log_factory( log_name, mode="a", logfile=log_file )
         self.sfx = sfx
+        self.fails = 0
+        self.blocking_fails = 0
+        self.passes = 0
 
     def __call__(self, pytest_report=None,test_case=None,sfx=None, cls=None):
         cmt = None
-        if pytest_report != None and hasattr( pytest_report, 'failed' ) and pytest_report.failed in [True,False]:
-           tag = {True:'OK', False:'ERROR'}[not pytest_report.failed]
+        if pytest_report != None and hasattr( pytest_report, 'outcome' ) and pytest_report.outcome in ['passed', 'failed', 'skipped']:
+            tag = {'passed':'OK', 'failed':'FAIL', 'skipped':'SKIP'}[pytest_report.outcome]
+        ##if pytest_report != None and hasattr( pytest_report, 'failed' ) and pytest_report.failed in [True,False]:
+           ##tag = {True:'OK', False:'ERROR'}[not pytest_report.failed]
         else:
            tag = '-'
 
@@ -98,10 +137,13 @@ class TestReporter(BaseClassISOReports):
                     result = "****"
                 cmt_item = cmt if cmt != None else ''
 
-                if pytest_report.failed:
-                  self.report_line = '\t'.join( ['FAIL',] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,cmt_item] )
-                else:
-                  self.report_line = '\t'.join( ['PASS',] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,cmt_item] )
+                if tag == 'FAIL':
+                  self.fails += 1
+                  if test_case.is_blocking:
+                     self.blocking_fails += 1
+                elif tag == 'OK':
+                  self.passes += 1
+                self.report_line = '\t'.join( [tag] + [str( test_case.spec._asdict()[x] ) for x in ['id','expected']] + [result,cmt_item] )
 
 
         if sfx != None:
@@ -115,7 +157,7 @@ class TestReporter(BaseClassISOReports):
  ##           f.write( ', '.join( dir(item.cls) ) )
         return self.report_line
 
-##line_reporter = TestReporter()
+##line_reporter = LogReporter()
 
 def get_user_warning(data):
     class HERE(UserWarning):
@@ -161,6 +203,7 @@ class TCBuild(BaseClassTS):
          self.conformance_mode = 'equals'
 
       self.ov = self.spec.ov
+      self.is_blocking = False
 
     def report(self,*args,**kwargs):
         return self.reporter( *args,**kwargs)
@@ -178,10 +221,12 @@ class MakeTest(object):
   def __init__(self,reporter=None,log_file=None,log_name=None):
     if reporter != None:
         self.reporter = reporter
+    elif BaseClassCheck.reporter != None:
+        self.reporter = BaseClassCheck.reporter
     else:
         if log_name == None:
             log_name = __name__
-        self.reporter = TestReporter(log_name,log_file=log_file)
+        self.reporter = LogReporter(log_name,log_file=log_file)
 
   def __call__(self,f):
     expected = f.__annotations__['return']['expected']
@@ -191,13 +236,15 @@ class MakeTest(object):
 
     return this
 
-@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+@pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    # execute all other hooks to obtain the report object
-    outcome = yield
-    rep = outcome.get_result()
 
     # we only look at actual failing test calls, not setup/teardown
+
+    # execute all other hooks to obtain the report object
+
+    outcome = yield
+    rep = outcome.get_result()
 
     if rep.when == "call":
            lr = None
@@ -233,3 +280,4 @@ def pytest_runtest_makereport(item, call):
                if RAISE_NO_CALLBACK_EXCEPTION:
                  raise NoCallback(item,rep)
                ##lr = line_reporter( pytest_report=rep, sfx='{no spec: %s}' % item.function.__name__ )
+

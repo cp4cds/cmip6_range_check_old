@@ -1,6 +1,8 @@
 
 import json, glob, collections
 
+def _sl(x): return sorted( list( x ) )
+
 
 class CollectionCheck(object):
     def __init__(self):
@@ -29,6 +31,8 @@ class CollectionCheck(object):
 
                 self.cc2[k][gcat][grid] =item[grid] 
         reps = dict()
+        ccx = collections.defaultdict( lambda: collections.defaultdict( dict ) )
+
         for c,item in self.cc2.items():
             for gc,xx in item.items():
               if len( xx.keys() ) > 1:
@@ -44,21 +48,48 @@ class CollectionCheck(object):
                         for x in v:
                           sbi.add(x)
                     sd = sai.symmetric_difference( sbi )
+                    si = sai.intersection( sbi )
                     if len(sd) == 0:
                         msg = 'identical'
+                        mtag = 'iden'
+                    elif len(si) == 0:
+                        msg = 'disjoint'
+                        mtag= 'disj'
                     else:
                       da = sai.difference( sbi )
                       db = sbi.difference( sai )
                       if len( da ) == 0:
                           msg = 'subset in %s' % a
+                          mtag = 'subsl'
                       elif len( db ) == 0:
                           msg = 'subset in %s' % b
+                          mtag = 'subsr'
                       else:
-                          msg = 'OVERLAPS'
+                          msg = 'OVERLAPS : %s only: %s, both %s, %s only %s' % (a,len(da),len(sbi) - len(db),b,len(db))
+                          mtag = 'overl'
 
+                else:
+                    msg = 'MANY grids: %s' % len( xx.keys() )
+                model = c.split('.')[3]
+                if mtag == 'iden':
+                  ccx[model][ (mtag,gc) ][c] = {'%s+%s' % (a,b):_sl(sai)}
+                elif mtag == 'disj':
+                  ccx[model][ (mtag,gc) ][c] = { a:_sl(sai), b:_sl(sbi)}
+                else:
+                  ccx[model][ (mtag,gc) ][c] = {'%s+%s' % (a,b):_sl(si), '%s<' % a:_sl(da), '%s<' % b:_sl(db)}
                 reps[ (c,gc) ] = sorted( list( xx.keys() ) ) + [msg,]
         for t in sorted( list( reps.keys() ) ):
             print (t,reps[t] )
+
+        for model in ccx.keys():
+            self.json_dump_model(model,ccx[model])
+
+    def json_dump_model(self,model,ee):
+        ff = {'%s::%s' % k:i for k,i in ee.items() }
+        oo = open( 'summary_by_model_%s.json' % model, 'w' )
+        info = 'overview'
+        json.dump( {'header':info, 'results':ff}, oo, indent=4, sort_keys=True )
+        oo.close()
 
 
 
