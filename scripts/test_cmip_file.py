@@ -1,6 +1,6 @@
 
 import logging
-from local_pytest_utils import BaseClassTS, Check3, BaseClassCheck
+from local_pytest_utils import BaseClassTS, Check3, BaseClassCheck, LogReporter
 import numpy, netCDF4, pytest, sys, os
 from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges, MaskLookUp
 
@@ -12,7 +12,7 @@ log_file_name = fname.replace('.nc','_qc-ranges.log')
 vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
 SHELVE_FILE_NAME = 'sh/%s' % fname.replace('.nc','_qc-ranges')
 
-BaseClassCheck.configure( 'cmip6', 'test_file', LOG_NAME )
+BaseClassCheck.configure( 'cmip6', 'test_file', LOG_NAME, reporter=LogReporter(LOG_NAME, log_file=log_file_name) )
 
 def get_vs(data_file, sampler):
           nc = netCDF4.Dataset( data_file )
@@ -101,7 +101,7 @@ class TestCmipFile:
           tt( 'Could not scan variable' )
 
       try:
-          vs.dump_shelve('test02',fname,mode='n')
+          vs.dump_shelve('sh/%s' % CMIP_FILE ,fname,mode='n')
       except:
           tt( 'could not dump variable' )
 

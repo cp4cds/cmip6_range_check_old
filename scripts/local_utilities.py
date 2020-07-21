@@ -1,9 +1,13 @@
-import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re, netCDF4
+import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re
 import csv
 from local_pytest_utils import BaseClassTS
 from generic_utils import LogFactory
-import hddump
+##import hddump
 from local_utilities_dataset import CMIPDatasetSample
+try:
+  import netCDF4
+except:
+  print( "netCDF4 not available" )
 
 __version__ = '0.1.0'
 
