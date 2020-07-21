@@ -2,7 +2,7 @@
 import logging
 from local_pytest_utils import BaseClassTS, Check3, BaseClassCheck
 import numpy, netCDF4, pytest, sys, os
-from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges
+from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges, MaskLookUp
 
 LOG_NAME = 'log0001'
 
@@ -24,6 +24,13 @@ def get_vs(data_file, sampler):
           return (vs, this_var, nc )
 
 examples_masks = {('E3SM-1-1-ECA','piControl','Lmon','mrsos','gr'):'../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-1-ECA_piControl_r1i1p1f1_gr.nc'}
+mlu = MaskLookUp(verify=True)
+# mk = '.'.join( [vname,table,model,expt,grid] )
+mlu_bb = dict()
+for mk,p in mlu.items():
+  vname,table,model,expt,grid = mk.split('.')
+  mkb = '.'.join( [vname,table,model,grid] )
+  mlu_bb[mkb] = p
 
 class TestCmipFile:
   id = 'scope201'
@@ -67,10 +74,16 @@ class TestCmipFile:
 
           kwargs = dict( fill_value=fill_value )
           tt1 = (model,expt,table,vname,grid)
-          if tt1 in examples_masks:
-            kwargs['ref_mask_file'] = examples_masks[tt1]
+          mk = '.'.join( [vname,table,model,expt,grid] )
+          mkb = '.'.join( [vname,table,model,grid] )
+          if mk in mlu:
+            kwargs['ref_mask_file'] = mlu[mk]
             self.__class__.with_mask = True
             print ('USING MASK')
+          elif mkb in mlu_bb:
+            kwargs['ref_mask_file'] = mlu_bb[mkb]
+            self.__class__.with_mask = True
+            print ('USING MASK [different expt]')
           vs = VariableSampler( this_var[:], self.sampler, **kwargs )
 
       except:
@@ -105,12 +118,24 @@ class TestCmipFile:
       ks = sorted( list( self.__class__.vs.sr_dict.keys() ) )
       basic = [ self.__class__.vs.sr_dict[k]['basic'] for k in ks]
       masks_ok = [ self.__class__.vs.sr_dict[k].get('mask_ok',None) for k in ks]
+      fraction = [ self.__class__.vs.sr_dict[k].get('fraction',None) for k in ks]
       data_min = min( [x[0] for x in basic] )
       data_max = max( [x[1] for x in basic] )
       data_ma_min = min( [x[2] for x in basic] )
       data_ma_max = max( [x[2] for x in basic] )
       self.__class__.range_comment = 'Data range: %s to %s; mean absolute range %s to %s' % (data_min,data_max,data_ma_min,data_ma_max)
       nfv = sum( [x[3] for x in basic] )
+
+      ## fraction report
+      if all( [x == None for x in fraction] ):
+        self.__class__.fraction_report = ('no report',None,None,None,None)
+      else:
+        cmt = set( [f[0] for f in fraction])
+        min1 = min( [f[1] for f in fraction] )
+        max1 = max( [f[1] for f in fraction] )
+        min2 = min( [f[3] for f in fraction] )
+        max2 = max( [f[4] for f in fraction] )
+        self.__class__.fraction_report = (cmt,min1,max1,min2,max2)
 
       self.__class__.mask_comment = ''
       if all( [x == None for x in masks_ok] ):
@@ -167,6 +192,26 @@ class TestCmipFile:
          res = 'Mask Error'
 
       Check3( self.test_masks )( res, cmt=self.__class__.mask_comment )
+
+  def test_fraction(self) -> dict( ov='Test of Sampler object: looking at area fraction values', id='tc104',
+                              obj='Test whether missing values in data are assigned consistently', p='SHOULD', tr='tbd', prec='None', i='None', expected='OK' ):
+
+      rep = self.__class__.fraction_report
+      if rep[0] == 'no report':
+         res = 'OK'
+         cmt = 'no report'
+      elif len( rep[0] ) > 1:
+         res = 'ERROR'
+         cmt = 'confused report'
+      else:
+         if rep[1] > rep[4]:
+           res = 'OK'
+           cmt = 'Min unmasked [%s] > max masked [%s]' % (rep[1],rep[4])
+         else:
+           res = 'Area Fraction Error'
+           cmt = 'Min unmasked [%s] < max masked [%s]' % (rep[1],rep[4])
+
+      Check3( self.test_fraction )( res, cmt=cmt )
 
 class ConcTestCmipFile(TestCmipFile):
     def __init__(self):

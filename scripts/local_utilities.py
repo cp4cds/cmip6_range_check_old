@@ -285,16 +285,18 @@ class CMIPFileSample(object):
 
 
 class MaskLookUp(dict):
-    def __init__(self):
+    def __init__(self, verify=False):
         ii = open( 'handle_scan_report_extended_20200713.json','r')
         new = json.load( ii )
         for k,item in new['results'].items():
             if 'mask' in item:
                 id = item["dset_id"]
+                mf =  item['mask']
+                if (not verify) or ( os.path.isfile(mf) and os.stat(mf).st_size > 100 ) :
                 ###CMIP6.ScenarioMIP.CCCma.CanESM5.ssp126.r1i1p1f1.AERmon.od550aer.gn.v20190429
-                era,mip,inst,source,expt,variant,table,var,grid, version = id.split('.')
-                ko = '.'.join( [var,table,source,expt,grid] )
-                self[ko] = item['mask']
+                  era,mip,inst,source,expt,variant,table,var,grid, version = id.split('.')
+                  ko = '.'.join( [var,table,source,expt,grid] )
+                  self[ko] = mf
 
 class VariableSampler(object):
     def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000,ref_mask_file=None):
@@ -375,7 +377,7 @@ class VariableSampler(object):
                 isamp = get_sample_from_mode( self.mode, self.var.shape[0], self.maxnt )
             if self.rank == 3:
               for k in isamp:
-                self.sampler.load( self.var[k,:], fill_value=self.fill_value, ref_mask=self.ref_mask)
+                self.sampler.load( self.var[k,:], fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fraction=self.ref_fraction)
                 self.sampler.apply( )
                 self.sr_dict[k] = self.sampler.sr
                 kl.add(k)
@@ -441,25 +443,34 @@ class Sampler(object):
           if self.q: self.sr.quantiles = self.get_quantiles()
           if self.ext: self.sr.extremes = self.get_extremes()
           if self.has_msk: self.sr.mask_ok = self.check_mask(rmode='full')
+          if self.has_frac: self.sr.fraction = self.check_fraction(rmode='full')
 
     def check_fraction(self,rmode='short'):
+        """Generate a Report on Area Fractions compared to Missing Values"""
+        
         import numpy
 
         n1 = self.ref_mask.count()
 
-        a1 = numpy.ma( self.ref_fraction, mask=self.array.mask )
-        a2 = numpy.ma( self.ref_fraction, mask=~self.array.mask )
+        a1 = numpy.ma.masked_where( self.array.mask, self.ref_fraction )
+        a2 = numpy.ma.masked_where( ~self.array.mask, self.ref_fraction )
+
+        ## min and max fraction on valid data points
+
         min1 = numpy.ma.min( a1 )
         max1 = numpy.ma.max( a1 )
+
+        ## min and max fraction on invalid data points
+
         min2 = numpy.ma.min( a2 )
         max2 = numpy.ma.max( a2 )
         self.fraction_report = ('fraction_rep',min1,max1,min2,max2)
 
-        print ( self.fraction_rep )
+        print ( self.fraction_report )
         if rmode == 'short':
-           return self.fraction_rep[0]
+           return self.fraction_report[0]
         else:
-           return self.fraction_rep
+           return self.fraction_report
 
     def check_mask(self,rmode='short'):
         import numpy
