@@ -33,12 +33,21 @@ Lmon,tsl,--------------,,,,,
 Amon,clt,valid_max,100.2,-0.001,update,robust,"Two models exceed the CMIP6 limit fo 100.001, with values up to 100.034%."
 Amon,co2,Valid_max,0.005,5E-05,new,proposed,generous limits … for troposphere.
 Amon,evspsbl,Valid_max,0.002,-0.0001,new,proposed ,
-Amon,pr,Valid_max,0.02,,,proposed,Upper limit set was 0.0015 – highest model was double this. Log-normal distribution makes the upper limit a moving target.
+Amon,pr,Valid_max,0.02,-0.0001,,proposed,Upper limit set was 0.0015 – highest model was double this. Log-normal distribution makes the upper limit a moving target.
 Amon,pr,mean_absolute_valid ..,0.0001,,,proposed,Upper limit of mean absolute was OK for historical .. but models got close.
 Amon,prsn,Valid_max,0.002,,,proposed,"OK, but close"
 Amon,prw,Valid_max,120,,,proposed,"OK, but close"
 Amon,prw,mean_absolute_valid ..,35,,,proposed,"OK, but close"
 Amon,tauu,Valid_max,25,-25,new,proposed,Range set was too narrow.            
+day,pr,valid_max,0.04,-0.0001,,proposed,Upper limit set was 0.0015 – highest model was double this. Log-normal distribution makes the upper limit a moving target.
+3hr,huss,valid_max,0.1,-0.001,new,proposed,
+3hr,tas,valid_max,345.,170.,new,proposed,
+3hr,vas,valid_max,80.,-80.,new,proposed,
+3hr,uas,valid_max,80.,-80.,new,proposed,
+day,mrro,valid_max,0.03,-0.001,new,proposed,
+day,sfcWindmax,valid_max,80,0,new,proposed,
+day,zg,valid_max,1200,-1000,new,proposed,
+day,psl,valid_max,120000,85000,new,proposed,
 day,hurs,valid_max,110,-0.01,new,proposed,
 day,hurs,mean_absolute_valid ..,95,10,new,proposed,
 day,huss,valid_max,0.04,-0.01,new,proposed,
