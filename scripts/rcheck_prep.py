@@ -59,11 +59,26 @@ class Rsplat(object):
   def __init__(self):
      ee = json.load( open( 'scanned_dset_for_qc.json', 'r' ) )
      cc = collections.defaultdict( list )
+     ff = collections.defaultdict( list )
      for h,d in ee['data'].items():
+       ds = d['dset_id']
+       era,mip,inst,model,expt,variant,table,var,grid,version = ds.split('.')
        if d['qc_status'] == 'pass':
-         ds = d['dset_id']
-         era,mip,inst,model,expt,variant,table,var,grid,version = ds.split('.')
          cc[(expt,table,var)].append( d )
+       elif d['qc_message'] == 'No variable limits provided':
+         ff[(table,var)].append(ds)
+     self.cc = cc
+     self.ff = ff
+
+  def analysis(self):
+      ks = sorted( list( self.ff.keys() ), key=lambda x:len( self.ff[x] ) )
+      for k in ks:
+          print( k,len( self.ff[k] ) )
+
+
+
+  def splat(self):
+     cc = self.cc
 
      for k,item in cc.items():
        d0 = 'inputs_01/%s' %  k[0]
@@ -80,3 +95,4 @@ class Rsplat(object):
 if __name__ == '__main__':
     ##r = Rprep()
     r = Rsplat()
+    r.analysis()
