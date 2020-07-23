@@ -1,4 +1,5 @@
 import json, collections, os, glob, sys
+import local_utilities as lu
 
 BASE_DIR = '/badc/cmip6/data/'
 
@@ -11,6 +12,9 @@ class Rprep( object ):
         ee = json.load( open( 'data/handle_scan_report_20200710.json', 'r' ) )
         ff = dict()
         nf1 = 0
+        nf2 = 0
+        np2 = 0
+        lims = lu.get_new_ranges()
         for h,d in ee['results'].items():
             if d['qc_status'] == 'pass':
                 ds = d['dset_id']
@@ -33,12 +37,46 @@ class Rprep( object ):
                     else:
                       this['qc_status'] = 'pass'
                       this['files'] = [x.rpartition('/')[-1] for x in sorted( list( fl) )] 
+                      this['dir'] = p1
+                if this['qc_status'] == 'pass':
+                   var_id = '%s.%s' % (table,var)
+                   if var_id not in lims:
+                      this['qc_status'] = 'ERROR'
+                      this['qc_message'] = 'No variable limits provided'
+
                 if this['qc_status'] != 'pass':
                    print (ds,this['qc_status'])
+                   nf2 += 1
+                else:
+                   np2 += 1
                 ff[h] = this
+        print( np2, nf2 )
         oo = open( 'scanned_dset_for_qc.json', 'w' )
         json.dump( {'info':{"title":"List of Scanned Datasets and their Files"}, 'data':ff}, oo, indent=4, sort_keys=True )
         oo.close()
 
+class Rsplat(object):
+  def __init__(self):
+     ee = json.load( open( 'scanned_dset_for_qc.json', 'r' ) )
+     cc = collections.defaultdict( list )
+     for h,d in ee['data'].items():
+       if d['qc_status'] == 'pass':
+         ds = d['dset_id']
+         era,mip,inst,model,expt,variant,table,var,grid,version = ds.split('.')
+         cc[(expt,table,var)].append( d )
+
+     for k,item in cc.items():
+       d0 = 'inputs_01/%s' %  k[0]
+       if not os.path.isdir(d0):
+         os.mkdir( d0 )
+       oo = open( 'inputs_01/%s/x1_%s_%s.txt' % k, 'w' )
+       for d in item:
+         d1 = d['dir']
+         for f in d['files']:
+           oo.write( '%s/%s\n' % (d1,f) )
+       oo.close()
+       
+
 if __name__ == '__main__':
-    r = Rprep()
+    ##r = Rprep()
+    r = Rsplat()

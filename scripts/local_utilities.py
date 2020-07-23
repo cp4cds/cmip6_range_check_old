@@ -1,4 +1,4 @@
-import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re
+import logging, time, os, collections, json, inspect, glob, warnings, numpy, shelve, re, random
 import csv
 from local_pytest_utils import BaseClassTS
 from generic_utils import LogFactory
@@ -16,6 +16,7 @@ NT__test_case_spec = collections.namedtuple( 'test_case_spec', ['ov', 'id', 'obj
 
 NT_RangeValue = collections.namedtuple( "range_value", ["value","status"] )
 NT_RangeSet = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min"] )
+NT_RangeSetX = collections.namedtuple( "range_set", ["max","min","ma_max","ma_min","max_l0","min_l0"] )
 null_range_value = NT_RangeValue( None, "NONE" )
 
 __overview__ = "Testing the local utilities module"
@@ -310,6 +311,7 @@ class VariableSampler(object):
         """
         assert isinstance( var, numpy.ndarray), 'Expected instance of numpy.ndarray, got %s' % type( var )
 
+        self.ref_fraction = None
         self.var = var
         self.ref_mask = ref_mask
         self.ref_mask_file = ref_mask_file
@@ -351,7 +353,7 @@ class VariableSampler(object):
         l1 = len( str( self.kmax ) )
         l2 = len( str( self.klmax ) )
         fmt1 = '%s:%' + '%si' % l1
-        fmt2 = '%s:%' + ( '%si' % l2 ) + '-' + '%si' % l2
+        fmt2 = '%s:%' + ( '%si' % l2 ) + '-%' + '%si' % l2
         for k,rec in self.sr_dict.items():
             if type(k) == type( 'x' ):
                 ko = k
@@ -370,7 +372,7 @@ class VariableSampler(object):
         kl = set()
         kl2 = set()
         if self.rank == 2:
-            self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fracton=self.ref_fraction )
+            self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fraction=self.ref_fraction )
             self.sampler.apply(  )
             self.sr = self.sampler.sr
             self.sr_dict[0] = self.sampler.sr
@@ -399,13 +401,14 @@ class VariableSampler(object):
           self.klmax = max( kl2 )
 
 class Sampler(object):
-    def __init__(self,extremes=0,quantiles=None):
+    def __init__(self,extremes=0,quantiles=None,verbose=False):
         import numpy 
 
         self.nextremes=extremes
         self.quantiles=quantiles
         self.q = quantiles != None
         self.ext = extremes > 0
+        self.verbose = verbose
 
     def load(self,array,fill_value=None,ref_mask=None,ref_fraction=None):
         self.ref_mask=ref_mask
@@ -419,7 +422,7 @@ class Sampler(object):
         if self.has_msk:
             assert hasattr( self.ref_mask, 'mask' )
 
-        print ( 'load ...',self.has_fv )
+        if self.verbose: print ( 'load ...',self.has_fv )
         if self.has_fv:
             self.get_basic = self._get_basic_ma
             self.array = numpy.ma.masked_equal( array, fill_value )
@@ -433,7 +436,7 @@ class Sampler(object):
                 self.farray = self.array.ravel()
 
     def apply(self,as_dict=True):
-        print ('sampler: apply' )
+        if self.verbose: print ('sampler: apply' )
         if as_dict:
           self.sr = dict()
           self.sr['basic'] = self.get_basic()
@@ -470,7 +473,7 @@ class Sampler(object):
         max2 = numpy.ma.max( a2 )
         self.fraction_report = ('fraction_rep',min1,max1,min2,max2)
 
-        print ( self.fraction_report )
+        if self.verbose: print ( self.fraction_report )
         if rmode == 'short':
            return self.fraction_report[0]
         else:
@@ -494,7 +497,7 @@ class Sampler(object):
             c2 = numpy.count_nonzero( self.ref_mask.mask & ~self.array.mask )
             self.mask_rep = ('mask_mismatch',n1,n2,c0,c1,c2)
 
-        print ( self.mask_rep )
+        if self.verbose: print ( self.mask_rep )
         if rmode == 'short':
            return self.mask_rep[0]
         else:
@@ -507,7 +510,7 @@ class Sampler(object):
                  numpy.ma.max( self.array ),
                  numpy.ma.mean( numpy.ma.abs( self.array ) ),
                  self.array.size - self.array.count() )
-        print ('basic_ma',basic)
+        if self.verbose: print ('basic_ma',basic)
         return basic
 
     def _get_basic(self):
@@ -632,13 +635,28 @@ class WGIPriority(object):
           if var_id in self.known_masks:
               self.mask_pool[var_id][model].add( fpath )
 
-def range_merge(a, b):
+def range_merge(a, b, overwrite=True) -> "NT_RangeSet instance combining a and b":
+    """Merge NT_RangeSet instances.
+       if overwrite: any non-null components of b replace existing values in a
+       else: non-null components of b replace non-null components of a
+    """
     this = list( a )
+    nn = max( [len(this),len(b)] )
 
-    for k in range(4):
-      if this[k] == null_range_value and b[k] != null_range_value:
-        this[k] = b[k]
-    return NT_RangeSet( this[0], this[1], this[2], this[3] )
+    if nn == 4:
+      for k in range(4):
+        if this[k] == null_range_value and b[k] != null_range_value:
+          this[k] = b[k]
+      return NT_RangeSet( this[0], this[1], this[2], this[3] )
+    else:
+      if len(this) == 4:
+          this += [null_range_value,null_range_value]
+      for k in range(6):
+        if this[k] == null_range_value and b[k] != null_range_value:
+          this[k] = b[k]
+      return NT_RangeSetX( this[0], this[1], this[2], this[3], this[4], this[5] )
+
+
 
 
 def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_limits.csv", merge=True ):
@@ -654,7 +672,14 @@ def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_lim
         if directive != '':
           id = "%s.%s" % (tab,var)
           print (directive, id)
-          if directive[:5] == "valid":
+          if directive[:5] == "valid" and directive[-3:] == '_l0':
+            this = new_data.get( id, {"ranges":{}} )
+            if words[3] != '':
+              this["ranges"]["max_l0"] = NT_RangeValue(float( words[3] ), words[6] )
+            if words[4] != '':
+              this["ranges"]["min_l0"] = NT_RangeValue(float( words[4] ), words[6] )
+            new_data[id] = this
+          elif directive[:5] == "valid":
             this = new_data.get( id, {"ranges":{}} )
             if words[3] != '':
               this["ranges"]["max"] = NT_RangeValue(float( words[3] ), words[6] )
@@ -674,14 +699,14 @@ def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_lim
         md = ar6.ranges
         for id in md:
             if id in new_data:
-                ntr = NT_RangeSet( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min']] )
+                ntr = NT_RangeSetX( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min', 'max_l0','min_l0']] )
                 new_data[id] = range_merge( md[id], ntr  )
             else:
                 new_data[id] = md[id]
 
         for id in new_data.keys():
             if id not in md:
-                ntr = NT_RangeSet( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min']] )
+                ntr = NT_RangeSetX( *[new_data[id]["ranges"].get(x,null_range_value) for x in ['max','min','ma_max','ma_min', 'max_l0','min_l0']] )
                 new_data[id] = ntr
             
     assert 'Lmon.mrsos' in new_data

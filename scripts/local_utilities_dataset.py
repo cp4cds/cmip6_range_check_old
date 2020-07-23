@@ -2,7 +2,10 @@ import logging, time, os, collections, json, inspect, glob, warnings, numpy, she
 import csv
 from local_pytest_utils import BaseClassTS
 from generic_utils import LogFactory
-import hddump
+try:
+  import hddump
+except:
+  print ("FAILED TO IMPORT hddump")
 
 __version__ = '0.1.0'
 
@@ -427,7 +430,7 @@ class VariableSampler(object):
         if len(kl2) > 0:
           self.klmax = max( kl2 )
 
-class Sampler(object):
+class XXXSampler(object):
     def __init__(self,extremes=0,quantiles=None):
         import numpy 
 

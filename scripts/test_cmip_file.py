@@ -1,8 +1,20 @@
 
 import logging
 from local_pytest_utils import BaseClassTS, Check3, BaseClassCheck, LogReporter
-import numpy, netCDF4, pytest, sys, os
+import numpy, netCDF4, pytest, sys, os, time
 from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges, MaskLookUp
+from utils import mode_by_table
+
+
+
+examples_masks = {('E3SM-1-1-ECA','piControl','Lmon','mrsos','gr'):'../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-1-ECA_piControl_r1i1p1f1_gr.nc'}
+mlu = MaskLookUp(verify=True)
+# mk = '.'.join( [vname,table,model,expt,grid] )
+mlu_bb = dict()
+for mk,p in mlu.items():
+  vname,table,model,expt,grid = mk.split('.')
+  mkb = '.'.join( [vname,table,model,grid] )
+  mlu_bb[mkb] = p
 
 LOG_NAME = 'log0001'
 CMIP_FILE = os.environ['CMIP_FILE']
@@ -11,8 +23,8 @@ fname = CMIP_FILE.rpartition('/')[-1]
 log_file_name = fname.replace('.nc','_qc-ranges.log')
 vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
 SHELVE_FILE_NAME = 'sh/%s' % fname.replace('.nc','_qc-ranges')
-
 BaseClassCheck.configure( 'cmip6', 'test_file', LOG_NAME, reporter=LogReporter(LOG_NAME, log_file=log_file_name) )
+
 
 def get_vs(data_file, sampler):
           nc = netCDF4.Dataset( data_file )
@@ -29,21 +41,13 @@ def get_vs(data_file, sampler):
           vs.dump_shelve('test01',fname,mode='n')
           return (vs, this_var, nc )
 
-examples_masks = {('E3SM-1-1-ECA','piControl','Lmon','mrsos','gr'):'../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-1-ECA_piControl_r1i1p1f1_gr.nc'}
-mlu = MaskLookUp(verify=True)
-# mk = '.'.join( [vname,table,model,expt,grid] )
-mlu_bb = dict()
-for mk,p in mlu.items():
-  vname,table,model,expt,grid = mk.split('.')
-  mkb = '.'.join( [vname,table,model,grid] )
-  mlu_bb[mkb] = p
-
 class TestCmipFile:
   id = 'scope201'
   description = 'check the numpy sampler class from local_utilities module'
   sample_config = dict(extremes=10, quantiles=[.1,.25,.5,.75,.9] )
   ar6 = WGIPriority()
   ranges_dict = get_new_ranges()
+  shdir = 'sh'
 
   def test_file(self) -> dict( ov='Test of Sampler object: expected attributes', id='tc101',
                               obj='test Sampler attributes', p='SHOULD', tr='tbd', prec='None', i='None', expected=True ):
@@ -82,6 +86,10 @@ class TestCmipFile:
           tt1 = (model,expt,table,vname,grid)
           mk = '.'.join( [vname,table,model,expt,grid] )
           mkb = '.'.join( [vname,table,model,grid] )
+
+          if table in mode_by_table:
+            kwargs['mode'] = mode_by_table[table]
+
           if mk in mlu:
             kwargs['ref_mask_file'] = mlu[mk]
             self.__class__.with_mask = True
@@ -101,9 +109,10 @@ class TestCmipFile:
           tt( 'Could not scan variable' )
 
       try:
-          vs.dump_shelve('sh/%s' % CMIP_FILE ,fname,mode='n')
+          fstem = fname.rpartition( '.' )[0]
+          vs.dump_shelve('%s/%s' % (self.shdir,fstem) ,fname,mode='n')
       except:
-          tt( 'could not dump variable' )
+          tt( 'Could not dump variable' )
 
       self.__class__.vs = vs
       vid = '%s.%s' % (table,vname)
@@ -131,6 +140,14 @@ class TestCmipFile:
       data_ma_max = max( [x[2] for x in basic] )
       self.__class__.range_comment = 'Data range: %s to %s; mean absolute range %s to %s' % (data_min,data_max,data_ma_min,data_ma_max)
       nfv = sum( [x[3] for x in basic] )
+ 
+      drl = [data_min,data_max,data_ma_min,data_ma_max]
+      if all( [type(k)==type(()) for k in ks] ):
+          basic0 = [ self.__class__.vs.sr_dict[k]['basic'] for k in ks if k[1] == 0]
+          data_min_l0 = min( [x[0] for x in basic0] )
+          data_max_l0 = max( [x[1] for x in basic0] )
+          drl += [data_min_l0,data_max_l0]
+          self.__class__.range_comment = 'Data range: %s to %s (l0: %s to %s); mean absolute range %s to %s' % (data_min,data_max,data_min_l0,data_max_l0,data_ma_min,data_ma_max)
 
       ## fraction report
       if all( [x == None for x in fraction] ):
@@ -157,7 +174,7 @@ class TestCmipFile:
         self.__class__.mask_check = False
       print ("MASK COMMENT: ",self.__class__.mask_comment, ' - check: ', self.__class__.mask_check )
 
-      self.__class__.basic = (data_min,data_max,data_ma_min,data_ma_max,nfv)
+      self.__class__.basic = (drl,nfv)
 
   def test_ranges(self) -> dict( ov='Test of Sampler object: expected ranges', id='tc102',
                               obj='test Sampler attributes', p='SHOULD', tr='tbd', prec='None', i='None', expected=True ):
@@ -169,8 +186,21 @@ class TestCmipFile:
       ks = sorted( list( self.__class__.vs.sr_dict.keys() ) )
       basic = [ self.__class__.vs.sr_dict[k]['basic'] for k in ks]
 
-      data_min,data_max,data_ma_min,data_ma_max,nfv = self.__class__.basic
+      drl,nfv = self.__class__.basic
+      data_min,data_max,data_ma_min,data_ma_max = drl[:4]
+      data_min_l0 = data_max_l0 = None
+      if len(drl) == 6:
+          data_min_l0,data_max_l0 = drl[-2:]
+
       res = []
+      if hasattr( ranges, 'min_l0' ) and ranges.min_l0.status != 'NONE':
+          min_valid = float( ranges.min_l0.value )
+          res.append( ('min',data_min_l0, min_valid, data_min_l0 >= min_valid ) )
+
+      if hasattr( ranges, 'max_l0' ) and ranges.max_l0.status != 'NONE':
+          max_valid = float( ranges.max_l0.value )
+          res.append( ('max',data_max_l0, max_valid, data_max_l0 <= max_valid  ) )
+
       if ranges.min.status != 'NONE':
           min_valid = float( ranges.min.value )
           res.append( ('min',data_min, min_valid, data_min >= min_valid ) ) 
@@ -190,7 +220,7 @@ class TestCmipFile:
 
       Check3( self.test_ranges)( all( [x[-1] for x in res] ), cmt=self.__class__.range_comment )
 
-  def test_masks(self) -> dict( ov='Test of Sampler object: expected mask extend', id='tc103',
+  def test_masks(self) -> dict( ov='Test of Sampler object: expected mask extent', id='tc103',
                               obj='test Sampler attributes', p='SHOULD', tr='tbd', prec='None', i='None', expected='OK' ):
       if self.__class__.mask_check in [True,None]:
          res = 'OK'
@@ -229,5 +259,62 @@ class ConcTestCmipFile(TestCmipFile):
         pass
 
 if __name__ == "__main__":
+##
+##
+## hacked version to avoid parallel read conflict
+##
+## also easier for debugging
+##
+##
+
+#vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
     t = ConcTestCmipFile()
-    t.test_file()
+    fstem = fname.rpartition( '.' )[0]
+    od1 = 'out_01/%s.%s' % (table,vname)
+    od2 = 'sh_01/%s.%s' % (table,vname)
+    if not os.path.isdir( od1 ):
+      os.mkdir(od1)
+    if not os.path.isdir( od2 ):
+      os.mkdir(od2)
+    t.shdir = od2
+    of1 = '%s/%s' % (od1,fstem)
+    oo1 = open( of1, 'w' )
+    oo1.write( '#FILE: %s\n' % CMIP_FILE )
+    oo1.write( '#DATE: %s\n' % time.ctime() )
+    oo1.write( '#SOURCE: %s\n' % 'test_cmip_file.py: as script' )
+    cmt = None
+    wcmt = ''
+    ##RAISE_FIRST = True
+    RAISE_FIRST = False
+    for m in [t.test_file, t.test_ranges, t.test_masks, t.test_fraction, t.test_wrapup]:
+       ret = m.__annotations__['return']
+       try:
+         m()
+         res = 'OK'
+       except:
+         res='FAIL'
+         if RAISE_FIRST:
+            oo1.write( '%s: %s: %s \n' % (res,ret['id'],ret['ov'] ) )
+            oo1.write( 'ABANDON TESTS\n' )
+            oo1.close()
+            raise
+       res2 = None
+       if 'tc' in m.__annotations__:
+         tc = m.__annotations__['tc']
+         if hasattr( tc, 'result' ):
+           res2 = tc.result
+       if res2 == None:
+         msg = '--NO RESULT FOUND--'
+       else:
+         try:
+           msg,cmt = res2
+         except:
+           msg = str(res2 )
+       
+       if cmt != None:
+         wcmt = ' | %s' % cmt
+       print ( '%s: %s: %s -- %s%s' % (res,ret['id'],ret['ov'], msg, wcmt ) )
+       oo1.write( '%s: %s: %s -- %s%s\n' % (res,ret['id'],ret['ov'], msg, wcmt ) )
+       res2 = None
+    oo1.close()
+    ##t.test_file()
