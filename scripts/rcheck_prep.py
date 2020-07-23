@@ -93,6 +93,6 @@ class Rsplat(object):
        
 
 if __name__ == '__main__':
-    ##r = Rprep()
+    r = Rprep()
     r = Rsplat()
     r.analysis()
