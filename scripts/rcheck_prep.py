@@ -72,8 +72,9 @@ class Rsplat(object):
 
   def analysis(self):
       ks = sorted( list( self.ff.keys() ), key=lambda x:len( self.ff[x] ) )
-      for k in ks:
+      for k in ks[-20:]:
           print( k,len( self.ff[k] ) )
+      print( len(ks) )
 
 
 
@@ -93,6 +94,7 @@ class Rsplat(object):
        
 
 if __name__ == '__main__':
-    r = Rprep()
+    #r = Rprep()
     r = Rsplat()
+    r.splat()
     r.analysis()
