@@ -334,7 +334,7 @@ class VariableSampler(object):
                    ## this does not work ... 
                    self.ref_mask = numpy.ma.masked_less( self.ref_fraction, 50. )
 
-    def dump_shelve(self,sname,kprefx,mode='c',context=None):
+    def dump_shelve(self,sname,kprefx,mode='c',context=None, file_info=None):
 
         ### might be better to move this up to calling object .....
 
@@ -347,13 +347,30 @@ class VariableSampler(object):
                 tech['ref_mask_file'] = self.ref_mask_file
             else:
                 tech['ref_mask_file'] = 'UNKNOWN'
+
+##
+### this is now assuming a shelve per file ...
+### this aproach needed also for __info__ and rest of __tech__
+###
+### alternative is to put kprefx into the key and have a master info and index record
+###
+### e.g. sh['__tech:%s__'% kprefx] = tech_info
+### index = sh['__index__']
+### ... update index
+### sh['__index__'] = index
+###
+### multiple files is easier ...
+##
+        if file_info != None:
+          tech['file_info'] = file_info
+# ------------------------------------------
         sh = shelve.open( sname, flag=mode )
         sh['__tech__'] = tech
         sh['__info__'] = info
         l1 = len( str( self.kmax ) )
         l2 = len( str( self.klmax ) )
-        fmt1 = '%s:%' + '%si' % l1
-        fmt2 = '%s:%' + ( '%si' % l2 ) + '-%' + '%si' % l2
+        fmt1 = '%s:%' + '%s.%si' % (l1,l1)
+        fmt2 = '%s:%' + ( '%s.%si' % (l2,l2) ) + '-%' + '%s.%si' % (l2,l2)
         for k,rec in self.sr_dict.items():
             if type(k) == type( 'x' ):
                 ko = k
@@ -623,10 +640,11 @@ class WGIPriority(object):
       var,tab = fn.split('_')[:2]
       return '%s.%s' % (tab,var) in self.known_masks
 
-  def review_masks(self,data_dir='../esgf_fetch/data_files_2/'):
+  def review_masks(self,data_dir='../esgf_fetch/data_files_2/', verbose=False):
       fl = [f for f in glob.glob( '%s/*.nc' ) if self._has_mask(f)]
       fl = glob.glob( '%s/*.nc' % data_dir )
-      print ('review ... ',len(fl) )
+      if verbose:
+        print ('review ... ',len(fl) )
       self.mask_pool = collections.defaultdict( lambda: collections.defaultdict( set ) )
       for fpath in fl:
           fn = fpath.rpartition( '/')[-1]
@@ -659,7 +677,7 @@ def range_merge(a, b, overwrite=True) -> "NT_RangeSet instance combining a and b
 
 
 
-def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_limits.csv", merge=True ):
+def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_limits.csv", merge=True, verbose=False ):
     ee = json.load( open( input_json, "r" ) )
     new_data = ee['data']
     ii = open( input_csv, "r", encoding = "ISO-8859-1" )
@@ -671,7 +689,8 @@ def get_new_ranges( input_json="data/new_limits.json", input_csv = "data/new_lim
         directive = directive.lower()
         if directive != '':
           id = "%s.%s" % (tab,var)
-          print (directive, id)
+          if verbose:
+             print (directive, id)
           if directive[:5] == "valid" and directive[-3:] == '_l0':
             this = new_data.get( id, {"ranges":{}} )
             if words[3] != '':

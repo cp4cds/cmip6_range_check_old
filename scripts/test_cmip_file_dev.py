@@ -3,6 +3,7 @@ import logging
 from local_pytest_utils import BaseClassTS, Check3, BaseClassCheck, LogReporter
 import numpy, netCDF4, pytest, sys, os, time
 from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges, MaskLookUp
+import generic_utils	
 from utils import mode_by_table
 
 
@@ -22,8 +23,11 @@ CMIP_FILE = os.environ['CMIP_FILE']
 fname = CMIP_FILE.rpartition('/')[-1]
 log_file_name = fname.replace('.nc','_qc-ranges.log')
 vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
-SHELVE_FILE_NAME = 'sh/%s' % fname.replace('.nc','_qc-ranges')
-BaseClassCheck.configure( 'cmip6', 'test_file', LOG_NAME, reporter=LogReporter(LOG_NAME, log_file=log_file_name) )
+##SHELVE_FILE_NAME = 'sh/%s' % fname.replace('.nc','_qc-ranges')
+##
+##
+## following needed for use with pytest.. dropped because of complexity in managing integration.
+##BaseClassCheck.configure( 'cmip6', 'test_file', LOG_NAME, reporter=LogReporter(LOG_NAME, log_file=log_file_name) )
 
 ##
 ## setting a list of quantiles ... adpated from code setting "percentiles" with loose meaning of "percentile" 
@@ -85,7 +89,7 @@ class TestCmipFile:
          else:
            contact = None
       except:
-          tt( 'Could not find required attributes' )
+          tt( 'Could not find required global attributes' )
 
       try:
           fname = this_file.rpartition('/')[-1]
@@ -142,7 +146,7 @@ class TestCmipFile:
       except:
           tt( 'Could not instantiate scanner' )
 
-      self.file_info = dict( tid=tid, contact=contact, shape=shp, units=units, dimensions=dimensions, fill_value=fill_value )
+      self.file_info = dict( tid=tid, contact=contact, shape=shp, units=units, dimensions=dimensions, fill_value=floatfill_value )
       if dt0 != None:
         self.file_info['time_units'] = time_units
         self.file_info['time_intervals'] = (dt0,dt1)
@@ -310,21 +314,20 @@ if __name__ == "__main__":
 ## also easier for debugging
 ##
 ##
-
-#vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
     log_dir = 'logs_02'
     log_factory = generic_utils.LogFactory(dir=log_dir)
 
-    date_ymd = '%s%2.2i%2.2i' % time.gmtime()[:3] 
+    date_ymd = '%s%2.2i%2.2i' % time.gmtime()[:3]
     log_name = '%s.%s' % (table,vname)
-    log_file = '%s.%s_%s' % (log_name, date_ymd)
+    log_file = '%s_%s' % (log_name, date_ymd)
     log_wf  = log_factory( '%s.%s' % (table,vname), mode="a", logfile=log_file, warnings=True )
     log_wf.info( 'STARTING test_cmip_file.py WORKFLOW, %s, %s' % ( time.ctime(), fname)  )
 
+#vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
     t = ConcTestCmipFile()
     fstem = fname.rpartition( '.' )[0]
-    od1 = 'out_01/%s.%s' % (table,vname)
-    od2 = 'sh_01/%s.%s' % (table,vname)
+    od1 = 'out_02/%s.%s' % (table,vname)
+    od2 = 'sh_02/%s.%s' % (table,vname)
     if not os.path.isdir( od1 ):
       os.mkdir(od1)
     if not os.path.isdir( od2 ):
@@ -370,4 +373,3 @@ if __name__ == "__main__":
        oo1.write( '%s: %s: %s -- %s%s\n' % (res,ret['id'],ret['ov'], msg, wcmt ) )
        res2 = None
     oo1.close()
-    ##t.test_file()

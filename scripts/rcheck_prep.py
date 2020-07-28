@@ -8,7 +8,7 @@ BASE_DIR = '/badc/cmip6/data/'
 TEMPLATE = '%(base)s/%(era)s/%(mip)s/%(inst)s/%(model)s/%(expt)s/%(variant)s/%(table)s/%(var)s/%(grid)s/%(version)s/'
 
 class Rprep( object ):
-    def __init__(self):
+    def __init__(self,with_limits=True, group=1):
         ee = json.load( open( 'data/handle_scan_report_20200710.json', 'r' ) )
         ff = dict()
         nf1 = 0
@@ -38,7 +38,7 @@ class Rprep( object ):
                       this['qc_status'] = 'pass'
                       this['files'] = [x.rpartition('/')[-1] for x in sorted( list( fl) )] 
                       this['dir'] = p1
-                if this['qc_status'] == 'pass':
+                if this['qc_status'] == 'pass' and with_limits:
                    var_id = '%s.%s' % (table,var)
                    if var_id not in lims:
                       this['qc_status'] = 'ERROR'
@@ -51,13 +51,14 @@ class Rprep( object ):
                    np2 += 1
                 ff[h] = this
         print( np2, nf2 )
-        oo = open( 'scanned_dset_for_qc.json', 'w' )
+        oo = open( 'scanned_dset_for_qc_%2.2i.json' % group, 'w' )
         json.dump( {'info':{"title":"List of Scanned Datasets and their Files"}, 'data':ff}, oo, indent=4, sort_keys=True )
         oo.close()
 
 class Rsplat(object):
-  def __init__(self):
-     ee = json.load( open( 'scanned_dset_for_qc.json', 'r' ) )
+  def __init__(self,group=1):
+     self.group=group
+     ee = json.load( open( 'scanned_dset_for_qc_%2.2i.json' % group, 'r' ) )
      cc = collections.defaultdict( list )
      ff = collections.defaultdict( list )
      for h,d in ee['data'].items():
@@ -76,16 +77,14 @@ class Rsplat(object):
           print( k,len( self.ff[k] ) )
       print( len(ks) )
 
-
-
   def splat(self):
      cc = self.cc
 
      for k,item in cc.items():
-       d0 = 'inputs_01/%s' %  k[0]
+       d0 = 'inputs_%2.2i/%s' %  (self.group,k[0])
        if not os.path.isdir(d0):
          os.mkdir( d0 )
-       oo = open( 'inputs_01/%s/x1_%s_%s.txt' % k, 'w' )
+       oo = open( 'inputs_%2.2i/%s/x1_%s_%s.txt' % (self.group,*k), 'w' )
        for d in item:
          d1 = d['dir']
          for f in d['files']:
@@ -94,7 +93,7 @@ class Rsplat(object):
        
 
 if __name__ == '__main__':
-    #r = Rprep()
-    r = Rsplat()
+    rp = Rprep(with_limits=False, group=2)
+    r = Rsplat(group=2)
     r.splat()
     r.analysis()
