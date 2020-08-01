@@ -25,10 +25,20 @@ def objwalk(obj, path=(), memo=None):
         yield path, obj
 
 class Walker(object):
-    def __init__(self,specials=dict(),order_sets=True):
+    """Walk an object and convert to json-ready objects (list, dict, float, int).
+       Deals with sets (converted to ordered lists) and numpy floats and ints (converted to float and int respectively).
+
+       TODO:
+       Keys must be (str, int, float, bool)  (see https://docs.python.org/3/library/json.html)
+          -- code added .. but not tested ... e.g. tuple as key ...
+    """
+
+    def __init__(self,specials=dict(),key_specials=dict(),order_sets=True):
         self.met = set()
+        self.key_types = set()
         self.yielded = set()
         self.specials = specials
+        self.key_specials = skey_pecials
         self.order_sets = order_sets
 
     def __call__(self,obj,specials=dict()):
@@ -36,6 +46,21 @@ class Walker(object):
       res = self._action(obj)
       self.yielded.add(type(res))
       return res
+
+    def coerce_key_reset(self):
+        self._new_keys = set()
+
+    def coerce_key(self,k):
+        if isinstance( k, (bool, int, str, float) ):
+            return k
+        self.key_types.add( type(k) )
+        if type(k) in self.key_specials:
+          newk = self.key_specials[ type(k) ](k)
+        else:
+          newk = str(k)
+
+        assert newk not in self._new_keys, 'Key coersion results in duplication of key values: %s' % newk
+        return newk
 
     def _action(self,obj):
 
@@ -50,7 +75,8 @@ class Walker(object):
              return self(r1)
 
       elif isinstance(obj, Mapping):
-          return {k:self(v) for k,v in obj.items()}
+          self.coerce_key_reset()
+          return {self.coerce_key(k):self(v) for k,v in obj.items()}
       elif isinstance(obj, (Set)) and self.order_sets and not isinstance(obj, string_types):
           return [self(v) for v in sorted( list( obj ) )]
       elif isinstance(obj, (Sequence, Set)) and not isinstance(obj, string_types):
