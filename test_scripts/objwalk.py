@@ -28,9 +28,8 @@ class Walker(object):
     """Walk an object and convert to json-ready objects (list, dict, float, int).
        Deals with sets (converted to ordered lists) and numpy floats and ints (converted to float and int respectively).
 
-       TODO:
-       Keys must be (str, int, float, bool)  (see https://docs.python.org/3/library/json.html)
-          -- code added .. but not tested ... e.g. tuple as key ...
+       Keys coerced to be one of: str, int, float, bool  (see https://docs.python.org/3/library/json.html)
+       e.g. tuple as key ... is replaced by str(x)
     """
 
     def __init__(self,specials=dict(),key_specials=dict(),order_sets=True):
@@ -38,7 +37,7 @@ class Walker(object):
         self.key_types = set()
         self.yielded = set()
         self.specials = specials
-        self.key_specials = skey_pecials
+        self.key_specials = key_specials
         self.order_sets = order_sets
 
     def __call__(self,obj,specials=dict()):

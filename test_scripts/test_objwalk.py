@@ -5,6 +5,7 @@ from objwalk import Walker
 
 z = numpy.zeros( 5 )
 obj1 = dict( a=numpy.zeros( (5,5) ), b=numpy.array( range(4) ), c=set(['a','v','b']), z=z[0] )
+obj1[(1,2)] = [1,3,4]
 
 w = Walker()
 res = w(obj1)
