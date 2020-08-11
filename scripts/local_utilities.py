@@ -454,18 +454,32 @@ class Sampler(object):
 
     def apply(self,as_dict=True):
         if self.verbose: print ('sampler: apply' )
+        flag_00 = (self.q or self.ext)
+        flag_01 = (self.q or self.ext) and len( self.farray ) > 0
         if as_dict:
           self.sr = dict()
           self.sr['basic'] = self.get_basic()
-          if self.q: self.sr['quantiles'] = self.get_quantiles()
-          if self.ext: self.sr['extremes'] = self.get_extremes()
+          if flag_01:
+            if self.q: self.sr['quantiles'] = self.get_quantiles()
+            if self.ext: self.sr['extremes'] = self.get_extremes()
+            self.sr['empty'] = False
+          elif flag_00:
+            ## if quantiles and/or extremes are asked for, but no data is present, set the emtpy flag as True
+            self.sr['empty'] = True
+
           if self.has_msk: self.sr['mask_ok'] = self.check_mask(rmode='full')
           if self.has_frac: self.sr['fraction'] = self.check_fraction(rmode='full')
         else:
           self.sr = SampleReturn()
           self.sr.basic = self.get_basic()
-          if self.q: self.sr.quantiles = self.get_quantiles()
-          if self.ext: self.sr.extremes = self.get_extremes()
+          if flag_01:
+            if self.q: self.sr.quantiles = self.get_quantiles()
+            if self.ext: self.sr.extremes = self.get_extremes()
+            self.sr.empty = False
+          elif flag_00:
+            ## if quantiles and/or extremes are asked for, but no data is present, set the emtpy flag as True
+            self.sr.empty = True
+
           if self.has_msk: self.sr.mask_ok = self.check_mask(rmode='full')
           if self.has_frac: self.sr.fraction = self.check_fraction(rmode='full')
 

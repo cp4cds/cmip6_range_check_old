@@ -146,7 +146,7 @@ class TestCmipFile:
       except:
           tt( 'Could not instantiate scanner' )
 
-      self.file_info = dict( tid=tid, contact=contact, shape=shp, units=units, dimensions=dimensions, fill_value=floatfill_value )
+      self.file_info = dict( tid=tid, contact=contact, shape=shp, units=units, dimensions=dimensions, fill_value=fill_value )
       if dt0 != None:
         self.file_info['time_units'] = time_units
         self.file_info['time_intervals'] = (dt0,dt1)
@@ -340,16 +340,19 @@ if __name__ == "__main__":
     oo1.write( '#SOURCE: %s\n' % 'test_cmip_file.py: as script' )
     cmt = None
     wcmt = ''
-    ##RAISE_FIRST = True
+    RAISE_FIRST = True
     RAISE_FIRST = False
+    RAISE_TEST_FILE = True
+    test_count = 0
     for m in [t.test_file, t.test_ranges, t.test_masks, t.test_fraction, t.test_wrapup]:
+       test_count += 1
        ret = m.__annotations__['return']
        try:
          m()
          res = 'OK'
        except:
          res='FAIL'
-         if RAISE_FIRST:
+         if RAISE_FIRST or (RAISE_TEST_FILE and test_count==1):
             oo1.write( '%s: %s: %s \n' % (res,ret['id'],ret['ov'] ) )
             oo1.write( 'ABANDON TESTS\n' )
             oo1.close()
