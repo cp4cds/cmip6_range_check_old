@@ -62,6 +62,16 @@ class Walker(object):
         return newk
 
     def _action(self,obj):
+      """*obj* is either a *Container* or a *Atom*;
+         -- For Container: recurse and walk through contained objects; yield Container
+         -- For Atom: yield Atom.
+         -- *yield* is not ideal here, as yield gives an item .... want a structured tree walk.
+         -- can yield: path, category, object
+         -- followed by append( path, category, object ) .... separating append from yield means that append needs to use path ... looses implicit
+         -- link between new structure and old which is the basis of a robust rebuild
+         -- perhaps need a rebuild callback ... 
+         -- 
+      """
 
       if type(obj) in self.specials:
           return self.specials[ type(obj) ](obj)
@@ -86,6 +96,61 @@ class Walker(object):
           return int(obj)
       else:
           return obj
+
+class WalkViewTransform(object):
+    pass
+
+class Walk(WalkViewTransform):
+    CONTAINER_TYPE = 'container'
+    OBJECT_TYPE = 'object'
+
+    def __init__(self, specials=dict(),key_specials=dict(),order_sets=True,repeats:'str: skip|link|duplicate'='skip'):
+        """Use of repeats is not so clear ... e.g. integers will be skipped, linked etc. For the basic objects link and duplicate are equivalent and
+           skip makes no sense.
+        """
+        self.met = set()
+        self.key_types = set()
+        self.yielded = set()
+        self.specials = specials
+        self.key_specials = key_specials
+        self.order_sets = order_sets
+        self.object_by_id = dict()
+        self.repeats = repeats
+
+    def _unwrap(self,obj):
+        i = 0
+        for item in obj:
+            yield item, i, self._type(item)
+            i+=1
+
+
+    def _type(self,obj):
+        if type( obj) in [type([]),type(())]:
+            return self.CONTAINER_TYPE
+        else:
+            return self.OBJECT_TYPE
+
+    def __call__(self,obj,path=()):
+        ## this runs, but is not producing anything useful ... yields 
+        ## yields a list of iterators ... not the objects ...
+
+      if self._type(obj) == self.CONTAINER_TYPE:
+          for next_obj, next_path, wvt_type  in self._unwrap( obj ):
+            this_id = id(next_obj)
+            if this_id in self.object_by_id and wvt_type != 'BASIC':
+               if self.repeats == 'skip':
+                   ## is this the correct python: ??
+                   cycle
+               elif self.repeats == 'link':
+                   yield self.object_by_id[id].path, self.object_by_id[id].object
+               elif self.repeats == 'duplicate':
+                   pass
+            yield self( next_obj, path=path+(next_path,) )
+      else:
+        ##self.transform( obj )
+        yield path, obj
+
+
 
 if __name__ == "__main__":
     print( "Test1" )
