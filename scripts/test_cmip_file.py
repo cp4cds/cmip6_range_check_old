@@ -170,7 +170,7 @@ class TestCmipFile:
       tt( True )
 
   def _gather_basic(self,vs):
-      """Concolidate results of scan to get max, min etc over the a full variable;
+      """Consolidate results of scan to get max, min etc over the a full variable;
       NB ... does not yet deal with levels
       """
       
