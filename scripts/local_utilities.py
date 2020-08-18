@@ -309,7 +309,7 @@ class VariableSampler(object):
           var : numpy array object
           sampler : Sampler instance
         """
-        assert isinstance( var, numpy.ndarray), 'Expected instance of numpy.ndarray, got %s' % type( var )
+        assert isinstance( var[0,0], numpy.ndarray), 'Expected instance of numpy.ndarray, got %s' % type( var )
 
         self.ref_fraction = None
         self.var = var
@@ -389,7 +389,7 @@ class VariableSampler(object):
         kl = set()
         kl2 = set()
         if self.rank == 2:
-            self.sampler.load( self.var, fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fraction=self.ref_fraction )
+            self.sampler.load( self.var[:], fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fraction=self.ref_fraction )
             self.sampler.apply(  )
             self.sr = self.sampler.sr
             self.sr_dict[0] = self.sampler.sr

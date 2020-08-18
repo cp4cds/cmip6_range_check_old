@@ -141,7 +141,7 @@ class TestCmipFile:
             kwargs['ref_mask_file'] = mlu_bb[mkb]
             self.__class__.with_mask = True
             print ('USING MASK [different expt]')
-          vs = VariableSampler( this_var[:], self.sampler, **kwargs )
+          vs = VariableSampler( this_var, self.sampler, **kwargs )
 
       except:
           tt( 'Could not instantiate scanner' )
