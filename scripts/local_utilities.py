@@ -284,7 +284,7 @@ class CMIPFileSample(object):
             else:
               fill_value = None
             print ("fill value = %s" % fill_value )
-            vs = VariableSampler( this_var[:], sampler, fill_value=fill_value )
+            vs = VariableSampler( this_var, sampler, fill_value=fill_value )
             vs.scan()
         return (vs, this_var, nc )
 
@@ -306,10 +306,20 @@ class MaskLookUp(dict):
 class VariableSampler(object):
     def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000,ref_mask_file=None):
         """
-          var : numpy array object
+          var : iobject which slices to numpy array object
           sampler : Sampler instance
+
+          NB: this routine was initially written to expect a numpy.ndarray as first argument, but that turned out to be wasteful
+              of memory. The change allows a full netcdf variable object to be passed. 
         """
-        assert isinstance( var[0,0], numpy.ndarray), 'Expected instance of numpy.ndarray, got %s' % type( var )
+
+##
+## these tests are designed to avoid excessive memory usage
+##
+        if len( var.shape ) > 2:
+          assert isinstance( var[0,0], numpy.ndarray), 'Expected slice to instance of numpy.ndarray, got %s' % type( var )
+        else:
+          assert isinstance( var[:1], numpy.ndarray), 'Expected slice to instance of numpy.ndarray, got %s' % type( var )
 
         self.ref_fraction = None
         self.var = var

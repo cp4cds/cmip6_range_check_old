@@ -49,7 +49,7 @@ def get_vs(data_file, sampler):
           else:
             fill_value = None
           print ("fill value = %s" % fill_value )
-          vs = VariableSampler( this_var[:], sampler, fill_value=fill_value )
+          vs = VariableSampler( this_var, sampler, fill_value=fill_value )
           vs.scan()
           vs.dump_shelve('test01',fname,mode='n')
           return (vs, this_var, nc )
@@ -314,6 +314,7 @@ if __name__ == "__main__":
 ## also easier for debugging
 ##
 ##
+    SKIP_REPEATS = True
     log_dir = 'logs_02'
     log_factory = generic_utils.LogFactory(dir=log_dir)
 
@@ -334,45 +335,48 @@ if __name__ == "__main__":
       os.mkdir(od2)
     t.shdir = od2
     of1 = '%s/%s' % (od1,fstem)
-    oo1 = open( of1, 'w' )
-    oo1.write( '#FILE: %s\n' % CMIP_FILE )
-    oo1.write( '#DATE: %s\n' % time.ctime() )
-    oo1.write( '#SOURCE: %s\n' % 'test_cmip_file.py: as script' )
-    cmt = None
-    wcmt = ''
-    RAISE_FIRST = True
-    RAISE_FIRST = False
-    RAISE_TEST_FILE = True
-    test_count = 0
-    for m in [t.test_file, t.test_ranges, t.test_masks, t.test_fraction, t.test_wrapup]:
-       test_count += 1
-       ret = m.__annotations__['return']
-       try:
-         m()
-         res = 'OK'
-       except:
-         res='FAIL'
-         if RAISE_FIRST or (RAISE_TEST_FILE and test_count==1):
-            oo1.write( '%s: %s: %s \n' % (res,ret['id'],ret['ov'] ) )
-            oo1.write( 'ABANDON TESTS\n' )
-            oo1.close()
-            raise
-       res2 = None
-       if 'tc' in m.__annotations__:
-         tc = m.__annotations__['tc']
-         if hasattr( tc, 'result' ):
-           res2 = tc.result
-       if res2 == None:
-         msg = '--NO RESULT FOUND--'
-       else:
+    if SKIP_REPEATS and os.path.isfile( of1 ) and os.stat(of1).st_size > 100:
+      log_wf.info( 'Ouput exists: %s .. terminating' % of1 )
+    else:
+      oo1 = open( of1, 'w' )
+      oo1.write( '#FILE: %s\n' % CMIP_FILE )
+      oo1.write( '#DATE: %s\n' % time.ctime() )
+      oo1.write( '#SOURCE: %s\n' % 'test_cmip_file.py: as script' )
+      cmt = None
+      wcmt = ''
+      RAISE_FIRST = True
+      RAISE_FIRST = False
+      RAISE_TEST_FILE = True
+      test_count = 0
+      for m in [t.test_file, t.test_ranges, t.test_masks, t.test_fraction, t.test_wrapup]:
+         test_count += 1
+         ret = m.__annotations__['return']
          try:
-           msg,cmt = res2
+           m()
+           res = 'OK'
          except:
-           msg = str(res2 )
-       
-       if cmt != None:
-         wcmt = ' | %s' % cmt
-       print ( '%s: %s: %s -- %s%s' % (res,ret['id'],ret['ov'], msg, wcmt ) )
-       oo1.write( '%s: %s: %s -- %s%s\n' % (res,ret['id'],ret['ov'], msg, wcmt ) )
-       res2 = None
-    oo1.close()
+           res='FAIL'
+           if RAISE_FIRST or (RAISE_TEST_FILE and test_count==1):
+              oo1.write( '%s: %s: %s \n' % (res,ret['id'],ret['ov'] ) )
+              oo1.write( 'ABANDON TESTS\n' )
+              oo1.close()
+              raise
+         res2 = None
+         if 'tc' in m.__annotations__:
+           tc = m.__annotations__['tc']
+           if hasattr( tc, 'result' ):
+             res2 = tc.result
+         if res2 == None:
+           msg = '--NO RESULT FOUND--'
+         else:
+           try:
+             msg,cmt = res2
+           except:
+             msg = str(res2 )
+         
+         if cmt != None:
+           wcmt = ' | %s' % cmt
+         print ( '%s: %s: %s -- %s%s' % (res,ret['id'],ret['ov'], msg, wcmt ) )
+         oo1.write( '%s: %s: %s -- %s%s\n' % (res,ret['id'],ret['ov'], msg, wcmt ) )
+         res2 = None
+      oo1.close()
