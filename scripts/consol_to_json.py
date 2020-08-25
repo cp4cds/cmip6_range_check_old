@@ -1,6 +1,13 @@
-import shelve, json, os, sys, glob, collections
+import shelve, json, os, sys, glob, collections, time
 
 import utils_walk
+
+def apply_to_list( f, ll, if_empty):
+  """Applies function *f* to list if it is not empty, otherwise returns *if_empty*"""
+  if len(ll) == 0:
+    return if_empty
+  else:
+    return f(ll)
 
 class ShToJson(object):
   def __init__(self,input_file):
@@ -94,18 +101,18 @@ class ShToJson(object):
       self.data[k] = this
 
   def _gather_basic(self):
-      """Concolidate results of scan to get max, min etc over the a full variable;
+      """Consolidate results of scan to get max, min etc over the a full variable;
       NB ... does not yet deal with levels
       """
       
       ks = sorted( [k for k in self.data.keys() if k[0] != '_'] )
       basic = [ self.data[k]['basic'] for k in ks ]
-      masks_ok = [ self.data[k].get('mask_ok',None) for k in ks]
-      fraction = [ self.data[k].get('fraction',None) for k in ks]
-      data_min = min( [x[0] for x in basic] )
-      data_max = max( [x[1] for x in basic] )
-      data_ma_min = min( [x[2] for x in basic] )
-      data_ma_max = max( [x[2] for x in basic] )
+      masks_ok = [ self.data[k].get('mask_ok', None) for k in ks ]
+      fraction = [ self.data[k].get('fraction', None) for k in ks ]
+      data_min = apply_to_list( min, [x[0] for x in basic if x[0] != None], None )
+      data_max = apply_to_list( max, [x[1] for x in basic if x[1] != None], None )
+      data_ma_min = apply_to_list( min, [x[2] for x in basic if x[2] != None], None )
+      data_ma_max = apply_to_list( max, [x[2] for x in basic if x[2] != None], None )
       self.range_comment = 'Data range: %s to %s; mean absolute range %s to %s' % (data_min,data_max,data_ma_min,data_ma_max)
       nfv = sum( [x[3] for x in basic] )
 
@@ -128,16 +135,49 @@ class ShToJson(object):
 
       if with_levels:
           basic0 = [ self.data[k]['basic'] for k in ks if levs[k][1] == 0 ]
-          data_min_l0 = min( [x[0] for x in basic0] )
-          data_max_l0 = max( [x[1] for x in basic0] )
+          data_min_l0 = apply_to_list( min, [x[0] for x in basic0 if x[0] != None], None )
+          data_max_l0 = apply_to_list( max, [x[1] for x in basic0 if x[1] != None], None )
           drl += [data_min_l0,data_max_l0]
           self.range_comment = 'Data range: %s to %s (l0: %s to %s); mean absolute range %s to %s' % (data_min,data_max,data_min_l0,data_max_l0,data_ma_min,data_ma_max)
+
+      consol = dict( basic=drl, nfv=nfv )
+
+      if all( [x == None for x in fraction] ):
+        consol['fraction_report'] = ('no report',None,None,None,None)
+      else:
+        cmt = set( [f[0] for f in fraction])
+        min1 = apply_to_list( min, [f[1] for f in fraction if f[1] != None], None )
+        max1 = apply_to_list( max, [f[2] for f in fraction if f[2] != None], None )
+        min2 = apply_to_list( min, [f[3] for f in fraction if f[3] != None], None )
+        max2 = apply_to_list( max, [f[4] for f in fraction if f[4] != None], None )
+        consol['fraction_report'] = (cmt,min1,max1,min2,max2)
+
+
+      mask_comment = ''
+      if all( [x == None for x in masks_ok] ):
+        mask_check = None
+        mask_comment = 'No mask report'
+      elif all( [x[0] == 'masks_match' for x in masks_ok] ):
+        mask_check = True
+        s1 = set( [x[1] for x in masks_ok] )
+        assert len(s1) == 1, 'Unexpected variation in mask ....'
+        n1 = s1.pop()
+        mask_comment = 'Mask count = %s' % n1
+      else:
+        mask_check = False
+
+      consol['mask_info'] = (mask_check,mask_comment)
+      self.consol = self.w( consol )
+
+
 
 
 
   def json_dump(self,input_label,json_file='test.json'):
     oo = open( json_file, 'w' )
-    json.dump( {'A: header':'Dump of results from %s' % input_label, 'B: data':dict( info=self.info, tech=self.tech, data=self.data )}, oo, indent=4, sort_keys=True )
+    json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
+                  'consol':self.consol,
+                  'data':dict( info=self.info, tech=self.tech, data=self.data )}, oo, indent=4, sort_keys=True )
     oo.close()
 
 
@@ -180,7 +220,7 @@ if __name__ == "__main__":
     print( d1.keys() )
     for k in sorted( list( d1.keys() ) ):
       input_files = sorted( fnfilt( d1[k] ) )
-      json_file = '%s.json' % k
+      json_file = 'json_02/%s.json' % k
       s = ShToJson( input_files[0] )
       for f in input_files[1:]:
         s.append(f)
