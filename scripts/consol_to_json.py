@@ -14,8 +14,13 @@ class JsonAggregate(object):
     self.data = dict()
     for f in input_files:
       ee = json.load( open( f, 'r' ) )
+      print (f, ee.keys(), ee['data'].keys() )
       key = f.rpartition( '/' )[-1]
       self.data[key] = {k:ee[k] for k in ['consol','header']}
+      if type( ee['data']['info'] ) == type( [] ):
+        self.data[key] = {k:ee['data'][k][0] for k in ['tech','info']}
+      else:
+        self.data[key] = {k:ee['data'][k] for k in ['tech','info']}
 
   def json_dump(self,input_label,json_file='test.json'):
     oo = open( json_file, 'w' )
@@ -234,6 +239,7 @@ if __name__ == "__main__":
     input_files = glob.glob( '%s/*.json' % sys.argv[2]  )
     ee = ssort_02( input_files )
     for k,ll in ee.items():
+      print( k )
       agg = JsonAggregate(sorted(ll))
       agg.json_dump( k, 'json_agg_02/%s.json' % k )
   elif sys.argv[1] == '-l':
