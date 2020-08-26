@@ -17,10 +17,12 @@ class JsonAggregate(object):
       print (f, ee.keys(), ee['data'].keys() )
       key = f.rpartition( '/' )[-1]
       self.data[key] = {k:ee[k] for k in ['consol','header']}
-      if type( ee['data']['info'] ) == type( [] ):
-        self.data[key] = {k:ee['data'][k][0] for k in ['tech','info']}
-      else:
-        self.data[key] = {k:ee['data'][k] for k in ['tech','info']}
+      for k in ['tech','info']:
+        this = ee['data'][k]
+        if type( this ) == type( [] ):
+          self.data[key][k] = this[0]
+        else:
+          self.data[key][k] = this
 
   def json_dump(self,input_label,json_file='test.json'):
     oo = open( json_file, 'w' )
@@ -38,6 +40,7 @@ class ShToJson(object):
     self.ks = [k for k in self.sh.keys() if k[0] != '_']
     self.tech_import()
     self.data_import()
+    self.first = True
 
   def tech_import(self,append=False):
 
@@ -55,10 +58,13 @@ class ShToJson(object):
 
   def append(self,input_file):
 
+      if self.first:
+        self.info = [self.info,]
+        self.tech = [self.tech,]
+      self.first = False
+
       self.sh = shelve.open( input_file )
       self.ks = [k for k in self.sh.keys() if k[0] != '_']
-      self.info = [self.info,]
-      self.tech = [self.tech,]
       self.info.append( self.sh['__info__'] )
       self.tech_import(append=True)
       self.data.update( self.w(self.sh) )

@@ -1,6 +1,33 @@
 {
     "data": {
         "msftmrho_Omon_MRI-ESM2-0_historical_r1i1p1f1_gr2z.json": {
+            "consol": {
+                "basic": [
+                    -93349036032.0,
+                    153717293056.0,
+                    3606136688.744821,
+                    17908391773.081333,
+                    -19378305024.0,
+                    38391631872.0
+                ],
+                "fraction_report": [
+                    "no report",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "mask_info": [
+                    null,
+                    "No mask report"
+                ],
+                "nfv": 7266540
+            },
+            "header": {
+                "source": "consol_to_json.py",
+                "time": "Wed Aug 26 14:16:51 2020",
+                "title": "Dump of results from sh_02/Omon.msftmrho/msftmrho_Omon_MRI-ESM2-0_historical_r1i1p1f1_gr2z_185001-201412..."
+            },
             "info": {
                 "script_version": "0.1.0",
                 "source": "local_utilities.VariableSampler",
@@ -74,2553 +101,309 @@
             }
         },
         "msftmrho_Omon_NorCPM1_historical_r1i1p1f1_grz.json": {
-            "info": [
-                {
-                    "script_version": "0.1.0",
-                    "source": "local_utilities.VariableSampler",
-                    "time": "Tue Aug 11 13:05:19 2020",
-                    "title": "Scanning set of data files"
-                },
-                {
-                    "script_version": "0.1.0",
-                    "source": "local_utilities.VariableSampler",
-                    "time": "Tue Aug 11 13:07:08 2020",
-                    "title": "Scanning set of data files"
-                }
-            ],
-            "tech": [
-                {
-                    "extremes": 10,
-                    "file_info": {
-                        "contact": "Please send any requests or bug reports to norcpm@uib.no",
-                        "dimensions": [
-                            "time",
-                            "basin",
-                            "rho",
-                            "lat"
-                        ],
-                        "fill_value": 1.0000000200408773e+20,
-                        "shape": [
-                            1980,
-                            3,
-                            53,
-                            166
-                        ],
-                        "tid": "hdl:21.14100/15c3462f-4e50-4959-97c3-4f2fa9dba365",
-                        "time_intervals": [
-                            30.416371905002528,
-                            31.0
-                        ],
-                        "time_units": "days since 1800-01-01 00:00",
-                        "units": "kg s-1"
-                    },
-                    "fill_value": 1.0000000200408773e+20,
-                    "quantiles": [
-                        0.9999899999999999,
-                        0.9999800000000001,
-                        0.9999500000000001,
-                        0.9999,
-                        0.9998,
-                        0.9995,
-                        0.9990000000000001,
-                        0.998,
-                        0.995,
-                        0.99,
-                        0.98,
-                        0.9500000000000001,
-                        0.9,
-                        0.75,
-                        0.5,
-                        0.25,
-                        0.1,
-                        0.05,
-                        0.02,
-                        0.01,
-                        0.005,
-                        0.002,
-                        0.001,
-                        0.0005,
-                        0.0002,
-                        0.0001,
-                        5e-05,
-                        2e-05,
-                        1e-05
+            "consol": {
+                "basic": [
+                    -27374911488.0,
+                    60496846848.0,
+                    0.0,
+                    12168960325.540998,
+                    -27374911488.0,
+                    60496846848.0
+                ],
+                "fraction_report": [
+                    "no report",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "mask_info": [
+                    null,
+                    "No mask report"
+                ],
+                "nfv": 935874
+            },
+            "header": {
+                "source": "consol_to_json.py",
+                "time": "Wed Aug 26 14:16:54 2020",
+                "title": "Dump of results from sh_02/Omon.msftmrho/msftmrho_Omon_NorCPM1_historical_r1i1p1f1_grz_185001-201412..."
+            },
+            "info": {
+                "script_version": "0.1.0",
+                "source": "local_utilities.VariableSampler",
+                "time": "Tue Aug 11 13:05:19 2020",
+                "title": "Scanning set of data files"
+            },
+            "tech": {
+                "extremes": 10,
+                "file_info": {
+                    "contact": "Please send any requests or bug reports to norcpm@uib.no",
+                    "dimensions": [
+                        "time",
+                        "basin",
+                        "rho",
+                        "lat"
                     ],
+                    "fill_value": 1.0000000200408773e+20,
                     "shape": [
                         1980,
                         3,
                         53,
                         166
                     ],
-                    "with_time": true
+                    "tid": "hdl:21.14100/15c3462f-4e50-4959-97c3-4f2fa9dba365",
+                    "time_intervals": [
+                        30.416371905002528,
+                        31.0
+                    ],
+                    "time_units": "days since 1800-01-01 00:00",
+                    "units": "kg s-1"
                 },
-                {
-                    "extremes": 10,
-                    "file_info": {
-                        "contact": "Please send any requests or bug reports to norcpm@uib.no",
-                        "dimensions": [
-                            "time",
-                            "basin",
-                            "rho",
-                            "lat"
-                        ],
-                        "fill_value": 1.0000000200408773e+20,
-                        "shape": [
-                            48,
-                            3,
-                            53,
-                            166
-                        ],
-                        "tid": "hdl:21.14100/916dd531-bf71-4a2f-81eb-44a8e364db24",
-                        "time_intervals": [
-                            30.404255319148938,
-                            31.0
-                        ],
-                        "time_units": "days since 1800-01-01 00:00",
-                        "units": "kg s-1"
-                    },
-                    "fill_value": 1.0000000200408773e+20,
-                    "quantiles": [
-                        0.9999899999999999,
-                        0.9999800000000001,
-                        0.9999500000000001,
-                        0.9999,
-                        0.9998,
-                        0.9995,
-                        0.9990000000000001,
-                        0.998,
-                        0.995,
-                        0.99,
-                        0.98,
-                        0.9500000000000001,
-                        0.9,
-                        0.75,
-                        0.5,
-                        0.25,
-                        0.1,
-                        0.05,
-                        0.02,
-                        0.01,
-                        0.005,
-                        0.002,
-                        0.001,
-                        0.0005,
-                        0.0002,
-                        0.0001,
-                        5e-05,
-                        2e-05,
-                        1e-05
-                    ],
-                    "shape": [
-                        48,
-                        3,
-                        53,
-                        166
-                    ],
-                    "with_time": true
-                }
-            ]
+                "fill_value": 1.0000000200408773e+20,
+                "quantiles": [
+                    0.9999899999999999,
+                    0.9999800000000001,
+                    0.9999500000000001,
+                    0.9999,
+                    0.9998,
+                    0.9995,
+                    0.9990000000000001,
+                    0.998,
+                    0.995,
+                    0.99,
+                    0.98,
+                    0.9500000000000001,
+                    0.9,
+                    0.75,
+                    0.5,
+                    0.25,
+                    0.1,
+                    0.05,
+                    0.02,
+                    0.01,
+                    0.005,
+                    0.002,
+                    0.001,
+                    0.0005,
+                    0.0002,
+                    0.0001,
+                    5e-05,
+                    2e-05,
+                    1e-05
+                ],
+                "shape": [
+                    1980,
+                    3,
+                    53,
+                    166
+                ],
+                "with_time": true
+            }
         },
         "msftmrho_Omon_NorESM2-LM_historical_r1i1p1f1_grz.json": {
-            "info": [
-                [
-                    [
-                        [
-                            [
-                                [
-                                    [
-                                        [
-                                            [
-                                                [
-                                                    [
-                                                        [
-                                                            [
-                                                                [
-                                                                    [
-                                                                        {
-                                                                            "script_version": "0.1.0",
-                                                                            "source": "local_utilities.VariableSampler",
-                                                                            "time": "Tue Aug 11 13:03:15 2020",
-                                                                            "title": "Scanning set of data files"
-                                                                        },
-                                                                        {
-                                                                            "script_version": "0.1.0",
-                                                                            "source": "local_utilities.VariableSampler",
-                                                                            "time": "Tue Aug 11 13:03:23 2020",
-                                                                            "title": "Scanning set of data files"
-                                                                        }
-                                                                    ],
-                                                                    {
-                                                                        "script_version": "0.1.0",
-                                                                        "source": "local_utilities.VariableSampler",
-                                                                        "time": "Tue Aug 11 13:03:28 2020",
-                                                                        "title": "Scanning set of data files"
-                                                                    }
-                                                                ],
-                                                                {
-                                                                    "script_version": "0.1.0",
-                                                                    "source": "local_utilities.VariableSampler",
-                                                                    "time": "Tue Aug 11 13:03:33 2020",
-                                                                    "title": "Scanning set of data files"
-                                                                }
-                                                            ],
-                                                            {
-                                                                "script_version": "0.1.0",
-                                                                "source": "local_utilities.VariableSampler",
-                                                                "time": "Tue Aug 11 13:03:43 2020",
-                                                                "title": "Scanning set of data files"
-                                                            }
-                                                        ],
-                                                        {
-                                                            "script_version": "0.1.0",
-                                                            "source": "local_utilities.VariableSampler",
-                                                            "time": "Tue Aug 11 13:03:51 2020",
-                                                            "title": "Scanning set of data files"
-                                                        }
-                                                    ],
-                                                    {
-                                                        "script_version": "0.1.0",
-                                                        "source": "local_utilities.VariableSampler",
-                                                        "time": "Tue Aug 11 13:03:56 2020",
-                                                        "title": "Scanning set of data files"
-                                                    }
-                                                ],
-                                                {
-                                                    "script_version": "0.1.0",
-                                                    "source": "local_utilities.VariableSampler",
-                                                    "time": "Tue Aug 11 13:04:14 2020",
-                                                    "title": "Scanning set of data files"
-                                                }
-                                            ],
-                                            {
-                                                "script_version": "0.1.0",
-                                                "source": "local_utilities.VariableSampler",
-                                                "time": "Tue Aug 11 13:04:21 2020",
-                                                "title": "Scanning set of data files"
-                                            }
-                                        ],
-                                        {
-                                            "script_version": "0.1.0",
-                                            "source": "local_utilities.VariableSampler",
-                                            "time": "Tue Aug 11 13:04:27 2020",
-                                            "title": "Scanning set of data files"
-                                        }
-                                    ],
-                                    {
-                                        "script_version": "0.1.0",
-                                        "source": "local_utilities.VariableSampler",
-                                        "time": "Tue Aug 11 13:04:31 2020",
-                                        "title": "Scanning set of data files"
-                                    }
-                                ],
-                                {
-                                    "script_version": "0.1.0",
-                                    "source": "local_utilities.VariableSampler",
-                                    "time": "Tue Aug 11 13:04:36 2020",
-                                    "title": "Scanning set of data files"
-                                }
-                            ],
-                            {
-                                "script_version": "0.1.0",
-                                "source": "local_utilities.VariableSampler",
-                                "time": "Tue Aug 11 13:04:41 2020",
-                                "title": "Scanning set of data files"
-                            }
-                        ],
-                        {
-                            "script_version": "0.1.0",
-                            "source": "local_utilities.VariableSampler",
-                            "time": "Tue Aug 11 13:04:46 2020",
-                            "title": "Scanning set of data files"
-                        }
-                    ],
-                    {
-                        "script_version": "0.1.0",
-                        "source": "local_utilities.VariableSampler",
-                        "time": "Tue Aug 11 13:04:52 2020",
-                        "title": "Scanning set of data files"
-                    }
+            "consol": {
+                "basic": [
+                    -17516214272.0,
+                    38047531008.0,
+                    0.0,
+                    9167916427.62625,
+                    -17516214272.0,
+                    38047531008.0
                 ],
-                {
-                    "script_version": "0.1.0",
-                    "source": "local_utilities.VariableSampler",
-                    "time": "Tue Aug 11 13:04:57 2020",
-                    "title": "Scanning set of data files"
-                }
-            ],
-            "tech": [
-                [
-                    [
-                        [
-                            [
-                                [
-                                    [
-                                        [
-                                            [
-                                                [
-                                                    [
-                                                        [
-                                                            [
-                                                                [
-                                                                    [
-                                                                        {
-                                                                            "extremes": 10,
-                                                                            "file_info": {
-                                                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                                "dimensions": [
-                                                                                    "time",
-                                                                                    "basin",
-                                                                                    "rho",
-                                                                                    "lat"
-                                                                                ],
-                                                                                "fill_value": 1.0000000200408773e+20,
-                                                                                "shape": [
-                                                                                    120,
-                                                                                    4,
-                                                                                    53,
-                                                                                    171
-                                                                                ],
-                                                                                "tid": "hdl:21.14100/2341da22-f727-45d2-969a-354d4be7bdb9",
-                                                                                "time_intervals": [
-                                                                                    30.41176470588235,
-                                                                                    31.0
-                                                                                ],
-                                                                                "time_units": "days since 1800-01-01 00:00",
-                                                                                "units": "kg s-1"
-                                                                            },
-                                                                            "fill_value": 1.0000000200408773e+20,
-                                                                            "quantiles": [
-                                                                                0.9999899999999999,
-                                                                                0.9999800000000001,
-                                                                                0.9999500000000001,
-                                                                                0.9999,
-                                                                                0.9998,
-                                                                                0.9995,
-                                                                                0.9990000000000001,
-                                                                                0.998,
-                                                                                0.995,
-                                                                                0.99,
-                                                                                0.98,
-                                                                                0.9500000000000001,
-                                                                                0.9,
-                                                                                0.75,
-                                                                                0.5,
-                                                                                0.25,
-                                                                                0.1,
-                                                                                0.05,
-                                                                                0.02,
-                                                                                0.01,
-                                                                                0.005,
-                                                                                0.002,
-                                                                                0.001,
-                                                                                0.0005,
-                                                                                0.0002,
-                                                                                0.0001,
-                                                                                5e-05,
-                                                                                2e-05,
-                                                                                1e-05
-                                                                            ],
-                                                                            "shape": [
-                                                                                120,
-                                                                                4,
-                                                                                53,
-                                                                                171
-                                                                            ],
-                                                                            "with_time": true
-                                                                        },
-                                                                        {
-                                                                            "extremes": 10,
-                                                                            "file_info": {
-                                                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                                "dimensions": [
-                                                                                    "time",
-                                                                                    "basin",
-                                                                                    "rho",
-                                                                                    "lat"
-                                                                                ],
-                                                                                "fill_value": 1.0000000200408773e+20,
-                                                                                "shape": [
-                                                                                    120,
-                                                                                    4,
-                                                                                    53,
-                                                                                    171
-                                                                                ],
-                                                                                "tid": "hdl:21.14100/dd6f0f23-ab96-40ab-9c2f-8f47c94bcab0",
-                                                                                "time_intervals": [
-                                                                                    30.41176470588235,
-                                                                                    31.0
-                                                                                ],
-                                                                                "time_units": "days since 1800-01-01 00:00",
-                                                                                "units": "kg s-1"
-                                                                            },
-                                                                            "fill_value": 1.0000000200408773e+20,
-                                                                            "quantiles": [
-                                                                                0.9999899999999999,
-                                                                                0.9999800000000001,
-                                                                                0.9999500000000001,
-                                                                                0.9999,
-                                                                                0.9998,
-                                                                                0.9995,
-                                                                                0.9990000000000001,
-                                                                                0.998,
-                                                                                0.995,
-                                                                                0.99,
-                                                                                0.98,
-                                                                                0.9500000000000001,
-                                                                                0.9,
-                                                                                0.75,
-                                                                                0.5,
-                                                                                0.25,
-                                                                                0.1,
-                                                                                0.05,
-                                                                                0.02,
-                                                                                0.01,
-                                                                                0.005,
-                                                                                0.002,
-                                                                                0.001,
-                                                                                0.0005,
-                                                                                0.0002,
-                                                                                0.0001,
-                                                                                5e-05,
-                                                                                2e-05,
-                                                                                1e-05
-                                                                            ],
-                                                                            "shape": [
-                                                                                120,
-                                                                                4,
-                                                                                53,
-                                                                                171
-                                                                            ],
-                                                                            "with_time": true
-                                                                        }
-                                                                    ],
-                                                                    {
-                                                                        "extremes": 10,
-                                                                        "file_info": {
-                                                                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                            "dimensions": [
-                                                                                "time",
-                                                                                "basin",
-                                                                                "rho",
-                                                                                "lat"
-                                                                            ],
-                                                                            "fill_value": 1.0000000200408773e+20,
-                                                                            "shape": [
-                                                                                120,
-                                                                                4,
-                                                                                53,
-                                                                                171
-                                                                            ],
-                                                                            "tid": "hdl:21.14100/5c5d3a7c-e2a4-4940-bfc6-03d40e457a3b",
-                                                                            "time_intervals": [
-                                                                                30.41176470588235,
-                                                                                31.0
-                                                                            ],
-                                                                            "time_units": "days since 1800-01-01 00:00",
-                                                                            "units": "kg s-1"
-                                                                        },
-                                                                        "fill_value": 1.0000000200408773e+20,
-                                                                        "quantiles": [
-                                                                            0.9999899999999999,
-                                                                            0.9999800000000001,
-                                                                            0.9999500000000001,
-                                                                            0.9999,
-                                                                            0.9998,
-                                                                            0.9995,
-                                                                            0.9990000000000001,
-                                                                            0.998,
-                                                                            0.995,
-                                                                            0.99,
-                                                                            0.98,
-                                                                            0.9500000000000001,
-                                                                            0.9,
-                                                                            0.75,
-                                                                            0.5,
-                                                                            0.25,
-                                                                            0.1,
-                                                                            0.05,
-                                                                            0.02,
-                                                                            0.01,
-                                                                            0.005,
-                                                                            0.002,
-                                                                            0.001,
-                                                                            0.0005,
-                                                                            0.0002,
-                                                                            0.0001,
-                                                                            5e-05,
-                                                                            2e-05,
-                                                                            1e-05
-                                                                        ],
-                                                                        "shape": [
-                                                                            120,
-                                                                            4,
-                                                                            53,
-                                                                            171
-                                                                        ],
-                                                                        "with_time": true
-                                                                    }
-                                                                ],
-                                                                {
-                                                                    "extremes": 10,
-                                                                    "file_info": {
-                                                                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                        "dimensions": [
-                                                                            "time",
-                                                                            "basin",
-                                                                            "rho",
-                                                                            "lat"
-                                                                        ],
-                                                                        "fill_value": 1.0000000200408773e+20,
-                                                                        "shape": [
-                                                                            120,
-                                                                            4,
-                                                                            53,
-                                                                            171
-                                                                        ],
-                                                                        "tid": "hdl:21.14100/5acfabee-2cce-480f-85ac-09d6ad573ce4",
-                                                                        "time_intervals": [
-                                                                            30.41176470588235,
-                                                                            31.0
-                                                                        ],
-                                                                        "time_units": "days since 1800-01-01 00:00",
-                                                                        "units": "kg s-1"
-                                                                    },
-                                                                    "fill_value": 1.0000000200408773e+20,
-                                                                    "quantiles": [
-                                                                        0.9999899999999999,
-                                                                        0.9999800000000001,
-                                                                        0.9999500000000001,
-                                                                        0.9999,
-                                                                        0.9998,
-                                                                        0.9995,
-                                                                        0.9990000000000001,
-                                                                        0.998,
-                                                                        0.995,
-                                                                        0.99,
-                                                                        0.98,
-                                                                        0.9500000000000001,
-                                                                        0.9,
-                                                                        0.75,
-                                                                        0.5,
-                                                                        0.25,
-                                                                        0.1,
-                                                                        0.05,
-                                                                        0.02,
-                                                                        0.01,
-                                                                        0.005,
-                                                                        0.002,
-                                                                        0.001,
-                                                                        0.0005,
-                                                                        0.0002,
-                                                                        0.0001,
-                                                                        5e-05,
-                                                                        2e-05,
-                                                                        1e-05
-                                                                    ],
-                                                                    "shape": [
-                                                                        120,
-                                                                        4,
-                                                                        53,
-                                                                        171
-                                                                    ],
-                                                                    "with_time": true
-                                                                }
-                                                            ],
-                                                            {
-                                                                "extremes": 10,
-                                                                "file_info": {
-                                                                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                    "dimensions": [
-                                                                        "time",
-                                                                        "basin",
-                                                                        "rho",
-                                                                        "lat"
-                                                                    ],
-                                                                    "fill_value": 1.0000000200408773e+20,
-                                                                    "shape": [
-                                                                        120,
-                                                                        4,
-                                                                        53,
-                                                                        171
-                                                                    ],
-                                                                    "tid": "hdl:21.14100/411f92d0-204b-4d38-94ef-51bad28662bb",
-                                                                    "time_intervals": [
-                                                                        30.41176470588235,
-                                                                        31.0
-                                                                    ],
-                                                                    "time_units": "days since 1800-01-01 00:00",
-                                                                    "units": "kg s-1"
-                                                                },
-                                                                "fill_value": 1.0000000200408773e+20,
-                                                                "quantiles": [
-                                                                    0.9999899999999999,
-                                                                    0.9999800000000001,
-                                                                    0.9999500000000001,
-                                                                    0.9999,
-                                                                    0.9998,
-                                                                    0.9995,
-                                                                    0.9990000000000001,
-                                                                    0.998,
-                                                                    0.995,
-                                                                    0.99,
-                                                                    0.98,
-                                                                    0.9500000000000001,
-                                                                    0.9,
-                                                                    0.75,
-                                                                    0.5,
-                                                                    0.25,
-                                                                    0.1,
-                                                                    0.05,
-                                                                    0.02,
-                                                                    0.01,
-                                                                    0.005,
-                                                                    0.002,
-                                                                    0.001,
-                                                                    0.0005,
-                                                                    0.0002,
-                                                                    0.0001,
-                                                                    5e-05,
-                                                                    2e-05,
-                                                                    1e-05
-                                                                ],
-                                                                "shape": [
-                                                                    120,
-                                                                    4,
-                                                                    53,
-                                                                    171
-                                                                ],
-                                                                "with_time": true
-                                                            }
-                                                        ],
-                                                        {
-                                                            "extremes": 10,
-                                                            "file_info": {
-                                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                "dimensions": [
-                                                                    "time",
-                                                                    "basin",
-                                                                    "rho",
-                                                                    "lat"
-                                                                ],
-                                                                "fill_value": 1.0000000200408773e+20,
-                                                                "shape": [
-                                                                    120,
-                                                                    4,
-                                                                    53,
-                                                                    171
-                                                                ],
-                                                                "tid": "hdl:21.14100/fc3d9b9e-51cc-4351-9c8d-6ca7bedbe439",
-                                                                "time_intervals": [
-                                                                    30.41176470588235,
-                                                                    31.0
-                                                                ],
-                                                                "time_units": "days since 1800-01-01 00:00",
-                                                                "units": "kg s-1"
-                                                            },
-                                                            "fill_value": 1.0000000200408773e+20,
-                                                            "quantiles": [
-                                                                0.9999899999999999,
-                                                                0.9999800000000001,
-                                                                0.9999500000000001,
-                                                                0.9999,
-                                                                0.9998,
-                                                                0.9995,
-                                                                0.9990000000000001,
-                                                                0.998,
-                                                                0.995,
-                                                                0.99,
-                                                                0.98,
-                                                                0.9500000000000001,
-                                                                0.9,
-                                                                0.75,
-                                                                0.5,
-                                                                0.25,
-                                                                0.1,
-                                                                0.05,
-                                                                0.02,
-                                                                0.01,
-                                                                0.005,
-                                                                0.002,
-                                                                0.001,
-                                                                0.0005,
-                                                                0.0002,
-                                                                0.0001,
-                                                                5e-05,
-                                                                2e-05,
-                                                                1e-05
-                                                            ],
-                                                            "shape": [
-                                                                120,
-                                                                4,
-                                                                53,
-                                                                171
-                                                            ],
-                                                            "with_time": true
-                                                        }
-                                                    ],
-                                                    {
-                                                        "extremes": 10,
-                                                        "file_info": {
-                                                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                            "dimensions": [
-                                                                "time",
-                                                                "basin",
-                                                                "rho",
-                                                                "lat"
-                                                            ],
-                                                            "fill_value": 1.0000000200408773e+20,
-                                                            "shape": [
-                                                                120,
-                                                                4,
-                                                                53,
-                                                                171
-                                                            ],
-                                                            "tid": "hdl:21.14100/1ed6e5fc-693f-45bc-ae94-09672a99a1cc",
-                                                            "time_intervals": [
-                                                                30.41176470588235,
-                                                                31.0
-                                                            ],
-                                                            "time_units": "days since 1800-01-01 00:00",
-                                                            "units": "kg s-1"
-                                                        },
-                                                        "fill_value": 1.0000000200408773e+20,
-                                                        "quantiles": [
-                                                            0.9999899999999999,
-                                                            0.9999800000000001,
-                                                            0.9999500000000001,
-                                                            0.9999,
-                                                            0.9998,
-                                                            0.9995,
-                                                            0.9990000000000001,
-                                                            0.998,
-                                                            0.995,
-                                                            0.99,
-                                                            0.98,
-                                                            0.9500000000000001,
-                                                            0.9,
-                                                            0.75,
-                                                            0.5,
-                                                            0.25,
-                                                            0.1,
-                                                            0.05,
-                                                            0.02,
-                                                            0.01,
-                                                            0.005,
-                                                            0.002,
-                                                            0.001,
-                                                            0.0005,
-                                                            0.0002,
-                                                            0.0001,
-                                                            5e-05,
-                                                            2e-05,
-                                                            1e-05
-                                                        ],
-                                                        "shape": [
-                                                            120,
-                                                            4,
-                                                            53,
-                                                            171
-                                                        ],
-                                                        "with_time": true
-                                                    }
-                                                ],
-                                                {
-                                                    "extremes": 10,
-                                                    "file_info": {
-                                                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                        "dimensions": [
-                                                            "time",
-                                                            "basin",
-                                                            "rho",
-                                                            "lat"
-                                                        ],
-                                                        "fill_value": 1.0000000200408773e+20,
-                                                        "shape": [
-                                                            120,
-                                                            4,
-                                                            53,
-                                                            171
-                                                        ],
-                                                        "tid": "hdl:21.14100/dd60f2a7-179d-4ebf-878d-e77a5b5ed5d8",
-                                                        "time_intervals": [
-                                                            30.41176470588235,
-                                                            31.0
-                                                        ],
-                                                        "time_units": "days since 1800-01-01 00:00",
-                                                        "units": "kg s-1"
-                                                    },
-                                                    "fill_value": 1.0000000200408773e+20,
-                                                    "quantiles": [
-                                                        0.9999899999999999,
-                                                        0.9999800000000001,
-                                                        0.9999500000000001,
-                                                        0.9999,
-                                                        0.9998,
-                                                        0.9995,
-                                                        0.9990000000000001,
-                                                        0.998,
-                                                        0.995,
-                                                        0.99,
-                                                        0.98,
-                                                        0.9500000000000001,
-                                                        0.9,
-                                                        0.75,
-                                                        0.5,
-                                                        0.25,
-                                                        0.1,
-                                                        0.05,
-                                                        0.02,
-                                                        0.01,
-                                                        0.005,
-                                                        0.002,
-                                                        0.001,
-                                                        0.0005,
-                                                        0.0002,
-                                                        0.0001,
-                                                        5e-05,
-                                                        2e-05,
-                                                        1e-05
-                                                    ],
-                                                    "shape": [
-                                                        120,
-                                                        4,
-                                                        53,
-                                                        171
-                                                    ],
-                                                    "with_time": true
-                                                }
-                                            ],
-                                            {
-                                                "extremes": 10,
-                                                "file_info": {
-                                                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                    "dimensions": [
-                                                        "time",
-                                                        "basin",
-                                                        "rho",
-                                                        "lat"
-                                                    ],
-                                                    "fill_value": 1.0000000200408773e+20,
-                                                    "shape": [
-                                                        120,
-                                                        4,
-                                                        53,
-                                                        171
-                                                    ],
-                                                    "tid": "hdl:21.14100/95b4975a-ab63-43c9-8d55-2cea50e5e9ab",
-                                                    "time_intervals": [
-                                                        30.41176470588235,
-                                                        31.0
-                                                    ],
-                                                    "time_units": "days since 1800-01-01 00:00",
-                                                    "units": "kg s-1"
-                                                },
-                                                "fill_value": 1.0000000200408773e+20,
-                                                "quantiles": [
-                                                    0.9999899999999999,
-                                                    0.9999800000000001,
-                                                    0.9999500000000001,
-                                                    0.9999,
-                                                    0.9998,
-                                                    0.9995,
-                                                    0.9990000000000001,
-                                                    0.998,
-                                                    0.995,
-                                                    0.99,
-                                                    0.98,
-                                                    0.9500000000000001,
-                                                    0.9,
-                                                    0.75,
-                                                    0.5,
-                                                    0.25,
-                                                    0.1,
-                                                    0.05,
-                                                    0.02,
-                                                    0.01,
-                                                    0.005,
-                                                    0.002,
-                                                    0.001,
-                                                    0.0005,
-                                                    0.0002,
-                                                    0.0001,
-                                                    5e-05,
-                                                    2e-05,
-                                                    1e-05
-                                                ],
-                                                "shape": [
-                                                    120,
-                                                    4,
-                                                    53,
-                                                    171
-                                                ],
-                                                "with_time": true
-                                            }
-                                        ],
-                                        {
-                                            "extremes": 10,
-                                            "file_info": {
-                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                "dimensions": [
-                                                    "time",
-                                                    "basin",
-                                                    "rho",
-                                                    "lat"
-                                                ],
-                                                "fill_value": 1.0000000200408773e+20,
-                                                "shape": [
-                                                    120,
-                                                    4,
-                                                    53,
-                                                    171
-                                                ],
-                                                "tid": "hdl:21.14100/2d8cdabc-e912-4e5f-8efb-e2161242095b",
-                                                "time_intervals": [
-                                                    30.41176470588235,
-                                                    31.0
-                                                ],
-                                                "time_units": "days since 1800-01-01 00:00",
-                                                "units": "kg s-1"
-                                            },
-                                            "fill_value": 1.0000000200408773e+20,
-                                            "quantiles": [
-                                                0.9999899999999999,
-                                                0.9999800000000001,
-                                                0.9999500000000001,
-                                                0.9999,
-                                                0.9998,
-                                                0.9995,
-                                                0.9990000000000001,
-                                                0.998,
-                                                0.995,
-                                                0.99,
-                                                0.98,
-                                                0.9500000000000001,
-                                                0.9,
-                                                0.75,
-                                                0.5,
-                                                0.25,
-                                                0.1,
-                                                0.05,
-                                                0.02,
-                                                0.01,
-                                                0.005,
-                                                0.002,
-                                                0.001,
-                                                0.0005,
-                                                0.0002,
-                                                0.0001,
-                                                5e-05,
-                                                2e-05,
-                                                1e-05
-                                            ],
-                                            "shape": [
-                                                120,
-                                                4,
-                                                53,
-                                                171
-                                            ],
-                                            "with_time": true
-                                        }
-                                    ],
-                                    {
-                                        "extremes": 10,
-                                        "file_info": {
-                                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                            "dimensions": [
-                                                "time",
-                                                "basin",
-                                                "rho",
-                                                "lat"
-                                            ],
-                                            "fill_value": 1.0000000200408773e+20,
-                                            "shape": [
-                                                120,
-                                                4,
-                                                53,
-                                                171
-                                            ],
-                                            "tid": "hdl:21.14100/84b25520-7e92-4784-aaff-19f4a8552793",
-                                            "time_intervals": [
-                                                30.41176470588235,
-                                                31.0
-                                            ],
-                                            "time_units": "days since 1800-01-01 00:00",
-                                            "units": "kg s-1"
-                                        },
-                                        "fill_value": 1.0000000200408773e+20,
-                                        "quantiles": [
-                                            0.9999899999999999,
-                                            0.9999800000000001,
-                                            0.9999500000000001,
-                                            0.9999,
-                                            0.9998,
-                                            0.9995,
-                                            0.9990000000000001,
-                                            0.998,
-                                            0.995,
-                                            0.99,
-                                            0.98,
-                                            0.9500000000000001,
-                                            0.9,
-                                            0.75,
-                                            0.5,
-                                            0.25,
-                                            0.1,
-                                            0.05,
-                                            0.02,
-                                            0.01,
-                                            0.005,
-                                            0.002,
-                                            0.001,
-                                            0.0005,
-                                            0.0002,
-                                            0.0001,
-                                            5e-05,
-                                            2e-05,
-                                            1e-05
-                                        ],
-                                        "shape": [
-                                            120,
-                                            4,
-                                            53,
-                                            171
-                                        ],
-                                        "with_time": true
-                                    }
-                                ],
-                                {
-                                    "extremes": 10,
-                                    "file_info": {
-                                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                        "dimensions": [
-                                            "time",
-                                            "basin",
-                                            "rho",
-                                            "lat"
-                                        ],
-                                        "fill_value": 1.0000000200408773e+20,
-                                        "shape": [
-                                            120,
-                                            4,
-                                            53,
-                                            171
-                                        ],
-                                        "tid": "hdl:21.14100/0da4f3de-a474-4fe9-a57d-831e6876daf8",
-                                        "time_intervals": [
-                                            30.41176470588235,
-                                            31.0
-                                        ],
-                                        "time_units": "days since 1800-01-01 00:00",
-                                        "units": "kg s-1"
-                                    },
-                                    "fill_value": 1.0000000200408773e+20,
-                                    "quantiles": [
-                                        0.9999899999999999,
-                                        0.9999800000000001,
-                                        0.9999500000000001,
-                                        0.9999,
-                                        0.9998,
-                                        0.9995,
-                                        0.9990000000000001,
-                                        0.998,
-                                        0.995,
-                                        0.99,
-                                        0.98,
-                                        0.9500000000000001,
-                                        0.9,
-                                        0.75,
-                                        0.5,
-                                        0.25,
-                                        0.1,
-                                        0.05,
-                                        0.02,
-                                        0.01,
-                                        0.005,
-                                        0.002,
-                                        0.001,
-                                        0.0005,
-                                        0.0002,
-                                        0.0001,
-                                        5e-05,
-                                        2e-05,
-                                        1e-05
-                                    ],
-                                    "shape": [
-                                        120,
-                                        4,
-                                        53,
-                                        171
-                                    ],
-                                    "with_time": true
-                                }
-                            ],
-                            {
-                                "extremes": 10,
-                                "file_info": {
-                                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                    "dimensions": [
-                                        "time",
-                                        "basin",
-                                        "rho",
-                                        "lat"
-                                    ],
-                                    "fill_value": 1.0000000200408773e+20,
-                                    "shape": [
-                                        120,
-                                        4,
-                                        53,
-                                        171
-                                    ],
-                                    "tid": "hdl:21.14100/0946f46e-192d-4d4d-b7c2-381cd2453feb",
-                                    "time_intervals": [
-                                        30.41176470588235,
-                                        31.0
-                                    ],
-                                    "time_units": "days since 1800-01-01 00:00",
-                                    "units": "kg s-1"
-                                },
-                                "fill_value": 1.0000000200408773e+20,
-                                "quantiles": [
-                                    0.9999899999999999,
-                                    0.9999800000000001,
-                                    0.9999500000000001,
-                                    0.9999,
-                                    0.9998,
-                                    0.9995,
-                                    0.9990000000000001,
-                                    0.998,
-                                    0.995,
-                                    0.99,
-                                    0.98,
-                                    0.9500000000000001,
-                                    0.9,
-                                    0.75,
-                                    0.5,
-                                    0.25,
-                                    0.1,
-                                    0.05,
-                                    0.02,
-                                    0.01,
-                                    0.005,
-                                    0.002,
-                                    0.001,
-                                    0.0005,
-                                    0.0002,
-                                    0.0001,
-                                    5e-05,
-                                    2e-05,
-                                    1e-05
-                                ],
-                                "shape": [
-                                    120,
-                                    4,
-                                    53,
-                                    171
-                                ],
-                                "with_time": true
-                            }
-                        ],
-                        {
-                            "extremes": 10,
-                            "file_info": {
-                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                "dimensions": [
-                                    "time",
-                                    "basin",
-                                    "rho",
-                                    "lat"
-                                ],
-                                "fill_value": 1.0000000200408773e+20,
-                                "shape": [
-                                    120,
-                                    4,
-                                    53,
-                                    171
-                                ],
-                                "tid": "hdl:21.14100/aed4ff25-0e66-437c-8446-a92204b35c76",
-                                "time_intervals": [
-                                    30.41176470588235,
-                                    31.0
-                                ],
-                                "time_units": "days since 1800-01-01 00:00",
-                                "units": "kg s-1"
-                            },
-                            "fill_value": 1.0000000200408773e+20,
-                            "quantiles": [
-                                0.9999899999999999,
-                                0.9999800000000001,
-                                0.9999500000000001,
-                                0.9999,
-                                0.9998,
-                                0.9995,
-                                0.9990000000000001,
-                                0.998,
-                                0.995,
-                                0.99,
-                                0.98,
-                                0.9500000000000001,
-                                0.9,
-                                0.75,
-                                0.5,
-                                0.25,
-                                0.1,
-                                0.05,
-                                0.02,
-                                0.01,
-                                0.005,
-                                0.002,
-                                0.001,
-                                0.0005,
-                                0.0002,
-                                0.0001,
-                                5e-05,
-                                2e-05,
-                                1e-05
-                            ],
-                            "shape": [
-                                120,
-                                4,
-                                53,
-                                171
-                            ],
-                            "with_time": true
-                        }
-                    ],
-                    {
-                        "extremes": 10,
-                        "file_info": {
-                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                            "dimensions": [
-                                "time",
-                                "basin",
-                                "rho",
-                                "lat"
-                            ],
-                            "fill_value": 1.0000000200408773e+20,
-                            "shape": [
-                                120,
-                                4,
-                                53,
-                                171
-                            ],
-                            "tid": "hdl:21.14100/a3d08216-50c9-4900-80e2-4bbedb09ed61",
-                            "time_intervals": [
-                                30.41176470588235,
-                                31.0
-                            ],
-                            "time_units": "days since 1800-01-01 00:00",
-                            "units": "kg s-1"
-                        },
-                        "fill_value": 1.0000000200408773e+20,
-                        "quantiles": [
-                            0.9999899999999999,
-                            0.9999800000000001,
-                            0.9999500000000001,
-                            0.9999,
-                            0.9998,
-                            0.9995,
-                            0.9990000000000001,
-                            0.998,
-                            0.995,
-                            0.99,
-                            0.98,
-                            0.9500000000000001,
-                            0.9,
-                            0.75,
-                            0.5,
-                            0.25,
-                            0.1,
-                            0.05,
-                            0.02,
-                            0.01,
-                            0.005,
-                            0.002,
-                            0.001,
-                            0.0005,
-                            0.0002,
-                            0.0001,
-                            5e-05,
-                            2e-05,
-                            1e-05
-                        ],
-                        "shape": [
-                            120,
-                            4,
-                            53,
-                            171
-                        ],
-                        "with_time": true
-                    }
+                "fraction_report": [
+                    "no report",
+                    null,
+                    null,
+                    null,
+                    null
                 ],
-                {
-                    "extremes": 10,
-                    "file_info": {
-                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                        "dimensions": [
-                            "time",
-                            "basin",
-                            "rho",
-                            "lat"
-                        ],
-                        "fill_value": 1.0000000200408773e+20,
-                        "shape": [
-                            120,
-                            4,
-                            53,
-                            171
-                        ],
-                        "tid": "hdl:21.14100/8b3b27b1-974a-4a46-a3c6-5c28031f5b21",
-                        "time_intervals": [
-                            30.41176470588235,
-                            31.0
-                        ],
-                        "time_units": "days since 1800-01-01 00:00",
-                        "units": "kg s-1"
-                    },
+                "mask_info": [
+                    null,
+                    "No mask report"
+                ],
+                "nfv": 976530
+            },
+            "header": {
+                "source": "consol_to_json.py",
+                "time": "Wed Aug 26 14:16:59 2020",
+                "title": "Dump of results from sh_02/Omon.msftmrho/msftmrho_Omon_NorESM2-LM_historical_r1i1p1f1_grz_185001-185912..."
+            },
+            "info": {
+                "script_version": "0.1.0",
+                "source": "local_utilities.VariableSampler",
+                "time": "Tue Aug 11 13:03:15 2020",
+                "title": "Scanning set of data files"
+            },
+            "tech": {
+                "extremes": 10,
+                "file_info": {
+                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                    "dimensions": [
+                        "time",
+                        "basin",
+                        "rho",
+                        "lat"
+                    ],
                     "fill_value": 1.0000000200408773e+20,
-                    "quantiles": [
-                        0.9999899999999999,
-                        0.9999800000000001,
-                        0.9999500000000001,
-                        0.9999,
-                        0.9998,
-                        0.9995,
-                        0.9990000000000001,
-                        0.998,
-                        0.995,
-                        0.99,
-                        0.98,
-                        0.9500000000000001,
-                        0.9,
-                        0.75,
-                        0.5,
-                        0.25,
-                        0.1,
-                        0.05,
-                        0.02,
-                        0.01,
-                        0.005,
-                        0.002,
-                        0.001,
-                        0.0005,
-                        0.0002,
-                        0.0001,
-                        5e-05,
-                        2e-05,
-                        1e-05
-                    ],
                     "shape": [
                         120,
                         4,
                         53,
                         171
                     ],
-                    "with_time": true
-                }
-            ]
+                    "tid": "hdl:21.14100/2341da22-f727-45d2-969a-354d4be7bdb9",
+                    "time_intervals": [
+                        30.41176470588235,
+                        31.0
+                    ],
+                    "time_units": "days since 1800-01-01 00:00",
+                    "units": "kg s-1"
+                },
+                "fill_value": 1.0000000200408773e+20,
+                "quantiles": [
+                    0.9999899999999999,
+                    0.9999800000000001,
+                    0.9999500000000001,
+                    0.9999,
+                    0.9998,
+                    0.9995,
+                    0.9990000000000001,
+                    0.998,
+                    0.995,
+                    0.99,
+                    0.98,
+                    0.9500000000000001,
+                    0.9,
+                    0.75,
+                    0.5,
+                    0.25,
+                    0.1,
+                    0.05,
+                    0.02,
+                    0.01,
+                    0.005,
+                    0.002,
+                    0.001,
+                    0.0005,
+                    0.0002,
+                    0.0001,
+                    5e-05,
+                    2e-05,
+                    1e-05
+                ],
+                "shape": [
+                    120,
+                    4,
+                    53,
+                    171
+                ],
+                "with_time": true
+            }
         },
         "msftmrho_Omon_NorESM2-MM_historical_r1i1p1f1_grz.json": {
-            "info": [
-                [
-                    [
-                        [
-                            [
-                                [
-                                    [
-                                        [
-                                            [
-                                                [
-                                                    [
-                                                        [
-                                                            [
-                                                                [
-                                                                    [
-                                                                        {
-                                                                            "script_version": "0.1.0",
-                                                                            "source": "local_utilities.VariableSampler",
-                                                                            "time": "Tue Aug 11 13:00:29 2020",
-                                                                            "title": "Scanning set of data files"
-                                                                        },
-                                                                        {
-                                                                            "script_version": "0.1.0",
-                                                                            "source": "local_utilities.VariableSampler",
-                                                                            "time": "Tue Aug 11 13:00:49 2020",
-                                                                            "title": "Scanning set of data files"
-                                                                        }
-                                                                    ],
-                                                                    {
-                                                                        "script_version": "0.1.0",
-                                                                        "source": "local_utilities.VariableSampler",
-                                                                        "time": "Tue Aug 11 13:01:08 2020",
-                                                                        "title": "Scanning set of data files"
-                                                                    }
-                                                                ],
-                                                                {
-                                                                    "script_version": "0.1.0",
-                                                                    "source": "local_utilities.VariableSampler",
-                                                                    "time": "Tue Aug 11 13:01:38 2020",
-                                                                    "title": "Scanning set of data files"
-                                                                }
-                                                            ],
-                                                            {
-                                                                "script_version": "0.1.0",
-                                                                "source": "local_utilities.VariableSampler",
-                                                                "time": "Tue Aug 11 13:01:48 2020",
-                                                                "title": "Scanning set of data files"
-                                                            }
-                                                        ],
-                                                        {
-                                                            "script_version": "0.1.0",
-                                                            "source": "local_utilities.VariableSampler",
-                                                            "time": "Tue Aug 11 13:02:02 2020",
-                                                            "title": "Scanning set of data files"
-                                                        }
-                                                    ],
-                                                    {
-                                                        "script_version": "0.1.0",
-                                                        "source": "local_utilities.VariableSampler",
-                                                        "time": "Tue Aug 11 13:02:10 2020",
-                                                        "title": "Scanning set of data files"
-                                                    }
-                                                ],
-                                                {
-                                                    "script_version": "0.1.0",
-                                                    "source": "local_utilities.VariableSampler",
-                                                    "time": "Tue Aug 11 13:02:18 2020",
-                                                    "title": "Scanning set of data files"
-                                                }
-                                            ],
-                                            {
-                                                "script_version": "0.1.0",
-                                                "source": "local_utilities.VariableSampler",
-                                                "time": "Tue Aug 11 13:02:24 2020",
-                                                "title": "Scanning set of data files"
-                                            }
-                                        ],
-                                        {
-                                            "script_version": "0.1.0",
-                                            "source": "local_utilities.VariableSampler",
-                                            "time": "Tue Aug 11 13:02:30 2020",
-                                            "title": "Scanning set of data files"
-                                        }
-                                    ],
-                                    {
-                                        "script_version": "0.1.0",
-                                        "source": "local_utilities.VariableSampler",
-                                        "time": "Tue Aug 11 13:02:35 2020",
-                                        "title": "Scanning set of data files"
-                                    }
-                                ],
-                                {
-                                    "script_version": "0.1.0",
-                                    "source": "local_utilities.VariableSampler",
-                                    "time": "Tue Aug 11 13:02:39 2020",
-                                    "title": "Scanning set of data files"
-                                }
-                            ],
-                            {
-                                "script_version": "0.1.0",
-                                "source": "local_utilities.VariableSampler",
-                                "time": "Tue Aug 11 13:02:44 2020",
-                                "title": "Scanning set of data files"
-                            }
-                        ],
-                        {
-                            "script_version": "0.1.0",
-                            "source": "local_utilities.VariableSampler",
-                            "time": "Tue Aug 11 13:02:52 2020",
-                            "title": "Scanning set of data files"
-                        }
-                    ],
-                    {
-                        "script_version": "0.1.0",
-                        "source": "local_utilities.VariableSampler",
-                        "time": "Tue Aug 11 13:02:57 2020",
-                        "title": "Scanning set of data files"
-                    }
+            "consol": {
+                "basic": [
+                    -16945060864.0,
+                    37215883264.0,
+                    0.0,
+                    9335299800.645874,
+                    -16945060864.0,
+                    37215883264.0
                 ],
-                {
-                    "script_version": "0.1.0",
-                    "source": "local_utilities.VariableSampler",
-                    "time": "Tue Aug 11 13:03:03 2020",
-                    "title": "Scanning set of data files"
-                }
-            ],
-            "tech": [
-                [
-                    [
-                        [
-                            [
-                                [
-                                    [
-                                        [
-                                            [
-                                                [
-                                                    [
-                                                        [
-                                                            [
-                                                                [
-                                                                    [
-                                                                        {
-                                                                            "extremes": 10,
-                                                                            "file_info": {
-                                                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                                "dimensions": [
-                                                                                    "time",
-                                                                                    "basin",
-                                                                                    "rho",
-                                                                                    "lat"
-                                                                                ],
-                                                                                "fill_value": 1.0000000200408773e+20,
-                                                                                "shape": [
-                                                                                    120,
-                                                                                    4,
-                                                                                    53,
-                                                                                    171
-                                                                                ],
-                                                                                "tid": "hdl:21.14100/9dcfa7f2-2701-4740-9ce4-c49c6bd736e9",
-                                                                                "time_intervals": [
-                                                                                    30.41176470588235,
-                                                                                    31.0
-                                                                                ],
-                                                                                "time_units": "days since 1800-01-01 00:00",
-                                                                                "units": "kg s-1"
-                                                                            },
-                                                                            "fill_value": 1.0000000200408773e+20,
-                                                                            "quantiles": [
-                                                                                0.9999899999999999,
-                                                                                0.9999800000000001,
-                                                                                0.9999500000000001,
-                                                                                0.9999,
-                                                                                0.9998,
-                                                                                0.9995,
-                                                                                0.9990000000000001,
-                                                                                0.998,
-                                                                                0.995,
-                                                                                0.99,
-                                                                                0.98,
-                                                                                0.9500000000000001,
-                                                                                0.9,
-                                                                                0.75,
-                                                                                0.5,
-                                                                                0.25,
-                                                                                0.1,
-                                                                                0.05,
-                                                                                0.02,
-                                                                                0.01,
-                                                                                0.005,
-                                                                                0.002,
-                                                                                0.001,
-                                                                                0.0005,
-                                                                                0.0002,
-                                                                                0.0001,
-                                                                                5e-05,
-                                                                                2e-05,
-                                                                                1e-05
-                                                                            ],
-                                                                            "shape": [
-                                                                                120,
-                                                                                4,
-                                                                                53,
-                                                                                171
-                                                                            ],
-                                                                            "with_time": true
-                                                                        },
-                                                                        {
-                                                                            "extremes": 10,
-                                                                            "file_info": {
-                                                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                                "dimensions": [
-                                                                                    "time",
-                                                                                    "basin",
-                                                                                    "rho",
-                                                                                    "lat"
-                                                                                ],
-                                                                                "fill_value": 1.0000000200408773e+20,
-                                                                                "shape": [
-                                                                                    120,
-                                                                                    4,
-                                                                                    53,
-                                                                                    171
-                                                                                ],
-                                                                                "tid": "hdl:21.14100/7bb1c331-560a-4e26-ade4-7972e79e7266",
-                                                                                "time_intervals": [
-                                                                                    30.41176470588235,
-                                                                                    31.0
-                                                                                ],
-                                                                                "time_units": "days since 1800-01-01 00:00",
-                                                                                "units": "kg s-1"
-                                                                            },
-                                                                            "fill_value": 1.0000000200408773e+20,
-                                                                            "quantiles": [
-                                                                                0.9999899999999999,
-                                                                                0.9999800000000001,
-                                                                                0.9999500000000001,
-                                                                                0.9999,
-                                                                                0.9998,
-                                                                                0.9995,
-                                                                                0.9990000000000001,
-                                                                                0.998,
-                                                                                0.995,
-                                                                                0.99,
-                                                                                0.98,
-                                                                                0.9500000000000001,
-                                                                                0.9,
-                                                                                0.75,
-                                                                                0.5,
-                                                                                0.25,
-                                                                                0.1,
-                                                                                0.05,
-                                                                                0.02,
-                                                                                0.01,
-                                                                                0.005,
-                                                                                0.002,
-                                                                                0.001,
-                                                                                0.0005,
-                                                                                0.0002,
-                                                                                0.0001,
-                                                                                5e-05,
-                                                                                2e-05,
-                                                                                1e-05
-                                                                            ],
-                                                                            "shape": [
-                                                                                120,
-                                                                                4,
-                                                                                53,
-                                                                                171
-                                                                            ],
-                                                                            "with_time": true
-                                                                        }
-                                                                    ],
-                                                                    {
-                                                                        "extremes": 10,
-                                                                        "file_info": {
-                                                                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                            "dimensions": [
-                                                                                "time",
-                                                                                "basin",
-                                                                                "rho",
-                                                                                "lat"
-                                                                            ],
-                                                                            "fill_value": 1.0000000200408773e+20,
-                                                                            "shape": [
-                                                                                120,
-                                                                                4,
-                                                                                53,
-                                                                                171
-                                                                            ],
-                                                                            "tid": "hdl:21.14100/c1b09985-9112-49b1-8052-2d38c5260192",
-                                                                            "time_intervals": [
-                                                                                30.41176470588235,
-                                                                                31.0
-                                                                            ],
-                                                                            "time_units": "days since 1800-01-01 00:00",
-                                                                            "units": "kg s-1"
-                                                                        },
-                                                                        "fill_value": 1.0000000200408773e+20,
-                                                                        "quantiles": [
-                                                                            0.9999899999999999,
-                                                                            0.9999800000000001,
-                                                                            0.9999500000000001,
-                                                                            0.9999,
-                                                                            0.9998,
-                                                                            0.9995,
-                                                                            0.9990000000000001,
-                                                                            0.998,
-                                                                            0.995,
-                                                                            0.99,
-                                                                            0.98,
-                                                                            0.9500000000000001,
-                                                                            0.9,
-                                                                            0.75,
-                                                                            0.5,
-                                                                            0.25,
-                                                                            0.1,
-                                                                            0.05,
-                                                                            0.02,
-                                                                            0.01,
-                                                                            0.005,
-                                                                            0.002,
-                                                                            0.001,
-                                                                            0.0005,
-                                                                            0.0002,
-                                                                            0.0001,
-                                                                            5e-05,
-                                                                            2e-05,
-                                                                            1e-05
-                                                                        ],
-                                                                        "shape": [
-                                                                            120,
-                                                                            4,
-                                                                            53,
-                                                                            171
-                                                                        ],
-                                                                        "with_time": true
-                                                                    }
-                                                                ],
-                                                                {
-                                                                    "extremes": 10,
-                                                                    "file_info": {
-                                                                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                        "dimensions": [
-                                                                            "time",
-                                                                            "basin",
-                                                                            "rho",
-                                                                            "lat"
-                                                                        ],
-                                                                        "fill_value": 1.0000000200408773e+20,
-                                                                        "shape": [
-                                                                            120,
-                                                                            4,
-                                                                            53,
-                                                                            171
-                                                                        ],
-                                                                        "tid": "hdl:21.14100/f70d0af9-c811-4d4f-9074-0dd168e92e2b",
-                                                                        "time_intervals": [
-                                                                            30.41176470588235,
-                                                                            31.0
-                                                                        ],
-                                                                        "time_units": "days since 1800-01-01 00:00",
-                                                                        "units": "kg s-1"
-                                                                    },
-                                                                    "fill_value": 1.0000000200408773e+20,
-                                                                    "quantiles": [
-                                                                        0.9999899999999999,
-                                                                        0.9999800000000001,
-                                                                        0.9999500000000001,
-                                                                        0.9999,
-                                                                        0.9998,
-                                                                        0.9995,
-                                                                        0.9990000000000001,
-                                                                        0.998,
-                                                                        0.995,
-                                                                        0.99,
-                                                                        0.98,
-                                                                        0.9500000000000001,
-                                                                        0.9,
-                                                                        0.75,
-                                                                        0.5,
-                                                                        0.25,
-                                                                        0.1,
-                                                                        0.05,
-                                                                        0.02,
-                                                                        0.01,
-                                                                        0.005,
-                                                                        0.002,
-                                                                        0.001,
-                                                                        0.0005,
-                                                                        0.0002,
-                                                                        0.0001,
-                                                                        5e-05,
-                                                                        2e-05,
-                                                                        1e-05
-                                                                    ],
-                                                                    "shape": [
-                                                                        120,
-                                                                        4,
-                                                                        53,
-                                                                        171
-                                                                    ],
-                                                                    "with_time": true
-                                                                }
-                                                            ],
-                                                            {
-                                                                "extremes": 10,
-                                                                "file_info": {
-                                                                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                    "dimensions": [
-                                                                        "time",
-                                                                        "basin",
-                                                                        "rho",
-                                                                        "lat"
-                                                                    ],
-                                                                    "fill_value": 1.0000000200408773e+20,
-                                                                    "shape": [
-                                                                        120,
-                                                                        4,
-                                                                        53,
-                                                                        171
-                                                                    ],
-                                                                    "tid": "hdl:21.14100/98f7b213-7e9c-438a-a12a-bbdb4884a98d",
-                                                                    "time_intervals": [
-                                                                        30.41176470588235,
-                                                                        31.0
-                                                                    ],
-                                                                    "time_units": "days since 1800-01-01 00:00",
-                                                                    "units": "kg s-1"
-                                                                },
-                                                                "fill_value": 1.0000000200408773e+20,
-                                                                "quantiles": [
-                                                                    0.9999899999999999,
-                                                                    0.9999800000000001,
-                                                                    0.9999500000000001,
-                                                                    0.9999,
-                                                                    0.9998,
-                                                                    0.9995,
-                                                                    0.9990000000000001,
-                                                                    0.998,
-                                                                    0.995,
-                                                                    0.99,
-                                                                    0.98,
-                                                                    0.9500000000000001,
-                                                                    0.9,
-                                                                    0.75,
-                                                                    0.5,
-                                                                    0.25,
-                                                                    0.1,
-                                                                    0.05,
-                                                                    0.02,
-                                                                    0.01,
-                                                                    0.005,
-                                                                    0.002,
-                                                                    0.001,
-                                                                    0.0005,
-                                                                    0.0002,
-                                                                    0.0001,
-                                                                    5e-05,
-                                                                    2e-05,
-                                                                    1e-05
-                                                                ],
-                                                                "shape": [
-                                                                    120,
-                                                                    4,
-                                                                    53,
-                                                                    171
-                                                                ],
-                                                                "with_time": true
-                                                            }
-                                                        ],
-                                                        {
-                                                            "extremes": 10,
-                                                            "file_info": {
-                                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                                "dimensions": [
-                                                                    "time",
-                                                                    "basin",
-                                                                    "rho",
-                                                                    "lat"
-                                                                ],
-                                                                "fill_value": 1.0000000200408773e+20,
-                                                                "shape": [
-                                                                    120,
-                                                                    4,
-                                                                    53,
-                                                                    171
-                                                                ],
-                                                                "tid": "hdl:21.14100/96380354-03de-40f2-a4d1-8af741898e8f",
-                                                                "time_intervals": [
-                                                                    30.41176470588235,
-                                                                    31.0
-                                                                ],
-                                                                "time_units": "days since 1800-01-01 00:00",
-                                                                "units": "kg s-1"
-                                                            },
-                                                            "fill_value": 1.0000000200408773e+20,
-                                                            "quantiles": [
-                                                                0.9999899999999999,
-                                                                0.9999800000000001,
-                                                                0.9999500000000001,
-                                                                0.9999,
-                                                                0.9998,
-                                                                0.9995,
-                                                                0.9990000000000001,
-                                                                0.998,
-                                                                0.995,
-                                                                0.99,
-                                                                0.98,
-                                                                0.9500000000000001,
-                                                                0.9,
-                                                                0.75,
-                                                                0.5,
-                                                                0.25,
-                                                                0.1,
-                                                                0.05,
-                                                                0.02,
-                                                                0.01,
-                                                                0.005,
-                                                                0.002,
-                                                                0.001,
-                                                                0.0005,
-                                                                0.0002,
-                                                                0.0001,
-                                                                5e-05,
-                                                                2e-05,
-                                                                1e-05
-                                                            ],
-                                                            "shape": [
-                                                                120,
-                                                                4,
-                                                                53,
-                                                                171
-                                                            ],
-                                                            "with_time": true
-                                                        }
-                                                    ],
-                                                    {
-                                                        "extremes": 10,
-                                                        "file_info": {
-                                                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                            "dimensions": [
-                                                                "time",
-                                                                "basin",
-                                                                "rho",
-                                                                "lat"
-                                                            ],
-                                                            "fill_value": 1.0000000200408773e+20,
-                                                            "shape": [
-                                                                120,
-                                                                4,
-                                                                53,
-                                                                171
-                                                            ],
-                                                            "tid": "hdl:21.14100/ead6903b-82d8-489f-abf4-b3001fbc1d13",
-                                                            "time_intervals": [
-                                                                30.41176470588235,
-                                                                31.0
-                                                            ],
-                                                            "time_units": "days since 1800-01-01 00:00",
-                                                            "units": "kg s-1"
-                                                        },
-                                                        "fill_value": 1.0000000200408773e+20,
-                                                        "quantiles": [
-                                                            0.9999899999999999,
-                                                            0.9999800000000001,
-                                                            0.9999500000000001,
-                                                            0.9999,
-                                                            0.9998,
-                                                            0.9995,
-                                                            0.9990000000000001,
-                                                            0.998,
-                                                            0.995,
-                                                            0.99,
-                                                            0.98,
-                                                            0.9500000000000001,
-                                                            0.9,
-                                                            0.75,
-                                                            0.5,
-                                                            0.25,
-                                                            0.1,
-                                                            0.05,
-                                                            0.02,
-                                                            0.01,
-                                                            0.005,
-                                                            0.002,
-                                                            0.001,
-                                                            0.0005,
-                                                            0.0002,
-                                                            0.0001,
-                                                            5e-05,
-                                                            2e-05,
-                                                            1e-05
-                                                        ],
-                                                        "shape": [
-                                                            120,
-                                                            4,
-                                                            53,
-                                                            171
-                                                        ],
-                                                        "with_time": true
-                                                    }
-                                                ],
-                                                {
-                                                    "extremes": 10,
-                                                    "file_info": {
-                                                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                        "dimensions": [
-                                                            "time",
-                                                            "basin",
-                                                            "rho",
-                                                            "lat"
-                                                        ],
-                                                        "fill_value": 1.0000000200408773e+20,
-                                                        "shape": [
-                                                            120,
-                                                            4,
-                                                            53,
-                                                            171
-                                                        ],
-                                                        "tid": "hdl:21.14100/3fe86fd1-e913-4a99-a84f-671df558c22e",
-                                                        "time_intervals": [
-                                                            30.41176470588235,
-                                                            31.0
-                                                        ],
-                                                        "time_units": "days since 1800-01-01 00:00",
-                                                        "units": "kg s-1"
-                                                    },
-                                                    "fill_value": 1.0000000200408773e+20,
-                                                    "quantiles": [
-                                                        0.9999899999999999,
-                                                        0.9999800000000001,
-                                                        0.9999500000000001,
-                                                        0.9999,
-                                                        0.9998,
-                                                        0.9995,
-                                                        0.9990000000000001,
-                                                        0.998,
-                                                        0.995,
-                                                        0.99,
-                                                        0.98,
-                                                        0.9500000000000001,
-                                                        0.9,
-                                                        0.75,
-                                                        0.5,
-                                                        0.25,
-                                                        0.1,
-                                                        0.05,
-                                                        0.02,
-                                                        0.01,
-                                                        0.005,
-                                                        0.002,
-                                                        0.001,
-                                                        0.0005,
-                                                        0.0002,
-                                                        0.0001,
-                                                        5e-05,
-                                                        2e-05,
-                                                        1e-05
-                                                    ],
-                                                    "shape": [
-                                                        120,
-                                                        4,
-                                                        53,
-                                                        171
-                                                    ],
-                                                    "with_time": true
-                                                }
-                                            ],
-                                            {
-                                                "extremes": 10,
-                                                "file_info": {
-                                                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                    "dimensions": [
-                                                        "time",
-                                                        "basin",
-                                                        "rho",
-                                                        "lat"
-                                                    ],
-                                                    "fill_value": 1.0000000200408773e+20,
-                                                    "shape": [
-                                                        120,
-                                                        4,
-                                                        53,
-                                                        171
-                                                    ],
-                                                    "tid": "hdl:21.14100/232851c2-aa9a-4f3b-b37c-4a687605d65c",
-                                                    "time_intervals": [
-                                                        30.41176470588235,
-                                                        31.0
-                                                    ],
-                                                    "time_units": "days since 1800-01-01 00:00",
-                                                    "units": "kg s-1"
-                                                },
-                                                "fill_value": 1.0000000200408773e+20,
-                                                "quantiles": [
-                                                    0.9999899999999999,
-                                                    0.9999800000000001,
-                                                    0.9999500000000001,
-                                                    0.9999,
-                                                    0.9998,
-                                                    0.9995,
-                                                    0.9990000000000001,
-                                                    0.998,
-                                                    0.995,
-                                                    0.99,
-                                                    0.98,
-                                                    0.9500000000000001,
-                                                    0.9,
-                                                    0.75,
-                                                    0.5,
-                                                    0.25,
-                                                    0.1,
-                                                    0.05,
-                                                    0.02,
-                                                    0.01,
-                                                    0.005,
-                                                    0.002,
-                                                    0.001,
-                                                    0.0005,
-                                                    0.0002,
-                                                    0.0001,
-                                                    5e-05,
-                                                    2e-05,
-                                                    1e-05
-                                                ],
-                                                "shape": [
-                                                    120,
-                                                    4,
-                                                    53,
-                                                    171
-                                                ],
-                                                "with_time": true
-                                            }
-                                        ],
-                                        {
-                                            "extremes": 10,
-                                            "file_info": {
-                                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                                "dimensions": [
-                                                    "time",
-                                                    "basin",
-                                                    "rho",
-                                                    "lat"
-                                                ],
-                                                "fill_value": 1.0000000200408773e+20,
-                                                "shape": [
-                                                    120,
-                                                    4,
-                                                    53,
-                                                    171
-                                                ],
-                                                "tid": "hdl:21.14100/2c06b131-2b02-4fca-b91f-0bf7184bd4be",
-                                                "time_intervals": [
-                                                    30.41176470588235,
-                                                    31.0
-                                                ],
-                                                "time_units": "days since 1800-01-01 00:00",
-                                                "units": "kg s-1"
-                                            },
-                                            "fill_value": 1.0000000200408773e+20,
-                                            "quantiles": [
-                                                0.9999899999999999,
-                                                0.9999800000000001,
-                                                0.9999500000000001,
-                                                0.9999,
-                                                0.9998,
-                                                0.9995,
-                                                0.9990000000000001,
-                                                0.998,
-                                                0.995,
-                                                0.99,
-                                                0.98,
-                                                0.9500000000000001,
-                                                0.9,
-                                                0.75,
-                                                0.5,
-                                                0.25,
-                                                0.1,
-                                                0.05,
-                                                0.02,
-                                                0.01,
-                                                0.005,
-                                                0.002,
-                                                0.001,
-                                                0.0005,
-                                                0.0002,
-                                                0.0001,
-                                                5e-05,
-                                                2e-05,
-                                                1e-05
-                                            ],
-                                            "shape": [
-                                                120,
-                                                4,
-                                                53,
-                                                171
-                                            ],
-                                            "with_time": true
-                                        }
-                                    ],
-                                    {
-                                        "extremes": 10,
-                                        "file_info": {
-                                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                            "dimensions": [
-                                                "time",
-                                                "basin",
-                                                "rho",
-                                                "lat"
-                                            ],
-                                            "fill_value": 1.0000000200408773e+20,
-                                            "shape": [
-                                                120,
-                                                4,
-                                                53,
-                                                171
-                                            ],
-                                            "tid": "hdl:21.14100/55b2a17e-abcd-4a50-b5e0-ad716cd1a52a",
-                                            "time_intervals": [
-                                                30.41176470588235,
-                                                31.0
-                                            ],
-                                            "time_units": "days since 1800-01-01 00:00",
-                                            "units": "kg s-1"
-                                        },
-                                        "fill_value": 1.0000000200408773e+20,
-                                        "quantiles": [
-                                            0.9999899999999999,
-                                            0.9999800000000001,
-                                            0.9999500000000001,
-                                            0.9999,
-                                            0.9998,
-                                            0.9995,
-                                            0.9990000000000001,
-                                            0.998,
-                                            0.995,
-                                            0.99,
-                                            0.98,
-                                            0.9500000000000001,
-                                            0.9,
-                                            0.75,
-                                            0.5,
-                                            0.25,
-                                            0.1,
-                                            0.05,
-                                            0.02,
-                                            0.01,
-                                            0.005,
-                                            0.002,
-                                            0.001,
-                                            0.0005,
-                                            0.0002,
-                                            0.0001,
-                                            5e-05,
-                                            2e-05,
-                                            1e-05
-                                        ],
-                                        "shape": [
-                                            120,
-                                            4,
-                                            53,
-                                            171
-                                        ],
-                                        "with_time": true
-                                    }
-                                ],
-                                {
-                                    "extremes": 10,
-                                    "file_info": {
-                                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                        "dimensions": [
-                                            "time",
-                                            "basin",
-                                            "rho",
-                                            "lat"
-                                        ],
-                                        "fill_value": 1.0000000200408773e+20,
-                                        "shape": [
-                                            120,
-                                            4,
-                                            53,
-                                            171
-                                        ],
-                                        "tid": "hdl:21.14100/8657b48a-82a0-4ebe-a92c-9c3655ab686d",
-                                        "time_intervals": [
-                                            30.41176470588235,
-                                            31.0
-                                        ],
-                                        "time_units": "days since 1800-01-01 00:00",
-                                        "units": "kg s-1"
-                                    },
-                                    "fill_value": 1.0000000200408773e+20,
-                                    "quantiles": [
-                                        0.9999899999999999,
-                                        0.9999800000000001,
-                                        0.9999500000000001,
-                                        0.9999,
-                                        0.9998,
-                                        0.9995,
-                                        0.9990000000000001,
-                                        0.998,
-                                        0.995,
-                                        0.99,
-                                        0.98,
-                                        0.9500000000000001,
-                                        0.9,
-                                        0.75,
-                                        0.5,
-                                        0.25,
-                                        0.1,
-                                        0.05,
-                                        0.02,
-                                        0.01,
-                                        0.005,
-                                        0.002,
-                                        0.001,
-                                        0.0005,
-                                        0.0002,
-                                        0.0001,
-                                        5e-05,
-                                        2e-05,
-                                        1e-05
-                                    ],
-                                    "shape": [
-                                        120,
-                                        4,
-                                        53,
-                                        171
-                                    ],
-                                    "with_time": true
-                                }
-                            ],
-                            {
-                                "extremes": 10,
-                                "file_info": {
-                                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                    "dimensions": [
-                                        "time",
-                                        "basin",
-                                        "rho",
-                                        "lat"
-                                    ],
-                                    "fill_value": 1.0000000200408773e+20,
-                                    "shape": [
-                                        120,
-                                        4,
-                                        53,
-                                        171
-                                    ],
-                                    "tid": "hdl:21.14100/c81d055b-afd6-44a4-b10d-27dd4e21385f",
-                                    "time_intervals": [
-                                        30.41176470588235,
-                                        31.0
-                                    ],
-                                    "time_units": "days since 1800-01-01 00:00",
-                                    "units": "kg s-1"
-                                },
-                                "fill_value": 1.0000000200408773e+20,
-                                "quantiles": [
-                                    0.9999899999999999,
-                                    0.9999800000000001,
-                                    0.9999500000000001,
-                                    0.9999,
-                                    0.9998,
-                                    0.9995,
-                                    0.9990000000000001,
-                                    0.998,
-                                    0.995,
-                                    0.99,
-                                    0.98,
-                                    0.9500000000000001,
-                                    0.9,
-                                    0.75,
-                                    0.5,
-                                    0.25,
-                                    0.1,
-                                    0.05,
-                                    0.02,
-                                    0.01,
-                                    0.005,
-                                    0.002,
-                                    0.001,
-                                    0.0005,
-                                    0.0002,
-                                    0.0001,
-                                    5e-05,
-                                    2e-05,
-                                    1e-05
-                                ],
-                                "shape": [
-                                    120,
-                                    4,
-                                    53,
-                                    171
-                                ],
-                                "with_time": true
-                            }
-                        ],
-                        {
-                            "extremes": 10,
-                            "file_info": {
-                                "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                                "dimensions": [
-                                    "time",
-                                    "basin",
-                                    "rho",
-                                    "lat"
-                                ],
-                                "fill_value": 1.0000000200408773e+20,
-                                "shape": [
-                                    120,
-                                    4,
-                                    53,
-                                    171
-                                ],
-                                "tid": "hdl:21.14100/c9c76b80-f5ee-441d-9082-93dfa8cc9cb1",
-                                "time_intervals": [
-                                    30.41176470588235,
-                                    31.0
-                                ],
-                                "time_units": "days since 1800-01-01 00:00",
-                                "units": "kg s-1"
-                            },
-                            "fill_value": 1.0000000200408773e+20,
-                            "quantiles": [
-                                0.9999899999999999,
-                                0.9999800000000001,
-                                0.9999500000000001,
-                                0.9999,
-                                0.9998,
-                                0.9995,
-                                0.9990000000000001,
-                                0.998,
-                                0.995,
-                                0.99,
-                                0.98,
-                                0.9500000000000001,
-                                0.9,
-                                0.75,
-                                0.5,
-                                0.25,
-                                0.1,
-                                0.05,
-                                0.02,
-                                0.01,
-                                0.005,
-                                0.002,
-                                0.001,
-                                0.0005,
-                                0.0002,
-                                0.0001,
-                                5e-05,
-                                2e-05,
-                                1e-05
-                            ],
-                            "shape": [
-                                120,
-                                4,
-                                53,
-                                171
-                            ],
-                            "with_time": true
-                        }
-                    ],
-                    {
-                        "extremes": 10,
-                        "file_info": {
-                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                            "dimensions": [
-                                "time",
-                                "basin",
-                                "rho",
-                                "lat"
-                            ],
-                            "fill_value": 1.0000000200408773e+20,
-                            "shape": [
-                                120,
-                                4,
-                                53,
-                                171
-                            ],
-                            "tid": "hdl:21.14100/54a5acac-3dc0-40ed-9573-9b3d429f3dc1",
-                            "time_intervals": [
-                                30.41176470588235,
-                                31.0
-                            ],
-                            "time_units": "days since 1800-01-01 00:00",
-                            "units": "kg s-1"
-                        },
-                        "fill_value": 1.0000000200408773e+20,
-                        "quantiles": [
-                            0.9999899999999999,
-                            0.9999800000000001,
-                            0.9999500000000001,
-                            0.9999,
-                            0.9998,
-                            0.9995,
-                            0.9990000000000001,
-                            0.998,
-                            0.995,
-                            0.99,
-                            0.98,
-                            0.9500000000000001,
-                            0.9,
-                            0.75,
-                            0.5,
-                            0.25,
-                            0.1,
-                            0.05,
-                            0.02,
-                            0.01,
-                            0.005,
-                            0.002,
-                            0.001,
-                            0.0005,
-                            0.0002,
-                            0.0001,
-                            5e-05,
-                            2e-05,
-                            1e-05
-                        ],
-                        "shape": [
-                            120,
-                            4,
-                            53,
-                            171
-                        ],
-                        "with_time": true
-                    }
+                "fraction_report": [
+                    "no report",
+                    null,
+                    null,
+                    null,
+                    null
                 ],
-                {
-                    "extremes": 10,
-                    "file_info": {
-                        "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
-                        "dimensions": [
-                            "time",
-                            "basin",
-                            "rho",
-                            "lat"
-                        ],
-                        "fill_value": 1.0000000200408773e+20,
-                        "shape": [
-                            120,
-                            4,
-                            53,
-                            171
-                        ],
-                        "tid": "hdl:21.14100/49c56dcd-963d-4851-ab3f-239f3cc62211",
-                        "time_intervals": [
-                            30.41176470588235,
-                            31.0
-                        ],
-                        "time_units": "days since 1800-01-01 00:00",
-                        "units": "kg s-1"
-                    },
+                "mask_info": [
+                    null,
+                    "No mask report"
+                ],
+                "nfv": 876587
+            },
+            "header": {
+                "source": "consol_to_json.py",
+                "time": "Wed Aug 26 14:17:04 2020",
+                "title": "Dump of results from sh_02/Omon.msftmrho/msftmrho_Omon_NorESM2-MM_historical_r1i1p1f1_grz_185001-185912..."
+            },
+            "info": {
+                "script_version": "0.1.0",
+                "source": "local_utilities.VariableSampler",
+                "time": "Tue Aug 11 13:00:29 2020",
+                "title": "Scanning set of data files"
+            },
+            "tech": {
+                "extremes": 10,
+                "file_info": {
+                    "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                    "dimensions": [
+                        "time",
+                        "basin",
+                        "rho",
+                        "lat"
+                    ],
                     "fill_value": 1.0000000200408773e+20,
-                    "quantiles": [
-                        0.9999899999999999,
-                        0.9999800000000001,
-                        0.9999500000000001,
-                        0.9999,
-                        0.9998,
-                        0.9995,
-                        0.9990000000000001,
-                        0.998,
-                        0.995,
-                        0.99,
-                        0.98,
-                        0.9500000000000001,
-                        0.9,
-                        0.75,
-                        0.5,
-                        0.25,
-                        0.1,
-                        0.05,
-                        0.02,
-                        0.01,
-                        0.005,
-                        0.002,
-                        0.001,
-                        0.0005,
-                        0.0002,
-                        0.0001,
-                        5e-05,
-                        2e-05,
-                        1e-05
-                    ],
                     "shape": [
                         120,
                         4,
                         53,
                         171
                     ],
-                    "with_time": true
-                }
-            ]
+                    "tid": "hdl:21.14100/9dcfa7f2-2701-4740-9ce4-c49c6bd736e9",
+                    "time_intervals": [
+                        30.41176470588235,
+                        31.0
+                    ],
+                    "time_units": "days since 1800-01-01 00:00",
+                    "units": "kg s-1"
+                },
+                "fill_value": 1.0000000200408773e+20,
+                "quantiles": [
+                    0.9999899999999999,
+                    0.9999800000000001,
+                    0.9999500000000001,
+                    0.9999,
+                    0.9998,
+                    0.9995,
+                    0.9990000000000001,
+                    0.998,
+                    0.995,
+                    0.99,
+                    0.98,
+                    0.9500000000000001,
+                    0.9,
+                    0.75,
+                    0.5,
+                    0.25,
+                    0.1,
+                    0.05,
+                    0.02,
+                    0.01,
+                    0.005,
+                    0.002,
+                    0.001,
+                    0.0005,
+                    0.0002,
+                    0.0001,
+                    5e-05,
+                    2e-05,
+                    1e-05
+                ],
+                "shape": [
+                    120,
+                    4,
+                    53,
+                    171
+                ],
+                "with_time": true
+            }
         }
     },
     "header": {
         "source": "consol_to_json.py::JsonAggregate",
-        "time": "Wed Aug 26 12:55:22 2020",
+        "time": "Wed Aug 26 16:02:17 2020",
         "title": "Dump of results from msftmrho_Omon"
     }
 }
