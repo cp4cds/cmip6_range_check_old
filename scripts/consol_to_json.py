@@ -9,6 +9,22 @@ def apply_to_list( f, ll, if_empty):
   else:
     return f(ll)
 
+class JsonAggregate(object):
+  def __init__(self, input_files ):
+    self.data = dict()
+    for f in input_files:
+      ee = json.load( open( f, 'r' ) )
+      key = f.rpartition( '/' )[-1]
+      self.data[key] = {k:ee[k] for k in ['consol','header']}
+
+  def json_dump(self,input_label,json_file='test.json'):
+    oo = open( json_file, 'w' )
+    json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py::JsonAggregate', 'time':time.ctime() },
+                  'data':self.data}, oo, indent=4, sort_keys=True )
+    oo.close()
+
+
+
 class ShToJson(object):
   def __init__(self,input_file):
     self.w = utils_walk.Walker()
@@ -170,9 +186,6 @@ class ShToJson(object):
       self.consol = self.w( consol )
 
 
-
-
-
   def json_dump(self,input_label,json_file='test.json'):
     oo = open( json_file, 'w' )
     json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
@@ -181,6 +194,14 @@ class ShToJson(object):
     oo.close()
 
 
+def ssort_02( ll ):
+  oo = collections.defaultdict( list )
+  for f in ll:
+    fn = f.rpartition( '/' )[-1]
+    a,b = fn.split( '_' )[:2]
+    oo['%s_%s' % (a,b) ].append( f )
+  return oo
+    
 def ssort( ll ):
   oo = collections.defaultdict( list )
   for f in ll:
@@ -205,6 +226,16 @@ if __name__ == "__main__":
     json_file = '%s.json' % input_file
     s = ShToJson( input_file )
     s.json_dump( input_file, json_file=json_file )
+  elif sys.argv[1] == '-a':
+    input_files = sorted( glob.glob( '%s*.json' % sys.argv[2]  ) )
+    agg = JsonAggregate(input_files)
+    agg.json_dump( sys.argv[2] )
+  elif sys.argv[1] == '-ad':
+    input_files = glob.glob( '%s/*.json' % sys.argv[2]  )
+    ee = ssort_02( input_files )
+    for k,ll in ee.items():
+      agg = JsonAggregate(sorted(ll))
+      agg.json_dump( k, 'json_agg_02/%s.json' % k )
   elif sys.argv[1] == '-l':
     input_files = fnfilt( sys.argv[2:]  )
     json_file = '%s.json' % input_files[0]
