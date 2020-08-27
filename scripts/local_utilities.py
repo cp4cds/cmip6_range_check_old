@@ -687,14 +687,14 @@ def range_merge(a, b, overwrite=True) -> "NT_RangeSet instance combining a and b
 
     if nn == 4:
       for k in range(4):
-        if this[k] == null_range_value and b[k] != null_range_value:
+        if b[k] != null_range_value and (this[k] == null_range_value or overwrite):
           this[k] = b[k]
       return NT_RangeSet( this[0], this[1], this[2], this[3] )
     else:
       if len(this) == 4:
           this += [null_range_value,null_range_value]
       for k in range(6):
-        if this[k] == null_range_value and b[k] != null_range_value:
+        if k < len(b) and b[k] != null_range_value and (this[k] == null_range_value or overwrite):
           this[k] = b[k]
       return NT_RangeSetX( this[0], this[1], this[2], this[3], this[4], this[5] )
 

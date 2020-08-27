@@ -26,6 +26,7 @@ class Review(object):
         for k in sorted( list( data.keys() ) ):
           kk = k.rpartition( '.' )[0]
           if k.find( 'AWI-CM-1-1-MR' ) == -1:
+            cce = collections.defaultdict(set)
             ks.append(k)
             this = data[k]
             cons = this['consol']
@@ -36,20 +37,24 @@ class Review(object):
             if '%s.%s' % (tab,var) in self.ranges:
               this = self.ranges['%s.%s' % (tab,var)]
               mn_error = this.min.status != 'NONE' and cons['basic'][0] < this.min.value
+              cce[mn_error].add( 'Min %s >= %s' % (cons['basic'][0],this.min.value) )
               mx_error = this.max.status != 'NONE' and cons['basic'][1] > this.max.value
+              cce[mn_error].add( 'Max %s <= %s' % (cons['basic'][2],this.max.value) )
               if any( [mn_error, mx_error] ):
+                print (mn_error, mx_error, cce[True] )
+                contact = tech['file_info']['contact']
                 hdl = self.hdls.key02_lookup(kk)
                 if hdl == None:
                   hdl = self.hdls_raw.key02_lookup(kk)
                   if hdl == None:
-                    print( 'ERROR:: in un-prioritised data .....' )
+                    print( 'ERROR:: in un-prioritised data .....', contact )
                   else:
-                    print( 'ERROR**:: ', hdl )
+                      print( 'ERROR**:: %s :' % contact, hdl )
 
                 else:
                   h,item = hdl
 
-                  print( 'ERROR:: ', h,item['dset_id'],item.get('qc_message','OK') )
+                  print( 'ERROR:: %s :' % contact, h,item['dset_id'],item.get('qc_message','OK') )
 
 
         mn = min( [data[k]['consol']['basic'][0] for k in ks] )
