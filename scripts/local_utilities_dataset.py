@@ -258,10 +258,15 @@ class CMIPDatasetSample(object):
                     vns.add(vn)
                     fns.add(fn)
 
-                if len(cc['l']) == 0:
-                    print ('ERROR.ds.0101: empty cc["l"] %s' % (drs_id) )
+                if len(cc.keys()) == 0:
+                    print ('ERROR.ds.0101: no files found (empty cc) %s' % (drs_id) )
                     if err == None:
-                      err = 'ERROR.ds.0101: empty cc["l"]'
+                      err = 'ERROR.ds.0101: no files found (empty cc)'
+                      self.dsr.errors.append( err )
+                elif len(cc['l']) == 0:
+                    print ('ERROR.ds.0901: empty cc["l"] %s' % (drs_id) )
+                    if err == None:
+                      err = 'ERROR.ds.0901: empty cc["l"]'
                       self.dsr.errors.append( err )
                 else:
                   if len(cc['l']) > 1:
@@ -616,7 +621,7 @@ class WGIPriority(object):
   def review_masks(self,data_dir='../esgf_fetch/data_files_2/'):
       fl = [f for f in glob.glob( '%s/*.nc' ) if self._has_mask(f) and os.stat(f).st_size > 100]
       fl = glob.glob( '%s/*.nc' % data_dir )
-      print ('review ... ',len(fl) )
+      print ('mask review ... ',len(fl) )
       self.mask_pool = collections.defaultdict( lambda: collections.defaultdict( set ) )
 
       for fpath in fl:
@@ -953,10 +958,8 @@ class CheckJson(object):
     print (var,distmsg,rangemsg)
 
 
-
-if __name__ == "__main__":
-   mm = 'ds'
-   if mm == 'ds':
+def run_dataset_review():
+       review_version = '01-02'
        ii = open( '../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv').readlines()
        this_table = 'day'
        this_table = 'other'
@@ -970,16 +973,22 @@ if __name__ == "__main__":
            if len(ttt) != 10:
                ne +=1 
                if ne < 100:
-                 print( "unexpected length of dataset split: %s" % esgf_id )
+                   print( "run_dataset_review: unexpected length of dataset split: %s" % esgf_id )
            else:
              era, mip, inst, model, expt, variant, table, var, grid, version = ttt
              if mip in ['CMIP','ScenarioMIP'] and (table == this_table or (this_table == 'other' and table not in set1)):
                dsl.append( (h, '.'.join( [era, mip, inst, model, expt, variant, this_table, var, grid] ), version) )
        ###dsl = dsl[:100]
+
        print ("Reviewing %s datasets" % len(dsl) )
 
        dss = CMIPDatasetSample()
-       dss.review(dsl,this_table)
+       dss.review(dsl,'%s_%s' % (this_table,review_version))
+
+if __name__ == "__main__":
+   mm = 'ds'
+   if mm == 'ds':
+     run_dataset_review()
    else:
      check_json = CheckJson()
      wg1 = WGIPriority()
