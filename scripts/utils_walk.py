@@ -45,20 +45,30 @@ class Walker(object):
         return newk
 
     def _action(self,obj):
-      """*obj* is either a *Container* or a *Atom*;
-         -- For Container: recurse and walk through contained objects; yield Container
-         -- For Atom: yield Atom.
-         -- *yield* is not ideal here, as yield gives an item .... want a structured tree walk.
-         -- can yield: path, category, object
-         -- followed by append( path, category, object ) .... separating append from yield means that append needs to use path ... looses implicit
-         -- link between new structure and old which is the basis of a robust rebuild
-         -- perhaps need a rebuild callback ... 
+      """Coerce 'obj' into an acceptable type, recursively calling 'self' for walkable objects.
+
+         The approach here builds a new object in place ... rather than flattening to a list of objects as in os.walk
          -- 
       """
 
+#
+#   Return objects of approved type without change.
+#
+      if type(obj) in [type(x) for x in [1.,1,'x']]:
+          return obj
+
+#
+#   The specials dictionary allows special treatment to be declared, e.g. for user-defined data types
+#
       if type(obj) in self.specials:
           return self.specials[ type(obj) ](obj)
 
+#
+#   The 'tolist' attribute is used as a marker for numpy arrays ... (without incurring the dependency on numpy which
+#   would result from having an explicit test).
+#
+#   The numpy tolist method can return a scalar if the numpy array object has unit length. Need to test for this here.
+#
       if hasattr( obj, 'tolist' ):
           r1 = obj.tolist()
           if isinstance(obj, Sequence):
@@ -66,21 +76,38 @@ class Walker(object):
           else:
              return self(r1)
 
+#
+#   All mappings are transformed into dictionaries, with keys from a defined set of acceptable types.
+#   The coerce_key method deals with key uniqueness
+#
       elif isinstance(obj, Mapping):
           self.coerce_key_reset()
           return {self.coerce_key(k):self(v) for k,v in obj.items()}
+
+#
+# Sets are returned as lists ... optionally ordered
+#
       elif isinstance(obj, (Set)) and self.order_sets and not isinstance(obj, string_types):
           return [self(v) for v in sorted( list( obj ) )]
+
+#
+# Sequences and sets returned as lists ... transformation applied recursively to each element
+#
       elif isinstance(obj, (Sequence, Set)) and not isinstance(obj, string_types):
           return [self(v) for v in obj]
-      elif isinstance(obj,float) and type(obj) != type(1.):
+
+
+#
+# for objects with are subclasses of string, float or integer, transform into primitive type (e.g. numpy floats are converted to float)
+#
+      elif isinstance(obj,str):
+          return str(obj)
+      elif isinstance(obj,float):
           return float(obj)
-      elif isinstance(obj,int) and type(obj) != type(1):
+      elif isinstance(obj,int):
           return int(obj)
       else:
           return obj
-
-
 
 if __name__ == "__main__":
     print( "Test1" )
