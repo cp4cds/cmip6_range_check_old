@@ -212,10 +212,10 @@ class CMIPDatasetSample(object):
             ## CMIP6.CMIP.AS-RCEC.TaiESM1.historical.r1i1p1f1.Lmon.mrso.gn
             ## http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/OMIP/NOAA-GFDL/GFDL-OM4p5B/omip1/r1i1p1f1/Omon/volcello/gn/v20180701/volcello_Omon_GFDL-OM4p5B_omip1_r1i1p1f1_gn_180801-182712.nc
             if h.obsolete:
-                print ( '%s: ds %s is obsolete [%s]' % (self.kk,ds,h.rec['DRS_ID']) )
+                print ( 'ERROR.ds.0900: %s: ds %s is obsolete [%s]' % (self.kk,ds,h.rec['DRS_ID']) )
                 oo.write( '\t'.join( [ds,drs_id,ev,'OBSOLETE'] ) + '\n' )
                 self.nobs += 1
-                err = 'Dataset obsolete'
+                err = 'ERROR.ds.0900: Dataset obsolete'
                 self.obsolete = True
             else:
                 self.obsolete = False
@@ -240,8 +240,8 @@ class CMIPDatasetSample(object):
                       vnss.add(vn)
                       fnss.add(fn)
                     if len( fnss ) != 1:
-                       print ('ERROR.ds.0030: too many files in file record: (%s) %s' % (fnss,f.rec['URL']) )
-                       err = 'ERROR.ds.0030: too many files in file record'
+                       print ('ERROR.ds.0030: multiple files in file record: (%s) %s' % (fnss,f.rec['URL']) )
+                       err = 'ERROR.ds.0030: multiple files in file record'
                        self.dsr.errors.append( err )
                     fn = fnss.pop()
                     if ev not in vnss:
