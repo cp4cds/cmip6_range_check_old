@@ -8,6 +8,8 @@ except:
   print ("FAILED TO IMPORT hddump")
 
 __version__ = '0.1.0'
+pid_input_june = "../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv"
+pid_input_oct = "../esgf_fetch/lists/c3s34g_pids_qcTest_Oct2020.txt"
 
 NT__scope = collections.namedtuple( 'scope', ['overview','identifier','description','priority','traceability'] )
 NT__test_case_spec = collections.namedtuple( 'test_case_spec', ['ov', 'id', 'obj', 'p', 'tr', 'prec', 'i', 'expected'])
@@ -215,7 +217,7 @@ class CMIPDatasetSample(object):
                 print ( 'ERROR.ds.0900: %s: ds %s is obsolete [%s]' % (self.kk,ds,h.rec['DRS_ID']) )
                 oo.write( '\t'.join( [ds,drs_id,ev,'OBSOLETE'] ) + '\n' )
                 self.nobs += 1
-                err = 'ERROR.ds.0900: Dataset obsolete'
+                err = 'ERROR.ds.0900: Dataset obsolete: %s' % ds
                 self.obsolete = True
             else:
                 self.obsolete = False
@@ -223,11 +225,12 @@ class CMIPDatasetSample(object):
                 vns = set()
                 fns = set()
                 cc = collections.defaultdict( set  )
+                ccl = collections.defaultdict( set  )
                 for f in h.rec['HAS_PARTS']:
                   f.get()
                   if 'URL_ORIGINAL_DATA' not in f.rec:
                         print ('ERROR.ds.0040: URL_ORIGINAL_DATA missing from file hdl record %s :: %s' % (drs_id,f.rec.get('URL','__NO__URL__')))
-                        err = 'ERROR.ds.0040: URL_ORIGINAL_DATA missing from file hdl record'
+                        err = 'ERROR.ds.0040: URL_ORIGINAL_DATA missing from file hdl record: %s' % ds
                         self.dsr.errors.append( err )
                   else:    
                     this = f.rec['URL_ORIGINAL_DATA']
@@ -241,18 +244,19 @@ class CMIPDatasetSample(object):
                       fnss.add(fn)
                     if len( fnss ) != 1:
                        print ('ERROR.ds.0030: multiple files in file record: (%s) %s' % (fnss,f.rec['URL']) )
-                       err = 'ERROR.ds.0030: multiple files in file record'
+                       err = 'ERROR.ds.0030: %s: multiple files in file record' % ds
                        self.dsr.errors.append( err )
                     fn = fnss.pop()
                     if ev not in vnss:
                        print ('ERROR.ds.0020: expected version not in file record original data: (%s) %s' % (vnss,f.rec['URL']) )
-                       err = 'ERROR.ds.0020: expected version not in file record original data'
+                       err = 'ERROR.ds.0020: %s: expected version not in file record original data' % ds
                        self.dsr.errors.append( err )
                        vn = vnss.pop()
                     else:
                        vn = ev
                     tt = fn.rpartition('.')[0].split('_')
                     cc['l'].add( len(tt) )
+                    ccl[len(tt)].add( fn )
                     for k in range(len(tt)):
                         cc[k].add(tt[k])
                     vns.add(vn)
@@ -261,48 +265,57 @@ class CMIPDatasetSample(object):
                 if len(cc.keys()) == 0:
                     print ('ERROR.ds.0101: no files found (empty cc) %s' % (drs_id) )
                     if err == None:
-                      err = 'ERROR.ds.0101: no files found (empty cc)'
-                      self.dsr.errors.append( err )
+                        err = 'ERROR.ds.0101: %s: no files found (empty cc)' % ds
+                        self.dsr.errors.append( err )
                 elif len(cc['l']) == 0:
                     print ('ERROR.ds.0901: empty cc["l"] %s' % (drs_id) )
                     if err == None:
-                      err = 'ERROR.ds.0901: empty cc["l"]'
-                      self.dsr.errors.append( err )
+                        err = 'ERROR.ds.0901: %s: empty cc["l"]' % ds
+                        self.dsr.errors.append( err )
                 else:
+                  eblock = False
                   if len(cc['l']) > 1:
                     print ('ERROR.ds.0001: Too many file naming patterns in dataset: (%s) %s' % (fns,drs_id) )
-                    err = 'ERROR.ds.0001: Too many file naming patterns in dataset'
+                    l0 = min( list(ccl.keys()), key=lambda x: len(ccl[x]) )
+                    print ('ERROR.ds.0001.01: %s: %s' % (l0,ccl[l0]) )
+                    err = 'ERROR.ds.0001: %s: Too many file naming patterns in dataset' % ds
                     self.dsr.errors.append( err )
+                    eblock = True
 
                   if len(vns) != 1:
                     print ('ERROR.ds.0002: Too many versions in dataset: (%s) %s' % (vns,drs_id) )
-                    err = 'ERROR.ds.0002: Too many versions in dataset'
+                    err = 'ERROR.ds.0002: %s: Too many versions in dataset' % ds
                     self.dsr.errors.append( err )
 
                   if ev not in vns:
                     print( 'ERROR.ds.0002b: version inconsistency: %s - %s : %s' % (ev,vns,drs_id) )
-                    err = 'ERROR.ds.0002b: version inconsistency'
+                    err = 'ERROR.ds.0002b: %s: version inconsistency' % ds
                     self.dsr.errors.append( err )
                   version = ev
 
               
-                  l = cc['l'].pop()
-                  is_fixed =  table in ['Ofx','fx']
-                  if not is_fixed:
-                    l += -1
+                  if not eblock:
+                    l = cc['l'].pop()
+                    is_fixed =  table in ['Ofx','fx']
+                    if not is_fixed:
+                      l += -1
 
-                  for k in range(l):
-                    if len(cc[k]) != 1:
-                      print ('ERROR.ds.0003: Too many elements at %s in file name: (%s) %s' % (k,cc[k],drs_id) )
-                      err = 'ERROR.ds.0003: Too many elements at %s in file name' % k
-                      self.dsr.errors.append( err )
+                    for k in range(l):
+                      if len(cc[k]) != 1:
+                        print ('ERROR.ds.0003: Too many elements at %s in file name: (%s) %s' % (k,cc[k],drs_id) )
+                        err = 'ERROR.ds.0003: Too many elements at %s in file name' % k
+                        self.dsr.errors.append( err )
 
-                  for k in range(l):
-                    this = cc[k].pop()
-                    if this != fncomps[k]:
-                      print ('ERROR.ds.0004: file name element inconsistency [%s]: (%s) %s' % (this,fns,drs_id) )
-                      err = 'ERROR.ds.0004: file name element inconsistency'
-                      self.dsr.errors.append( err )
+                    for k in range(l):
+                      this = cc[k].pop()
+                      if k > len(fncomps) -1 :
+                        print ('ERROR.ds.0005: file name element inconsistency [%s]: (%s) %s' % (this,fns,drs_id) )
+                        err = 'ERROR.ds.0005: file name element inconsistency'
+                        self.dsr.errors.append( err )
+                      elif this != fncomps[k]:
+                        print ('ERROR.ds.0004: file name element inconsistency [%s]: (%s) %s' % (this,fns,drs_id) )
+                        err = 'ERROR.ds.0004: file name element inconsistency'
+                        self.dsr.errors.append( err )
 
                 if err != None:
                   oo.write( '\t'.join( [ds,drs_id,ev,err] ) + '\n' )
@@ -700,7 +713,7 @@ class CheckJson(object):
               self.known_errors[this].add( fn )
       ii.close()
     
-    ii = open( "../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv", 'r' )
+    ii = open( pid_input_oct, 'r' )
     for l in ii.readlines()[1:]:
        esgf_id,pid = [x.strip() for x in l.split(',') ]
        self.pid_lookup[esgf_id] = pid
@@ -958,13 +971,32 @@ class CheckJson(object):
     print (var,distmsg,rangemsg)
 
 
-def run_dataset_review():
-       review_version = '01-02'
-       ii = open( '../esgf_fetch/lists/wg1subset-r1-datasets-pids-clean.csv').readlines()
-       this_table = 'day'
+def run_dataset_review(repeat=False, mode='a'):
+     dsl = []
+     if repeat:
+       if mode=='a':
+         review_version = '01-02-a1'
+         ii = open( '/home/mjuckes/Repositories/git/shared/c3s_34g_qc_results/QC_Results/passes.csv').readlines()
+         this_table = 'other'
+         for l in ii[1:]:
+           h,i = [ x.strip() for x in l.split( '\t' )[:2] ]
+           v = i.rpartition( '.' )[-1]
+           dsl.append( (h,i,v) )
+       else:
+         review_version = '01-02-01'
+         ii = open( 'hdl_rev/june/hdl-reviewed_datasets_Amon.csv').readlines()
+         this_table = 'other'
+         for l in ii[1:]:
+           h,i,v,check = [ x.strip() for x in l.split( '\t' )[:4] ]
+           if check != 'OK':
+             dsl.append( (h,i,v) )
+     else:
+
+       review_version = '02-01'
+       ii = open( pid_input_oct).readlines()
+       set1 = ['Omon','Amon','Lmon','day']
        this_table = 'other'
-       set1 = ['Amon','Lmon','day']
-       dsl = []
+       this_table = 'Amon'
        ne = 0
        for l in ii[1:]:
            esgf_id,h = [x.strip() for x in l.split(',')[:2]]
@@ -980,15 +1012,18 @@ def run_dataset_review():
                dsl.append( (h, '.'.join( [era, mip, inst, model, expt, variant, this_table, var, grid] ), version) )
        ###dsl = dsl[:100]
 
-       print ("Reviewing %s datasets" % len(dsl) )
+     
+     print ("Reviewing %s datasets" % len(dsl) )
 
-       dss = CMIPDatasetSample()
-       dss.review(dsl,'%s_%s' % (this_table,review_version))
+     dss = CMIPDatasetSample()
+     dss.review(dsl,'%s_%s' % (this_table,review_version))
 
 if __name__ == "__main__":
    mm = 'ds'
    if mm == 'ds':
      run_dataset_review()
+   elif mm == 'ds2':
+     run_dataset_review(repeat=True)
    else:
      check_json = CheckJson()
      wg1 = WGIPriority()
