@@ -89,4 +89,11 @@ Omon,umo,valid_max,100000000000,-100000000000,new,proposed,
 Omon,vmo,valid_max,100000000000,-100000000000,new,proposed,
 Omon,uo,valid_max,6,-6,new,proposed,
 Omon,vo,valid_max,6,-6,new,proposed,
-Omon,volcello,valid_max,1.00E+14,0,new,proposed,"Large values may occur in isopycnal models.  E.g. this occurs sometimes at polar waters, where the ocean column is not stratified. And also occurs at some coast sea regions. See https://github.com/cp4cds/cmip6_range_check/issues/26 "
+Omon,volcello,valid_max,100000000000000,0,new,proposed,"Large values may occur in isopycnal models.  E.g. this occurs sometimes at polar waters, where the ocean column is not stratified. And also occurs at some coast sea regions. See https://github.com/cp4cds/cmip6_range_check/issues/26 "
+Amon,uas,valid_max,80,-80,new,proposed,
+Amon,vas,valid_max,80,-80,new,proposed,
+Amon,sfcWind ,valid_max,80,0,new,proposed,
+day,sfcWind ,valid_max,80,0,new,proposed,
+Ofx,areacello,valid_max,1000000000000,1000000,new,proposed,
+Ofx,deptho,valid_max,15000,-10,new,proposed,
+Simin,sitemptop,valid_max,280,150,new,proposed,
