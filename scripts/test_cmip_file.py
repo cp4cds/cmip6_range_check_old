@@ -312,6 +312,7 @@ if __name__ == "__main__":
 ##
 
 #vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
+    import generic_utils
     log_dir = 'logs_02'
     log_factory = generic_utils.LogFactory(dir=log_dir)
 
