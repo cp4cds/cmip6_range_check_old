@@ -313,12 +313,12 @@ if __name__ == "__main__":
 
 #vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
     import generic_utils
-    log_dir = 'logs_02'
+    log_dir = 'logs_03'
     log_factory = generic_utils.LogFactory(dir=log_dir)
 
     date_ymd = '%s%2.2i%2.2i' % time.gmtime()[:3] 
     log_name = '%s.%s' % (table,vname)
-    log_file = '%s.%s_%s' % (log_name, date_ymd)
+    log_file = '%s.%s' % (log_name, date_ymd)
     log_wf  = log_factory( '%s.%s' % (table,vname), mode="a", logfile=log_file, warnings=True )
     log_wf.info( 'STARTING test_cmip_file.py WORKFLOW, %s, %s' % ( time.ctime(), fname)  )
 
