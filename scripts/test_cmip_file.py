@@ -63,7 +63,7 @@ class TestCmipFile:
   def test_file(self) -> dict( ov='Test of Sampler object: expected attributes', id='tc101',
                               obj='test Sampler attributes', p='SHOULD', tr='tbd', prec='None', i='None', expected=True ):
 
-      this_file = os.environ['CMIP_FILE']
+      this_file = os.environ['CMIP_FILE'].replace( '//', '/' )
       ##log = logging.getLogger( LOG_NAME )
       ##log.info(  'Starting: %s' % this_file )
       print( 'Starting: %s' % this_file ) 
@@ -77,6 +77,17 @@ class TestCmipFile:
           nc = netCDF4.Dataset( this_file )
       except:
           tt( 'Could not open netCDF4 Dataset' )
+
+      pbase = '/badc/cmip6/data/CMIP6/'
+      if this_file.find( pbase ) != 0:
+          tt( 'DRS not in path: %s' % this_file )
+      try:
+          era = 'CMIP6'
+          activity,inst,model,expt,variant_id,table,var,grid_id,version = this_file[len(pbase):].split('/')[:9]
+      except:
+          tt( 'Could not extract DRS' )
+
+            ## http://esgdata.gfdl.noaa.gov/thredds/fileServer/gfdl_dataroot4/OMIP/NOAA-GFDL/GFDL-OM4p5B/omip1/r1i1p1f1/Omon/volcello/gn/v20180701/volcello_Omon_GFDL-OM4p5B_omip1_r1i1p1f1_gn_180801-182712.nc
 
       try:
          tid = nc.tracking_id
@@ -142,7 +153,8 @@ class TestCmipFile:
       except:
           tt( 'Could not instantiate scanner' )
 
-      self.file_info = dict( tid=tid, contact=contact, shape=shp, units=units, dimensions=dimensions, fill_value=fill_value )
+      drs = (table,var,inst,model,activity,expt,variant_id,grid_id,version)
+      self.file_info = dict( tid=tid, contact=contact, shape=shp, units=units, dimensions=dimensions, fill_value=fill_value, drs=drs )
       if dt0 != None:
         self.file_info['time_units'] = time_units
         self.file_info['time_intervals'] = (dt0,dt1)
