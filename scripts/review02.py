@@ -135,6 +135,37 @@ class ConsolidateVar(object):
       oo.write( "\t".join( rec ) + "\n" )
     oo.close()
       
+
+class FileGroup(object):
+  """Get header info from a series of files, in order to be able to aggregate with Review
+    PLAN is to use this to allocat space in work arrays, then loop over all files and create a json report.
+  """
+  def __init__(self,flist):
+    assert all( [os.path.isfile(f) for f in flist] ), 'Not all files found ... %s' % flist
+
+    self.files = dict()
+    for f in flist:
+      self.files[f] = self.glimpse(f) )
+
+  def glimpse(self,f):
+    sh = shelve.open(f,'r')
+    input_tech = sh["__tech__"]
+    npct = len( input_tech["quantiles"] )
+    
+
+    ks = [k for k in sh.keys() if k[0] != "_"]
+    sh.close()
+    assert len(ks) > 0, "no data records in %s" % file
+   
+
+    drs = input_tech["file_info"]["drs"]
+    tab,var_xx,inst,model,activity,experiment,variant_id,grid,this_version = drs
+
+    withLevels = ":l=" in ks[0]
+    shape  = input_tech['shape']
+    
+    return dict( shape=shape, ks=ks, withLevels=withLevels, drs=drs, npct=npct )
+
     
 class Review(object):
   def __init__(self, logid=None):
@@ -158,8 +189,6 @@ class Review(object):
       self.log_workflow.info( "%s:: loadShelve ( file = %s )" % (time.ctime(),file) )
 
 ##################
-
-
 ### percentiles
     if "__tech__" in sh.keys():
       self.input_tech = sh["__tech__"]
@@ -184,6 +213,7 @@ class Review(object):
     assert len(ks) > 0, "no data records in %s" % file
    
 
+    self.drs = self.input_tech["file_info"]["drs"]
     tab,var_xx,inst,model,activity,experiment,variant_id,grid,this_version = self.input_tech["file_info"]["drs"]
 
     self.withLevels = ":l=" in ks[0]
@@ -359,9 +389,10 @@ class Review(object):
       os.makedirs( odir )
 
     tech = {"quantiles":self.input_tech["quantiles"],
+            "drs":self.drs,
             "files":self.files_info,
             "variable":self.var_info,
-            "summary":["median","max","min","mean absolute max","mean absolute min"]}
+            "summary":["min","max","mean absolute min","mean absolute max","BLANK"]}
     
   
     if not self.withLevels:
@@ -370,10 +401,10 @@ class Review(object):
       for k in range(self.npct):
         percentiles[k] = numpy.median( self.work[k,:] )
 
-      summary[0] = numpy.median( self.work02[0,:] )
+      summary[0] = numpy.min( self.work02[0,:] )
       summary[1] = numpy.max( self.work02[1,:] )
       summary[2] = numpy.min( self.work02[2,:] )
-      ##summary[3] = numpy.max( self.work02[3,:] )
+      summary[3] = numpy.max( self.work02[2,:] )
       ##summary[4] = numpy.min( self.work02[4,:] )
       tech["with_levels"] = False
     else:
@@ -392,17 +423,17 @@ class Review(object):
         for k in range(self.npct):
           perc[k] = numpy.median( self.work[k,:self.ntl[lev],l] )
 
-        summy[0] = numpy.median( self.work02[0,:,l] )
+        summy[0] = numpy.min( self.work02[0,:,l] )
         summy[1] = numpy.max( self.work02[1,:,l] )
         summy[2] = numpy.min( self.work02[2,:,l] )
-        summy[3] = numpy.max( self.work02[3,:,l] )
-        summy[4] = numpy.min( self.work02[4,:,l] )
+        summy[3] = numpy.max( self.work02[2,:,l] )
+        ##summy[4] = numpy.min( self.work02[4,:,l] )
         summary[lev] = summy
         percentiles[lev] = perc
 
     self.file_summary_brief = sum( self.file_summary ) 
 
-    self.this = {'percentiles':percentiles, "summary":summary, "file_summary":self.file_summary_brief}
+    self.this = {'quantiles':percentiles, "summary":summary, "file_summary":self.file_summary_brief}
     oo = open( ofile, 'w' )
     self.info["tech"] = tech
     json.dump( {'info':self.info, 'data':self.this}, oo, indent=4, sort_keys=True )
