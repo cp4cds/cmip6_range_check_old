@@ -16,13 +16,7 @@ class JsonAggregate(object):
       ee = json.load( open( f, 'r' ) )
       print (f, ee.keys(), ee['data'].keys() )
       key = f.rpartition( '/' )[-1]
-      self.data[key] = {k:ee[k] for k in ['consol','header']}
-      for k in ['tech','info']:
-        this = ee['data'][k]
-        if type( this ) == type( [] ):
-          self.data[key][k] = this[0]
-        else:
-          self.data[key][k] = this
+      self.data[key] = {k:ee[k] for k in ['data','header']}
 
   def json_dump(self,input_label,json_file='test.json'):
     oo = open( json_file, 'w' )
@@ -33,14 +27,32 @@ class JsonAggregate(object):
 
 
 class ShToJson(object):
-  def __init__(self,input_file):
+  def __init__(self,input_file,mode='single'):
+    self.mode = mode
     self.w = utils_walk.Walker()
-    self.sh = shelve.open( input_file )
+    self.sh = shelve.open( input_file, 'r' )
     self.info = self.sh['__info__']
     self.ks = [k for k in self.sh.keys() if k[0] != '_']
-    self.tech_import()
     self.data_import()
+    self.sh.close()
+    self.fn = input_file.rpartition( '/' )[-1]
     self.first = True
+    if mode == 'single':
+      self.data = self._data
+    else:
+      self.append_imported(start=True)
+
+
+  def append_imported(self,start=False):
+    if start:
+      self.headers = dict()
+      self.records = dict()
+
+    self.headers[self.fn] = dict( tech=self._data['__tech__'], info=self._data['__info__'] )
+    for k in self._data.keys():
+      if k[0] != '_':
+        self.records[k] = self._data[k]
+    
 
   def tech_import(self,append=False):
 
@@ -57,6 +69,13 @@ class ShToJson(object):
         self.tech = this
 
   def append(self,input_file):
+    self.sh = shelve.open( input_file, 'r' )
+    self.fn = input_file.rpartition( '/' )[-1]
+    self._data = self.w( self.sh )
+    self.sh.close()
+    self.append_imported()
+
+  def __append(self,input_file):
 
       if self.first:
         self.info = [self.info,]
@@ -70,7 +89,7 @@ class ShToJson(object):
       self.data.update( self.w(self.sh) )
     
   def data_import(self):
-      self.data = self.w( self.sh )
+      self._data = self.w( self.sh )
 
   def data_import_00(self):
     SKIPPED = []
@@ -132,10 +151,11 @@ class ShToJson(object):
       NB ... does not yet deal with levels
       """
       
-      ks = sorted( [k for k in self.data.keys() if k[0] != '_'] )
-      basic = [ self.data[k]['basic'] for k in ks ]
-      masks_ok = [ self.data[k].get('mask_ok', None) for k in ks ]
-      fraction = [ self.data[k].get('fraction', None) for k in ks ]
+      records = self.records
+      ks = sorted( [k for k in self.records.keys() if k[0] != '_'] )
+      basic = [ records[k]['basic'] for k in ks ]
+      masks_ok = [ records[k].get('mask_ok', None) for k in ks ]
+      fraction = [ records[k].get('fraction', None) for k in ks ]
       data_min = apply_to_list( min, [x[0] for x in basic if x[0] != None], None )
       data_max = apply_to_list( max, [x[1] for x in basic if x[1] != None], None )
       data_ma_min = apply_to_list( min, [x[2] for x in basic if x[2] != None], None )
@@ -161,7 +181,7 @@ class ShToJson(object):
         raise
 
       if with_levels:
-          basic0 = [ self.data[k]['basic'] for k in ks if levs[k][1] == 0 ]
+          basic0 = [ records[k]['basic'] for k in ks if levs[k][1] == 0 ]
           data_min_l0 = apply_to_list( min, [x[0] for x in basic0 if x[0] != None], None )
           data_max_l0 = apply_to_list( max, [x[1] for x in basic0 if x[1] != None], None )
           drl += [data_min_l0,data_max_l0]
@@ -199,9 +219,14 @@ class ShToJson(object):
 
   def json_dump(self,input_label,json_file='test.json'):
     oo = open( json_file, 'w' )
-    json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
-                  'consol':self.consol,
-                  'data':dict( info=self.info, tech=self.tech, data=self.data )}, oo, indent=4, sort_keys=True )
+    if self.mode == 'single':
+      json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
+                  'data':self.data} ,
+                   oo, indent=4, sort_keys=True )
+    else:
+      json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
+                  'data':dict( headers=self.headers, records=self.records ) },
+                   oo, indent=4, sort_keys=True )
     oo.close()
 
 
@@ -263,8 +288,8 @@ if __name__ == "__main__":
     print( d1.keys() )
     for k in sorted( list( d1.keys() ) ):
       input_files = sorted( fnfilt( d1[k] ) )
-      json_file = 'json_02/%s.json' % k
-      s = ShToJson( input_files[0] )
+      json_file = 'json_03/%s.json' % k
+      s = ShToJson( input_files[0], mode='multi' )
       for f in input_files[1:]:
         s.append(f)
       s._gather_basic()
