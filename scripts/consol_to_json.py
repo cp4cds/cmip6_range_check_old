@@ -1,6 +1,7 @@
 import shelve, json, os, sys, glob, collections, time
 
 import utils_walk
+import numpy
 
 def apply_to_list( f, ll, if_empty):
   """Applies function *f* to list if it is not empty, otherwise returns *if_empty*"""
@@ -25,7 +26,6 @@ class JsonAggregate(object):
     oo.close()
 
 
-
 class ShToJson(object):
   def __init__(self,input_file,mode='single'):
     self.mode = mode
@@ -43,6 +43,7 @@ class ShToJson(object):
       self.append_imported(start=True)
     self.tech = self._data['__tech__']
     self.npct = len( self.tech['quantiles'] ) 
+    self.nextremes = self.tech['extremes']
 
 
   def append_imported(self,start=False):
@@ -226,7 +227,31 @@ class ShToJson(object):
                   'data':self.data} ,
                    oo, indent=4, sort_keys=True )
     else:
+
       summary = dict( quantiles=[numpy.median( [this['quantiles'][i] for k,this in self.records.items()] ) for i in range(self.npct) ] )
+
+      basic_maps = [(numpy.min,0), (numpy.max,1), (numpy.min,2), (numpy.max,2) ]
+      summary['basic'] = [f( [this['basic'][i] for k,this in self.records.items()] ) for  f,i in basic_maps]
+
+      extr_min = [[],[],[],[]]
+      extr_max = [[],[],[],[]]
+      for k,this in self.records.items():
+        for i in range(3):
+          extr_min[i+1] += this['extremes'][0][i]
+          extr_max[i+1] += this['extremes'][1][i]
+        extr_min[0] += [k,]*self.nextremes
+        extr_max[0] += [k,]*self.nextremes
+
+      extr_max[3] = [-x for x in extr_max[3]]
+      flat_indices_min = numpy.argpartition(extr_min[3], self.nextremes-1)[:self.nextremes]
+      flat_indices_max = numpy.argpartition(extr_max[3], self.nextremes-1)[:self.nextremes]
+
+      extremes = [  [ [ extr_min[i][k] for k in flat_indices_min] for i in range(4) ],
+                    [ [ extr_max[i][k] for k in flat_indices_max] for i in range(4) ] ]
+
+      extremes[1][3] = [-x for x in extremes[1][3]]
+      summary['extremes'] = extremes
+
       json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
                   'data':dict( headers=self.headers, records=self.records, summary=summary ) },
                    oo, indent=4, sort_keys=True )
