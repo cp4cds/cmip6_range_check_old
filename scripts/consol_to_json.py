@@ -226,10 +226,10 @@ class ShToJson(object):
                   'data':self.data} ,
                    oo, indent=4, sort_keys=True )
     else:
-      json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
-                  'data':dict( headers=self.headers, records=self.records ) },
-                   oo, indent=4, sort_keys=True )
       summary = dict( quantiles=[numpy.median( [this['quantiles'][i] for k,this in self.records.items()] ) for i in range(self.npct) ] )
+      json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
+                  'data':dict( headers=self.headers, records=self.records, summary=summary ) },
+                   oo, indent=4, sort_keys=True )
     oo.close()
 
 
