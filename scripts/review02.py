@@ -33,43 +33,43 @@ class ConsolidateVar(object):
     for f in fl:
       fn = f.rpartition('/')[-1]
       this = json.load( open( f, 'r' ) )
+      k0,h0 = list(this['data']['headers'].items())[0]
 
       fcc = collections.defaultdict( set )
-      for k in ['summary','percentiles']:
-        cc[k].add( tuple( this['info']['tech'][k] ) )
+      cc['quantiles'] = h0['tech']['quantiles']
+      ##for k in ['summary','percentiles']:
+        ##cc[k].add( tuple( this['info']['tech'][k] ) )
 
-      cc['dimensions'].add( tuple( this['info']['tech']['variable']['dimensions'] ) )
-      cc['units'].add(  this['info']['tech']['variable']['units'] )
+      cc['dimensions'].add( tuple( h0['tech']['file_info']['dimensions'] ) )
+      cc['units'].add(  h0['tech']['file_info']['units'] )
 
-      fcc["shape"] = this['info']['tech']['variable']["shape"]
-      for nc,file_info in this['info']['tech']['files'].items():
-        for c in file_info['contact']:
-          fcc["contacts"].add(str(c))
+      fcc["shape"] = h0['tech']['file_info']["shape"]
+      fcc["contacts"].add(str( h0['tech']['file_info']["contact"] ) )
 
 
-      if "drs" not in this["info"].keys():
+      finfo = h0['tech']['file_info']
+      if "drs" not in finfo.keys():
         if not self.lax:
           raise WorkflowException( "drs record not found in header", file=f, directory=idir)
         else:
           inst, model, experiment = fn.split( '_' )[1:4]
           drs = None
       else:
-          tab,var_xx,inst,model,experiment,variant_id,grid,this_version = this["info"]["drs"]
-          f0 = sorted( list( this['info']['tech']['files'].keys() ))[0]
+          tab,var_xx,inst,model,mip,experiment,variant_id,grid,this_version = finfo["drs"]
+          f0 = sorted( list( this['data']['headers'].keys() ))[0]
   ## ta_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-185912.nc
-          bits = f0.rpartition('.')[0].split( '_' )
+          bits = f0.split( '_' )
           grid_from_fn = bits[5]
           if grid_from_fn != grid:
             print( "WARNING: adjusting grid to match filename" )
           grid = grid_from_fn
-          drs = this["info"]["drs"]
+          drs = finfo["drs"]
           drs[6] = grid
-          assert var == var_xx
-
+          var_yy = var.rpartition( '.' )[-1]
+          assert var_yy == var_xx, '%s not equal %s' % (var_yy,var_xx)
      
       model_info = {"drs":drs, "contact":sorted( list( fcc['contacts'] ) ), "shape":fcc["shape"] }
       
-
 ## "CMIP6.%(mip)s.%(inst)s.%(model)s.%(experiment)s.%(variant_id)s.%(tab)s.%(grid)s.%(version)s ...
 
 ## CMIP6.CMIP.NCC.NorESM1-F.piControl.r1i1p1f1.Amon.rsds.gn.v20190920
@@ -145,7 +145,7 @@ class FileGroup(object):
 
     self.files = dict()
     for f in flist:
-      self.files[f] = self.glimpse(f) )
+      self.files[f] = self.glimpse(f)
 
   def glimpse(self,f):
     sh = shelve.open(f,'r')
