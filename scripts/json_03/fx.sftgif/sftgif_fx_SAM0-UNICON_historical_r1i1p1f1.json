@@ -1,0 +1,357 @@
+{
+    "data": {
+        "headers": {
+            "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn": {
+                "info": {
+                    "script_version": "0.1.0",
+                    "source": "local_utilities.VariableSampler",
+                    "time": "Fri Nov 27 15:30:19 2020",
+                    "title": "Scanning set of data files"
+                },
+                "tech": {
+                    "extremes": 10,
+                    "file_info": {
+                        "contact": "Sungsu Park (sungsup@snu.ac.kr), Jihoon Shin (sjh11556@snu.ac.kr)",
+                        "dimensions": [
+                            "lat",
+                            "lon"
+                        ],
+                        "drs": [
+                            "fx",
+                            "sftgif",
+                            "SNU",
+                            "SAM0-UNICON",
+                            "CMIP",
+                            "historical",
+                            "r1i1p1f1",
+                            "gn",
+                            "v20190323"
+                        ],
+                        "fill_value": 1.0000000200408773e+20,
+                        "shape": [
+                            192,
+                            288
+                        ],
+                        "tid": "hdl:21.14100/9e8fcd70-bf89-4ad9-b87b-d7a5227b2928",
+                        "units": "%"
+                    },
+                    "fill_value": 1.0000000200408773e+20,
+                    "quantiles": [
+                        0.9999899999999999,
+                        0.9999800000000001,
+                        0.9999500000000001,
+                        0.9999,
+                        0.9998,
+                        0.9995,
+                        0.9990000000000001,
+                        0.998,
+                        0.995,
+                        0.99,
+                        0.98,
+                        0.9500000000000001,
+                        0.9,
+                        0.75,
+                        0.5,
+                        0.25,
+                        0.1,
+                        0.05,
+                        0.02,
+                        0.01,
+                        0.005,
+                        0.002,
+                        0.001,
+                        0.0005,
+                        0.0002,
+                        0.0001,
+                        5e-05,
+                        2e-05,
+                        1e-05
+                    ],
+                    "ref_mask_threshold": 0.0,
+                    "shape": [
+                        192,
+                        288
+                    ],
+                    "with_time": 1
+                }
+            }
+        },
+        "records": {
+            "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    12.690447807312012,
+                    0
+                ],
+                "empty": 0,
+                "extremes": [
+                    [
+                        [
+                            124,
+                            124,
+                            124,
+                            124,
+                            124,
+                            124,
+                            124,
+                            124,
+                            124,
+                            124
+                        ],
+                        [
+                            212,
+                            210,
+                            215,
+                            214,
+                            213,
+                            217,
+                            211,
+                            207,
+                            208,
+                            218
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            15,
+                            174,
+                            15,
+                            15,
+                            15,
+                            15,
+                            15,
+                            15,
+                            15,
+                            15
+                        ],
+                        [
+                            135,
+                            250,
+                            131,
+                            132,
+                            134,
+                            129,
+                            168,
+                            167,
+                            127,
+                            166
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "summary": {
+            "basic": [
+                0.0,
+                100.0,
+                12.690447807312012,
+                12.690447807312012
+            ],
+            "drs": [
+                "fx",
+                "sftgif",
+                "SNU",
+                "SAM0-UNICON",
+                "CMIP",
+                "historical",
+                "r1i1p1f1",
+                "gn",
+                "v20190323"
+            ],
+            "extremes": [
+                [
+                    [
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0"
+                    ],
+                    [
+                        124,
+                        124,
+                        124,
+                        124,
+                        124,
+                        124,
+                        124,
+                        124,
+                        124,
+                        124
+                    ],
+                    [
+                        212,
+                        210,
+                        215,
+                        214,
+                        213,
+                        217,
+                        211,
+                        207,
+                        208,
+                        218
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    [
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0",
+                        "sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn.nc:0"
+                    ],
+                    [
+                        15,
+                        174,
+                        15,
+                        15,
+                        15,
+                        15,
+                        15,
+                        15,
+                        15,
+                        15
+                    ],
+                    [
+                        135,
+                        250,
+                        131,
+                        132,
+                        134,
+                        129,
+                        168,
+                        167,
+                        127,
+                        166
+                    ],
+                    [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ]
+                ]
+            ],
+            "quantiles": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "header": {
+        "source": "consol_to_json.py",
+        "time": "Fri Nov 27 16:47:27 2020",
+        "title": "Dump of results from sh_03/fx.sftgif/sftgif_fx_SAM0-UNICON_historical_r1i1p1f1_gn..."
+    }
+}

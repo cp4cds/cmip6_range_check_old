@@ -1,0 +1,357 @@
+{
+    "data": {
+        "headers": {
+            "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr": {
+                "info": {
+                    "script_version": "0.1.0",
+                    "source": "local_utilities.VariableSampler",
+                    "time": "Fri Nov 27 15:31:39 2020",
+                    "title": "Scanning set of data files"
+                },
+                "tech": {
+                    "extremes": 10,
+                    "file_info": {
+                        "contact": "contact.cmip@meteo.fr",
+                        "dimensions": [
+                            "lat",
+                            "lon"
+                        ],
+                        "drs": [
+                            "fx",
+                            "sftlf",
+                            "CNRM-CERFACS",
+                            "CNRM-CM6-1-HR",
+                            "CMIP",
+                            "historical",
+                            "r1i1p1f2",
+                            "gr",
+                            "v20191021"
+                        ],
+                        "fill_value": 1.0000000200408773e+20,
+                        "shape": [
+                            360,
+                            720
+                        ],
+                        "tid": "hdl:21.14100/d679c9ee-3260-4541-aab8-4e3e805a14bf",
+                        "units": "%"
+                    },
+                    "fill_value": 1.0000000200408773e+20,
+                    "quantiles": [
+                        0.9999899999999999,
+                        0.9999800000000001,
+                        0.9999500000000001,
+                        0.9999,
+                        0.9998,
+                        0.9995,
+                        0.9990000000000001,
+                        0.998,
+                        0.995,
+                        0.99,
+                        0.98,
+                        0.9500000000000001,
+                        0.9,
+                        0.75,
+                        0.5,
+                        0.25,
+                        0.1,
+                        0.05,
+                        0.02,
+                        0.01,
+                        0.005,
+                        0.002,
+                        0.001,
+                        0.0005,
+                        0.0002,
+                        0.0001,
+                        5e-05,
+                        2e-05,
+                        1e-05
+                    ],
+                    "ref_mask_threshold": 0.0,
+                    "shape": [
+                        360,
+                        720
+                    ],
+                    "with_time": 1
+                }
+            }
+        },
+        "records": {
+            "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    34.18902587890625,
+                    0
+                ],
+                "empty": 0,
+                "extremes": [
+                    [
+                        [
+                            195,
+                            195,
+                            195,
+                            195,
+                            195,
+                            195,
+                            195,
+                            195,
+                            195,
+                            195
+                        ],
+                        [
+                            314,
+                            312,
+                            316,
+                            315,
+                            318,
+                            313,
+                            309,
+                            320,
+                            308,
+                            317
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            309,
+                            309,
+                            309,
+                            309,
+                            309,
+                            309,
+                            309,
+                            309,
+                            309,
+                            309
+                        ],
+                        [
+                            112,
+                            114,
+                            105,
+                            106,
+                            107,
+                            108,
+                            109,
+                            110,
+                            111,
+                            103
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "summary": {
+            "basic": [
+                0.0,
+                100.0,
+                34.18902587890625,
+                34.18902587890625
+            ],
+            "drs": [
+                "fx",
+                "sftlf",
+                "CNRM-CERFACS",
+                "CNRM-CM6-1-HR",
+                "CMIP",
+                "historical",
+                "r1i1p1f2",
+                "gr",
+                "v20191021"
+            ],
+            "extremes": [
+                [
+                    [
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0"
+                    ],
+                    [
+                        195,
+                        195,
+                        195,
+                        195,
+                        195,
+                        195,
+                        195,
+                        195,
+                        195,
+                        195
+                    ],
+                    [
+                        314,
+                        312,
+                        316,
+                        315,
+                        318,
+                        313,
+                        309,
+                        320,
+                        308,
+                        317
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    [
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0",
+                        "sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr.nc:0"
+                    ],
+                    [
+                        309,
+                        309,
+                        309,
+                        309,
+                        309,
+                        309,
+                        309,
+                        309,
+                        309,
+                        309
+                    ],
+                    [
+                        112,
+                        114,
+                        105,
+                        106,
+                        107,
+                        108,
+                        109,
+                        110,
+                        111,
+                        103
+                    ],
+                    [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ]
+                ]
+            ],
+            "quantiles": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "header": {
+        "source": "consol_to_json.py",
+        "time": "Fri Nov 27 16:47:36 2020",
+        "title": "Dump of results from sh_03/fx.sftlf/sftlf_fx_CNRM-CM6-1-HR_historical_r1i1p1f2_gr..."
+    }
+}

@@ -1,0 +1,373 @@
+{
+    "data": {
+        "headers": {
+            "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn": {
+                "info": {
+                    "script_version": "0.1.0",
+                    "source": "local_utilities.VariableSampler",
+                    "time": "Fri Nov 27 15:30:42 2020",
+                    "title": "Scanning set of data files"
+                },
+                "tech": {
+                    "extremes": 10,
+                    "file_info": {
+                        "contact": "david.neubauer@env.ethz.ch",
+                        "dimensions": [
+                            "lat",
+                            "lon"
+                        ],
+                        "drs": [
+                            "fx",
+                            "mrsofc",
+                            "HAMMOZ-Consortium",
+                            "MPI-ESM-1-2-HAM",
+                            "CMIP",
+                            "historical",
+                            "r1i1p1f1",
+                            "gn",
+                            "v20190627"
+                        ],
+                        "fill_value": 1.0000000200408773e+20,
+                        "shape": [
+                            96,
+                            192
+                        ],
+                        "tid": "hdl:21.14100/0190bfac-7107-4429-adb0-f862f7b9f140",
+                        "units": "kg m-2"
+                    },
+                    "fill_value": 1.0000000200408773e+20,
+                    "quantiles": [
+                        0.9999899999999999,
+                        0.9999800000000001,
+                        0.9999500000000001,
+                        0.9999,
+                        0.9998,
+                        0.9995,
+                        0.9990000000000001,
+                        0.998,
+                        0.995,
+                        0.99,
+                        0.98,
+                        0.9500000000000001,
+                        0.9,
+                        0.75,
+                        0.5,
+                        0.25,
+                        0.1,
+                        0.05,
+                        0.02,
+                        0.01,
+                        0.005,
+                        0.002,
+                        0.001,
+                        0.0005,
+                        0.0002,
+                        0.0001,
+                        5e-05,
+                        2e-05,
+                        1e-05
+                    ],
+                    "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                    "ref_mask_threshold": 0.0,
+                    "shape": [
+                        96,
+                        192
+                    ],
+                    "with_time": 1
+                }
+            }
+        },
+        "records": {
+            "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0": {
+                "basic": [
+                    0.0,
+                    0.004245449788868427,
+                    0.00024194776779040694,
+                    0
+                ],
+                "empty": 0,
+                "extremes": [
+                    [
+                        [
+                            54,
+                            54,
+                            54,
+                            54,
+                            54,
+                            54,
+                            54,
+                            54,
+                            54,
+                            54
+                        ],
+                        [
+                            130,
+                            129,
+                            134,
+                            133,
+                            132,
+                            131,
+                            136,
+                            125,
+                            127,
+                            137
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            82,
+                            79,
+                            81,
+                            79,
+                            80,
+                            80,
+                            80,
+                            80,
+                            77,
+                            81
+                        ],
+                        [
+                            47,
+                            53,
+                            48,
+                            54,
+                            20,
+                            37,
+                            39,
+                            24,
+                            140,
+                            39
+                        ],
+                        [
+                            0.004080892074853182,
+                            0.004245449788868427,
+                            0.004104278050363064,
+                            0.004245449788868427,
+                            0.00398657051846385,
+                            0.003976040054112673,
+                            0.0038496938068419695,
+                            0.0038449165876954794,
+                            0.0038095200434327126,
+                            0.003795779310166836
+                        ]
+                    ]
+                ],
+                "fraction": [
+                    "fraction_rep",
+                    0.0,
+                    100.0,
+                    null,
+                    null
+                ],
+                "mask_ok": [
+                    "masks_match",
+                    18432,
+                    18432,
+                    18432,
+                    0,
+                    0
+                ],
+                "quantiles": [
+                    0.004245449788868427,
+                    0.004245449788868427,
+                    0.004245449788868427,
+                    0.0041264278961348055,
+                    0.004016168622858813,
+                    0.0037920902431942795,
+                    0.0034445867014583752,
+                    0.0030872449260204785,
+                    0.0026892091461922975,
+                    0.002355292672291398,
+                    0.002070409222505996,
+                    0.001572434190893546,
+                    0.0010827452526427819,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "summary": {
+            "basic": [
+                0.0,
+                0.004245449788868427,
+                0.00024194776779040694,
+                0.00024194776779040694
+            ],
+            "drs": [
+                "fx",
+                "mrsofc",
+                "HAMMOZ-Consortium",
+                "MPI-ESM-1-2-HAM",
+                "CMIP",
+                "historical",
+                "r1i1p1f1",
+                "gn",
+                "v20190627"
+            ],
+            "extremes": [
+                [
+                    [
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0"
+                    ],
+                    [
+                        54,
+                        54,
+                        54,
+                        54,
+                        54,
+                        54,
+                        54,
+                        54,
+                        54,
+                        54
+                    ],
+                    [
+                        130,
+                        129,
+                        134,
+                        133,
+                        132,
+                        131,
+                        136,
+                        125,
+                        127,
+                        137
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    [
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0",
+                        "mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn.nc:0"
+                    ],
+                    [
+                        82,
+                        79,
+                        81,
+                        79,
+                        80,
+                        80,
+                        80,
+                        80,
+                        77,
+                        81
+                    ],
+                    [
+                        47,
+                        53,
+                        48,
+                        54,
+                        20,
+                        37,
+                        39,
+                        24,
+                        140,
+                        39
+                    ],
+                    [
+                        0.004080892074853182,
+                        0.004245449788868427,
+                        0.004104278050363064,
+                        0.004245449788868427,
+                        0.00398657051846385,
+                        0.003976040054112673,
+                        0.0038496938068419695,
+                        0.0038449165876954794,
+                        0.0038095200434327126,
+                        0.003795779310166836
+                    ]
+                ]
+            ],
+            "quantiles": [
+                0.004245449788868427,
+                0.004245449788868427,
+                0.004245449788868427,
+                0.0041264278961348055,
+                0.004016168622858813,
+                0.0037920902431942795,
+                0.0034445867014583752,
+                0.0030872449260204785,
+                0.0026892091461922975,
+                0.002355292672291398,
+                0.002070409222505996,
+                0.001572434190893546,
+                0.0010827452526427819,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "header": {
+        "source": "consol_to_json.py",
+        "time": "Fri Nov 27 16:47:58 2020",
+        "title": "Dump of results from sh_03/fx.mrsofc/mrsofc_fx_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn..."
+    }
+}

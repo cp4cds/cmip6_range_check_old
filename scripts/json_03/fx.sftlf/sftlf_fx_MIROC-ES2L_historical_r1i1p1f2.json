@@ -1,0 +1,357 @@
+{
+    "data": {
+        "headers": {
+            "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn": {
+                "info": {
+                    "script_version": "0.1.0",
+                    "source": "local_utilities.VariableSampler",
+                    "time": "Fri Nov 27 15:30:42 2020",
+                    "title": "Scanning set of data files"
+                },
+                "tech": {
+                    "extremes": 10,
+                    "file_info": {
+                        "contact": null,
+                        "dimensions": [
+                            "lat",
+                            "lon"
+                        ],
+                        "drs": [
+                            "fx",
+                            "sftlf",
+                            "MIROC",
+                            "MIROC-ES2L",
+                            "CMIP",
+                            "historical",
+                            "r1i1p1f2",
+                            "gn",
+                            "v20190823"
+                        ],
+                        "fill_value": 1.0000000200408773e+20,
+                        "shape": [
+                            64,
+                            128
+                        ],
+                        "tid": "hdl:21.14100/1fb5ca0f-f493-4784-b5cd-a12789f56f1c",
+                        "units": "%"
+                    },
+                    "fill_value": 1.0000000200408773e+20,
+                    "quantiles": [
+                        0.9999899999999999,
+                        0.9999800000000001,
+                        0.9999500000000001,
+                        0.9999,
+                        0.9998,
+                        0.9995,
+                        0.9990000000000001,
+                        0.998,
+                        0.995,
+                        0.99,
+                        0.98,
+                        0.9500000000000001,
+                        0.9,
+                        0.75,
+                        0.5,
+                        0.25,
+                        0.1,
+                        0.05,
+                        0.02,
+                        0.01,
+                        0.005,
+                        0.002,
+                        0.001,
+                        0.0005,
+                        0.0002,
+                        0.0001,
+                        5e-05,
+                        2e-05,
+                        1e-05
+                    ],
+                    "ref_mask_threshold": 0.0,
+                    "shape": [
+                        64,
+                        128
+                    ],
+                    "with_time": 1
+                }
+            }
+        },
+        "records": {
+            "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    35.3377685546875,
+                    0
+                ],
+                "empty": 0,
+                "extremes": [
+                    [
+                        [
+                            33,
+                            33,
+                            32,
+                            32,
+                            32,
+                            33,
+                            33,
+                            32,
+                            33,
+                            32
+                        ],
+                        [
+                            1,
+                            19,
+                            126,
+                            127,
+                            124,
+                            18,
+                            20,
+                            123,
+                            21,
+                            125
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            50,
+                            50,
+                            50,
+                            50,
+                            50,
+                            50,
+                            21,
+                            21,
+                            21,
+                            21
+                        ],
+                        [
+                            104,
+                            105,
+                            101,
+                            102,
+                            103,
+                            97,
+                            8,
+                            9,
+                            42,
+                            10
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "summary": {
+            "basic": [
+                0.0,
+                100.0,
+                35.3377685546875,
+                35.3377685546875
+            ],
+            "drs": [
+                "fx",
+                "sftlf",
+                "MIROC",
+                "MIROC-ES2L",
+                "CMIP",
+                "historical",
+                "r1i1p1f2",
+                "gn",
+                "v20190823"
+            ],
+            "extremes": [
+                [
+                    [
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0"
+                    ],
+                    [
+                        33,
+                        33,
+                        32,
+                        32,
+                        32,
+                        33,
+                        33,
+                        32,
+                        33,
+                        32
+                    ],
+                    [
+                        1,
+                        19,
+                        126,
+                        127,
+                        124,
+                        18,
+                        20,
+                        123,
+                        21,
+                        125
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                [
+                    [
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0",
+                        "sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn.nc:0"
+                    ],
+                    [
+                        50,
+                        50,
+                        50,
+                        50,
+                        50,
+                        50,
+                        21,
+                        21,
+                        21,
+                        21
+                    ],
+                    [
+                        104,
+                        105,
+                        101,
+                        102,
+                        103,
+                        97,
+                        8,
+                        9,
+                        42,
+                        10
+                    ],
+                    [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ]
+                ]
+            ],
+            "quantiles": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "header": {
+        "source": "consol_to_json.py",
+        "time": "Fri Nov 27 16:47:40 2020",
+        "title": "Dump of results from sh_03/fx.sftlf/sftlf_fx_MIROC-ES2L_historical_r1i1p1f2_gn..."
+    }
+}
