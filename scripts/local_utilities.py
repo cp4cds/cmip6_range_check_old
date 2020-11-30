@@ -349,6 +349,7 @@ class VariableSampler(object):
         ### might be better to move this up to calling object .....
 
         tech = {'extremes':self.sampler.nextremes, 'quantiles':self.sampler.quantiles, 'with_time':self.with_time, 'fill_value':float(self.fill_value), 'shape':self.var.shape }
+        tech['mask_rep'] = self.sampler.mask_rep
         info = {"title":"Scanning set of data files", "source":"local_utilities.VariableSampler", "time":time.ctime(), "script_version":__version__}
         if context != None:
             info['context'] = context
