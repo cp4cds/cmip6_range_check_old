@@ -1,0 +1,43 @@
+#!/bin/bash
+#SBATCH --partition=short-serial 
+#SBATCH --job-name=Misc
+#SBATCH -o lotus_logs_03/%A_%a.out
+#SBATCH -e lotus_logs_03/%A_%a.err
+#SBATCH --time=04:30:00
+#SBATCH --array=1-8
+
+
+source activate myenv38
+
+##
+##  8 variables from 3 tabls .... over all C3S requested experiments
+##
+##LImon snw snd
+##Lmon mrro mrsos
+##SImon siconc sithick simass sitemptop
+
+vars=(mrro mrsos snw snd siconc sithick simass sitemptop)
+tables=(Lmon Lmon LImon LImon SImon SImon SImon SImon)
+experiment=historical
+group=03
+mode=sampledtenpercent
+
+### table, ddir, shelve-tag
+var=${vars[${SLURM_ARRAY_TASK_ID}-1]}
+table=${tables[${SLURM_ARRAY_TASK_ID}-1]}
+
+echo table=$table, var=${var}
+for experiment in historical ssp119 ssp126 ssp245 ssp370 ssp434 ssp460 ssp534-over ssp585
+  do
+    flist=inputs_${group}/${experiment}/x1_${table}_${var}.txt
+    if test -f "${flist}"; then
+       echo "${flist} exists - running checks"
+
+       for f in `cat inputs_${group}/${experiment}/x1_${table}_${var}.txt`
+         do
+           CMIP_FILE=$f python test_cmip_file.py
+         done
+    else
+       echo "${flist} does not exist"
+    fi
+  done
