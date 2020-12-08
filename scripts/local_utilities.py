@@ -304,7 +304,7 @@ class MaskLookUp(dict):
                   self[ko] = mf
 
 class VariableSampler(object):
-    def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000,ref_mask_file=None):
+    def __init__(self,var,sampler,mode='all',with_time=True,ref_mask=None,fill_value=None,maxnt=10000,ref_mask_file=None,ref_mask_threshold=0.):
         """
           var : iobject which slices to numpy array object
           sampler : Sampler instance
@@ -331,6 +331,7 @@ class VariableSampler(object):
         self.rank = len(var.shape)
         self.mode = mode
         self.with_time = with_time
+        self.ref_mask_threshold = ref_mask_threshold
         self.sr_dict = dict()
         if self.ref_mask_file != None:
              rmfn = self.ref_mask_file.rpartition('/')[-1]
@@ -342,14 +343,17 @@ class VariableSampler(object):
                    ##self.ref_mask = numpy.ma.masked_equal( this, 0. )
                    ##
                    ## this does not work ... 
-                   self.ref_mask = numpy.ma.masked_less( self.ref_fraction, 50. )
+                   self.ref_mask = numpy.ma.masked_less( self.ref_fraction, ref_mask_threshold )
 
     def dump_shelve(self,sname,kprefx,mode='c',context=None, file_info=None):
 
         ### might be better to move this up to calling object .....
 
-        tech = {'extremes':self.sampler.nextremes, 'quantiles':self.sampler.quantiles, 'with_time':self.with_time, 'fill_value':float(self.fill_value), 'shape':self.var.shape }
-        tech['mask_rep'] = self.sampler.mask_rep
+        tech = {'extremes':self.sampler.nextremes, 'quantiles':self.sampler.quantiles,
+                'ref_mask_threshold':self.ref_mask_threshold,
+                'with_time':self.with_time, 'fill_value':float(self.fill_value), 'shape':self.var.shape }
+        if hasattr( self.sampler, 'mask_rep' ):
+          tech['mask_rep'] = self.sampler.mask_rep
         info = {"title":"Scanning set of data files", "source":"local_utilities.VariableSampler", "time":time.ctime(), "script_version":__version__}
         if context != None:
             info['context'] = context
@@ -403,6 +407,7 @@ class VariableSampler(object):
             self.sampler.load( self.var[:], fill_value=self.fill_value, ref_mask=self.ref_mask, ref_fraction=self.ref_fraction )
             self.sampler.apply(  )
             self.sr = self.sampler.sr
+            print( 'INFO.001: adding sampler record',list(self.sampler.sr.keys()) )
             self.sr_dict[0] = self.sampler.sr
             kl.add(0)
 

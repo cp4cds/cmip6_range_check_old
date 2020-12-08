@@ -24,7 +24,9 @@ def filter_listings( ddir, frequency=None, experiment="historical", listing_grou
 def exec_bsub(table, comment):
   if os.path.isfile( ".bsub_log" ):
     os.unlink( ".bsub_log" )
-  os.popen( "sbatch BS/batch_scan_%s.txt > .bsub_log" % table ).read()
+  cmd = "sbatch BS/batch_scan_%s.txt > .bsub_log" % table
+  print ('Executing cmd: ',cmd )
+  os.popen( cmd ).read()
   ii = open( ".bsub_log" ).readlines()
   words = ii[0].split()
   jobid = words[1][1:-1]
@@ -54,7 +56,7 @@ if __name__ == "__main__":
     filter_listings( "inputs/historical/byvar" )
   elif sys.argv[1] == "-x":
     table, comment = sys.argv[2:4]
-    if table in table_list:
+    if table in table_list or any( [table.find(x) == 0 for x in table_list] ) or table[:4] in ['Misc', 'Fixe']:
       exec_bsub( table, comment )
     elif table == "ALL":
       for table in table_list:

@@ -30,6 +30,7 @@ class ShToJson(object):
   def __init__(self,input_file,mode='single'):
     self.mode = mode
     self.w = utils_walk.Walker()
+    self.input_file = input_file
     self.sh = shelve.open( input_file, 'r' )
     self.info = self.sh['__info__']
     self.ks = [k for k in self.sh.keys() if k[0] != '_']
@@ -220,18 +221,27 @@ class ShToJson(object):
       self.consol = self.w( consol )
 
 
-  def json_dump(self,input_label,json_file='test.json'):
-    oo = open( json_file, 'w' )
-    if self.mode == 'single':
-      json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
-                  'data':self.data} ,
-                   oo, indent=4, sort_keys=True )
-    else:
+  def get_summary(self):
 
-      summary = dict( quantiles=[numpy.median( [this['quantiles'][i] for k,this in self.records.items()] ) for i in range(self.npct) ] )
+
+      sdrs = set()
+      for k,item in self.headers.items():
+           sdrs.add( tuple( item['tech']['file_info']['drs'] ) )
+
+      assert len(sdrs) == 1, 'Multiple DRS elements: %s' % sdrs
+      drs = sdrs.pop()
+
+
+      try:
+         summary = dict( drs=drs, quantiles=[numpy.median( [this['quantiles'][i] for k,this in self.records.items()] ) for i in range(self.npct) ] )
+      except:
+         print ([(k,list(this.keys())) for k,this in self.records.items()])
+         print (self.input_file )
+         raise
 
       basic_maps = [(numpy.min,0), (numpy.max,1), (numpy.min,2), (numpy.max,2) ]
       summary['basic'] = [f( [this['basic'][i] for k,this in self.records.items()] ) for  f,i in basic_maps]
+      self.range_comment = 'Data range: %s to %s; mean absolute range %s to %s' % tuple( summary['basic'] )
 
       extr_min = [[],[],[],[]]
       extr_max = [[],[],[],[]]
@@ -252,9 +262,48 @@ class ShToJson(object):
       extremes[1][3] = [-x for x in extremes[1][3]]
       summary['extremes'] = extremes
 
+      if all( ['mask_ok' in this and 'fraction' in this for k,this in self.records.items() ] ):
+        if all( [ this.get('mask_ok',['__missing__',])[0] == 'masks_match' for k,this in self.records.items() ] ):
+          mm = 'masks_all_match'
+        else:
+          mm = 'masks_dont_match'
+        min1 = numpy.min( [ this['fraction'][1]  for k,this in self.records.items() ] )
+        xx = [ this['fraction'][4]  for k,this in self.records.items() ] 
+        if None in xx:
+          max2 = None
+        else:
+          try:
+            max2 = numpy.max( xx )
+          except:
+            print ( xx )
+            max2 = None
+
+        summary['mask'] = (mm,min1,max2)
+
+      elif any( ['mask_ok' in this or 'fraction' in this for k,this in self.records.items() ] ):
+        summary['mask'] = ('partial_report',None,None)
+      else:
+        summary['mask'] = ('no_report',None,None)
+
+      print( summary['mask'] )
+
+      self.summary = summary
+
+  def json_dump(self,input_label,json_file='test.json'):
+    oo = open( json_file, 'w' )
+    if self.mode == 'single':
       json.dump( {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
-                  'data':dict( headers=self.headers, records=self.records, summary=summary ) },
+                  'data':self.data} ,
                    oo, indent=4, sort_keys=True )
+    else:
+
+      
+      data = dict( headers=self.headers, records=self.records )
+      if hasattr( self, 'summary') :
+        data['summary'] = self.summary
+      dumpd = {'header':{'title':'Dump of results from %s' % input_label, 'source':'consol_to_json.py', 'time':time.ctime() },
+                  'data':data }
+      json.dump( dumpd, oo, indent=4, sort_keys=True )
     oo.close()
 
 
@@ -266,12 +315,15 @@ def ssort_02( ll ):
     oo['%s_%s' % (a,b) ].append( f )
   return oo
     
-def ssort( ll ):
+def ssort( ll, fixed=False ):
   oo = collections.defaultdict( list )
   for f in ll:
     fn = f.rpartition( '/' )[-1]
-    a,x,b = fn.rpartition( '_' )
-    oo[a].append( f )
+    if not fixed:
+      a,x,b = fn.rpartition( '_' )
+      oo[a].append( f )
+    else:
+      oo[fn].append( f )
   return oo
     
 def fnfilt( ll ):
@@ -312,15 +364,31 @@ if __name__ == "__main__":
     s.json_dump( input_files[0] + '...', json_file=json_file )
   elif sys.argv[1] == '-d':
     input_files = sorted( glob.glob( '%s/*.dat' % sys.argv[2]  ) )
-    d1 = ssort( input_files )
+    isFixed = sys.argv[2].find( 'fx' ) != -1
+    d1 = ssort( input_files, fixed=isFixed )
     print( d1.keys() )
     for k in sorted( list( d1.keys() ) ):
       input_files = sorted( fnfilt( d1[k] ) )
-      json_file = 'json_03/%s.json' % k
       s = ShToJson( input_files[0], mode='multi' )
       for f in input_files[1:]:
         s.append(f)
-      s._gather_basic()
-      print (k)
-      print (s.range_comment )
+      try:
+        s.get_summary()
+        drs = s.summary['drs']
+        sdir = '%s.%s' % tuple( drs[:2] )
+        if not os.path.isdir( 'json_03/%s' % sdir ):
+          os.mkdir( 'json_03/%s' % sdir )
+  
+        json_file = 'json_03/%s/%s.json' % (sdir,k)
+      
+        print (k)
+        print (s.range_comment )
+      except:
+        print ('Failed to generate summary for %s' % k )
+        raise
+        sdir = '__no_drs__'
+        if not os.path.isdir( 'json_03/%s' % sdir ):
+          os.mkdir( 'json_03/%s' % sdir ) 
+  
+        json_file = 'json_03/%s/%s.json' % (sdir,k)
       s.json_dump( input_files[0] + '...', json_file=json_file )
