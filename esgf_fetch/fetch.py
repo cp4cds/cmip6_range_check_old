@@ -137,7 +137,7 @@ class ESGF_Query(object):
       if verbose:
         print ( datasetid, drs )
       self.drs_dict[datasetid] = (drs,node)
-    print (ss)
+    print ("Size: %8.2fGB (%s)" % (ss*1.e-9,ss) )
 
   def get_file(self):
     for k,tt in self.drs_dict.items():
@@ -189,6 +189,6 @@ class Scanner(object):
           oo.close()
 
 if __name__ == "__main__":
-  eq = ESGF_Query(query=tmpl_isi)
+  eq = ESGF_Query(query=tmpl_tas, filters=filters_tas)
   eq.get_drs()
   ##eq.get_file()
