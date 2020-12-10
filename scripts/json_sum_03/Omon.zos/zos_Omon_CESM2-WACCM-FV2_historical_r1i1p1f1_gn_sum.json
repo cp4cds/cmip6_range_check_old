@@ -1,0 +1,537 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:15:12 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "time",
+                                "nlat",
+                                "nlon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCAR",
+                                "CESM2-WACCM-FV2",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191120"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                600,
+                                384,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/149b6ee1-c1c4-42ea-885f-42ad8c2fb4be",
+                            "time_intervals": [
+                                30.41562326099041,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            122880,
+                            86096,
+                            86096,
+                            36784,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_CESM2-WACCM-FV2_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            600,
+                            384,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:15:24 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "time",
+                                "nlat",
+                                "nlon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCAR",
+                                "CESM2-WACCM-FV2",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191120"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                600,
+                                384,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/149b6ee1-c1c4-42ea-885f-42ad8c2fb4be",
+                            "time_intervals": [
+                                30.41569282136895,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            122880,
+                            86096,
+                            86096,
+                            36784,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_CESM2-WACCM-FV2_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            600,
+                            384,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_195001-199912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:15:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "time",
+                                "nlat",
+                                "nlon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCAR",
+                                "CESM2-WACCM-FV2",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191120"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                600,
+                                384,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/149b6ee1-c1c4-42ea-885f-42ad8c2fb4be",
+                            "time_intervals": [
+                                30.41569282136895,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            122880,
+                            86096,
+                            86096,
+                            36784,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_CESM2-WACCM-FV2_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            600,
+                            384,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_200001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:15:48 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "time",
+                                "nlat",
+                                "nlon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCAR",
+                                "CESM2-WACCM-FV2",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191120"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                180,
+                                384,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/149b6ee1-c1c4-42ea-885f-42ad8c2fb4be",
+                            "time_intervals": [
+                                30.41340782122905,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            122880,
+                            86096,
+                            86096,
+                            36784,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_CESM2-WACCM-FV2_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            180,
+                            384,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -2.181936025619507,
+                    1.9968247413635254,
+                    0.5960242146121771,
+                    0.6298816328575079
+                ],
+                "drs": [
+                    "Omon",
+                    "zos",
+                    "NCAR",
+                    "CESM2-WACCM-FV2",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20191120"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912.nc:512"
+                        ],
+                        [
+                            33,
+                            33,
+                            33,
+                            34,
+                            34,
+                            32,
+                            34,
+                            33,
+                            33,
+                            34
+                        ],
+                        [
+                            31,
+                            32,
+                            33,
+                            33,
+                            34,
+                            31,
+                            35,
+                            34,
+                            30,
+                            32
+                        ],
+                        [
+                            -2.1818625926971436,
+                            -2.181936025619507,
+                            -2.1780080795288086,
+                            -2.1746785640716553,
+                            -2.175367832183838,
+                            -2.173569679260254,
+                            -2.173027992248535,
+                            -2.172699213027954,
+                            -2.172271490097046,
+                            -2.17134690284729
+                        ]
+                    ],
+                    [
+                        [
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360",
+                            "zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_190001-194912.nc:360"
+                        ],
+                        [
+                            179,
+                            180,
+                            178,
+                            177,
+                            178,
+                            180,
+                            181,
+                            180,
+                            182,
+                            181
+                        ],
+                        [
+                            131,
+                            132,
+                            130,
+                            131,
+                            132,
+                            130,
+                            131,
+                            128,
+                            132,
+                            129
+                        ],
+                        [
+                            1.909264087677002,
+                            1.8848496675491333,
+                            1.9417693614959717,
+                            1.9968247413635254,
+                            1.9831045866012573,
+                            1.83805513381958,
+                            1.8276118040084839,
+                            1.824533224105835,
+                            1.8236836194992065,
+                            1.8106324672698975
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    100.0,
+                    0.0
+                ],
+                "quantiles": [
+                    1.3069183056652363,
+                    1.3005920030058458,
+                    1.2745078028589656,
+                    1.254207201868227,
+                    1.2225862953066855,
+                    1.161221540868281,
+                    1.1204400464892519,
+                    1.0856850743293738,
+                    1.0249284520745268,
+                    0.9506874844431883,
+                    0.860508808493614,
+                    0.7646261677145958,
+                    0.6904750019311905,
+                    0.502375990152359,
+                    0.11145005747675896,
+                    -0.6037749946117401,
+                    -1.4217725992202759,
+                    -1.8333999812602997,
+                    -1.9510740101337434,
+                    -1.9917728841304778,
+                    -2.0211627036333084,
+                    -2.041313939094543,
+                    -2.05094552397728,
+                    -2.0562688544392587,
+                    -2.0640170748233793,
+                    -2.0660305562615395,
+                    -2.0683092059493067,
+                    -2.071634395468235,
+                    -2.0733828772068024
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:52:38 2020",
+            "title": "Dump of results from sh_03/Omon.zos/zos_Omon_CESM2-WACCM-FV2_historical_r1i1p1f1_gn_185001-189912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

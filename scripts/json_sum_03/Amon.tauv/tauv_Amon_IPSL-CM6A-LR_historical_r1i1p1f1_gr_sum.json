@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:52:36 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "ipsl-cmip6@listes.ipsl.fr",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauv",
+                                "IPSL",
+                                "IPSL-CM6A-LR",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20180803"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                143,
+                                144
+                            ],
+                            "tid": "hdl:21.14100/65862567-c38d-410b-a8bb-26a1ec1577fe",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            143,
+                            144
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -0.8243423700332642,
+                    0.7400614023208618,
+                    0.03594478592276573,
+                    0.05326661840081215
+                ],
+                "drs": [
+                    "Amon",
+                    "tauv",
+                    "IPSL",
+                    "IPSL-CM6A-LR",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20180803"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1535",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0406",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0253",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1835",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1077",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1237",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1343",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0253",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1237",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1237"
+                        ],
+                        [
+                            84,
+                            84,
+                            117,
+                            84,
+                            84,
+                            125,
+                            84,
+                            118,
+                            124,
+                            124
+                        ],
+                        [
+                            106,
+                            106,
+                            89,
+                            106,
+                            106,
+                            135,
+                            106,
+                            88,
+                            134,
+                            135
+                        ],
+                        [
+                            -0.771146297454834,
+                            -0.724434494972229,
+                            -0.8243423700332642,
+                            -0.8048255443572998,
+                            -0.7229776978492737,
+                            -0.6902924180030823,
+                            -0.709323525428772,
+                            -0.7121801972389221,
+                            -0.6618686318397522,
+                            -0.6610603928565979
+                        ]
+                    ],
+                    [
+                        [
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1218",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0138",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0219",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0295",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0630",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1771",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1722",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1708",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1672",
+                            "tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1770"
+                        ],
+                        [
+                            18,
+                            17,
+                            15,
+                            18,
+                            18,
+                            76,
+                            76,
+                            17,
+                            18,
+                            76
+                        ],
+                        [
+                            27,
+                            58,
+                            68,
+                            27,
+                            27,
+                            19,
+                            19,
+                            58,
+                            27,
+                            19
+                        ],
+                        [
+                            0.7358811497688293,
+                            0.66489577293396,
+                            0.6791111826896667,
+                            0.6852312684059143,
+                            0.726328432559967,
+                            0.6702582240104675,
+                            0.669447124004364,
+                            0.7178530097007751,
+                            0.7400614023208618,
+                            0.6643824577331543
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.4918646229873139,
+                    0.48477769438184837,
+                    0.4628219596453048,
+                    0.4318539656639321,
+                    0.41056463342606675,
+                    0.3773285753354424,
+                    0.33237434123461707,
+                    0.27966274937987223,
+                    0.2231021219119427,
+                    0.18447853311896326,
+                    0.14708321645855904,
+                    0.09930843263864518,
+                    0.06933711282908919,
+                    0.032521617598831654,
+                    0.0022993001621216536,
+                    -0.02731034392490983,
+                    -0.06181687749922275,
+                    -0.08538541160523891,
+                    -0.11854066371917725,
+                    -0.14618608757853507,
+                    -0.1763807128369808,
+                    -0.2173231628239155,
+                    -0.2441697134077549,
+                    -0.2708942436873913,
+                    -0.31119674831926825,
+                    -0.33323322067409755,
+                    -0.35291641310006383,
+                    -0.3864767553734779,
+                    -0.3945625714842975
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:43:10 2020",
+            "title": "Dump of results from sh_03/Amon.tauv/tauv_Amon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

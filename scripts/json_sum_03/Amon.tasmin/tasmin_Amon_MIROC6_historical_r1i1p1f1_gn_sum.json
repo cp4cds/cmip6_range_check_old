@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:00:58 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmin",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/6e8e25cf-5439-4d60-a9bd-eadb8fc21227",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:01:13 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmin",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/a8a84a9d-ea48-4193-ac65-f8c42eefd05f",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    200.39041137695312,
+                    313.8846435546875,
+                    274.55999755859375,
+                    281.921142578125
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmin",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181212"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0942",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0942",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0942",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:188"
+                        ],
+                        [
+                            5,
+                            6,
+                            6,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            6,
+                            5
+                        ],
+                        [
+                            52,
+                            35,
+                            36,
+                            56,
+                            53,
+                            55,
+                            54,
+                            57,
+                            37,
+                            51
+                        ],
+                        [
+                            200.6736297607422,
+                            200.8524169921875,
+                            200.7980194091797,
+                            200.55532836914062,
+                            200.47341918945312,
+                            200.42092895507812,
+                            200.39041137695312,
+                            200.78497314453125,
+                            200.88026428222656,
+                            200.94285583496094
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:222",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:222",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0234",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:703",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:678",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:222",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0474",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:222",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0330",
+                            "tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:222"
+                        ],
+                        [
+                            83,
+                            85,
+                            83,
+                            84,
+                            83,
+                            84,
+                            83,
+                            84,
+                            85,
+                            83
+                        ],
+                        [
+                            37,
+                            35,
+                            37,
+                            35,
+                            37,
+                            35,
+                            37,
+                            36,
+                            35,
+                            36
+                        ],
+                        [
+                            313.70513916015625,
+                            313.8683776855469,
+                            313.8457946777344,
+                            313.54302978515625,
+                            313.8536071777344,
+                            313.5732116699219,
+                            313.8846435546875,
+                            313.852783203125,
+                            313.4667663574219,
+                            313.41778564453125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    306.5141831214896,
+                    306.3603556750512,
+                    306.01813228454614,
+                    305.605576226807,
+                    304.8832901489256,
+                    303.68462340545653,
+                    302.6541856536866,
+                    302.13175064086914,
+                    301.42039283752445,
+                    300.9990269470215,
+                    300.60310119628906,
+                    299.8740165710449,
+                    299.0764221191406,
+                    294.8865165710449,
+                    282.4706115722656,
+                    267.339168548584,
+                    249.39619827270508,
+                    231.49598388671876,
+                    220.82163833618165,
+                    218.0225514984131,
+                    215.86261768341063,
+                    213.62066244506838,
+                    212.6825285720825,
+                    212.01215820693972,
+                    211.18723184051515,
+                    210.923480960083,
+                    210.7777629016876,
+                    210.71979315979002,
+                    210.70840350738524
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:37:05 2020",
+            "title": "Dump of results from sh_03/Amon.tasmin/tasmin_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

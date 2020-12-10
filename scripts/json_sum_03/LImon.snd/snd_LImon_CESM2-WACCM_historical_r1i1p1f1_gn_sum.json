@@ -1,0 +1,264 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:20:23 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snd",
+                                "NCAR",
+                                "CESM2-WACCM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190227"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/7929bd49-b844-4bd3-b986-22ad19a605c3",
+                            "time_intervals": [
+                                30.416377168603592,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            55296,
+                            21013,
+                            21013,
+                            34283,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_CESM2-WACCM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    38.7689094543457,
+                    7.080940221529529,
+                    7.298703481178318
+                ],
+                "drs": [
+                    "LImon",
+                    "snd",
+                    "NCAR",
+                    "CESM2-WACCM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190227"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1306",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1306",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1306",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1307"
+                        ],
+                        [
+                            82,
+                            82,
+                            83,
+                            83,
+                            82,
+                            82,
+                            83,
+                            82,
+                            82,
+                            82
+                        ],
+                        [
+                            232,
+                            234,
+                            250,
+                            241,
+                            230,
+                            228,
+                            239,
+                            231,
+                            226,
+                            227
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0858",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0786",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0702",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1218",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0858",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0414",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1879",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0521",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0930",
+                            "snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0918"
+                        ],
+                        [
+                            169,
+                            169,
+                            169,
+                            178,
+                            178,
+                            178,
+                            178,
+                            168,
+                            168,
+                            178
+                        ],
+                        [
+                            270,
+                            270,
+                            270,
+                            273,
+                            273,
+                            273,
+                            273,
+                            268,
+                            268,
+                            273
+                        ],
+                        [
+                            38.67947769165039,
+                            38.39375305175781,
+                            37.82317352294922,
+                            38.71584701538086,
+                            38.7689094543457,
+                            36.790771484375,
+                            36.0726318359375,
+                            36.37436294555664,
+                            36.60919189453125,
+                            35.99513626098633
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.11030320078134537,
+                    0.0
+                ],
+                "quantiles": [
+                    24.124905922126832,
+                    24.07564802589429,
+                    23.915691971206666,
+                    23.909288953018187,
+                    23.90668564987183,
+                    23.90266216468811,
+                    23.8943125038147,
+                    23.86850006866455,
+                    23.77492721557617,
+                    23.74968933105469,
+                    23.69931293487549,
+                    23.22366924285889,
+                    22.73409194946289,
+                    21.192587852478027,
+                    0.04215981811285019,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:33:22 2020",
+            "title": "Dump of results from sh_03/LImon.sndxx/snd_LImon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:38:48 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Tongwen Wu(twwu@cma.gov.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmax",
+                                "BCC",
+                                "BCC-CSM2-MR",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181126"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/8ba670e9-4c5b-40f6-abdb-315644efa0ce",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    203.15223693847656,
+                    323.04473876953125,
+                    278.12384033203125,
+                    283.60260009765625
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmax",
+                    "BCC",
+                    "BCC-CSM2-MR",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181126"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0677"
+                        ],
+                        [
+                            10,
+                            10,
+                            10,
+                            10,
+                            9,
+                            10,
+                            9,
+                            9,
+                            9,
+                            10
+                        ],
+                        [
+                            82,
+                            83,
+                            81,
+                            84,
+                            80,
+                            85,
+                            81,
+                            79,
+                            78,
+                            80
+                        ],
+                        [
+                            203.15223693847656,
+                            203.19586181640625,
+                            203.43304443359375,
+                            203.48423767089844,
+                            203.77769470214844,
+                            203.85433959960938,
+                            203.92388916015625,
+                            203.75161743164062,
+                            203.93331909179688,
+                            204.04832458496094
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1794",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1949",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1949",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1794",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1542",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1949",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1794",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1949",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1949",
+                            "tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1949"
+                        ],
+                        [
+                            106,
+                            107,
+                            107,
+                            99,
+                            99,
+                            107,
+                            99,
+                            106,
+                            108,
+                            106
+                        ],
+                        [
+                            42,
+                            66,
+                            65,
+                            47,
+                            48,
+                            64,
+                            48,
+                            66,
+                            65,
+                            65
+                        ],
+                        [
+                            322.0970153808594,
+                            322.15594482421875,
+                            323.04473876953125,
+                            322.1735534667969,
+                            322.0849609375,
+                            322.0804443359375,
+                            322.0166015625,
+                            321.961181640625,
+                            321.96112060546875,
+                            321.8919372558594
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    316.22367682510304,
+                    316.1715992474366,
+                    316.0106495346075,
+                    315.73263206939737,
+                    315.446442352295,
+                    314.85083594512946,
+                    314.33398982238776,
+                    313.5118849182129,
+                    311.98716888427737,
+                    310.31492965698243,
+                    307.9467581176757,
+                    303.8479934692383,
+                    302.4833129882812,
+                    298.77648162841797,
+                    283.62345123291016,
+                    267.2894744873047,
+                    251.4132102966309,
+                    237.98457107543945,
+                    226.58020736694337,
+                    223.73564804077148,
+                    221.92599113464354,
+                    220.20657203674315,
+                    219.26261029052733,
+                    218.98039820861817,
+                    218.83240111846925,
+                    218.76397157974242,
+                    218.62818144836424,
+                    218.58837727615355,
+                    218.57604631820678
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:32:54 2020",
+            "title": "Dump of results from sh_03/Amon.tasmax/tasmax_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:56:34 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsdt",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/c9fd3c1f-8b0d-4b23-b3a4-e638a5de569d",
+                            "time_intervals": [
+                                30.416180150125104,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:56:47 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsdt",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/87e4d4b1-ffc5-4fc7-a379-d01ab0ac3cbd",
+                            "time_intervals": [
+                                30.41591784338896,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    549.2279052734375,
+                    275.2027587890625,
+                    326.172119140625
+                ],
+                "drs": [
+                    "Amon",
+                    "rsdt",
+                    "NOAA-GFDL",
+                    "GFDL-CM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20180701"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:046",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:030",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:005"
+                        ],
+                        [
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            170,
+                            11,
+                            14
+                        ],
+                        [
+                            237,
+                            228,
+                            233,
+                            232,
+                            231,
+                            227,
+                            229,
+                            225,
+                            226,
+                            98
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131",
+                            "rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:131"
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            84,
+                            86,
+                            101,
+                            65,
+                            105,
+                            113,
+                            104,
+                            99,
+                            64,
+                            108
+                        ],
+                        [
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375,
+                            549.2279052734375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    460.7590061587524,
+                    460.7586122045899,
+                    460.75589945449826,
+                    460.7511514404297,
+                    460.7392686981201,
+                    460.72465747070316,
+                    460.69227146911624,
+                    460.64117871093754,
+                    460.5492788696289,
+                    460.44183547973637,
+                    460.2584564208984,
+                    459.214306640625,
+                    455.032292175293,
+                    428.0574417114258,
+                    337.9106750488281,
+                    167.5204620361328,
+                    19.450103855134465,
+                    0.059630994219343224,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:19:48 2020",
+            "title": "Dump of results from sh_03/Amon.rsdt/rsdt_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:01:18 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "evspsbl",
+                                "NIMS-KMA",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r13i1p1f2",
+                                "gn",
+                                "v20200205"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/18591f0f-430e-4f44-9a7d-d30706497ba7",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:01:29 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "evspsbl",
+                                "NIMS-KMA",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r13i1p1f2",
+                                "gn",
+                                "v20200205"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/14d85821-9f66-49da-98a5-dd596ed58e77",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.8599695977172814e-05,
+                    0.000204199313884601,
+                    2.5157440177281387e-05,
+                    2.8981899959035218e-05
+                ],
+                "drs": [
+                    "Amon",
+                    "evspsbl",
+                    "NIMS-KMA",
+                    "UKESM1-0-LL",
+                    "CMIP",
+                    "historical",
+                    "r13i1p1f2",
+                    "gn",
+                    "v20200205"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:497",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0054",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:162",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0018"
+                        ],
+                        [
+                            106,
+                            109,
+                            108,
+                            108,
+                            108,
+                            106,
+                            107,
+                            108,
+                            109,
+                            107
+                        ],
+                        [
+                            165,
+                            166,
+                            165,
+                            167,
+                            163,
+                            159,
+                            160,
+                            163,
+                            164,
+                            164
+                        ],
+                        [
+                            -1.759737278916873e-05,
+                            -1.835236616898328e-05,
+                            -1.857659844972659e-05,
+                            -1.8599695977172814e-05,
+                            -1.7516656953375787e-05,
+                            -1.6482945284224115e-05,
+                            -1.7443428077967837e-05,
+                            -1.639328183955513e-05,
+                            -1.6350733858416788e-05,
+                            -1.6260015399893746e-05
+                        ]
+                    ],
+                    [
+                        [
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:468",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:010",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0251",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:743",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0251",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0251",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:010",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0251",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0251",
+                            "evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0251"
+                        ],
+                        [
+                            103,
+                            102,
+                            101,
+                            102,
+                            98,
+                            100,
+                            102,
+                            101,
+                            99,
+                            102
+                        ],
+                        [
+                            77,
+                            76,
+                            76,
+                            77,
+                            73,
+                            76,
+                            77,
+                            77,
+                            76,
+                            77
+                        ],
+                        [
+                            0.000204199313884601,
+                            0.000200215945369564,
+                            0.0001956782361958176,
+                            0.00019784303731285036,
+                            0.0001950398727785796,
+                            0.00019694042566698045,
+                            0.0001948585413629189,
+                            0.00019409749074839056,
+                            0.00019511951541062444,
+                            0.00019351192167960107
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.0001331211384438924,
+                    0.00013264005382211035,
+                    0.00013079594671871835,
+                    0.00012846985183641722,
+                    0.0001247361062807618,
+                    0.00011752092123788382,
+                    0.00011015980209776927,
+                    0.00010414402986498296,
+                    9.52069802951882e-05,
+                    8.845312073390221e-05,
+                    8.147498469043061e-05,
+                    7.164511789596874e-05,
+                    6.289981138252188e-05,
+                    4.670768976211548e-05,
+                    1.9930647795263212e-05,
+                    2.4314489053267607e-06,
+                    -1.3494361850163694e-08,
+                    -1.147888390562457e-07,
+                    -2.1404004328928748e-07,
+                    -3.13705073864412e-07,
+                    -4.500808964280622e-07,
+                    -7.299036378753954e-07,
+                    -9.07514390092956e-07,
+                    -1.0928488591730457e-06,
+                    -1.2919781934442652e-06,
+                    -1.5476940728433421e-06,
+                    -1.8684047573231058e-06,
+                    -2.184039129804205e-06,
+                    -2.2421052307151967e-06
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:37:49 2020",
+            "title": "Dump of results from sh_03/Amon.evspsbl/evspsbl_Amon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

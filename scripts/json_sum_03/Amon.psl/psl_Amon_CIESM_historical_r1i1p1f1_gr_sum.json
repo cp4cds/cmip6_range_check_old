@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:38:03 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "yanluan@tsinghua.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "psl",
+                                "THU",
+                                "CIESM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20200417"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/c30107f8-7bfe-4c65-99f2-f13b044f716d",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    96193.8203125,
+                    104410.8828125,
+                    100668.7421875,
+                    101208.1640625
+                ],
+                "drs": [
+                    "Amon",
+                    "psl",
+                    "THU",
+                    "CIESM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20200417"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0129",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1546"
+                        ],
+                        [
+                            23,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            21,
+                            23,
+                            23
+                        ],
+                        [
+                            161,
+                            161,
+                            157,
+                            160,
+                            158,
+                            162,
+                            159,
+                            159,
+                            160,
+                            198
+                        ],
+                        [
+                            96202.5703125,
+                            96200.09375,
+                            96203.09375,
+                            96197.03125,
+                            96197.7890625,
+                            96204.765625,
+                            96193.8203125,
+                            96205.1171875,
+                            96205.1796875,
+                            96205.5078125
+                        ]
+                    ],
+                    [
+                        [
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0960",
+                            "psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1223"
+                        ],
+                        [
+                            146,
+                            145,
+                            145,
+                            144,
+                            147,
+                            145,
+                            144,
+                            145,
+                            147,
+                            144
+                        ],
+                        [
+                            77,
+                            73,
+                            76,
+                            75,
+                            77,
+                            77,
+                            76,
+                            75,
+                            76,
+                            77
+                        ],
+                        [
+                            104410.125,
+                            104368.125,
+                            104374.1484375,
+                            104376.6171875,
+                            104410.8828125,
+                            104394.640625,
+                            104361.390625,
+                            104360.90625,
+                            104359.0625,
+                            104358.078125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    103142.008868164,
+                    103133.70857460942,
+                    103107.00673437513,
+                    103090.7661523438,
+                    103072.0055859375,
+                    103035.85520507811,
+                    102971.79615234374,
+                    102885.09984375001,
+                    102768.96640625,
+                    102648.97636718751,
+                    102503.126953125,
+                    102265.111328125,
+                    102048.40625,
+                    101665.2509765625,
+                    101207.18359375,
+                    100544.8466796875,
+                    99031.912109375,
+                    98446.2412109375,
+                    98035.08984375,
+                    97832.21152343751,
+                    97692.315234375,
+                    97553.9673828125,
+                    97476.15310546875,
+                    97448.99534179688,
+                    97416.9813125,
+                    97403.98996484374,
+                    97399.79461230469,
+                    97394.57096835939,
+                    97394.33543515624
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:03:34 2020",
+            "title": "Dump of results from sh_03/Amon.psl/psl_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

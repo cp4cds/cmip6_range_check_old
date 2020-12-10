@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:32:40 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "T. Lovato",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "psl",
+                                "CMCC",
+                                "CMCC-CM2-SR5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200616"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/e6d13cc9-bbf2-49b4-9dc7-6d9bac898e52",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    95780.5703125,
+                    104673.0546875,
+                    100656.0859375,
+                    101087.6328125
+                ],
+                "drs": [
+                    "Amon",
+                    "psl",
+                    "CMCC",
+                    "CMCC-CM2-SR5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200616"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0717"
+                        ],
+                        [
+                            21,
+                            20,
+                            20,
+                            21,
+                            21,
+                            21,
+                            20,
+                            20,
+                            20,
+                            21
+                        ],
+                        [
+                            167,
+                            166,
+                            169,
+                            166,
+                            168,
+                            169,
+                            167,
+                            168,
+                            165,
+                            170
+                        ],
+                        [
+                            95782.8046875,
+                            95783.9140625,
+                            95792.03125,
+                            95786.6640625,
+                            95782.9765625,
+                            95786.765625,
+                            95780.5703125,
+                            95782.765625,
+                            95793.0390625,
+                            95795.28125
+                        ]
+                    ],
+                    [
+                        [
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1381",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1381",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0948",
+                            "psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1381"
+                        ],
+                        [
+                            148,
+                            153,
+                            177,
+                            150,
+                            177,
+                            149,
+                            152,
+                            150,
+                            148,
+                            177
+                        ],
+                        [
+                            75,
+                            48,
+                            83,
+                            76,
+                            84,
+                            75,
+                            48,
+                            75,
+                            76,
+                            85
+                        ],
+                        [
+                            104617.0078125,
+                            104608.4375,
+                            104608.9453125,
+                            104618.1796875,
+                            104609.5625,
+                            104664.21875,
+                            104611.2109375,
+                            104673.0546875,
+                            104603.6953125,
+                            104602.578125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    103144.87557929687,
+                    103143.71503320313,
+                    103121.077421875,
+                    103112.93474804689,
+                    103100.61150390624,
+                    103076.09901367188,
+                    103041.97539062501,
+                    102970.64800781252,
+                    102839.48583984375,
+                    102699.3021484375,
+                    102554.470703125,
+                    102317.6064453125,
+                    102091.630859375,
+                    101675.3408203125,
+                    101163.287109375,
+                    100484.7646484375,
+                    98680.76171875,
+                    98132.5126953125,
+                    97767.89570312499,
+                    97567.59375,
+                    97406.9478515625,
+                    97265.527578125,
+                    97208.18736328125,
+                    97172.37951171875,
+                    97145.85789062499,
+                    97126.9685625,
+                    97121.16039160156,
+                    97110.36646015625,
+                    97107.79200214843
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:03:34 2020",
+            "title": "Dump of results from sh_03/Amon.psl/psl_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

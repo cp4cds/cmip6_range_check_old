@@ -1,0 +1,355 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:55:54 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/b6778300-7039-4b8d-89cd-10dd9e987776",
+                            "time_intervals": [
+                                30.416180150125104,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            51840,
+                            51840,
+                            51840,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GFDL-CM4_piControl_r1i1p1f1_gr1.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:00:22 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/80e7c3ff-a134-4ede-b108-48c51d154ef3",
+                            "time_intervals": [
+                                30.41591784338896,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            51840,
+                            51840,
+                            51840,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GFDL-CM4_piControl_r1i1p1f1_gr1.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    47.612396240234375,
+                    7.477818012237549,
+                    8.657327651977539
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "NOAA-GFDL",
+                    "GFDL-CM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20180701"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:119",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:119",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:120",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:119"
+                        ],
+                        [
+                            93,
+                            93,
+                            93,
+                            93,
+                            93,
+                            93,
+                            93,
+                            93,
+                            93,
+                            93
+                        ],
+                        [
+                            187,
+                            175,
+                            180,
+                            179,
+                            178,
+                            177,
+                            184,
+                            182,
+                            175,
+                            183
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:543",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:542",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:0015",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:0015",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:540",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:541",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:539",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:538",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:0866",
+                            "mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:0863"
+                        ],
+                        [
+                            159,
+                            159,
+                            145,
+                            146,
+                            159,
+                            159,
+                            159,
+                            159,
+                            158,
+                            158
+                        ],
+                        [
+                            34,
+                            34,
+                            131,
+                            131,
+                            34,
+                            34,
+                            34,
+                            34,
+                            147,
+                            147
+                        ],
+                        [
+                            47.606876373291016,
+                            47.606876373291016,
+                            47.612396240234375,
+                            47.612396240234375,
+                            47.606876373291016,
+                            47.606876373291016,
+                            47.606876373291016,
+                            47.606876373291016,
+                            47.60687255859375,
+                            47.60687255859375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_all_match",
+                    0.0,
+                    null
+                ],
+                "quantiles": [
+                    47.60049819946289,
+                    47.60049819946289,
+                    47.60049819946289,
+                    47.60049819946289,
+                    47.60049819946289,
+                    47.57284172534948,
+                    47.36643972969057,
+                    47.03212593078614,
+                    45.991796522140504,
+                    44.3847343826294,
+                    42.69436660766601,
+                    38.47298574447632,
+                    32.70803127288818,
+                    14.68104875087738,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:40:03 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

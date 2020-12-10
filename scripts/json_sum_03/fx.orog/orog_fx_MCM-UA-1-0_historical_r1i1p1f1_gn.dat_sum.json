@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:17:35 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "GEOS-CMIP@email.arizona.edu           ",
+                            "dimensions": [
+                                "latitude",
+                                "longitude"
+                            ],
+                            "drs": [
+                                "fx",
+                                "orog",
+                                "UA",
+                                "MCM-UA-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190731"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                80,
+                                96
+                            ],
+                            "tid": "hdl:21.14100/7052b31a-a56f-4d50-9814-24ec6d9bf168",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            80,
+                            96
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -153.83834838867188,
+                    5422.6767578125,
+                    384.7967529296875,
+                    384.7967529296875
+                ],
+                "drs": [
+                    "fx",
+                    "orog",
+                    "UA",
+                    "MCM-UA-1-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190731"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            5,
+                            4,
+                            4,
+                            4,
+                            5,
+                            4,
+                            4,
+                            13,
+                            13,
+                            13
+                        ],
+                        [
+                            51,
+                            50,
+                            53,
+                            51,
+                            52,
+                            52,
+                            49,
+                            7,
+                            20,
+                            6
+                        ],
+                        [
+                            -91.82076263427734,
+                            -133.68374633789062,
+                            -93.36273193359375,
+                            -153.83834838867188,
+                            -89.64282989501953,
+                            -139.6438751220703,
+                            -77.30595397949219,
+                            -69.12736511230469,
+                            -68.86830139160156,
+                            -68.30484008789062
+                        ]
+                    ],
+                    [
+                        [
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            54,
+                            55,
+                            55,
+                            55,
+                            54,
+                            54,
+                            55,
+                            54,
+                            54,
+                            53
+                        ],
+                        [
+                            23,
+                            23,
+                            24,
+                            25,
+                            25,
+                            24,
+                            22,
+                            22,
+                            26,
+                            24
+                        ],
+                        [
+                            5236.46142578125,
+                            5040.81689453125,
+                            5142.31689453125,
+                            4918.36279296875,
+                            5154.53271484375,
+                            5422.6767578125,
+                            4646.5693359375,
+                            4576.02001953125,
+                            4463.75537109375,
+                            4441.8388671875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    5408.377282465806,
+                    5394.077807119283,
+                    5351.179381079202,
+                    5279.682004345736,
+                    5192.564022460966,
+                    5057.107644531337,
+                    4499.79232324228,
+                    3799.6889624023406,
+                    3626.8018859863264,
+                    3520.254685058594,
+                    3244.793857421875,
+                    2325.1109497070315,
+                    1216.7455810546878,
+                    342.33275604248047,
+                    37.97802925109863,
+                    -2.0848708748817444,
+                    -16.059963607788085,
+                    -27.872577571868895,
+                    -44.10075271606445,
+                    -54.90917854309082,
+                    -61.20997529983521,
+                    -64.99321339416504,
+                    -68.95146084594727,
+                    -92.06824870681763,
+                    -136.45043811950683,
+                    -142.93841236724853,
+                    -148.3883803779602,
+                    -151.6583611843872,
+                    -152.74835478652955
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:11 2020",
+            "title": "Dump of results from sh_03/fx.orog/orog_fx_MCM-UA-1-0_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

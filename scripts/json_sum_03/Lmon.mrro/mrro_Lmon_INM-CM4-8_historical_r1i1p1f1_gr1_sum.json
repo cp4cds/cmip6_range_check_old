@@ -1,0 +1,446 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 20:10:35 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Evgeny Volodin (volodinev@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "INM",
+                                "INM-CM4-8",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190530"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                120,
+                                180
+                            ],
+                            "tid": "hdl:21.14100/28dd8c33-e0f1-4baa-aa4d-e7a029a2ca2a",
+                            "time_intervals": [
+                                30.416180150125104,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            21600,
+                            21600,
+                            21600,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_INM-CM4-8_piControl_r1i1p1f1_gr1.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            120,
+                            180
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 20:13:15 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Evgeny Volodin (volodinev@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "INM",
+                                "INM-CM4-8",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190530"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                600,
+                                120,
+                                180
+                            ],
+                            "tid": "hdl:21.14100/12566e32-480b-4336-b7f9-3e9b9ef11b65",
+                            "time_intervals": [
+                                30.41569282136895,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            21600,
+                            21600,
+                            21600,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_INM-CM4-8_piControl_r1i1p1f1_gr1.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            600,
+                            120,
+                            180
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_200001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 20:14:21 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Evgeny Volodin (volodinev@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "INM",
+                                "INM-CM4-8",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190530"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                180,
+                                120,
+                                180
+                            ],
+                            "tid": "hdl:21.14100/1aa5d099-430d-43d8-8666-9f93142a09b3",
+                            "time_intervals": [
+                                30.41340782122905,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            21600,
+                            21600,
+                            21600,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_INM-CM4-8_piControl_r1i1p1f1_gr1.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            180,
+                            120,
+                            180
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -4.074714524904266e-05,
+                    0.0007001198828220367,
+                    1.7170856381198973e-06,
+                    4.083045041625155e-06
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrro",
+                    "INM",
+                    "INM-CM4-8",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20190530"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:450",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:0894",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:137",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:1074",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:0222",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_200001-201412.nc:043",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:137",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:138",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_200001-201412.nc:137",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_200001-201412.nc:138"
+                        ],
+                        [
+                            90,
+                            95,
+                            94,
+                            90,
+                            90,
+                            90,
+                            95,
+                            95,
+                            95,
+                            94
+                        ],
+                        [
+                            136,
+                            131,
+                            131,
+                            136,
+                            136,
+                            136,
+                            131,
+                            131,
+                            131,
+                            131
+                        ],
+                        [
+                            -4.0451777749694884e-05,
+                            -4.074714524904266e-05,
+                            -4.01160323235672e-05,
+                            -3.8386351661756635e-05,
+                            -3.846781692118384e-05,
+                            -3.81565660063643e-05,
+                            -3.716707942658104e-05,
+                            -3.6448793252930045e-05,
+                            -3.635546090663411e-05,
+                            -3.615517562138848e-05
+                        ]
+                    ],
+                    [
+                        [
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:1015",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:0287",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:1164",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:265",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:0623",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:215",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:0324",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:1015",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_195001-199912.nc:265",
+                            "mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912.nc:1033"
+                        ],
+                        [
+                            74,
+                            59,
+                            50,
+                            59,
+                            60,
+                            60,
+                            59,
+                            74,
+                            59,
+                            50
+                        ],
+                        [
+                            40,
+                            140,
+                            19,
+                            140,
+                            141,
+                            140,
+                            140,
+                            41,
+                            141,
+                            19
+                        ],
+                        [
+                            0.0007001198828220367,
+                            0.0006348036113195121,
+                            0.0006438395357690752,
+                            0.0006396613316610456,
+                            0.0006436135736294091,
+                            0.0006439744029194117,
+                            0.0006344257853925228,
+                            0.0006462741876021028,
+                            0.0006266202544793487,
+                            0.0006204724777489901
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_all_match",
+                    0.0,
+                    null
+                ],
+                "quantiles": [
+                    0.00030604194681115493,
+                    0.0003007180679348234,
+                    0.0002810388456576889,
+                    0.0002564345437538634,
+                    0.00021922717913109584,
+                    0.00016695800944220704,
+                    0.00013505944743519716,
+                    0.00010719212594267437,
+                    7.70612428641471e-05,
+                    5.503607968421394e-05,
+                    3.492424304567979e-05,
+                    1.2785628860001474e-05,
+                    3.412932539959017e-06,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    -2.600572354083394e-07,
+                    -1.891504268769495e-06,
+                    -5.372853658627719e-06,
+                    -8.079751888544707e-06,
+                    -1.0894967211015682e-05,
+                    -1.4537698476306104e-05,
+                    -1.670174123501056e-05,
+                    -1.8380267222346447e-05,
+                    -1.9513073110429106e-05,
+                    -1.997672504534421e-05
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:53 2020",
+            "title": "Dump of results from sh_03/Lmon.mrro/mrro_Lmon_INM-CM4-8_historical_r1i1p1f1_gr1_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

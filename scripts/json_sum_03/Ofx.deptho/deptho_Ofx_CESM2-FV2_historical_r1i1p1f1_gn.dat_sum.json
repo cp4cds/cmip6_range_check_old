@@ -1,0 +1,256 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Thu Dec 10 14:32:32 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "nlat",
+                                "nlon"
+                            ],
+                            "drs": [
+                                "Ofx",
+                                "deptho",
+                                "NCAR",
+                                "CESM2-FV2",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191120"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                384,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/f382142b-a409-436c-b3b1-f7b156f29b0b",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            122880,
+                            106864,
+                            106864,
+                            16016,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_CESM2-FV2_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            384,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    5499.99072265625,
+                    2812.807605929031,
+                    2812.807605929031
+                ],
+                "drs": [
+                    "Ofx",
+                    "deptho",
+                    "NCAR",
+                    "CESM2-FV2",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20191120"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            327,
+                            327,
+                            327,
+                            327,
+                            327,
+                            327,
+                            327,
+                            327,
+                            327,
+                            327
+                        ],
+                        [
+                            275,
+                            273,
+                            279,
+                            278,
+                            277,
+                            276,
+                            283,
+                            274,
+                            242,
+                            271
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0",
+                            "deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            264,
+                            264,
+                            264,
+                            264,
+                            264,
+                            264,
+                            264,
+                            264,
+                            264,
+                            264
+                        ],
+                        [
+                            178,
+                            177,
+                            181,
+                            180,
+                            179,
+                            183,
+                            174,
+                            175,
+                            184,
+                            176
+                        ],
+                        [
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625,
+                            5499.99072265625
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.0,
+                    0.0
+                ],
+                "quantiles": [
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5499.99072265625,
+                    5250.00927734375,
+                    5250.00927734375,
+                    4500.2607421875,
+                    3503.44873046875,
+                    215.92343139648438,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:48:34 2020",
+            "title": "Dump of results from sh_03/Ofx.deptho/deptho_Ofx_CESM2-FV2_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

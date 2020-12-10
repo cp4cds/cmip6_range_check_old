@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:01:15 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauv",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/582d309c-37e9-4326-ad35-1d88acb098c1",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:01:28 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauv",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/56bc3223-c238-4e40-9c3c-797c9c90582c",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -4.166756629943848,
+                    5.323583126068115,
+                    0.05838370323181152,
+                    0.0974944531917572
+                ],
+                "drs": [
+                    "Amon",
+                    "tauv",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190311"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0228",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0467",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0467",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0467",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:000",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0011",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0242",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:745",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0421",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1127"
+                        ],
+                        [
+                            104,
+                            107,
+                            107,
+                            108,
+                            107,
+                            104,
+                            107,
+                            107,
+                            104,
+                            107
+                        ],
+                        [
+                            98,
+                            111,
+                            110,
+                            112,
+                            225,
+                            98,
+                            225,
+                            225,
+                            98,
+                            225
+                        ],
+                        [
+                            -3.1336891651153564,
+                            -3.1971921920776367,
+                            -3.02451491355896,
+                            -3.114109754562378,
+                            -4.166756629943848,
+                            -3.029609203338623,
+                            -3.075162887573242,
+                            -3.4778287410736084,
+                            -2.985159397125244,
+                            -2.9804818630218506
+                        ]
+                    ],
+                    [
+                        [
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1087",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:304",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:304",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:029",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1110",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1087",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:207",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1148",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:568",
+                            "tauv_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:113"
+                        ],
+                        [
+                            12,
+                            12,
+                            15,
+                            12,
+                            12,
+                            12,
+                            12,
+                            12,
+                            12,
+                            13
+                        ],
+                        [
+                            121,
+                            121,
+                            103,
+                            121,
+                            121,
+                            120,
+                            121,
+                            121,
+                            121,
+                            48
+                        ],
+                        [
+                            5.276186466217041,
+                            4.875802040100098,
+                            4.978259086608887,
+                            4.727929592132568,
+                            5.323583126068115,
+                            4.949838638305664,
+                            4.987309455871582,
+                            4.761331081390381,
+                            4.7158026695251465,
+                            4.487250328063965
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    3.2320921758860788,
+                    3.12882558850065,
+                    2.979675053829682,
+                    2.743437879967736,
+                    2.536702213191925,
+                    2.197061691999437,
+                    1.9955794824958097,
+                    1.6220597834587136,
+                    1.1232510054111504,
+                    0.684624343514441,
+                    0.40668540060520175,
+                    0.19447443783283253,
+                    0.10229384191334244,
+                    0.03782899118959904,
+                    0.002046643174253404,
+                    -0.03285166434943676,
+                    -0.08395531065762042,
+                    -0.14145010896027085,
+                    -0.24981558859348296,
+                    -0.3562254722416401,
+                    -0.48398649506270885,
+                    -0.6862478309273718,
+                    -0.8511406118869782,
+                    -0.9878752473145723,
+                    -1.1920913144350052,
+                    -1.3504585663199424,
+                    -1.44029477660954,
+                    -1.545133584138155,
+                    -1.6066787882167102
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:43:13 2020",
+            "title": "Dump of results from sh_03/Amon.tauv/tauv_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

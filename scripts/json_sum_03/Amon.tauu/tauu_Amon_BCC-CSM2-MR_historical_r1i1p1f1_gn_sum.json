@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:20:49 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Tongwen Wu(twwu@cma.gov.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauu",
+                                "BCC",
+                                "BCC-CSM2-MR",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/f45e1122-e1ce-4bbf-9b7a-0192ce52bb2b",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.0022382736206055,
+                    1.6448736190795898,
+                    0.0675608441233635,
+                    0.09200587123632431
+                ],
+                "drs": [
+                    "Amon",
+                    "tauu",
+                    "BCC",
+                    "BCC-CSM2-MR",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190403"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1534",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0022",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0478",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0276",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0514",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0130",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0454",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0865",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0983",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0276"
+                        ],
+                        [
+                            100,
+                            95,
+                            100,
+                            89,
+                            95,
+                            95,
+                            95,
+                            88,
+                            95,
+                            92
+                        ],
+                        [
+                            107,
+                            108,
+                            107,
+                            106,
+                            108,
+                            108,
+                            108,
+                            246,
+                            108,
+                            109
+                        ],
+                        [
+                            -0.9862584471702576,
+                            -0.9794732928276062,
+                            -0.9889042973518372,
+                            -0.9968656897544861,
+                            -1.0022382736206055,
+                            -0.9701817035675049,
+                            -0.9576767683029175,
+                            -0.9393193125724792,
+                            -0.9312177896499634,
+                            -0.9289470314979553
+                        ]
+                    ],
+                    [
+                        [
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0655",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1015",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1750",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1015",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0603",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1168",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0303",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:0629",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1506",
+                            "tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412.nc:1936"
+                        ],
+                        [
+                            31,
+                            38,
+                            41,
+                            31,
+                            31,
+                            41,
+                            38,
+                            31,
+                            41,
+                            31
+                        ],
+                        [
+                            260,
+                            254,
+                            130,
+                            260,
+                            260,
+                            130,
+                            150,
+                            260,
+                            130,
+                            260
+                        ],
+                        [
+                            1.6448736190795898,
+                            1.6412584781646729,
+                            1.557984709739685,
+                            1.5232651233673096,
+                            1.5974422693252563,
+                            1.622268795967102,
+                            1.5683972835540771,
+                            1.5485047101974487,
+                            1.5903126001358032,
+                            1.5148108005523682
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    1.0045560843819363,
+                    0.9230907009394786,
+                    0.8384022266226753,
+                    0.7628998786419858,
+                    0.6762396182299333,
+                    0.5433552995771317,
+                    0.47433486765624266,
+                    0.424478986352682,
+                    0.36497525177896006,
+                    0.32340945467352905,
+                    0.2810991087555874,
+                    0.2222508881241085,
+                    0.16569443866610525,
+                    0.06563441455364227,
+                    -0.0008229597588069737,
+                    -0.050441114231944084,
+                    -0.09998463429510593,
+                    -0.1378556866198778,
+                    -0.1897117106616497,
+                    -0.23283523887395857,
+                    -0.2766255749762058,
+                    -0.33028235095739367,
+                    -0.3732646978497505,
+                    -0.41776314622908833,
+                    -0.4865334067672491,
+                    -0.5347986393123865,
+                    -0.5781288669392467,
+                    -0.6358672368246316,
+                    -0.660655131482482
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:38:16 2020",
+            "title": "Dump of results from sh_03/Amon.tauu/tauu_Amon_BCC-CSM2-MR_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

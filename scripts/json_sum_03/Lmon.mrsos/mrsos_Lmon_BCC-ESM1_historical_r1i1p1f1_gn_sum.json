@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:58:34 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Tongwen Wu(twwu@cma.gov.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "BCC",
+                                "BCC-ESM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181114"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/c5f14e80-70dd-4b1e-9f9b-a5140db978ef",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0021213486324995756,
+                    44.83527374267578,
+                    22.3396282708628,
+                    25.633053394625176
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "BCC",
+                    "BCC-ESM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181114"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0340",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1729",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1948",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1540",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1708",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0397",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1252",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1777",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1729",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0712"
+                        ],
+                        [
+                            37,
+                            20,
+                            37,
+                            37,
+                            37,
+                            19,
+                            37,
+                            20,
+                            22,
+                            37
+                        ],
+                        [
+                            122,
+                            41,
+                            123,
+                            123,
+                            123,
+                            102,
+                            122,
+                            41,
+                            40,
+                            122
+                        ],
+                        [
+                            0.0021213486324995756,
+                            0.002648252062499523,
+                            0.0028574266470968723,
+                            0.002233204199001193,
+                            0.002757979789748788,
+                            0.0029721055179834366,
+                            0.0024351575411856174,
+                            0.0025101732462644577,
+                            0.0030127489008009434,
+                            0.0030226397793740034
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0610",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0736",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0274",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0976",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1210",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0406",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0970",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0982",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1546",
+                            "mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0430"
+                        ],
+                        [
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51
+                        ],
+                        [
+                            98,
+                            55,
+                            98,
+                            98,
+                            98,
+                            98,
+                            98,
+                            98,
+                            98,
+                            98
+                        ],
+                        [
+                            44.37529373168945,
+                            44.83527374267578,
+                            44.37529373168945,
+                            44.37529373168945,
+                            44.37529373168945,
+                            44.37529754638672,
+                            44.37529373168945,
+                            44.37529373168945,
+                            44.37529373168945,
+                            44.37529373168945
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    44.345638958129584,
+                    44.31598799926773,
+                    44.22703512268106,
+                    44.07878032836917,
+                    43.78227073974615,
+                    43.405748355865484,
+                    43.01326172256483,
+                    40.83029608917235,
+                    40.692142486572266,
+                    40.692142486572266,
+                    40.692142486572266,
+                    40.692142486572266,
+                    40.692142486572266,
+                    40.037553787231445,
+                    22.797751426696777,
+                    14.972631216049194,
+                    8.216441345214843,
+                    6.047835206985474,
+                    3.8419956302642824,
+                    2.6480364108085634,
+                    1.6442633777856828,
+                    0.803621079325676,
+                    0.5661516584157944,
+                    0.3948015428334475,
+                    0.2793468155445531,
+                    0.22935298480987548,
+                    0.20419619052857163,
+                    0.18896393841207026,
+                    0.18340896871596574
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:38:16 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

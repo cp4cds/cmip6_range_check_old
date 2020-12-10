@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:52:43 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "contact.cmip@meteo.fr",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tas",
+                                "CNRM-CERFACS",
+                                "CNRM-ESM2-1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gr",
+                                "v20181206"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/a2e7d2e9-40c2-4d66-935b-a7706cf873ca",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    199.7819366455078,
+                    313.1584167480469,
+                    274.820068359375,
+                    281.20330810546875
+                ],
+                "drs": [
+                    "Amon",
+                    "tas",
+                    "CNRM-CERFACS",
+                    "CNRM-ESM2-1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gr",
+                    "v20181206"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0199",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0199",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0199",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0463"
+                        ],
+                        [
+                            9,
+                            9,
+                            6,
+                            9,
+                            6,
+                            6,
+                            7,
+                            7,
+                            7,
+                            6
+                        ],
+                        [
+                            72,
+                            70,
+                            58,
+                            71,
+                            57,
+                            56,
+                            32,
+                            31,
+                            33,
+                            59
+                        ],
+                        [
+                            199.7819366455078,
+                            200.07174682617188,
+                            200.08778381347656,
+                            199.7819366455078,
+                            200.08778381347656,
+                            200.08778381347656,
+                            200.1433868408203,
+                            200.1433868408203,
+                            200.1433868408203,
+                            200.330078125
+                        ]
+                    ],
+                    [
+                        [
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1879",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0834",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1889",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1158",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1879",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1793",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1853",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:0834",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1158",
+                            "tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1889"
+                        ],
+                        [
+                            86,
+                            86,
+                            82,
+                            86,
+                            86,
+                            82,
+                            82,
+                            86,
+                            86,
+                            78
+                        ],
+                        [
+                            33,
+                            34,
+                            58,
+                            34,
+                            34,
+                            58,
+                            58,
+                            33,
+                            33,
+                            61
+                        ],
+                        [
+                            313.15106201171875,
+                            313.1442565917969,
+                            313.1584167480469,
+                            313.1222229003906,
+                            312.93804931640625,
+                            312.808837890625,
+                            312.77239990234375,
+                            312.7488708496094,
+                            312.7093200683594,
+                            312.6915283203125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    307.5155035462949,
+                    307.43375488098206,
+                    307.30496016845734,
+                    307.17702956390383,
+                    306.9789093353271,
+                    306.59858108520507,
+                    306.1400779418946,
+                    305.4996417541504,
+                    304.11241638183594,
+                    302.52770538330077,
+                    301.1462948608398,
+                    299.8505638122558,
+                    299.1154495239258,
+                    295.7802505493164,
+                    282.2031021118164,
+                    265.18196868896484,
+                    247.21249389648438,
+                    227.69980430603027,
+                    218.6911163330078,
+                    215.86857818603517,
+                    213.87326179504396,
+                    212.21573638916016,
+                    211.31700134277344,
+                    210.91376379776003,
+                    210.43522695617676,
+                    210.227974243927,
+                    209.93519831275938,
+                    209.9337615966797,
+                    209.9337615966797
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:30:20 2020",
+            "title": "Dump of results from sh_03/Amon.tas/tas_Amon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

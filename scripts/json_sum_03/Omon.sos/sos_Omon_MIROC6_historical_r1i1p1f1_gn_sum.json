@@ -1,0 +1,355 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:41:00 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "y",
+                                "x"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "sos",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                256,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/9c841dec-c1b4-4792-909d-18975253b214",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "0.001"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            92160,
+                            55746,
+                            55746,
+                            36414,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_MIROC6_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            256,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "sos_Omon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:41:17 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "y",
+                                "x"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "sos",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                256,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/107eac4a-f12e-49b2-866f-6ad32528deae",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "0.001"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            92160,
+                            55746,
+                            55746,
+                            36414,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_MIROC6_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            256,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.4207093417644501,
+                    40.28779983520508,
+                    33.96337181143041,
+                    34.31546658056183
+                ],
+                "drs": [
+                    "Omon",
+                    "sos",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181212"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0951",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1059",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0999",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0076",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0076",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0951",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:554",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1059",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0326",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:388"
+                        ],
+                        [
+                            127,
+                            127,
+                            127,
+                            127,
+                            126,
+                            126,
+                            126,
+                            126,
+                            127,
+                            127
+                        ],
+                        [
+                            250,
+                            250,
+                            250,
+                            250,
+                            251,
+                            251,
+                            251,
+                            251,
+                            250,
+                            250
+                        ],
+                        [
+                            0.9113843441009521,
+                            0.9511174559593201,
+                            0.898600697517395,
+                            0.533367931842804,
+                            0.4207093417644501,
+                            0.9483055472373962,
+                            0.9364114999771118,
+                            0.9690753221511841,
+                            0.9948136210441589,
+                            1.024742603302002
+                        ]
+                    ],
+                    [
+                        [
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0632",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0691",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0031",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0751",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0127",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0751",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0633",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0751",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0127",
+                            "sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0751"
+                        ],
+                        [
+                            166,
+                            166,
+                            166,
+                            166,
+                            166,
+                            166,
+                            166,
+                            166,
+                            166,
+                            166
+                        ],
+                        [
+                            319,
+                            319,
+                            319,
+                            319,
+                            319,
+                            318,
+                            319,
+                            317,
+                            318,
+                            316
+                        ],
+                        [
+                            40.24506378173828,
+                            40.25273895263672,
+                            40.24906921386719,
+                            40.28779983520508,
+                            40.26112747192383,
+                            40.26914978027344,
+                            40.241764068603516,
+                            40.23968505859375,
+                            40.23628616333008,
+                            40.23434829711914
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    100.0,
+                    0.0
+                ],
+                "quantiles": [
+                    39.926047164726235,
+                    39.891239481163325,
+                    39.82571394491208,
+                    39.75133607578269,
+                    39.546003829956064,
+                    39.41381758689881,
+                    38.89844225883497,
+                    37.9421619796753,
+                    37.57132573127747,
+                    37.20096292495728,
+                    36.841496276855466,
+                    36.41369342803955,
+                    35.981414794921875,
+                    35.29077625274658,
+                    34.247538566589355,
+                    33.66225576400757,
+                    32.19264507293701,
+                    31.377458333969116,
+                    29.81359443664551,
+                    28.448641204833983,
+                    26.487465071678162,
+                    23.266476554870607,
+                    20.955239434242248,
+                    17.54053827762604,
+                    12.209924772739413,
+                    9.874361804485321,
+                    7.839399413764477,
+                    6.832785564446449,
+                    6.290566465485096
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:49:26 2020",
+            "title": "Dump of results from sh_03/Omon.sos/sos_Omon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

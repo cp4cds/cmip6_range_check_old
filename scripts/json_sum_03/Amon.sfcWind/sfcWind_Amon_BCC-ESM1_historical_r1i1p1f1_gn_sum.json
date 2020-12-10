@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:24:56 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Tongwen Wu(twwu@cma.gov.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "sfcWind",
+                                "BCC",
+                                "BCC-ESM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181214"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/ac2edab4-ff47-4470-9387-dd2c4cb4a404",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.2460467666387558,
+                    15.775350570678711,
+                    5.564851760864258,
+                    6.186318397521973
+                ],
+                "drs": [
+                    "Amon",
+                    "sfcWind",
+                    "BCC",
+                    "BCC-ESM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181214"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1061",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1061",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1061",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1061",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1061",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0821",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1978",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0821",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0821",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0970"
+                        ],
+                        [
+                            62,
+                            62,
+                            62,
+                            62,
+                            62,
+                            62,
+                            58,
+                            62,
+                            62,
+                            59
+                        ],
+                        [
+                            67,
+                            65,
+                            66,
+                            68,
+                            64,
+                            71,
+                            47,
+                            70,
+                            72,
+                            30
+                        ],
+                        [
+                            0.2460467666387558,
+                            0.25758734345436096,
+                            0.24968597292900085,
+                            0.25405353307724,
+                            0.26716309785842896,
+                            0.26964864134788513,
+                            0.2680472731590271,
+                            0.2705862522125244,
+                            0.27135297656059265,
+                            0.2720889449119568
+                        ]
+                    ],
+                    [
+                        [
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1639",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1639",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0329",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0329",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0329",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0329",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1639",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0642",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0175",
+                            "sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1964"
+                        ],
+                        [
+                            12,
+                            12,
+                            11,
+                            11,
+                            11,
+                            11,
+                            12,
+                            37,
+                            16,
+                            14
+                        ],
+                        [
+                            25,
+                            24,
+                            49,
+                            52,
+                            51,
+                            50,
+                            26,
+                            21,
+                            37,
+                            28
+                        ],
+                        [
+                            15.588213920593262,
+                            15.559025764465332,
+                            15.675063133239746,
+                            15.553199768066406,
+                            15.710289001464844,
+                            15.775350570678711,
+                            15.530840873718262,
+                            15.520773887634277,
+                            15.453619003295898,
+                            15.418429374694824
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    13.88961347130773,
+                    13.88702933366779,
+                    13.879276920747776,
+                    13.86394520311357,
+                    13.761960689163276,
+                    13.60084423375136,
+                    13.44924033021928,
+                    13.248573235511788,
+                    12.901239914894106,
+                    12.538564119338991,
+                    11.999016485214234,
+                    11.03734624385834,
+                    9.890465688705444,
+                    7.799951910972595,
+                    5.70856249332428,
+                    3.912081152200699,
+                    2.32062304019928,
+                    1.5775304198265077,
+                    1.2627996599674225,
+                    1.1275328916311265,
+                    1.008142405450344,
+                    0.8981196911931039,
+                    0.8213644505441189,
+                    0.766037531837821,
+                    0.7126900618493557,
+                    0.6802476820886135,
+                    0.6534522793367505,
+                    0.6500538424855471,
+                    0.6498131223621963
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:26:13 2020",
+            "title": "Dump of results from sh_03/Amon.sfcWind/sfcWind_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:12:03 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snd",
+                                "CAS",
+                                "FGOALS-f3-L",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190821"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/857bbb5c-d491-4adc-9e6a-c4e701aff048",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    3.466475248336792,
+                    0.5590517755004767,
+                    0.7277050967439228
+                ],
+                "drs": [
+                    "LImon",
+                    "snd",
+                    "CAS",
+                    "FGOALS-f3-L",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190821"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1222",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1222",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1222",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1232"
+                        ],
+                        [
+                            158,
+                            55,
+                            100,
+                            100,
+                            127,
+                            55,
+                            100,
+                            55,
+                            55,
+                            158
+                        ],
+                        [
+                            21,
+                            141,
+                            231,
+                            239,
+                            279,
+                            118,
+                            241,
+                            142,
+                            116,
+                            19
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:0450",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1880",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:0129",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1903",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1052",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:0450",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1880",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:0762",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:1880",
+                            "snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412.nc:0470"
+                        ],
+                        [
+                            24,
+                            24,
+                            22,
+                            24,
+                            24,
+                            24,
+                            24,
+                            24,
+                            24,
+                            170
+                        ],
+                        [
+                            76,
+                            107,
+                            122,
+                            113,
+                            77,
+                            78,
+                            111,
+                            77,
+                            108,
+                            267
+                        ],
+                        [
+                            3.3999226093292236,
+                            3.4047629833221436,
+                            3.3872487545013428,
+                            3.3569345474243164,
+                            3.3697733879089355,
+                            3.466475248336792,
+                            3.3691604137420654,
+                            3.392176628112793,
+                            3.354886531829834,
+                            3.3538055419921875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    2.9999249322879034,
+                    2.9894894212699716,
+                    2.9477211445633955,
+                    2.8997834885358515,
+                    2.827102148604375,
+                    2.7374721260666903,
+                    2.638525960326196,
+                    2.54682899951935,
+                    2.3870291006565085,
+                    2.290118570327759,
+                    2.218727695941925,
+                    2.1248399853706363,
+                    1.9914870798587803,
+                    1.5559660345315933,
+                    0.1203458346426487,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:33:05 2020",
+            "title": "Dump of results from sh_03/LImon.snd/snd_LImon_FGOALS-f3-L_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

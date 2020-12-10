@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:26:34 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "sfcWind",
+                                "MRI",
+                                "MRI-ESM2-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190222"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/6fa75512-22ee-4ada-aeb3-82a9aeffa90e",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.8036283254623413,
+                    27.291271209716797,
+                    6.798648834228516,
+                    7.591081142425537
+                ],
+                "drs": [
+                    "Amon",
+                    "sfcWind",
+                    "MRI",
+                    "MRI-ESM2-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190222"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1471",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0952",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1498",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0952",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0955",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1498",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1471",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1471",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1170",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1471"
+                        ],
+                        [
+                            83,
+                            81,
+                            80,
+                            81,
+                            79,
+                            80,
+                            83,
+                            83,
+                            82,
+                            83
+                        ],
+                        [
+                            19,
+                            14,
+                            259,
+                            15,
+                            254,
+                            260,
+                            20,
+                            16,
+                            256,
+                            21
+                        ],
+                        [
+                            0.8072516322135925,
+                            0.8121581673622131,
+                            0.811332106590271,
+                            0.8120800256729126,
+                            0.8057069182395935,
+                            0.8072839975357056,
+                            0.8036283254623413,
+                            0.806786835193634,
+                            0.812655508518219,
+                            0.8130522966384888
+                        ]
+                    ],
+                    [
+                        [
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0847",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1074",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1159",
+                            "sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1074"
+                        ],
+                        [
+                            10,
+                            9,
+                            9,
+                            10,
+                            9,
+                            10,
+                            9,
+                            15,
+                            15,
+                            15
+                        ],
+                        [
+                            142,
+                            141,
+                            140,
+                            143,
+                            142,
+                            141,
+                            139,
+                            23,
+                            23,
+                            22
+                        ],
+                        [
+                            27.291271209716797,
+                            27.28642463684082,
+                            27.046398162841797,
+                            26.97776985168457,
+                            26.81690788269043,
+                            26.51014518737793,
+                            26.180192947387695,
+                            26.1577091217041,
+                            26.14910125732422,
+                            25.97241973876953
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    22.915561158178512,
+                    22.80184164228513,
+                    22.438246038867383,
+                    22.071173342895968,
+                    21.39004199638406,
+                    20.24147044038778,
+                    19.378360655784725,
+                    18.15697010993953,
+                    16.27492938518521,
+                    14.679608325958256,
+                    13.54811138153076,
+                    12.407858180999758,
+                    11.304738330841065,
+                    9.23777985572815,
+                    7.141782999038696,
+                    5.45989191532135,
+                    2.7681815862655643,
+                    2.0155088663101197,
+                    1.4904618418216704,
+                    1.2240038353204727,
+                    1.0627642676234246,
+                    0.9719858722090722,
+                    0.9341225462257862,
+                    0.9102026270180941,
+                    0.8892850458800793,
+                    0.8776378787219525,
+                    0.8687048768028617,
+                    0.8621229646337032,
+                    0.8565012266707421
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:26:22 2020",
+            "title": "Dump of results from sh_03/Amon.sfcWind/sfcWind_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,537 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_185001-190012": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:45:57 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                612,
+                                90,
+                                144
+                            ],
+                            "tid": "hdl:21.14100/275a18d6-ab90-4929-9b55-2550f60dfd56",
+                            "time_intervals": [
+                                30.415711947626843,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            12960,
+                            12960,
+                            12960,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GISS-E2-1-H_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            612,
+                            90,
+                            144
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_190101-195012": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:46:14 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                600,
+                                90,
+                                144
+                            ],
+                            "tid": "hdl:21.14100/c771db3b-144c-4490-8f83-90a2bb9f924a",
+                            "time_intervals": [
+                                30.41569282136895,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            12960,
+                            12960,
+                            12960,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GISS-E2-1-H_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            600,
+                            90,
+                            144
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:46:32 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                600,
+                                90,
+                                144
+                            ],
+                            "tid": "hdl:21.14100/9709e121-583e-419d-a776-0ff6cfc41a3c",
+                            "time_intervals": [
+                                30.41569282136895,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            12960,
+                            12960,
+                            12960,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GISS-E2-1-H_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            600,
+                            90,
+                            144
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_200101-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:46:46 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                168,
+                                90,
+                                144
+                            ],
+                            "tid": "hdl:21.14100/c9e2fbfc-bf89-4237-8c38-94fda313679a",
+                            "time_intervals": [
+                                30.41317365269461,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            12960,
+                            12960,
+                            12960,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GISS-E2-1-H_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            168,
+                            90,
+                            144
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    3558.064453125,
+                    16.077556610107422,
+                    38.63022232055664
+                ],
+                "drs": [
+                    "LImon",
+                    "snw",
+                    "NASA-GISS",
+                    "GISS-E2-1-H",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190403"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:089",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:103",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:095"
+                        ],
+                        [
+                            50,
+                            50,
+                            50,
+                            50,
+                            50,
+                            50,
+                            53,
+                            50,
+                            56,
+                            50
+                        ],
+                        [
+                            65,
+                            67,
+                            71,
+                            62,
+                            63,
+                            64,
+                            141,
+                            66,
+                            25,
+                            60
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_190101-195012.nc:496",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:232",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:448",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_200101-201412.nc:062",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_190101-195012.nc:075",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_200101-201412.nc:037",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_185001-190012.nc:496",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_195101-200012.nc:590",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_185001-190012.nc:389",
+                            "snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_185001-190012.nc:244"
+                        ],
+                        [
+                            84,
+                            84,
+                            84,
+                            84,
+                            84,
+                            84,
+                            84,
+                            84,
+                            84,
+                            84
+                        ],
+                        [
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40
+                        ],
+                        [
+                            3483.551025390625,
+                            3558.064453125,
+                            3491.730224609375,
+                            3481.1123046875,
+                            3463.43408203125,
+                            3463.362548828125,
+                            3443.5615234375,
+                            3437.056396484375,
+                            3435.427490234375,
+                            3433.8271484375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_all_match",
+                    0.0,
+                    null
+                ],
+                "quantiles": [
+                    3079.1384914767486,
+                    2999.4654161139497,
+                    2746.077117688713,
+                    2495.6023238281728,
+                    2388.2225333496035,
+                    2160.5589934082363,
+                    1899.0518597412508,
+                    1640.2438583984397,
+                    813.3058135986315,
+                    337.9683972167952,
+                    177.55756896972636,
+                    90.06698455810552,
+                    86.45144348144532,
+                    0.006639471394009888,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:21 2020",
+            "title": "Dump of results from sh_03/LImon.snw/snw_LImon_GISS-E2-1-H_historical_r1i1p1f1_gn_185001-190012..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Thu Dec 10 14:32:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Ofx",
+                                "sftof",
+                                "NCC",
+                                "NorESM2-LM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/0eef1f03-8c63-43f7-927c-718655eb247f",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    62.55988311767578,
+                    62.55988311767578
+                ],
+                "drs": [
+                    "Ofx",
+                    "sftof",
+                    "NCC",
+                    "NorESM2-LM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20191108"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            258,
+                            258,
+                            258,
+                            258,
+                            258,
+                            258,
+                            258,
+                            258,
+                            258,
+                            258
+                        ],
+                        [
+                            121,
+                            120,
+                            127,
+                            126,
+                            125,
+                            124,
+                            123,
+                            122,
+                            129,
+                            117
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            160,
+                            160,
+                            160,
+                            160,
+                            160,
+                            160,
+                            160,
+                            160,
+                            160,
+                            160
+                        ],
+                        [
+                            266,
+                            264,
+                            273,
+                            272,
+                            271,
+                            270,
+                            269,
+                            268,
+                            267,
+                            275
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:48:40 2020",
+            "title": "Dump of results from sh_03/Ofx.sftof/sftof_Ofx_NorESM2-LM_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:17:47 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "ec.cccma.info-info.ccmac.ec@canada.ca",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "sftlf",
+                                "CCCma",
+                                "CanESM5-CanOE",
+                                "CMIP",
+                                "historical",
+                                "r1i1p2f1",
+                                "gn",
+                                "v20190429"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/7fc5c7a2-2176-4905-ac31-1bc467d22f15",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    33.71266174316406,
+                    33.71266174316406
+                ],
+                "drs": [
+                    "fx",
+                    "sftlf",
+                    "CCCma",
+                    "CanESM5-CanOE",
+                    "CMIP",
+                    "historical",
+                    "r1i1p2f1",
+                    "gn",
+                    "v20190429"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0"
+                        ],
+                        [
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33
+                        ],
+                        [
+                            70,
+                            72,
+                            68,
+                            69,
+                            66,
+                            71,
+                            73,
+                            65,
+                            74,
+                            67
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0",
+                            "sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn.nc:0"
+                        ],
+                        [
+                            25,
+                            25,
+                            47,
+                            25,
+                            25,
+                            25,
+                            25,
+                            47,
+                            25,
+                            25
+                        ],
+                        [
+                            109,
+                            107,
+                            43,
+                            113,
+                            112,
+                            111,
+                            110,
+                            41,
+                            108,
+                            104
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:22 2020",
+            "title": "Dump of results from sh_03/fx.sftlf/sftlf_fx_CanESM5-CanOE_historical_r1i1p2f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

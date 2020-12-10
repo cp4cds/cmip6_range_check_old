@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:27:53 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "sithick",
+                                "CSIRO-ARCCSS",
+                                "ACCESS-CM2",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200817"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                300,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/538cc7d5-19b5-4a6c-bd72-821f1eebe980",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            300,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.14892512559890747,
+                    7.546220779418945,
+                    1.2900538561113206,
+                    2.2386165796169815
+                ],
+                "drs": [
+                    "SImon",
+                    "sithick",
+                    "CSIRO-ARCCSS",
+                    "ACCESS-CM2",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200817"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0927",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0010",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1307",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0130",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0454",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0238",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0009",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1390",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1791",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1101"
+                        ],
+                        [
+                            32,
+                            269,
+                            219,
+                            252,
+                            232,
+                            259,
+                            295,
+                            258,
+                            18,
+                            252
+                        ],
+                        [
+                            60,
+                            326,
+                            60,
+                            325,
+                            210,
+                            329,
+                            340,
+                            318,
+                            196,
+                            197
+                        ],
+                        [
+                            0.149739608168602,
+                            0.15287837386131287,
+                            0.14892512559890747,
+                            0.15096263587474823,
+                            0.15124723315238953,
+                            0.15142716467380524,
+                            0.15144245326519012,
+                            0.15365730226039886,
+                            0.15443605184555054,
+                            0.15656334161758423
+                        ]
+                    ],
+                    [
+                        [
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1611",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0927",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0496",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1610",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0902",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1611",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1610",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1251",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:0492",
+                            "sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412.nc:1601"
+                        ],
+                        [
+                            247,
+                            285,
+                            294,
+                            247,
+                            285,
+                            247,
+                            247,
+                            247,
+                            294,
+                            248
+                        ],
+                        [
+                            113,
+                            234,
+                            239,
+                            113,
+                            234,
+                            112,
+                            112,
+                            112,
+                            239,
+                            109
+                        ],
+                        [
+                            7.546220779418945,
+                            7.030445575714111,
+                            6.996819496154785,
+                            7.334815502166748,
+                            6.9785895347595215,
+                            7.132038593292236,
+                            6.931060791015625,
+                            6.8427934646606445,
+                            6.7429518699646,
+                            6.7367658615112305
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    5.633946054313174,
+                    5.582512780189605,
+                    5.468264494360884,
+                    5.341548606610305,
+                    5.241116599273694,
+                    5.0259131312370275,
+                    4.856952887058268,
+                    4.666758037567137,
+                    4.397103284597393,
+                    4.171361384391784,
+                    3.952450489997863,
+                    3.710120332241059,
+                    3.43572313785553,
+                    2.549268424510956,
+                    1.54179048538208,
+                    0.8188705146312714,
+                    0.46014378070831297,
+                    0.3237271711230278,
+                    0.22839286163449285,
+                    0.20456787467002868,
+                    0.20011878237128256,
+                    0.20000093305110933,
+                    0.1999615979641676,
+                    0.19740910822153093,
+                    0.19466113937497137,
+                    0.19269962519854306,
+                    0.1909692214041948,
+                    0.18981398691624402,
+                    0.18966497758746148
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:47 2020",
+            "title": "Dump of results from sh_03/SImon.sithick/sithick_SImon_ACCESS-CM2_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

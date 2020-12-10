@@ -1,0 +1,992 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_185001-186912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:08 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/bc8c6d40-17ce-4e6f-a1b6-282810db56b7",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_187001-188912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:15 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/717f7a52-7994-489d-90b7-0fb66fda6c57",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:22 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/b7b4ec6f-5841-4aab-b397-c24ea2c8e94b",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_191001-192912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:29 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/459da737-c83f-47d3-b560-2a0b10e1df2f",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_193001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:36 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/96ce1832-8469-499d-8756-cbf3b40afb9d",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_195001-196912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:43 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/c97d54b5-42e3-4a1f-8f55-e00855b9c543",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_197001-198912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:49 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/c9bfb3ef-4621-4ce3-a52c-a3d6d26aa35d",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_199001-200912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:56 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/c2cd5f93-9125-413f-afca-c7942879e77b",
+                            "time_intervals": [
+                                30.414225941422593,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_201001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:55:02 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Kenneth Lo (cdkkl@giss.nasa.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NASA-GISS",
+                                "GISS-E2-1-H",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190403"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                60,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/3993f616-1ed4-4c09-a0f1-e2af06ba58df",
+                            "time_intervals": [
+                                30.406779661016948,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            64800,
+                            64800,
+                            64800,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_GISS-E2-1-H_piControl_r1i1p3f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            60,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.8003262281417847,
+                    2.3872244358062744,
+                    0.5833126306533813,
+                    0.6236904859542847
+                ],
+                "drs": [
+                    "Omon",
+                    "zos",
+                    "NASA-GISS",
+                    "GISS-E2-1-H",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20190403"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:173",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:173",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:173",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:087"
+                        ],
+                        [
+                            20,
+                            20,
+                            19,
+                            19,
+                            20,
+                            20,
+                            20,
+                            19,
+                            20,
+                            20
+                        ],
+                        [
+                            193,
+                            194,
+                            194,
+                            193,
+                            194,
+                            193,
+                            192,
+                            192,
+                            195,
+                            195
+                        ],
+                        [
+                            -1.8003262281417847,
+                            -1.7996500730514526,
+                            -1.798309326171875,
+                            -1.7989031076431274,
+                            -1.7982064485549927,
+                            -1.7972074747085571,
+                            -1.797732949256897,
+                            -1.7966349124908447,
+                            -1.7962572574615479,
+                            -1.7956730127334595
+                        ]
+                    ],
+                    [
+                        [
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_201001-201412.nc:53",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_193001-194912.nc:115",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_201001-201412.nc:53",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_193001-194912.nc:115",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_193001-194912.nc:067",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:211",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_201001-201412.nc:32",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_189001-190912.nc:211",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_201001-201412.nc:53",
+                            "zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_193001-194912.nc:067"
+                        ],
+                        [
+                            118,
+                            120,
+                            118,
+                            120,
+                            120,
+                            120,
+                            120,
+                            120,
+                            119,
+                            120
+                        ],
+                        [
+                            133,
+                            135,
+                            132,
+                            136,
+                            136,
+                            136,
+                            136,
+                            135,
+                            134,
+                            137
+                        ],
+                        [
+                            2.38519024848938,
+                            2.3872244358062744,
+                            2.373948097229004,
+                            2.386523723602295,
+                            2.3702352046966553,
+                            2.3571934700012207,
+                            2.3492422103881836,
+                            2.354621171951294,
+                            2.3533923625946045,
+                            2.3484013080596924
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_all_match",
+                    0.0,
+                    null
+                ],
+                "quantiles": [
+                    2.1342463967239533,
+                    2.127196361229493,
+                    2.098050489503179,
+                    2.0691016303539325,
+                    2.02628388793471,
+                    1.933139612346891,
+                    1.8739780350923663,
+                    1.8124776515960699,
+                    1.705740303397178,
+                    1.6194445145130163,
+                    1.5462240374088283,
+                    1.4558628797531128,
+                    1.3442502975463868,
+                    0.9481711387634277,
+                    0.0,
+                    0.0,
+                    -0.5574990153312682,
+                    -1.3663504332304002,
+                    -1.504885470867157,
+                    -1.5584864336252213,
+                    -1.588779911696911,
+                    -1.61640522480011,
+                    -1.6295207808613776,
+                    -1.6413574079275133,
+                    -1.6543530988931656,
+                    -1.658226873600483,
+                    -1.6605293163448573,
+                    -1.6633324842250348,
+                    -1.6637146261394025
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:53:11 2020",
+            "title": "Dump of results from sh_03/Omon.zos/zos_Omon_GISS-E2-1-H_historical_r1i1p1f1_gr_185001-186912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

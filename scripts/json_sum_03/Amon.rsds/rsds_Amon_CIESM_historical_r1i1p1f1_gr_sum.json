@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:37:04 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "yanluan@tsinghua.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsds",
+                                "THU",
+                                "CIESM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20200417"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/b990920f-9e93-47b4-811e-5eab4227b970",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -2.183282635853847e-18,
+                    478.4772033691406,
+                    143.0990753173828,
+                    192.19659423828125
+                ],
+                "drs": [
+                    "Amon",
+                    "rsds",
+                    "THU",
+                    "CIESM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20200417"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1525",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1765",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0001",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1813",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0637",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1501",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1141",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1321",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0997",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0745"
+                        ],
+                        [
+                            183,
+                            183,
+                            183,
+                            183,
+                            183,
+                            183,
+                            183,
+                            183,
+                            183,
+                            183
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            -1.9856015654998525e-18,
+                            -2.1820507571266024e-18,
+                            -2.051293147821517e-18,
+                            -2.14422626925639e-18,
+                            -2.129065496194365e-18,
+                            -2.068492921093485e-18,
+                            -2.005836264439278e-18,
+                            -2.183282635853847e-18,
+                            -1.9839308674576485e-18,
+                            -1.9034501229641486e-18
+                        ]
+                    ],
+                    [
+                        [
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095",
+                            "rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0095"
+                        ],
+                        [
+                            6,
+                            6,
+                            6,
+                            6,
+                            6,
+                            6,
+                            6,
+                            6,
+                            6,
+                            6
+                        ],
+                        [
+                            54,
+                            59,
+                            56,
+                            58,
+                            53,
+                            57,
+                            65,
+                            64,
+                            55,
+                            63
+                        ],
+                        [
+                            478.4772033691406,
+                            478.2547302246094,
+                            478.384521484375,
+                            478.2967529296875,
+                            478.3868103027344,
+                            478.34002685546875,
+                            478.3209228515625,
+                            478.2851257324219,
+                            478.4302673339844,
+                            478.2490234375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    361.1581057754314,
+                    358.96598020478694,
+                    357.418148502362,
+                    353.477185279848,
+                    350.37901513671864,
+                    341.704387245179,
+                    334.3333801269561,
+                    327.9850117492679,
+                    319.5430477142335,
+                    310.6538734436036,
+                    298.0565658569336,
+                    279.1171569824219,
+                    266.08036041259766,
+                    240.9269962310791,
+                    187.58785247802734,
+                    66.66145420074463,
+                    8.101855754852295,
+                    0.0012063550384482369,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:15:22 2020",
+            "title": "Dump of results from sh_03/Amon.rsds/rsds_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

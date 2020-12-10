@@ -1,0 +1,992 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_185001-186912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:41:19 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/c2d97a43-ca05-444d-8176-5ba0f80c7179",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_187001-188912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:41:59 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/08c6bae9-b409-4cf3-9ba2-db8f5bba2d2c",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_189001-190912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:42:38 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/ecfe07a1-63e9-4b19-a73d-b62dd77c8cc3",
+                            "time_intervals": [
+                                30.430962343096233,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_191001-192912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:43:20 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/a73a601f-a0fc-4b5c-944d-9266f419348a",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_193001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:44:04 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/6194c016-5e32-48c9-a604-2e487dc404a2",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:44:47 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/ded9aaca-10e0-4360-a89f-718e1d86138e",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_197001-198912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:45:32 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/d31c725b-ec8d-4d9f-ac8b-5ae8de896c68",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_199001-200912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:46:19 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                240,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/562b2314-d235-49dd-a664-c6b83d978ea2",
+                            "time_intervals": [
+                                30.435146443514643,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            240,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_201001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:46:57 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "david.neubauer@env.ethz.ch",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "HAMMOZ-Consortium",
+                                "MPI-ESM-1-2-HAM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190627"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                60,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/bf49a842-4ab2-4fd6-b108-29ac3a36eab1",
+                            "time_intervals": [
+                                30.423728813559322,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            18432,
+                            6222,
+                            6222,
+                            12210,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MPI-ESM-1-2-HAM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            60,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    0.0004950555739924312,
+                    2.675201493572553e-06,
+                    9.8112986157539e-06
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrro",
+                    "HAMMOZ-Consortium",
+                    "MPI-ESM-1-2-HAM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190627"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:119",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:119",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:120",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_195001-196912.nc:119"
+                        ],
+                        [
+                            7,
+                            7,
+                            91,
+                            91,
+                            91,
+                            91,
+                            7,
+                            7,
+                            91,
+                            7
+                        ],
+                        [
+                            158,
+                            146,
+                            151,
+                            150,
+                            149,
+                            148,
+                            119,
+                            118,
+                            146,
+                            157
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_187001-188912.nc:077",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_193001-194912.nc:101",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_197001-198912.nc:185",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_189001-190912.nc:234",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_189001-190912.nc:087",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_193001-194912.nc:040",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_193001-194912.nc:005",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_193001-194912.nc:041",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_197001-198912.nc:185",
+                            "mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_197001-198912.nc:053"
+                        ],
+                        [
+                            65,
+                            65,
+                            66,
+                            62,
+                            66,
+                            66,
+                            66,
+                            66,
+                            65,
+                            66
+                        ],
+                        [
+                            42,
+                            42,
+                            41,
+                            48,
+                            40,
+                            40,
+                            41,
+                            41,
+                            42,
+                            41
+                        ],
+                        [
+                            0.0004266194300726056,
+                            0.00042333302553743124,
+                            0.0004224181466270238,
+                            0.0004432960704434663,
+                            0.0004206822195556015,
+                            0.0004950555739924312,
+                            0.00041650646016933024,
+                            0.0004037433536723256,
+                            0.00041262456215918064,
+                            0.000400946824811399
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    100.0,
+                    0.0
+                ],
+                "quantiles": [
+                    0.00018970028515228314,
+                    0.00018830234254830114,
+                    0.00018450265533538434,
+                    0.00017772008467946133,
+                    0.00016675461116683353,
+                    0.0001467675356470894,
+                    0.00012618530627514832,
+                    0.00010548093174293171,
+                    7.83885556302265e-05,
+                    5.769706142018548e-05,
+                    3.952816725359298e-05,
+                    2.100958081427964e-05,
+                    1.0540096991462636e-05,
+                    3.2117350201588124e-06,
+                    2.703236532397568e-07,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:36:31 2020",
+            "title": "Dump of results from sh_03/Lmon.mrro/mrro_Lmon_MPI-ESM-1-2-HAM_historical_r1i1p1f1_gn_185001-186912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,1720 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_185001-185912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:25 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/723d7c87-9d3f-4283-a5ef-f389f4dd7e30",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_186001-186912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:30 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/caba5df6-c69d-48fd-beef-401ee67b2894",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_187001-187912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/f49a54a7-6ec5-4b1b-bb04-a108b6670176",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_188001-188912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:43 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/b80cbbdb-4eaa-4aee-89bf-4c6634eff649",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_189001-189912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:49 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/b3f41a93-504f-4691-b959-01816891918d",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:55 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/71515214-4c04-4ff8-8d07-9f56983e40d6",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_191001-191912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:01 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/7e5c1f42-9c37-4951-a1fd-4e3f960393a9",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_192001-192912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:07 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/8244c588-39e0-4a50-9f18-b7a4b34f71d4",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_193001-193912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:12 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/6d242ed7-9be7-47e8-b26b-ad423a84f42a",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_194001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:18 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/fe618fcf-b4e6-4bee-b31a-15a700939604",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_195001-195912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:24 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/a695772d-9243-4e9f-8057-c1ebb4781dfa",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_196001-196912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:30 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/b0f4b025-c8db-45db-87a4-5160e4d62f97",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_197001-197912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/9c4156b5-028f-4c3f-a152-2f5bdb7aa554",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_198001-198912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:45 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/3f0d9957-a1a9-4fcc-a75e-f5d9b0268c20",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_199001-199912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:51 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/6bde9d13-0bc8-49a0-93b8-60b55f1cf832",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:14:57 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                120,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/39e1c327-4908-4145-843a-a28e7c697305",
+                            "time_intervals": [
+                                30.41176470588235,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            120,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_201001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:15:03 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                60,
+                                385,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/c7506323-bb50-4066-8dbc-5ef00e13eee9",
+                            "time_intervals": [
+                                30.406779661016948,
+                                31.0
+                            ],
+                            "time_units": "days since 1800-01-01 00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            138600,
+                            86708,
+                            86708,
+                            51892,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_NorESM2-MM_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            60,
+                            385,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -2.082413673400879,
+                    1.4259579181671143,
+                    0.6975728252439222,
+                    0.7367667829813858
+                ],
+                "drs": [
+                    "Omon",
+                    "zos",
+                    "NCC",
+                    "NorESM2-MM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20191108"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_195001-195912.nc:115",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_196001-196912.nc:17",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_190001-190912.nc:045"
+                        ],
+                        [
+                            63,
+                            63,
+                            62,
+                            62,
+                            63,
+                            63,
+                            63,
+                            62,
+                            63,
+                            62
+                        ],
+                        [
+                            111,
+                            110,
+                            110,
+                            111,
+                            110,
+                            110,
+                            109,
+                            112,
+                            112,
+                            109
+                        ],
+                        [
+                            -2.079442024230957,
+                            -2.082413673400879,
+                            -2.0802297592163086,
+                            -2.0787672996520996,
+                            -2.0767109394073486,
+                            -2.074557304382324,
+                            -2.075338363647461,
+                            -2.0742034912109375,
+                            -2.074151039123535,
+                            -2.07372784614563
+                        ]
+                    ],
+                    [
+                        [
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80",
+                            "zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_200001-200912.nc:80"
+                        ],
+                        [
+                            262,
+                            264,
+                            263,
+                            264,
+                            263,
+                            263,
+                            262,
+                            265,
+                            264,
+                            265
+                        ],
+                        [
+                            242,
+                            243,
+                            243,
+                            244,
+                            242,
+                            244,
+                            243,
+                            245,
+                            245,
+                            244
+                        ],
+                        [
+                            1.4025601148605347,
+                            1.4169731140136719,
+                            1.4259579181671143,
+                            1.416291356086731,
+                            1.41453218460083,
+                            1.398223638534546,
+                            1.3918439149856567,
+                            1.39261794090271,
+                            1.3934155702590942,
+                            1.3876664638519287
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    100.0,
+                    0.0
+                ],
+                "quantiles": [
+                    1.2119602954208728,
+                    1.209570347323433,
+                    1.1969014489323144,
+                    1.1894157170295687,
+                    1.1774198132276488,
+                    1.1525422429144396,
+                    1.1282007719278386,
+                    1.0942354670762993,
+                    1.0459693479537961,
+                    0.9936209499835965,
+                    0.9285114854574203,
+                    0.8516516074538232,
+                    0.7785636484622958,
+                    0.5384568646550179,
+                    0.0292975720949471,
+                    -0.8245608881115913,
+                    -1.702391105890274,
+                    -1.7997636467218399,
+                    -1.87832909822464,
+                    -1.915690882205963,
+                    -1.9343929687142374,
+                    -1.9465667655467986,
+                    -1.9551899683475493,
+                    -1.9676877812743188,
+                    -1.978112682211399,
+                    -1.9843798292696477,
+                    -1.9880535501718521,
+                    -1.9897791012823582,
+                    -1.990090257425308
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:53:34 2020",
+            "title": "Dump of results from sh_03/Omon.zos/zos_Omon_NorESM2-MM_historical_r1i1p1f1_gn_185001-185912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:25:26 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "uas",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/7a069b1a-a323-44c1-b2b7-2f3ebe3603de",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:25:42 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "uas",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/165c8b93-b2cf-45e1-bcce-e67244c2c9ed",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -13.522284507751465,
+                    14.148551940917969,
+                    2.2988264560699463,
+                    2.940946102142334
+                ],
+                "drs": [
+                    "Amon",
+                    "uas",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181212"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:497",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:497",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0728",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0728",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0649",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:497",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:497",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:497",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0221",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:497"
+                        ],
+                        [
+                            15,
+                            15,
+                            15,
+                            15,
+                            74,
+                            15,
+                            15,
+                            15,
+                            74,
+                            15
+                        ],
+                        [
+                            10,
+                            8,
+                            8,
+                            9,
+                            205,
+                            12,
+                            11,
+                            9,
+                            205,
+                            7
+                        ],
+                        [
+                            -13.497770309448242,
+                            -13.369510650634766,
+                            -13.083906173706055,
+                            -13.072948455810547,
+                            -13.228404998779297,
+                            -13.074265480041504,
+                            -13.320481300354004,
+                            -13.522284507751465,
+                            -13.044590950012207,
+                            -13.02452564239502
+                        ]
+                    ],
+                    [
+                        [
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:637",
+                            "uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0480"
+                        ],
+                        [
+                            87,
+                            87,
+                            87,
+                            87,
+                            88,
+                            87,
+                            88,
+                            88,
+                            88,
+                            105
+                        ],
+                        [
+                            139,
+                            141,
+                            140,
+                            142,
+                            131,
+                            138,
+                            132,
+                            139,
+                            140,
+                            230
+                        ],
+                        [
+                            14.042399406433105,
+                            14.148551940917969,
+                            14.141965866088867,
+                            14.019928932189941,
+                            13.841328620910645,
+                            13.883944511413574,
+                            13.777791976928711,
+                            13.790964126586914,
+                            13.77120590209961,
+                            13.753482818603516
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    10.890645355520183,
+                    10.881705940837929,
+                    10.818386724639112,
+                    10.733829535246011,
+                    10.629585959339124,
+                    10.459927156448366,
+                    10.239889503955883,
+                    9.876192752838138,
+                    9.243985850811015,
+                    8.632671260833735,
+                    7.864391198158264,
+                    6.413978695869449,
+                    4.766265916824341,
+                    1.7218979597091675,
+                    -0.010983200743794441,
+                    -1.9157295674085617,
+                    -5.021991109848022,
+                    -6.509714019298553,
+                    -7.583578100204467,
+                    -8.09398000240326,
+                    -8.534722895622252,
+                    -8.998584314346314,
+                    -9.373223103046417,
+                    -9.779587952375412,
+                    -10.303094750595092,
+                    -10.57339149799347,
+                    -10.728072268557549,
+                    -10.864779456691743,
+                    -10.944080854578019
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:48:26 2020",
+            "title": "Dump of results from sh_03/Amon.uas/uas_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

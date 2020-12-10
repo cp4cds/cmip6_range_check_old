@@ -1,0 +1,256 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:14:10 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "mrsofc",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/de18a55f-501b-415f-93f1-0cee230a1c83",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            51840,
+                            22514,
+                            22514,
+                            29326,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_GFDL-CM4_piControl_r1i1p1f1_gr1.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    4760.0,
+                    3058.6092209291996,
+                    3058.6092209291996
+                ],
+                "drs": [
+                    "fx",
+                    "mrsofc",
+                    "NOAA-GFDL",
+                    "GFDL-CM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20180701"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0"
+                        ],
+                        [
+                            14,
+                            14,
+                            14,
+                            14,
+                            14,
+                            14,
+                            14,
+                            14,
+                            14,
+                            14
+                        ],
+                        [
+                            61,
+                            63,
+                            59,
+                            60,
+                            57,
+                            62,
+                            64,
+                            55,
+                            65,
+                            58
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0"
+                        ],
+                        [
+                            160,
+                            160,
+                            160,
+                            160,
+                            165,
+                            160,
+                            165,
+                            165,
+                            165,
+                            165
+                        ],
+                        [
+                            201,
+                            199,
+                            203,
+                            202,
+                            70,
+                            200,
+                            72,
+                            69,
+                            73,
+                            71
+                        ],
+                        [
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0,
+                            4760.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    1.0289178931088827e-07,
+                    0.0
+                ],
+                "quantiles": [
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4760.0,
+                    4680.0,
+                    4590.390087890625,
+                    4390.0,
+                    4268.089599609375,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:04 2020",
+            "title": "Dump of results from sh_03/fx.mrsofc/mrsofc_fx_GFDL-CM4_historical_r1i1p1f1_gr1..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

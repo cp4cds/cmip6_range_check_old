@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:03:01 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "vas",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                145,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/97154e96-4554-422a-b586-f4136634cbfa",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            145,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:03:16 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "vas",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                145,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/4e4a14f7-4498-4965-92b5-04a3bed6ef07",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            145,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -14.7802734375,
+                    15.2041015625,
+                    1.588510513305664,
+                    2.1930227279663086
+                ],
+                "drs": [
+                    "Amon",
+                    "vas",
+                    "MOHC",
+                    "HadGEM3-GC31-LL",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f3",
+                    "gn",
+                    "v20190624"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0266",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:071",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0266",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:071",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:182",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0266",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:071",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0097",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:612",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0745"
+                        ],
+                        [
+                            128,
+                            128,
+                            127,
+                            127,
+                            128,
+                            127,
+                            127,
+                            120,
+                            122,
+                            127
+                        ],
+                        [
+                            181,
+                            181,
+                            181,
+                            180,
+                            181,
+                            180,
+                            181,
+                            170,
+                            171,
+                            181
+                        ],
+                        [
+                            -13.7890625,
+                            -14.564453125,
+                            -13.8720703125,
+                            -13.7177734375,
+                            -14.7802734375,
+                            -13.912109375,
+                            -13.490234375,
+                            -13.4599609375,
+                            -13.197265625,
+                            -13.0751953125
+                        ]
+                    ],
+                    [
+                        [
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0077",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0001",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0001",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0077",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0001",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:723",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0077",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0001",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0016",
+                            "vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1085"
+                        ],
+                        [
+                            12,
+                            122,
+                            121,
+                            12,
+                            123,
+                            15,
+                            12,
+                            122,
+                            17,
+                            12
+                        ],
+                        [
+                            33,
+                            1,
+                            1,
+                            32,
+                            1,
+                            92,
+                            31,
+                            0,
+                            76,
+                            31
+                        ],
+                        [
+                            14.134765625,
+                            15.2041015625,
+                            14.7041015625,
+                            14.228515625,
+                            14.0849609375,
+                            15.162109375,
+                            14.0419921875,
+                            13.9580078125,
+                            13.9501953125,
+                            13.9306640625
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    11.309584355468267,
+                    11.198207343750255,
+                    11.01276342773486,
+                    10.842007324219257,
+                    10.423240039062396,
+                    9.900454345703126,
+                    9.276548828125094,
+                    8.627830078125001,
+                    7.790791015625004,
+                    7.023867187500002,
+                    6.102695312500003,
+                    4.648510742187504,
+                    3.362402343750002,
+                    1.35888671875,
+                    0.0,
+                    -1.26171875,
+                    -2.73779296875,
+                    -3.8618408203125,
+                    -5.318466796875,
+                    -6.228076171875,
+                    -6.93965576171875,
+                    -7.732007812500001,
+                    -8.18251318359375,
+                    -8.593197021484375,
+                    -9.0817,
+                    -9.3937697265625,
+                    -9.615770166015626,
+                    -9.74850287109375,
+                    -9.88629248046875
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:57:52 2020",
+            "title": "Dump of results from sh_03/Amon.vas/vas_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

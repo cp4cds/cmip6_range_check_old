@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:16:26 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsus",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/3c014ca3-843d-4062-b241-bd78dd947fee",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:16:40 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsus",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/63c993c6-ba44-4ed1-8846-2615551070ed",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    352.7225646972656,
+                    18.02003288269043,
+                    44.33821105957031
+                ],
+                "drs": [
+                    "Amon",
+                    "rsus",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190311"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:106",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:106",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:105",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:105",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:105",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:106",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:105",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:106",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:106",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:105"
+                        ],
+                        [
+                            121,
+                            121,
+                            126,
+                            126,
+                            126,
+                            121,
+                            126,
+                            121,
+                            121,
+                            126
+                        ],
+                        [
+                            50,
+                            58,
+                            175,
+                            164,
+                            163,
+                            51,
+                            170,
+                            54,
+                            56,
+                            171
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107",
+                            "rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0107"
+                        ],
+                        [
+                            4,
+                            5,
+                            4,
+                            5,
+                            5,
+                            7,
+                            5,
+                            4,
+                            7,
+                            5
+                        ],
+                        [
+                            38,
+                            36,
+                            37,
+                            37,
+                            39,
+                            46,
+                            35,
+                            39,
+                            43,
+                            38
+                        ],
+                        [
+                            352.49114990234375,
+                            352.6849060058594,
+                            352.7225646972656,
+                            352.5126647949219,
+                            352.4158020019531,
+                            352.2758483886719,
+                            352.3350524902344,
+                            352.3511962890625,
+                            352.2758483886719,
+                            352.26507568359375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    266.6124123867779,
+                    266.2969093762282,
+                    263.78047844315233,
+                    261.39072460022123,
+                    257.684882217407,
+                    251.5927876968384,
+                    243.7313273315454,
+                    231.16966172790552,
+                    193.74474925994875,
+                    186.42928810119628,
+                    181.19943237304688,
+                    173.28620491027834,
+                    109.85914573669432,
+                    23.336375951766968,
+                    11.213065147399902,
+                    7.997783184051514,
+                    0.38328339308500403,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:22:55 2020",
+            "title": "Dump of results from sh_03/Amon.rsus/rsus_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Thu Dec 10 14:32:47 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to norcpm@uib.no",
+                            "dimensions": [
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Ofx",
+                                "sftof",
+                                "NCC",
+                                "NorCPM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200724"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                384,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/38336181-7a81-4500-acf1-1a6e5cc88e78",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            384,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    70.17496490478516,
+                    70.17496490478516
+                ],
+                "drs": [
+                    "Ofx",
+                    "sftof",
+                    "NCC",
+                    "NorCPM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200724"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            235,
+                            235,
+                            235,
+                            235,
+                            235,
+                            235,
+                            235,
+                            235,
+                            235,
+                            235
+                        ],
+                        [
+                            72,
+                            71,
+                            103,
+                            102,
+                            75,
+                            74,
+                            105,
+                            67,
+                            69,
+                            123
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0",
+                            "sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            181,
+                            181,
+                            345,
+                            345,
+                            345,
+                            345,
+                            345,
+                            181,
+                            181,
+                            345
+                        ],
+                        [
+                            281,
+                            279,
+                            175,
+                            176,
+                            177,
+                            178,
+                            179,
+                            283,
+                            282,
+                            173
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:48:39 2020",
+            "title": "Dump of results from sh_03/Ofx.sftof/sftof_Ofx_NorCPM1_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

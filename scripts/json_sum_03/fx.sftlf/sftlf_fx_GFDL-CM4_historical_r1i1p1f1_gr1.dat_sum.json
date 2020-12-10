@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:13:06 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "sftlf",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/833ff446-73b3-472f-b3dd-433d2a6d290f",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    34.3468132019043,
+                    34.3468132019043
+                ],
+                "drs": [
+                    "fx",
+                    "sftlf",
+                    "NOAA-GFDL",
+                    "GFDL-CM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20180701"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0"
+                        ],
+                        [
+                            92,
+                            92,
+                            92,
+                            92,
+                            92,
+                            92,
+                            92,
+                            92,
+                            92,
+                            92
+                        ],
+                        [
+                            253,
+                            255,
+                            223,
+                            249,
+                            250,
+                            251,
+                            252,
+                            221,
+                            254,
+                            258
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0"
+                        ],
+                        [
+                            80,
+                            80,
+                            80,
+                            80,
+                            80,
+                            80,
+                            80,
+                            80,
+                            80,
+                            80
+                        ],
+                        [
+                            25,
+                            26,
+                            22,
+                            23,
+                            24,
+                            20,
+                            29,
+                            28,
+                            18,
+                            27
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    99.9999771118164,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:24 2020",
+            "title": "Dump of results from sh_03/fx.sftlf/sftlf_fx_GFDL-CM4_historical_r1i1p1f1_gr1..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

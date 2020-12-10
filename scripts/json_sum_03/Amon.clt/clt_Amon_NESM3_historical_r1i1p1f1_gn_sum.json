@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:13:04 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "esmc@nuist.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "clt",
+                                "NUIST",
+                                "NESM3",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190705"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/1067abbb-25c5-4c43-8391-0360168a30b1",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    63.86030578613281,
+                    69.18280792236328
+                ],
+                "drs": [
+                    "Amon",
+                    "clt",
+                    "NUIST",
+                    "NESM3",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190705"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0774",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0774",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0774",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0774",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0774",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0774",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764"
+                        ],
+                        [
+                            62,
+                            65,
+                            63,
+                            63,
+                            62,
+                            63,
+                            65,
+                            63,
+                            67,
+                            61
+                        ],
+                        [
+                            9,
+                            24,
+                            11,
+                            10,
+                            10,
+                            14,
+                            23,
+                            14,
+                            34,
+                            11
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1351",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0869",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0879",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0879",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0879",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0879",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0879",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1351",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0903",
+                            "clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1418"
+                        ],
+                        [
+                            6,
+                            4,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            6,
+                            0,
+                            4
+                        ],
+                        [
+                            51,
+                            45,
+                            49,
+                            47,
+                            46,
+                            48,
+                            51,
+                            50,
+                            61,
+                            37
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    99.99346621356963,
+                    99.98963347778324,
+                    99.98004152679445,
+                    99.94461992454532,
+                    99.87880440673828,
+                    99.64840728950506,
+                    99.33895314407357,
+                    98.91534313201902,
+                    98.14959646224976,
+                    97.35537281036376,
+                    96.38919204711915,
+                    94.5441354751587,
+                    92.17449302673342,
+                    85.59204292297363,
+                    71.69894409179688,
+                    50.963634967803955,
+                    32.27709941864014,
+                    23.046976041793826,
+                    14.288545999526978,
+                    9.667835822105408,
+                    6.3539604520797734,
+                    3.4952958664894114,
+                    2.2303467108011246,
+                    1.3355708827972412,
+                    0.7481179799377919,
+                    0.5473613233864307,
+                    0.37837196177504956,
+                    0.23101072350695728,
+                    0.16078817719941957
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:34:33 2020",
+            "title": "Dump of results from sh_03/Amon.clt/clt_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

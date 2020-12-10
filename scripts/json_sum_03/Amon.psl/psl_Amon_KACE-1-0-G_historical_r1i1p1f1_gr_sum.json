@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:45:58 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Yoon-Jin Lim (yoonjin.lim@korea.kr)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "psl",
+                                "NIMS-KMA",
+                                "KACE-1-0-G",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190910"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/81222d1e-bfb9-43d1-9bfc-9e47deec5455",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    96733.0625,
+                    105186.5625,
+                    100839.8671875,
+                    101362.203125
+                ],
+                "drs": [
+                    "Amon",
+                    "psl",
+                    "NIMS-KMA",
+                    "KACE-1-0-G",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20190910"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1593"
+                        ],
+                        [
+                            13,
+                            12,
+                            12,
+                            12,
+                            13,
+                            13,
+                            12,
+                            13,
+                            13,
+                            12
+                        ],
+                        [
+                            112,
+                            111,
+                            110,
+                            109,
+                            111,
+                            113,
+                            112,
+                            110,
+                            114,
+                            108
+                        ],
+                        [
+                            96737.25,
+                            96735.125,
+                            96733.0625,
+                            96738.3125,
+                            96737.25,
+                            96741.5,
+                            96750.0625,
+                            96746.375,
+                            96750.5,
+                            96753.9375
+                        ]
+                    ],
+                    [
+                        [
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961",
+                            "psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0961"
+                        ],
+                        [
+                            136,
+                            136,
+                            136,
+                            136,
+                            136,
+                            136,
+                            136,
+                            136,
+                            137,
+                            137
+                        ],
+                        [
+                            88,
+                            85,
+                            83,
+                            86,
+                            87,
+                            84,
+                            89,
+                            90,
+                            86,
+                            87
+                        ],
+                        [
+                            105183.375,
+                            105183.0625,
+                            105166.75,
+                            105186.375,
+                            105186.5625,
+                            105176.5,
+                            105177.1875,
+                            105167.625,
+                            105160.375,
+                            105159.375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    103158.938605,
+                    103157.97096,
+                    103150.94490000006,
+                    103139.18199375001,
+                    103130.35481250001,
+                    103101.12504687501,
+                    103048.698625,
+                    102976.56293749998,
+                    102866.30906249999,
+                    102744.85125,
+                    102610.48000000001,
+                    102367.73749999999,
+                    102134.165625,
+                    101745.3125,
+                    101212.140625,
+                    100568.1015625,
+                    99389.959375,
+                    98898.7625,
+                    98527.42624999999,
+                    98348.40406249999,
+                    98190.17046875,
+                    98043.0494375,
+                    97982.771625,
+                    97928.213171875,
+                    97908.5147,
+                    97898.83449375001,
+                    97888.946684375,
+                    97886.324260625,
+                    97885.25882125
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:05:15 2020",
+            "title": "Dump of results from sh_03/Amon.psl/psl_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

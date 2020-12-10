@@ -1,0 +1,264 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:22:27 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "ipsl-cmip6@listes.ipsl.fr",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snd",
+                                "IPSL",
+                                "IPSL-CM6A-LR",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20180803"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                143,
+                                144
+                            ],
+                            "tid": "hdl:21.14100/0869bc8a-ef0c-4274-b868-d04bfd827baa",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            20592,
+                            3213,
+                            3213,
+                            17379,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_IPSL-CM6A-LR_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            143,
+                            144
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    9.681309700012207,
+                    0.41538671381252257,
+                    1.337364375871112
+                ],
+                "drs": [
+                    "LImon",
+                    "snd",
+                    "IPSL",
+                    "IPSL-CM6A-LR",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20180803"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1272",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1272",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1272",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1277"
+                        ],
+                        [
+                            125,
+                            105,
+                            101,
+                            106,
+                            105,
+                            105,
+                            102,
+                            105,
+                            121,
+                            109
+                        ],
+                        [
+                            55,
+                            35,
+                            8,
+                            143,
+                            43,
+                            47,
+                            0,
+                            32,
+                            6,
+                            113
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1036",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0299",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1190",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0959",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0755",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0850",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0994",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0071",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:0759",
+                            "snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412.nc:1188"
+                        ],
+                        [
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119
+                        ],
+                        [
+                            88,
+                            88,
+                            88,
+                            88,
+                            88,
+                            88,
+                            88,
+                            88,
+                            88,
+                            88
+                        ],
+                        [
+                            9.120399475097656,
+                            8.721726417541504,
+                            9.382340431213379,
+                            9.286955833435059,
+                            8.711090087890625,
+                            8.923066139221191,
+                            9.681309700012207,
+                            9.3727445602417,
+                            8.862738609313965,
+                            8.702589988708496
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.0021398067474365234,
+                    100.0
+                ],
+                "quantiles": [
+                    7.655766986241296,
+                    7.646157977285414,
+                    7.602846584129452,
+                    7.559424756479281,
+                    7.382438529157591,
+                    6.982448551416423,
+                    6.641555037021672,
+                    6.358687374114991,
+                    5.923264220952984,
+                    5.641974027156833,
+                    5.370804815292358,
+                    4.942780911922456,
+                    1.1140249907970436,
+                    0.37388813495635986,
+                    0.10196974501013756,
+                    0.007170213270001113,
+                    8.11841684480897e-05,
+                    2.0843566730377475e-07,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:33:26 2020",
+            "title": "Dump of results from sh_03/LImon.sndxx/snd_LImon_IPSL-CM6A-LR_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

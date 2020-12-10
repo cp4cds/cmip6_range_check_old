@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:48:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsds",
+                                "MRI",
+                                "MRI-ESM2-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190222"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/70be58bc-20ec-46f7-85ec-fc800874280d",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    478.03411865234375,
+                    149.7955780029297,
+                    195.32888793945312
+                ],
+                "drs": [
+                    "Amon",
+                    "rsds",
+                    "MRI",
+                    "MRI-ESM2-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190222"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1341",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1341",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1341",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1308"
+                        ],
+                        [
+                            149,
+                            158,
+                            149,
+                            149,
+                            149,
+                            149,
+                            149,
+                            158,
+                            158,
+                            149
+                        ],
+                        [
+                            100,
+                            44,
+                            105,
+                            106,
+                            107,
+                            108,
+                            103,
+                            41,
+                            39,
+                            102
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299",
+                            "rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0299"
+                        ],
+                        [
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7
+                        ],
+                        [
+                            64,
+                            67,
+                            66,
+                            65,
+                            63,
+                            62,
+                            68,
+                            61,
+                            60,
+                            69
+                        ],
+                        [
+                            478.02398681640625,
+                            477.92181396484375,
+                            477.9764404296875,
+                            478.03411865234375,
+                            477.8877868652344,
+                            477.83544921875,
+                            477.77728271484375,
+                            477.6785888671875,
+                            477.5782165527344,
+                            477.5586242675781
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    383.20538716566733,
+                    382.1970253842194,
+                    380.33474551697,
+                    378.60183237152273,
+                    375.55834329528875,
+                    367.38429210662935,
+                    361.0150202789325,
+                    348.1737041931147,
+                    336.75464721679685,
+                    329.36610443115234,
+                    320.7973635864257,
+                    305.0752723693848,
+                    283.52157440185545,
+                    247.79652976989746,
+                    196.72528076171875,
+                    73.98637104034424,
+                    0.7410635232926077,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:17:09 2020",
+            "title": "Dump of results from sh_03/Amon.rsds/rsds_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

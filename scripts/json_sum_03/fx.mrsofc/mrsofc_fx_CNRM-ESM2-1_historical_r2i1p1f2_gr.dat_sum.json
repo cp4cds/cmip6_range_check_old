@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:12:36 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "contact.cmip@meteo.fr",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "mrsofc",
+                                "CNRM-CERFACS",
+                                "CNRM-ESM2-1",
+                                "CMIP",
+                                "historical",
+                                "r2i1p1f2",
+                                "gr",
+                                "v20190125"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/c064ac0b-0e6e-4518-9447-e417713c8b9e",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    56.37393569946289,
+                    6882.95654296875,
+                    2518.918982330083,
+                    2518.918982330083
+                ],
+                "drs": [
+                    "fx",
+                    "mrsofc",
+                    "CNRM-CERFACS",
+                    "CNRM-ESM2-1",
+                    "CMIP",
+                    "historical",
+                    "r2i1p1f2",
+                    "gr",
+                    "v20190125"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0"
+                        ],
+                        [
+                            74,
+                            91,
+                            24,
+                            24,
+                            25,
+                            82,
+                            25,
+                            25,
+                            20,
+                            20
+                        ],
+                        [
+                            37,
+                            66,
+                            230,
+                            231,
+                            230,
+                            25,
+                            229,
+                            231,
+                            223,
+                            225
+                        ],
+                        [
+                            59.867252349853516,
+                            65.33267974853516,
+                            71.32246398925781,
+                            71.32246398925781,
+                            71.32246398925781,
+                            56.37393569946289,
+                            71.32246398925781,
+                            71.32246398925781,
+                            71.32246398925781,
+                            71.32246398925781
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0",
+                            "mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr.nc:0"
+                        ],
+                        [
+                            102,
+                            101,
+                            101,
+                            102,
+                            102,
+                            102,
+                            101,
+                            100,
+                            101,
+                            100
+                        ],
+                        [
+                            196,
+                            197,
+                            196,
+                            198,
+                            195,
+                            197,
+                            199,
+                            196,
+                            198,
+                            197
+                        ],
+                        [
+                            6882.95654296875,
+                            6882.9521484375,
+                            6882.951171875,
+                            6786.212890625,
+                            6807.78759765625,
+                            6802.3369140625,
+                            6788.41455078125,
+                            6792.91748046875,
+                            6874.99169921875,
+                            6735.2529296875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    6882.955943642578,
+                    6882.955344316406,
+                    6882.953546337891,
+                    6882.951793164062,
+                    6877.159859570311,
+                    6789.22958105469,
+                    6618.88818359375,
+                    6453.263154296876,
+                    6045.16598144531,
+                    5489.061318359374,
+                    5115.22052734375,
+                    4279.34765625,
+                    4279.34765625,
+                    4279.34765625,
+                    3123.833251953125,
+                    576.5140991210938,
+                    344.8619018554688,
+                    275.58958435058594,
+                    214.40173217773437,
+                    183.07721588134766,
+                    155.1176057434082,
+                    107.1409769897461,
+                    80.15725044250489,
+                    71.32246398925781,
+                    69.69084676208496,
+                    61.85557483749389,
+                    58.75602832336426,
+                    57.326772749023434,
+                    56.85035422424317
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:04 2020",
+            "title": "Dump of results from sh_03/fx.mrsofc/mrsofc_fx_CNRM-ESM2-1_historical_r2i1p1f2_gr..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

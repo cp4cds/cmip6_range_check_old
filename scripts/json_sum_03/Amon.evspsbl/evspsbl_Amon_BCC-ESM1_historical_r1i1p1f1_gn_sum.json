@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:28:47 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Tongwen Wu(twwu@cma.gov.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "evspsbl",
+                                "BCC",
+                                "BCC-ESM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181214"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/e2a7192b-effe-4d9e-8ffd-c6370041af9b",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.565728416608181e-05,
+                    0.00020423954993020743,
+                    2.3071099349181168e-05,
+                    2.5670909963082522e-05
+                ],
+                "drs": [
+                    "Amon",
+                    "evspsbl",
+                    "BCC",
+                    "BCC-ESM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181214"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0846",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0846",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1662",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0715",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0715",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1662",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0066",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0654",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1157",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0726"
+                        ],
+                        [
+                            47,
+                            47,
+                            47,
+                            47,
+                            47,
+                            47,
+                            44,
+                            47,
+                            44,
+                            48
+                        ],
+                        [
+                            53,
+                            54,
+                            55,
+                            55,
+                            54,
+                            54,
+                            44,
+                            54,
+                            44,
+                            68
+                        ],
+                        [
+                            -1.2059435903211124e-05,
+                            -1.2340586181380786e-05,
+                            -1.3761808077106252e-05,
+                            -1.5210176570690237e-05,
+                            -1.565728416608181e-05,
+                            -1.347493252978893e-05,
+                            -1.1893146620423067e-05,
+                            -1.1678825103444979e-05,
+                            -1.1858792277052999e-05,
+                            -1.1289222129562404e-05
+                        ]
+                    ],
+                    [
+                        [
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0708",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0311",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0947",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0947",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0947",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1104",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0599",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0708",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:0586",
+                            "evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412.nc:1740"
+                        ],
+                        [
+                            45,
+                            45,
+                            45,
+                            44,
+                            45,
+                            44,
+                            45,
+                            44,
+                            45,
+                            45
+                        ],
+                        [
+                            52,
+                            51,
+                            51,
+                            51,
+                            52,
+                            51,
+                            52,
+                            51,
+                            52,
+                            52
+                        ],
+                        [
+                            0.00018513186660129577,
+                            0.00018084216571878642,
+                            0.00019678966782521456,
+                            0.0001894343295134604,
+                            0.00020423954993020743,
+                            0.00018192947027273476,
+                            0.00018531386740505695,
+                            0.00018698748317547143,
+                            0.0001883314980659634,
+                            0.0001801852195058018
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.00011686819102938771,
+                    0.0001167366116605281,
+                    0.0001161658399894825,
+                    0.00011520667895638343,
+                    0.00011350186230775001,
+                    0.00010733455716399502,
+                    0.00010337270278978626,
+                    9.815690165851279e-05,
+                    9.091350764720119e-05,
+                    8.402491122978974e-05,
+                    7.705386145971716e-05,
+                    6.719997472828255e-05,
+                    5.819258294650354e-05,
+                    4.252605685906019e-05,
+                    1.6994772067846498e-05,
+                    1.7853352431984604e-06,
+                    6.0912428878623366e-09,
+                    -4.5382604429988755e-08,
+                    -1.0936624249779926e-07,
+                    -1.9604501282799448e-07,
+                    -3.6406163360425127e-07,
+                    -5.492435709015809e-07,
+                    -6.416080163376137e-07,
+                    -7.476859626507348e-07,
+                    -9.483127802241142e-07,
+                    -1.022833170367221e-06,
+                    -1.093301466872276e-06,
+                    -1.109154921047093e-06,
+                    -1.1199808858785331e-06
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:40 2020",
+            "title": "Dump of results from sh_03/Amon.evspsbl/evspsbl_Amon_BCC-ESM1_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

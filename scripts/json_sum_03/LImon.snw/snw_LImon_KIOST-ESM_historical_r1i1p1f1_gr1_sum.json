@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:44:08 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "YoungHo Kim (yhokim@pknu.ac.kr & yhkimstar@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "KIOST",
+                                "KIOST-ESM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20191104"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/1d7ac7ed-8ad2-4910-ad22-cfbb690222c1",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN
+                ],
+                "drs": [
+                    "LImon",
+                    "snw",
+                    "KIOST",
+                    "KIOST-ESM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20191104"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1413",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1413",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1413",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418"
+                        ],
+                        [
+                            62,
+                            61,
+                            20,
+                            62,
+                            61,
+                            61,
+                            62,
+                            62,
+                            61,
+                            62
+                        ],
+                        [
+                            1,
+                            191,
+                            153,
+                            132,
+                            189,
+                            187,
+                            137,
+                            0,
+                            148,
+                            3
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1413",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1413",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1413",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418",
+                            "snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1418"
+                        ],
+                        [
+                            9,
+                            9,
+                            5,
+                            5,
+                            9,
+                            9,
+                            9,
+                            9,
+                            9,
+                            9
+                        ],
+                        [
+                            58,
+                            60,
+                            14,
+                            22,
+                            64,
+                            66,
+                            55,
+                            59,
+                            56,
+                            62
+                        ],
+                        [
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375,
+                            912.1302490234375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN,
+                    NaN
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:24 2020",
+            "title": "Dump of results from sh_03/LImon.snw/snw_LImon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

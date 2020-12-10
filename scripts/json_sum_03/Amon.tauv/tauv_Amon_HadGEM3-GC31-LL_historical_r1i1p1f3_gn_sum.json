@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:21:00 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauv",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                145,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/f6ea3360-a474-4e17-8b09-ebf6c0dab187",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            145,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:21:13 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauv",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                145,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/07ec5233-e30b-423a-8a43-b84f49fe9b69",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            145,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -0.7864990234375,
+                    0.62158203125,
+                    0.030237238854169846,
+                    0.043540552258491516
+                ],
+                "drs": [
+                    "Amon",
+                    "tauv",
+                    "MOHC",
+                    "HadGEM3-GC31-LL",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f3",
+                    "gn",
+                    "v20190624"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:012",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0227",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0888",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0227",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:526",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0227",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:012",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:012",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0227",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0888"
+                        ],
+                        [
+                            126,
+                            128,
+                            121,
+                            129,
+                            128,
+                            127,
+                            125,
+                            125,
+                            130,
+                            124
+                        ],
+                        [
+                            181,
+                            181,
+                            94,
+                            182,
+                            181,
+                            181,
+                            179,
+                            178,
+                            183,
+                            99
+                        ],
+                        [
+                            -0.70196533203125,
+                            -0.7864990234375,
+                            -0.70367431640625,
+                            -0.7005615234375,
+                            -0.77508544921875,
+                            -0.72418212890625,
+                            -0.6839599609375,
+                            -0.6746826171875,
+                            -0.67462158203125,
+                            -0.66888427734375
+                        ]
+                    ],
+                    [
+                        [
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:531",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0593",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0593",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:531",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:531",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0593",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0041",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0593",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:531",
+                            "tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0593"
+                        ],
+                        [
+                            15,
+                            99,
+                            100,
+                            16,
+                            16,
+                            98,
+                            90,
+                            97,
+                            15,
+                            97
+                        ],
+                        [
+                            93,
+                            140,
+                            140,
+                            93,
+                            92,
+                            140,
+                            47,
+                            140,
+                            94,
+                            141
+                        ],
+                        [
+                            0.62158203125,
+                            0.5860595703125,
+                            0.57977294921875,
+                            0.57586669921875,
+                            0.5592041015625,
+                            0.557373046875,
+                            0.54852294921875,
+                            0.54022216796875,
+                            0.53521728515625,
+                            0.527099609375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.3697091271971904,
+                    0.35779012023928436,
+                    0.3367357391357495,
+                    0.3189612945556871,
+                    0.3034598083496082,
+                    0.274477279663086,
+                    0.24922204589844066,
+                    0.21986206054687507,
+                    0.1816532897949219,
+                    0.15296234130859387,
+                    0.12368408203125014,
+                    0.08615264892578134,
+                    0.05990905761718757,
+                    0.02813720703125,
+                    0.000762939453125,
+                    -0.02557373046875,
+                    -0.0567962646484375,
+                    -0.07968292236328126,
+                    -0.1113177490234375,
+                    -0.13700683593750002,
+                    -0.16329360961914063,
+                    -0.2046337890625,
+                    -0.2304803771972656,
+                    -0.2563137512207031,
+                    -0.302582275390625,
+                    -0.32269996643066406,
+                    -0.3482140090942383,
+                    -0.36739628356933596,
+                    -0.3692663803100586
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:43:03 2020",
+            "title": "Dump of results from sh_03/Amon.tauv/tauv_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

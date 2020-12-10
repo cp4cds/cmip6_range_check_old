@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:23:32 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Xinyao Rong (rongxy@cma.gov.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "psl",
+                                "CAMS",
+                                "CAMS-CSM1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190708"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/758ebe79-0a82-4729-8c75-b5a10c1e3b5f",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1 00:00",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    96111.40625,
+                    104859.09375,
+                    100762.890625,
+                    101221.75
+                ],
+                "drs": [
+                    "Amon",
+                    "psl",
+                    "CAMS",
+                    "CAMS-CSM1-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190708"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:1240"
+                        ],
+                        [
+                            14,
+                            13,
+                            13,
+                            13,
+                            13,
+                            13,
+                            13,
+                            14,
+                            14,
+                            14
+                        ],
+                        [
+                            182,
+                            180,
+                            181,
+                            182,
+                            183,
+                            184,
+                            185,
+                            183,
+                            184,
+                            181
+                        ],
+                        [
+                            96129.203125,
+                            96126.421875,
+                            96115.9921875,
+                            96111.40625,
+                            96112.453125,
+                            96118.5390625,
+                            96128.8515625,
+                            96128.4765625,
+                            96131.6796875,
+                            96134.6015625
+                        ]
+                    ],
+                    [
+                        [
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979",
+                            "psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412.nc:0979"
+                        ],
+                        [
+                            14,
+                            13,
+                            13,
+                            13,
+                            13,
+                            14,
+                            14,
+                            14,
+                            13,
+                            12
+                        ],
+                        [
+                            98,
+                            101,
+                            98,
+                            99,
+                            100,
+                            99,
+                            97,
+                            100,
+                            97,
+                            100
+                        ],
+                        [
+                            104790.6796875,
+                            104775.4296875,
+                            104809.7578125,
+                            104859.09375,
+                            104844.796875,
+                            104767.0,
+                            104740.015625,
+                            104676.796875,
+                            104695.96875,
+                            104669.0703125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    103033.2750410156,
+                    103031.21395585939,
+                    103019.9472640625,
+                    103009.66982929688,
+                    102988.51833125,
+                    102938.47013671875,
+                    102897.63596484375,
+                    102823.341578125,
+                    102710.25470703124,
+                    102592.4623046875,
+                    102464.838203125,
+                    102231.5349609375,
+                    102014.88515625,
+                    101631.3515625,
+                    101173.23828125,
+                    100635.25,
+                    99155.801171875,
+                    98598.5119140625,
+                    98190.303828125,
+                    97987.6575390625,
+                    97813.30716796874,
+                    97664.7606484375,
+                    97605.87962109374,
+                    97567.0573359375,
+                    97530.415196875,
+                    97521.0070578125,
+                    97512.01962226562,
+                    97508.31560937499,
+                    97506.9414146875
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:03:29 2020",
+            "title": "Dump of results from sh_03/Amon.psl/psl_Amon_CAMS-CSM1-0_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

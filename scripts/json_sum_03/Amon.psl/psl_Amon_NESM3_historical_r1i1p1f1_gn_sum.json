@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:35:17 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "esmc@nuist.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "psl",
+                                "NUIST",
+                                "NESM3",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190630"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/ef55b833-9dee-484d-98e6-09e06e5dd8e9",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    96006.6171875,
+                    104615.5625,
+                    100732.9140625,
+                    101156.8203125
+                ],
+                "drs": [
+                    "Amon",
+                    "psl",
+                    "NUIST",
+                    "NESM3",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190630"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1900"
+                        ],
+                        [
+                            10,
+                            10,
+                            9,
+                            9,
+                            9,
+                            9,
+                            10,
+                            9,
+                            8,
+                            8
+                        ],
+                        [
+                            122,
+                            121,
+                            122,
+                            119,
+                            120,
+                            121,
+                            120,
+                            118,
+                            119,
+                            120
+                        ],
+                        [
+                            96026.6875,
+                            96024.3515625,
+                            96023.6953125,
+                            96015.75,
+                            96006.6171875,
+                            96010.0234375,
+                            96035.8828125,
+                            96036.7421875,
+                            96042.5625,
+                            96042.6015625
+                        ]
+                    ],
+                    [
+                        [
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924",
+                            "psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0924"
+                        ],
+                        [
+                            82,
+                            84,
+                            82,
+                            82,
+                            82,
+                            84,
+                            82,
+                            84,
+                            82,
+                            84
+                        ],
+                        [
+                            51,
+                            55,
+                            48,
+                            49,
+                            50,
+                            56,
+                            52,
+                            54,
+                            53,
+                            57
+                        ],
+                        [
+                            104589.375,
+                            104570.71875,
+                            104591.8828125,
+                            104615.5625,
+                            104611.84375,
+                            104567.7578125,
+                            104566.3984375,
+                            104556.0,
+                            104553.5234375,
+                            104552.5546875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    103037.97603101561,
+                    103036.22940578127,
+                    103030.89376523439,
+                    103025.67590742189,
+                    103020.6495828125,
+                    102990.77670507814,
+                    102949.88629687505,
+                    102892.536203125,
+                    102774.00324218751,
+                    102652.80480468749,
+                    102525.34046875,
+                    102280.4716796875,
+                    102059.6546875,
+                    101674.3447265625,
+                    101173.005859375,
+                    100561.0693359375,
+                    99045.13671875,
+                    98501.31894531251,
+                    98094.671875,
+                    97839.13054687499,
+                    97628.47205078125,
+                    97479.31628125001,
+                    97389.98046875,
+                    97354.69409570313,
+                    97330.73796015626,
+                    97317.221459375,
+                    97313.93680546875,
+                    97312.240548125,
+                    97311.8546490625
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:05:26 2020",
+            "title": "Dump of results from sh_03/Amon.psl/psl_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

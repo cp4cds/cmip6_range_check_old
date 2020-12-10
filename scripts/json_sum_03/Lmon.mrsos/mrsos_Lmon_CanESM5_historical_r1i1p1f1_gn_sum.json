@@ -1,0 +1,264 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:37:07 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "ec.cccma.info-info.ccmac.ec@canada.ca",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "CCCma",
+                                "CanESM5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190429"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/248db28a-ead6-4800-bcd3-5a03e12d0d13",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 0:0:0.0",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            8192,
+                            8192,
+                            8192,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_CanESM5_piControl_r1i1p2f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    91.70000457763672,
+                    16.928035736083984,
+                    19.816303253173828
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "CCCma",
+                    "CanESM5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190429"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1319"
+                        ],
+                        [
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33,
+                            33
+                        ],
+                        [
+                            75,
+                            73,
+                            79,
+                            74,
+                            77,
+                            76,
+                            80,
+                            78,
+                            73,
+                            82
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1319"
+                        ],
+                        [
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            5,
+                            59,
+                            5
+                        ],
+                        [
+                            83,
+                            95,
+                            94,
+                            95,
+                            96,
+                            97,
+                            91,
+                            92,
+                            93,
+                            84
+                        ],
+                        [
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672,
+                            91.70000457763672
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_all_match",
+                    0.0,
+                    null
+                ],
+                "quantiles": [
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    91.70000457763672,
+                    29.595696926116943,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:38:59 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_CanESM5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:14:17 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "sftgif",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/e7991552-c748-4f68-aec0-9fb69b04fabe",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    11.389396667480469,
+                    11.389396667480469
+                ],
+                "drs": [
+                    "fx",
+                    "sftgif",
+                    "NOAA-GFDL",
+                    "GFDL-CM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20180701"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0"
+                        ],
+                        [
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116
+                        ],
+                        [
+                            231,
+                            230,
+                            234,
+                            233,
+                            232,
+                            236,
+                            227,
+                            228,
+                            237,
+                            229
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0",
+                            "sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1.nc:0"
+                        ],
+                        [
+                            21,
+                            21,
+                            21,
+                            21,
+                            21,
+                            21,
+                            8,
+                            8,
+                            8,
+                            8
+                        ],
+                        [
+                            74,
+                            73,
+                            78,
+                            77,
+                            76,
+                            75,
+                            131,
+                            120,
+                            122,
+                            132
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    99.57619323730465,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:16 2020",
+            "title": "Dump of results from sh_03/fx.sftgif/sftgif_fx_GFDL-CM4_historical_r1i1p1f1_gr1..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

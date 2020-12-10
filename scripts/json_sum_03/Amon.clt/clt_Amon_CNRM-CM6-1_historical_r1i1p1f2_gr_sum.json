@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:30:57 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "contact.cmip@meteo.fr",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "clt",
+                                "CNRM-CERFACS",
+                                "CNRM-CM6-1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gr",
+                                "v20180917"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/fa17aac5-fdd6-4da9-a5fd-81cfc187ca98",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.005423575174063444,
+                    100.0,
+                    66.33039855957031,
+                    69.6460189819336
+                ],
+                "drs": [
+                    "Amon",
+                    "clt",
+                    "CNRM-CERFACS",
+                    "CNRM-CM6-1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gr",
+                    "v20180917"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1411",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0775",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0080",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1411",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0812",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1411",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1411",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1003",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1424",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0055"
+                        ],
+                        [
+                            86,
+                            87,
+                            84,
+                            86,
+                            85,
+                            86,
+                            86,
+                            86,
+                            85,
+                            86
+                        ],
+                        [
+                            32,
+                            44,
+                            46,
+                            31,
+                            45,
+                            33,
+                            34,
+                            44,
+                            45,
+                            33
+                        ],
+                        [
+                            0.0127352150157094,
+                            0.009794396348297596,
+                            0.009541129693388939,
+                            0.009620876051485538,
+                            0.005423575174063444,
+                            0.007008911110460758,
+                            0.012146255001425743,
+                            0.015105852857232094,
+                            0.015979524701833725,
+                            0.017348233610391617
+                        ]
+                    ],
+                    [
+                        [
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1494",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1494",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0509",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1494",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1494",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1494",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:1494",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0498",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0548",
+                            "clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412.nc:0548"
+                        ],
+                        [
+                            7,
+                            7,
+                            6,
+                            7,
+                            5,
+                            7,
+                            7,
+                            1,
+                            4,
+                            4
+                        ],
+                        [
+                            55,
+                            56,
+                            181,
+                            54,
+                            51,
+                            58,
+                            53,
+                            44,
+                            179,
+                            182
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    99.82726485420213,
+                    99.80453374427796,
+                    99.77235794067383,
+                    99.68443781433109,
+                    99.63946607894897,
+                    99.41860940361023,
+                    99.1416599159241,
+                    98.6989609375,
+                    97.8365693473816,
+                    96.80262287139891,
+                    95.42871475219727,
+                    92.66500854492188,
+                    89.56606636047363,
+                    82.36572360992432,
+                    71.02891731262207,
+                    56.40057134628296,
+                    41.83711910247803,
+                    33.81001873016358,
+                    24.76400876998901,
+                    18.92859565734863,
+                    13.934082660675049,
+                    9.20616499710083,
+                    6.742799026966095,
+                    4.983539474487305,
+                    3.202220475268364,
+                    2.1170457749009133,
+                    1.6276762313216926,
+                    1.1386674698722363,
+                    1.019402767443359
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:33:04 2020",
+            "title": "Dump of results from sh_03/Amon.clt/clt_Amon_CNRM-CM6-1_historical_r1i1p1f2_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

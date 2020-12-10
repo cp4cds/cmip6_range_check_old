@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:32:27 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "YoungHo Kim (yhokim@pknu.ac.kr & yhkimstar@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "clt",
+                                "KIOST",
+                                "KIOST-ESM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20191106"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/626d053b-6178-45d7-aaa3-1f658789ab37",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    69.19905090332031,
+                    72.94400024414062
+                ],
+                "drs": [
+                    "Amon",
+                    "clt",
+                    "KIOST",
+                    "KIOST-ESM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20191106"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0907",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1770",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0292",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1770",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0292",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1567",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1770",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1770",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0907",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1770"
+                        ],
+                        [
+                            64,
+                            64,
+                            35,
+                            64,
+                            36,
+                            64,
+                            64,
+                            64,
+                            64,
+                            65
+                        ],
+                        [
+                            32,
+                            21,
+                            62,
+                            19,
+                            60,
+                            22,
+                            22,
+                            20,
+                            33,
+                            22
+                        ],
+                        [
+                            0.0,
+                            0.004101061262190342,
+                            0.003209969261661172,
+                            0.005109488498419523,
+                            0.005322338547557592,
+                            0.010111703537404537,
+                            0.014096143655478954,
+                            0.014180894009768963,
+                            0.016645174473524094,
+                            0.018669910728931427
+                        ]
+                    ],
+                    [
+                        [
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0745",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1586",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0745",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0565",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0745",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0565",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1586",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0745",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:1586",
+                            "clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412.nc:0745"
+                        ],
+                        [
+                            90,
+                            93,
+                            90,
+                            91,
+                            90,
+                            91,
+                            93,
+                            90,
+                            93,
+                            91
+                        ],
+                        [
+                            67,
+                            38,
+                            68,
+                            23,
+                            72,
+                            29,
+                            36,
+                            71,
+                            41,
+                            66
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    99.91466947006225,
+                    99.90791664817814,
+                    99.89187404766083,
+                    99.87753492393503,
+                    99.86207915878296,
+                    99.80949139022829,
+                    99.75190284347536,
+                    99.6532895889282,
+                    99.44155900955201,
+                    99.14408954620362,
+                    98.68058013916016,
+                    97.44405784606934,
+                    95.07222633361816,
+                    87.94271087646484,
+                    75.82029724121094,
+                    58.74420976638794,
+                    40.80507488250733,
+                    30.83035502433777,
+                    21.825213108062744,
+                    17.11519956588745,
+                    13.489366512298584,
+                    9.594652713775634,
+                    7.767204978466034,
+                    6.485327000617982,
+                    5.18132978401184,
+                    4.551166417527199,
+                    4.150363279408216,
+                    3.8109514428019526,
+                    3.6823372376120087
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:34:23 2020",
+            "title": "Dump of results from sh_03/Amon.clt/clt_Amon_KIOST-ESM_historical_r1i1p1f1_gr1_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

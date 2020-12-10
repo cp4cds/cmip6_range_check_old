@@ -1,0 +1,355 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snw_LImon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:37:15 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/43c6d569-66bc-4197-91b2-ed31f9b9ad5e",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            32768,
+                            13046,
+                            13046,
+                            19722,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MIROC6_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:37:56 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/03b85b22-d4e9-4657-a784-1d0092e83139",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            32768,
+                            13046,
+                            13046,
+                            19722,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MIROC6_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    1000.0,
+                    225.12777862946498,
+                    258.7259696458685
+                ],
+                "drs": [
+                    "LImon",
+                    "snw",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190311"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:128",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:128",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:128",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134"
+                        ],
+                        [
+                            84,
+                            84,
+                            102,
+                            102,
+                            84,
+                            65,
+                            102,
+                            84,
+                            84,
+                            84
+                        ],
+                        [
+                            43,
+                            45,
+                            169,
+                            162,
+                            47,
+                            92,
+                            168,
+                            44,
+                            50,
+                            41
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:128",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:128",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:128",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134",
+                            "snw_LImon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:134"
+                        ],
+                        [
+                            5,
+                            5,
+                            3,
+                            4,
+                            5,
+                            4,
+                            3,
+                            5,
+                            5,
+                            5
+                        ],
+                        [
+                            6,
+                            4,
+                            252,
+                            36,
+                            0,
+                            255,
+                            254,
+                            5,
+                            8,
+                            2
+                        ],
+                        [
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.0026995069347321987,
+                    0.0
+                ],
+                "quantiles": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    999.9998168945312,
+                    194.20578956604004,
+                    8.137123703956604,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:25 2020",
+            "title": "Dump of results from sh_03/LImon.snw/snw_LImon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

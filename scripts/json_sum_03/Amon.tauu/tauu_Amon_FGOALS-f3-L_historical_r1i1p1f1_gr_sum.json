@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 15:20:29 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Yongqiang Yu (yyq@lasg.iap.ac.cn);Bian He(heb@lasg.iap.ac.cn)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauu",
+                                "CAS",
+                                "FGOALS-f3-L",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190927"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/910b3984-bbdc-4b52-a09f-1cf3b2bed5e0",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.5010228157043457,
+                    0.8397095799446106,
+                    0.060110773891210556,
+                    0.08938519656658173
+                ],
+                "drs": [
+                    "Amon",
+                    "tauu",
+                    "CAS",
+                    "FGOALS-f3-L",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20190927"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1811",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1811",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1811",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1811",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1511",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1811",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0809",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0323",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1511",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0454"
+                        ],
+                        [
+                            38,
+                            37,
+                            36,
+                            37,
+                            38,
+                            36,
+                            47,
+                            47,
+                            37,
+                            38
+                        ],
+                        [
+                            229,
+                            229,
+                            230,
+                            230,
+                            229,
+                            231,
+                            116,
+                            116,
+                            229,
+                            229
+                        ],
+                        [
+                            -1.5010228157043457,
+                            -1.4681754112243652,
+                            -1.4117143154144287,
+                            -1.3739218711853027,
+                            -1.2538968324661255,
+                            -1.241438865661621,
+                            -1.3603549003601074,
+                            -1.2398195266723633,
+                            -1.2123093605041504,
+                            -1.2104023694992065
+                        ]
+                    ],
+                    [
+                        [
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1116",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1087",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1801",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0494",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0494",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0557",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0557",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1087",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:1087",
+                            "tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412.nc:0557"
+                        ],
+                        [
+                            145,
+                            23,
+                            100,
+                            148,
+                            145,
+                            19,
+                            19,
+                            23,
+                            23,
+                            19
+                        ],
+                        [
+                            182,
+                            82,
+                            220,
+                            179,
+                            182,
+                            4,
+                            5,
+                            81,
+                            80,
+                            6
+                        ],
+                        [
+                            0.8100939989089966,
+                            0.8397095799446106,
+                            0.812088668346405,
+                            0.8078467845916748,
+                            0.7855598330497742,
+                            0.7940593957901001,
+                            0.7843067646026611,
+                            0.8007153868675232,
+                            0.7876694202423096,
+                            0.7747200727462769
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.5904534556105173,
+                    0.5793787629653944,
+                    0.5599441909865646,
+                    0.5440569404035821,
+                    0.5206846261858941,
+                    0.4793347398862293,
+                    0.44830349439383727,
+                    0.4114090178906918,
+                    0.3509356578439474,
+                    0.29738877743482595,
+                    0.22915918841958055,
+                    0.14036688357591662,
+                    0.09836868457496165,
+                    0.04775453545153141,
+                    0.00209622283000499,
+                    -0.057119350880384445,
+                    -0.13647839203476905,
+                    -0.184827771410346,
+                    -0.24104493856430054,
+                    -0.28047485470771794,
+                    -0.3222692427784204,
+                    -0.40135399791598314,
+                    -0.4764768412858248,
+                    -0.5571993689090013,
+                    -0.6578352692961693,
+                    -0.6948436954796313,
+                    -0.7197893983438611,
+                    -0.7533830333322287,
+                    -0.7695724668386579
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:39:48 2020",
+            "title": "Dump of results from sh_03/Amon.tauu/tauu_Amon_FGOALS-f3-L_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

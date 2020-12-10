@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:18:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "contact.cmip@meteo.fr",
+                            "dimensions": [
+                                "time",
+                                "y",
+                                "x"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "sithick",
+                                "CNRM-CERFACS",
+                                "CNRM-CM6-1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20180917"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                294,
+                                362
+                            ],
+                            "tid": "hdl:21.14100/3c0fd4bd-afec-4065-a13c-181aed0a3316",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            294,
+                            362
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    3.82088910555467e-06,
+                    7.676980972290039,
+                    0.4917478846553156,
+                    0.9686589499080882
+                ],
+                "drs": [
+                    "SImon",
+                    "sithick",
+                    "CNRM-CERFACS",
+                    "CNRM-CM6-1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gn",
+                    "v20180917"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0036",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0889",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1776",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0359",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1441",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0480",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1776",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1764",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1326",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1824"
+                        ],
+                        [
+                            64,
+                            41,
+                            48,
+                            66,
+                            29,
+                            48,
+                            62,
+                            53,
+                            276,
+                            49
+                        ],
+                        [
+                            270,
+                            125,
+                            2,
+                            344,
+                            156,
+                            4,
+                            274,
+                            5,
+                            296,
+                            130
+                        ],
+                        [
+                            7.323989393626107e-06,
+                            7.962742529343814e-06,
+                            9.306121683039237e-06,
+                            1.3389038031164091e-05,
+                            3.82088910555467e-06,
+                            9.202024557453115e-06,
+                            4.89589592689299e-06,
+                            1.4402066881302744e-05,
+                            1.2501418495958205e-05,
+                            1.4754648873349652e-05
+                        ]
+                    ],
+                    [
+                        [
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0293",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1398",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0087",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1552",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1553",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1073",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1181",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0761",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0390",
+                            "sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:0184"
+                        ],
+                        [
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40,
+                            40
+                        ],
+                        [
+                            227,
+                            227,
+                            227,
+                            227,
+                            227,
+                            227,
+                            227,
+                            227,
+                            227,
+                            227
+                        ],
+                        [
+                            6.767404079437256,
+                            7.284027099609375,
+                            6.906652450561523,
+                            6.2517571449279785,
+                            6.503351211547852,
+                            7.676980972290039,
+                            6.663694381713867,
+                            6.202122211456299,
+                            6.064455509185791,
+                            5.980762004852295
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    4.139330158596719,
+                    4.085188310695505,
+                    3.9169497857693303,
+                    3.6847082025288445,
+                    3.495812528014202,
+                    3.2493296093345454,
+                    3.0397901523113413,
+                    2.8045624604224892,
+                    2.4598819446563756,
+                    2.228909721374512,
+                    1.9754550516605378,
+                    1.6221608340740206,
+                    1.4401916205883027,
+                    1.0960726290941238,
+                    0.6209843754768372,
+                    0.26366259902715683,
+                    0.08877836391329766,
+                    0.030397827923297885,
+                    0.013731727721169592,
+                    0.009679380259476601,
+                    0.007372703339206054,
+                    0.005181701998692006,
+                    0.00405975397536531,
+                    0.0028856323621585037,
+                    0.0017881057070335375,
+                    0.001193979231431149,
+                    0.0008091074832045706,
+                    0.0006153092772862874,
+                    0.0005579258581547765
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:49 2020",
+            "title": "Dump of results from sh_03/SImon.sithick/sithick_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

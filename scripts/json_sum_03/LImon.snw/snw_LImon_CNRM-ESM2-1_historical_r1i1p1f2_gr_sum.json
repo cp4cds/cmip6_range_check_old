@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:39:32 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "contact.cmip@meteo.fr",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "CNRM-CERFACS",
+                                "CNRM-ESM2-1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gr",
+                                "v20181206"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/fc1cdd8e-9d22-4093-b5f4-e2cba711173e",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    763339.625,
+                    202016.52789793973,
+                    202363.52342547107
+                ],
+                "drs": [
+                    "LImon",
+                    "snw",
+                    "CNRM-CERFACS",
+                    "CNRM-ESM2-1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gr",
+                    "v20181206"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1266",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1266",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1266",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1291"
+                        ],
+                        [
+                            106,
+                            106,
+                            106,
+                            106,
+                            106,
+                            106,
+                            106,
+                            106,
+                            106,
+                            106
+                        ],
+                        [
+                            32,
+                            34,
+                            26,
+                            34,
+                            35,
+                            36,
+                            36,
+                            33,
+                            29,
+                            39
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1751",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1751",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1688",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1688",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1680",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1680",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1734",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1734",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1697",
+                            "snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412.nc:1697"
+                        ],
+                        [
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119,
+                            119
+                        ],
+                        [
+                            210,
+                            211,
+                            211,
+                            210,
+                            210,
+                            211,
+                            210,
+                            211,
+                            211,
+                            210
+                        ],
+                        [
+                            763339.625,
+                            763339.625,
+                            763333.1875,
+                            763333.1875,
+                            763332.0625,
+                            763332.0625,
+                            763285.25,
+                            763285.25,
+                            763223.75,
+                            763223.75
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    762397.96875,
+                    762397.96875,
+                    762397.96875,
+                    760524.5840625045,
+                    757033.9375,
+                    755521.4506562501,
+                    753534.269000001,
+                    752068.65625,
+                    751541.34375,
+                    750983.4918750001,
+                    750370.05625,
+                    750079.65625,
+                    750023.10625,
+                    749516.953125,
+                    0.32909082621335983,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:34:05 2020",
+            "title": "Dump of results from sh_03/LImon.snw/snw_LImon_CNRM-ESM2-1_historical_r1i1p1f2_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

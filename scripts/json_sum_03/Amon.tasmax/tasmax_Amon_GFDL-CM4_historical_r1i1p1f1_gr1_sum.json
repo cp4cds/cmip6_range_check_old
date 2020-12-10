@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:33:09 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmax",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/22dfc06c-fc09-4785-9a19-f757e75b7e7a",
+                            "time_intervals": [
+                                30.416180150125104,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:33:24 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmax",
+                                "NOAA-GFDL",
+                                "GFDL-CM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20180701"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/ff0ab7d8-fbd3-4c74-a696-22631747442f",
+                            "time_intervals": [
+                                30.41591784338896,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    200.7982940673828,
+                    322.9012451171875,
+                    276.0599670410156,
+                    282.0888671875
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmax",
+                    "NOAA-GFDL",
+                    "GFDL-CM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20180701"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:0654",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:163"
+                        ],
+                        [
+                            10,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            10,
+                            10,
+                            10
+                        ],
+                        [
+                            32,
+                            33,
+                            30,
+                            34,
+                            32,
+                            35,
+                            31,
+                            33,
+                            34,
+                            32
+                        ],
+                        [
+                            201.90072631835938,
+                            200.83937072753906,
+                            201.44607543945312,
+                            201.27915954589844,
+                            200.7982940673828,
+                            201.87649536132812,
+                            201.0504150390625,
+                            201.740966796875,
+                            201.91143798828125,
+                            201.94627380371094
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:715",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:763",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:714",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:1182",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:667",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:714",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:270",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912.nc:0462",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:643",
+                            "tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_195001-201412.nc:739"
+                        ],
+                        [
+                            121,
+                            121,
+                            121,
+                            121,
+                            121,
+                            121,
+                            121,
+                            121,
+                            121,
+                            121
+                        ],
+                        [
+                            38,
+                            38,
+                            38,
+                            38,
+                            38,
+                            37,
+                            38,
+                            38,
+                            38,
+                            38
+                        ],
+                        [
+                            321.9941711425781,
+                            322.0199890136719,
+                            322.9012451171875,
+                            321.78851318359375,
+                            321.6692810058594,
+                            321.6497802734375,
+                            321.33636474609375,
+                            321.3204650878906,
+                            321.2631530761719,
+                            321.2421569824219
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    314.4110569853205,
+                    314.27289388611047,
+                    314.04082798462036,
+                    313.6617864959718,
+                    313.21436649780276,
+                    312.65145730590825,
+                    312.09316281127934,
+                    311.2693014831543,
+                    309.87678504943847,
+                    308.1502305603027,
+                    305.6996969604492,
+                    301.3494445800781,
+                    300.1907424926758,
+                    296.3646354675293,
+                    283.24756622314453,
+                    266.5036163330078,
+                    249.02850418090821,
+                    229.95040435791014,
+                    218.8867932128906,
+                    215.8424514770508,
+                    214.14036575317385,
+                    212.81000729370118,
+                    211.8273457183838,
+                    211.33249612808228,
+                    210.90495471343993,
+                    210.59589726867677,
+                    210.43751417274476,
+                    210.33619114395142,
+                    210.29716123146056
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:34:14 2020",
+            "title": "Dump of results from sh_03/Amon.tasmax/tasmax_Amon_GFDL-CM4_historical_r1i1p1f1_gr1_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

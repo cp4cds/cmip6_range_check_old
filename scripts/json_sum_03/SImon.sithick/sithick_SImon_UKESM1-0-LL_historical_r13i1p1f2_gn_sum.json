@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:19:09 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "sithick",
+                                "NIMS-KMA",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r13i1p1f2",
+                                "gn",
+                                "v20200611"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                330,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/ddcb4418-e1b7-4dd4-b75b-0f4205e178b2",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            330,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:19:36 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "sithick",
+                                "NIMS-KMA",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r13i1p1f2",
+                                "gn",
+                                "v20200611"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                330,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/be8a04b0-bd95-479d-a52a-0d6caf415f43",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            330,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.1279289722442627,
+                    28.555831909179688,
+                    1.5603192673442992,
+                    2.120026413945939
+                ],
+                "drs": [
+                    "SImon",
+                    "sithick",
+                    "NIMS-KMA",
+                    "UKESM1-0-LL",
+                    "CMIP",
+                    "historical",
+                    "r13i1p1f2",
+                    "gn",
+                    "v20200611"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0825",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:333",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:333",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:373",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:477",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0310",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912.nc:0598",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:741",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:454",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:213"
+                        ],
+                        [
+                            314,
+                            296,
+                            296,
+                            267,
+                            313,
+                            281,
+                            310,
+                            323,
+                            280,
+                            324
+                        ],
+                        [
+                            309,
+                            202,
+                            203,
+                            124,
+                            308,
+                            301,
+                            308,
+                            59,
+                            111,
+                            308
+                        ],
+                        [
+                            0.13971351087093353,
+                            0.128329798579216,
+                            0.1279289722442627,
+                            0.13528336584568024,
+                            0.14094671607017517,
+                            0.14400608837604523,
+                            0.14517000317573547,
+                            0.1457747370004654,
+                            0.14645247161388397,
+                            0.14778722822666168
+                        ]
+                    ],
+                    [
+                        [
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:100",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:478",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:126",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:120",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:493",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:468",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:492",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:477",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:213",
+                            "sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_195001-201412.nc:189"
+                        ],
+                        [
+                            323,
+                            323,
+                            323,
+                            323,
+                            323,
+                            323,
+                            323,
+                            323,
+                            323,
+                            323
+                        ],
+                        [
+                            248,
+                            248,
+                            248,
+                            248,
+                            248,
+                            248,
+                            248,
+                            248,
+                            248,
+                            248
+                        ],
+                        [
+                            27.720308303833008,
+                            27.387983322143555,
+                            27.531076431274414,
+                            28.555831909179688,
+                            27.45883560180664,
+                            27.712596893310547,
+                            27.414440155029297,
+                            27.37651252746582,
+                            27.271995544433594,
+                            27.267690658569336
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    17.59075796028383,
+                    17.40352286273215,
+                    16.87954613690573,
+                    13.769584286928449,
+                    9.978121190454107,
+                    7.203670712471068,
+                    6.755987465858476,
+                    6.462917041778564,
+                    5.999263180494312,
+                    5.490130844116207,
+                    4.942666130065916,
+                    4.460743856430055,
+                    3.982280302047733,
+                    2.27340367436409,
+                    1.5384868681430817,
+                    1.023001104593277,
+                    0.5711586743593215,
+                    0.3575875967741013,
+                    0.22848010897636414,
+                    0.20402085296809674,
+                    0.20020775981247424,
+                    0.20000142961740494,
+                    0.19999085204303266,
+                    0.19875836124643684,
+                    0.19634024997502564,
+                    0.19466913763582705,
+                    0.193531572830677,
+                    0.19216418820619582,
+                    0.19203059256739916
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:33:15 2020",
+            "title": "Dump of results from sh_03/SImon.sithick/sithick_SImon_UKESM1-0-LL_historical_r13i1p1f2_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

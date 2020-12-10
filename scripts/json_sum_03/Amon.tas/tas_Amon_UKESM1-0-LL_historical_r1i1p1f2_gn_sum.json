@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:24:55 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tas",
+                                "MOHC",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20190406"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/255d149c-12fc-41f1-878d-0344c8b797f4",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:25:12 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tas",
+                                "MOHC",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20190406"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/be06a059-363d-47a4-97a2-d5253190fd15",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    192.532470703125,
+                    315.39111328125,
+                    273.8927917480469,
+                    280.9141540527344
+                ],
+                "drs": [
+                    "Amon",
+                    "tas",
+                    "MOHC",
+                    "UKESM1-0-LL",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gn",
+                    "v20190406"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0583",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:234",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0583",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0583"
+                        ],
+                        [
+                            8,
+                            8,
+                            8,
+                            9,
+                            7,
+                            9,
+                            8,
+                            8,
+                            7,
+                            7
+                        ],
+                        [
+                            23,
+                            22,
+                            24,
+                            20,
+                            42,
+                            21,
+                            25,
+                            21,
+                            43,
+                            41
+                        ],
+                        [
+                            192.532470703125,
+                            193.011474609375,
+                            193.494140625,
+                            195.160888671875,
+                            195.547607421875,
+                            195.23681640625,
+                            195.636474609375,
+                            194.56884765625,
+                            195.66259765625,
+                            195.868896484375
+                        ]
+                    ],
+                    [
+                        [
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0209",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0509",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0989",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0989",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:1073",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:1001",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:738",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:762",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0509",
+                            "tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:1001"
+                        ],
+                        [
+                            92,
+                            92,
+                            93,
+                            92,
+                            92,
+                            92,
+                            96,
+                            96,
+                            93,
+                            93
+                        ],
+                        [
+                            44,
+                            44,
+                            42,
+                            44,
+                            44,
+                            44,
+                            39,
+                            39,
+                            42,
+                            42
+                        ],
+                        [
+                            314.73828125,
+                            314.67822265625,
+                            314.496337890625,
+                            315.39111328125,
+                            314.524658203125,
+                            315.17919921875,
+                            314.560546875,
+                            314.982666015625,
+                            314.46142578125,
+                            314.145263671875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    307.69216332275363,
+                    307.58085984863374,
+                    307.4068676879885,
+                    307.17940814208987,
+                    306.87120168457034,
+                    306.4829321899414,
+                    305.90525231933594,
+                    305.30725976562496,
+                    304.134375,
+                    302.9162548828125,
+                    301.9146240234375,
+                    301.0392150878906,
+                    300.00853271484374,
+                    295.72369384765625,
+                    281.6087646484375,
+                    262.7764892578125,
+                    243.01206054687498,
+                    227.07252197265626,
+                    218.76663330078122,
+                    216.71286499023438,
+                    214.15812744140624,
+                    211.71198193359373,
+                    210.43504406738282,
+                    209.63512548828123,
+                    208.67911916503908,
+                    208.19665306396485,
+                    207.89804248046875,
+                    207.84760301025392,
+                    207.82333763793946
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:31:58 2020",
+            "title": "Dump of results from sh_03/Amon.tas/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

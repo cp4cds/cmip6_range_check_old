@@ -1,0 +1,810 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:32:43 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                300,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/d42f0c1f-c25d-499b-94df-f06c936be1ae",
+                            "time_intervals": [
+                                30.414750557413598,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            300,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_187501-189912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:33:25 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                300,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/380a6b03-d97c-43bf-bf12-827879e02236",
+                            "time_intervals": [
+                                30.414715719063544,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            300,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_190001-192412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:34:18 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                300,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/96df3942-dd4d-417c-b299-0f8ac4b92db7",
+                            "time_intervals": [
+                                30.414715719063544,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            300,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_192501-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:34:59 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                300,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/1a009979-ea31-4624-964f-bdf875698529",
+                            "time_intervals": [
+                                30.414715719063544,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            300,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_195001-197412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:35:37 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                300,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/7fc71015-620f-4066-a389-3ec400b81973",
+                            "time_intervals": [
+                                30.414715719063544,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            300,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_197501-199912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:36:15 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                300,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/d3eed1b0-4c46-4c3c-b130-5bbf2184908e",
+                            "time_intervals": [
+                                30.414715719063544,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            300,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_200001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:36:53 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dave Bader (bader2@llnl.gov)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "E3SM-Project",
+                                "E3SM-1-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190913"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                180,
+                                180,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/a9e63a7f-0bc8-4e14-b0cd-c1d78394769b",
+                            "time_intervals": [
+                                30.41340782122905,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            64800,
+                            27953,
+                            27953,
+                            36847,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-0_piControl_r1i1p1f1_gr.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            180,
+                            180,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -0.0001007148894132115,
+                    0.0009034594404511154,
+                    5.190567595329335e-06,
+                    1.4524711366928495e-05
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrro",
+                    "E3SM-Project",
+                    "E3SM-1-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20190913"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_190001-192412.nc:102",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_187501-189912.nc:210",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_192501-194912.nc:054",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412.nc:150",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_192501-194912.nc:270",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412.nc:234",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_190001-192412.nc:126",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_195001-197412.nc:030",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412.nc:282",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412.nc:054"
+                        ],
+                        [
+                            128,
+                            128,
+                            128,
+                            128,
+                            128,
+                            128,
+                            128,
+                            128,
+                            128,
+                            128
+                        ],
+                        [
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51,
+                            51
+                        ],
+                        [
+                            -9.797353413887322e-05,
+                            -9.920744923874736e-05,
+                            -0.0001007148894132115,
+                            -0.00010008711979025975,
+                            -9.971913095796481e-05,
+                            -9.908124775392935e-05,
+                            -9.829826740315184e-05,
+                            -9.953227709047496e-05,
+                            -9.761549154063687e-05,
+                            -9.739644156070426e-05
+                        ]
+                    ],
+                    [
+                        [
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_192501-194912.nc:126",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_190001-192412.nc:018",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412.nc:199",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_195001-197412.nc:043",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412.nc:211",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_195001-197412.nc:090",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_195001-197412.nc:139",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_195001-197412.nc:043",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_197501-199912.nc:259",
+                            "mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_200001-201412.nc:175"
+                        ],
+                        [
+                            117,
+                            117,
+                            117,
+                            117,
+                            117,
+                            117,
+                            117,
+                            117,
+                            117,
+                            117
+                        ],
+                        [
+                            84,
+                            84,
+                            83,
+                            83,
+                            83,
+                            83,
+                            83,
+                            84,
+                            83,
+                            83
+                        ],
+                        [
+                            0.0009034594404511154,
+                            0.0009030284709297121,
+                            0.0008330828859470785,
+                            0.0008389259455725551,
+                            0.0008542173891328275,
+                            0.0008321846835315228,
+                            0.0008205097983591259,
+                            0.0008087418973445892,
+                            0.0008281383197754622,
+                            0.0007902185898274183
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    1.1782415321182071e-11,
+                    0.0
+                ],
+                "quantiles": [
+                    0.0003143223749846205,
+                    0.0003087169161020369,
+                    0.00029324953070610594,
+                    0.0002745323602110138,
+                    0.0002505678652785692,
+                    0.00021616854099557116,
+                    0.0001902489766362149,
+                    0.00016505617421353256,
+                    0.0001294832275016236,
+                    0.00010058220417704424,
+                    7.156738793128166e-05,
+                    3.612495820561897e-05,
+                    1.7195475447806526e-05,
+                    5.70046950087999e-06,
+                    6.552672857651487e-07,
+                    1.8196488760224838e-08,
+                    1.2051826875879302e-12,
+                    0.0,
+                    -3.7720162140431055e-07,
+                    -1.0840809636647464e-06,
+                    -2.328262035007356e-06,
+                    -5.531106453418033e-06,
+                    -9.608071501133963e-06,
+                    -1.4732301366166211e-05,
+                    -2.251158082362963e-05,
+                    -2.7892587917449418e-05,
+                    -3.3227450344566027e-05,
+                    -3.654384282475803e-05,
+                    -3.8126213314244524e-05
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:33:46 2020",
+            "title": "Dump of results from sh_03/Lmon.mrro/mrro_Lmon_E3SM-1-0_historical_r1i1p1f1_gr_185001-187412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

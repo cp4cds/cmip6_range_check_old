@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:29:24 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cesm_cmip6@ucar.edu",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "huss",
+                                "NCAR",
+                                "CESM2-WACCM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190227"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/9d11dee8-b792-40ce-8361-1aaa9507e37e",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    4.469922259886516e-06,
+                    0.024580206722021103,
+                    0.006780172232538462,
+                    0.008641197346150875
+                ],
+                "drs": [
+                    "Amon",
+                    "huss",
+                    "NCAR",
+                    "CESM2-WACCM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190227"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0271",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0271",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0390"
+                        ],
+                        [
+                            15,
+                            16,
+                            15,
+                            15,
+                            16,
+                            15,
+                            16,
+                            11,
+                            11,
+                            15
+                        ],
+                        [
+                            95,
+                            93,
+                            96,
+                            94,
+                            94,
+                            97,
+                            92,
+                            39,
+                            38,
+                            98
+                        ],
+                        [
+                            4.469922259886516e-06,
+                            4.52955418950296e-06,
+                            4.5083643271937035e-06,
+                            4.58760405308567e-06,
+                            4.631231149687665e-06,
+                            4.614557838067412e-06,
+                            4.67036488771555e-06,
+                            4.715161139756674e-06,
+                            4.761709533340763e-06,
+                            4.780987637786893e-06
+                        ]
+                    ],
+                    [
+                        [
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0893",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0893",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0077",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1974",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1421",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1974",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0893",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0893",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:1435",
+                            "huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412.nc:0545"
+                        ],
+                        [
+                            118,
+                            116,
+                            118,
+                            123,
+                            118,
+                            122,
+                            115,
+                            117,
+                            123,
+                            118
+                        ],
+                        [
+                            71,
+                            70,
+                            71,
+                            42,
+                            71,
+                            43,
+                            69,
+                            71,
+                            42,
+                            71
+                        ],
+                        [
+                            0.02455044351518154,
+                            0.024404270574450493,
+                            0.024561738595366478,
+                            0.024580206722021103,
+                            0.02442537061870098,
+                            0.024387629702687263,
+                            0.024350155144929886,
+                            0.024379709735512733,
+                            0.024383043870329857,
+                            0.024316580966114998
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.021403074253490046,
+                    0.02135101367859191,
+                    0.021264119191560963,
+                    0.021174300391227047,
+                    0.02106434546690431,
+                    0.020913810310885312,
+                    0.02071747812908147,
+                    0.02056737684644761,
+                    0.020252424501813953,
+                    0.01999221360310912,
+                    0.019667322188615798,
+                    0.018985569477081302,
+                    0.017702463548630476,
+                    0.012501544202677906,
+                    0.0051800336223095655,
+                    0.0016730608622310683,
+                    0.00035821385972667485,
+                    5.986907808619435e-05,
+                    2.7338161908119217e-05,
+                    2.3339918789133664e-05,
+                    1.9809113859992066e-05,
+                    1.7574629700902734e-05,
+                    1.6777669952716678e-05,
+                    1.619954437501292e-05,
+                    1.5881769908446586e-05,
+                    1.5671252421270765e-05,
+                    1.5470547718678063e-05,
+                    1.5417640884152203e-05,
+                    1.54114384247805e-05
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:51:31 2020",
+            "title": "Dump of results from sh_03/Amon.huss/huss_Amon_CESM2-WACCM_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

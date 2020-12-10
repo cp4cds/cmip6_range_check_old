@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:50:57 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "T. Lovato",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "CMCC",
+                                "CMCC-CM2-SR5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200616"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/7741c3cd-88bb-463f-a529-abecf0bd2a2f",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    2.0926928520202637,
+                    92.03296661376953,
+                    22.158505090120162,
+                    31.614974132176236
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "CMCC",
+                    "CMCC-CM2-SR5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200616"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1701",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1567",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1484",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0536",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1388",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0044",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0460",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1159",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1568",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1387"
+                        ],
+                        [
+                            76,
+                            76,
+                            76,
+                            76,
+                            76,
+                            76,
+                            76,
+                            76,
+                            76,
+                            76
+                        ],
+                        [
+                            115,
+                            115,
+                            115,
+                            115,
+                            115,
+                            115,
+                            115,
+                            115,
+                            115,
+                            115
+                        ],
+                        [
+                            2.0926928520202637,
+                            2.0933094024658203,
+                            2.0965752601623535,
+                            2.0984749794006348,
+                            2.1017889976501465,
+                            2.1003849506378174,
+                            2.1103289127349854,
+                            2.099724054336548,
+                            2.1108808517456055,
+                            2.113034248352051
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1135",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1207",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1603",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1039",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0487",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0920",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1135",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1074",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0918",
+                            "mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0847"
+                        ],
+                        [
+                            171,
+                            171,
+                            172,
+                            171,
+                            172,
+                            171,
+                            170,
+                            171,
+                            170,
+                            172
+                        ],
+                        [
+                            124,
+                            124,
+                            94,
+                            124,
+                            94,
+                            55,
+                            124,
+                            124,
+                            124,
+                            94
+                        ],
+                        [
+                            92.03296661376953,
+                            92.03153228759766,
+                            92.03117370605469,
+                            92.03129577636719,
+                            92.03116607666016,
+                            92.03105926513672,
+                            92.03104400634766,
+                            92.03108978271484,
+                            92.03101348876953,
+                            92.03097534179688
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    86.23333965976713,
+                    86.22386689399727,
+                    86.19422537384054,
+                    86.16045295257568,
+                    86.1213077407837,
+                    86.0436245136261,
+                    85.912881225586,
+                    85.50032834625245,
+                    84.06127300262449,
+                    80.93240684509277,
+                    74.15605163574219,
+                    60.395403480529794,
+                    50.190427589416515,
+                    37.24954271316528,
+                    27.973018646240234,
+                    16.827358961105347,
+                    10.706098508834838,
+                    8.377299976348876,
+                    6.105252461433411,
+                    5.037009525299072,
+                    4.223649731874466,
+                    3.444857722759247,
+                    3.2160005443096162,
+                    3.0152823486328124,
+                    2.867030541276932,
+                    2.7335643765211106,
+                    2.6455809891700746,
+                    2.6048945826363568,
+                    2.597730558882952
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:38:46 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

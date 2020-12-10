@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:26:04 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Evgeny Volodin (volodinev@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmin",
+                                "INM",
+                                "INM-CM5-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190610"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                120,
+                                180
+                            ],
+                            "tid": "hdl:21.14100/336a5549-82e5-44ac-8970-e0a2941c5fef",
+                            "time_intervals": [
+                                30.416180150125104,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            120,
+                            180
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:26:20 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Evgeny Volodin (volodinev@gmail.com)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmin",
+                                "INM",
+                                "INM-CM5-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190610"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                120,
+                                180
+                            ],
+                            "tid": "hdl:21.14100/1baa57ea-4ed7-4c20-a93f-815f4ec5f075",
+                            "time_intervals": [
+                                30.41591784338896,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            120,
+                            180
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    191.65602111816406,
+                    310.3759765625,
+                    272.09521484375,
+                    278.46392822265625
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmin",
+                    "INM",
+                    "INM-CM5-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20190610"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:247",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:247",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075"
+                        ],
+                        [
+                            4,
+                            4,
+                            6,
+                            6,
+                            4,
+                            4,
+                            6,
+                            5,
+                            5,
+                            5
+                        ],
+                        [
+                            22,
+                            21,
+                            20,
+                            19,
+                            20,
+                            23,
+                            20,
+                            35,
+                            34,
+                            36
+                        ],
+                        [
+                            191.7512664794922,
+                            191.8037567138672,
+                            191.65602111816406,
+                            191.81326293945312,
+                            192.4514923095703,
+                            192.216796875,
+                            192.32943725585938,
+                            192.35888671875,
+                            192.50753784179688,
+                            192.53549194335938
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1038",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:006",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:727",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1063",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:174",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:727",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:163",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:0583",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_195001-201412.nc:727",
+                            "tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912.nc:1075"
+                        ],
+                        [
+                            76,
+                            76,
+                            76,
+                            76,
+                            76,
+                            77,
+                            76,
+                            76,
+                            77,
+                            76
+                        ],
+                        [
+                            26,
+                            26,
+                            26,
+                            26,
+                            26,
+                            26,
+                            26,
+                            26,
+                            27,
+                            26
+                        ],
+                        [
+                            309.71826171875,
+                            309.3771057128906,
+                            310.3759765625,
+                            309.7274475097656,
+                            309.862548828125,
+                            309.3929443359375,
+                            309.3836669921875,
+                            309.40899658203125,
+                            309.1688232421875,
+                            309.09423828125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    302.3732149761962,
+                    302.3467486492922,
+                    302.2239992126475,
+                    301.9186663589478,
+                    301.61914333190873,
+                    301.04182172393814,
+                    300.72569781494144,
+                    300.4196675109863,
+                    300.0691802978515,
+                    299.8407060241699,
+                    299.53251861572267,
+                    298.94557800292966,
+                    298.1124557495117,
+                    293.20301055908203,
+                    280.1420669555664,
+                    261.427791595459,
+                    241.21555709838867,
+                    226.19123497009278,
+                    216.3021681213379,
+                    213.30474426269532,
+                    211.41299854278566,
+                    209.66894473266603,
+                    208.90089801788332,
+                    208.15408444213867,
+                    207.78150879821777,
+                    207.59810586242676,
+                    207.4050175224304,
+                    207.29555626968386,
+                    207.2757307105255
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:37:03 2020",
+            "title": "Dump of results from sh_03/Amon.tasmin/tasmin_Amon_INM-CM5-0_historical_r1i1p1f1_gr1_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

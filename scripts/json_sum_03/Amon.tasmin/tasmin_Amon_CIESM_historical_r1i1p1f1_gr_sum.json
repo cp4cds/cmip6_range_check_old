@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:29:26 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "yanluan@tsinghua.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmin",
+                                "THU",
+                                "CIESM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20200417"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/ae1fc3ff-719d-4c32-a574-25dcfe8f651f",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    195.1933135986328,
+                    308.4804382324219,
+                    269.5152587890625,
+                    277.7946472167969
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmin",
+                    "THU",
+                    "CIESM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20200417"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0835"
+                        ],
+                        [
+                            8,
+                            8,
+                            8,
+                            8,
+                            8,
+                            8,
+                            8,
+                            8,
+                            9,
+                            8
+                        ],
+                        [
+                            56,
+                            55,
+                            53,
+                            60,
+                            54,
+                            57,
+                            58,
+                            59,
+                            60,
+                            52
+                        ],
+                        [
+                            195.4295196533203,
+                            195.49082946777344,
+                            195.6103515625,
+                            195.5758819580078,
+                            195.54794311523438,
+                            195.36402893066406,
+                            195.2128448486328,
+                            195.1933135986328,
+                            195.62362670898438,
+                            195.73284912109375
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1627",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1975",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1975",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1975",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1579",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1627",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1579",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1975",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1579",
+                            "tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1627"
+                        ],
+                        [
+                            122,
+                            123,
+                            122,
+                            123,
+                            122,
+                            123,
+                            123,
+                            123,
+                            123,
+                            123
+                        ],
+                        [
+                            43,
+                            43,
+                            43,
+                            42,
+                            43,
+                            42,
+                            42,
+                            44,
+                            43,
+                            43
+                        ],
+                        [
+                            308.1670837402344,
+                            307.7019348144531,
+                            308.4804382324219,
+                            307.7833557128906,
+                            307.8498229980469,
+                            307.6962585449219,
+                            307.5874328613281,
+                            307.48809814453125,
+                            307.456787109375,
+                            307.4191589355469
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    303.80503395080564,
+                    303.7572351409914,
+                    303.63175630187993,
+                    303.50564814758343,
+                    303.3464707489013,
+                    303.1794151306152,
+                    303.0120867156983,
+                    302.9050958251953,
+                    302.66956253051757,
+                    302.406216430664,
+                    301.990087890625,
+                    301.08044815063477,
+                    299.7568817138672,
+                    294.31330490112305,
+                    280.26285552978516,
+                    254.57913398742676,
+                    233.08301162719727,
+                    216.27317428588867,
+                    211.53204727172852,
+                    209.55068969726562,
+                    208.34914836883547,
+                    206.86783264160155,
+                    206.24940383911132,
+                    205.87083753585813,
+                    205.26417624664305,
+                    204.87879846954345,
+                    204.49658076286318,
+                    204.35178530578614,
+                    204.3360559741974
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:35:36 2020",
+            "title": "Dump of results from sh_03/Amon.tasmin/tasmin_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

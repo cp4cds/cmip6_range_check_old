@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "orog_fx_MIROC6_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:15:59 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "orog",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190311"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/b7cdf131-10a3-41ff-8abc-8936bd5d34c7",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -160.8411102294922,
+                    5413.81884765625,
+                    377.4425048828125,
+                    377.4425048828125
+                ],
+                "drs": [
+                    "fx",
+                    "orog",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190311"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            50,
+                            50,
+                            46,
+                            45,
+                            49,
+                            109,
+                            109,
+                            47,
+                            92,
+                            6
+                        ],
+                        [
+                            203,
+                            204,
+                            204,
+                            204,
+                            204,
+                            231,
+                            232,
+                            204,
+                            37,
+                            127
+                        ],
+                        [
+                            -125.1322021484375,
+                            -140.6568603515625,
+                            -127.77970123291016,
+                            -105.35303497314453,
+                            -160.8411102294922,
+                            -97.66665649414062,
+                            -94.75682067871094,
+                            -92.41654205322266,
+                            -91.10818481445312,
+                            -89.02942657470703
+                        ]
+                    ],
+                    [
+                        [
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MIROC6_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            88,
+                            87,
+                            87,
+                            88,
+                            87,
+                            88,
+                            86,
+                            85,
+                            85,
+                            86
+                        ],
+                        [
+                            57,
+                            58,
+                            57,
+                            56,
+                            59,
+                            58,
+                            60,
+                            62,
+                            63,
+                            61
+                        ],
+                        [
+                            5413.81884765625,
+                            5410.0771484375,
+                            5381.67919921875,
+                            5366.69287109375,
+                            5286.400390625,
+                            5234.64453125,
+                            5281.88330078125,
+                            5232.60595703125,
+                            5227.87353515625,
+                            5227.0458984375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    5412.592805073233,
+                    5411.366762490244,
+                    5391.949317553784,
+                    5344.4759417481655,
+                    5233.516384277342,
+                    5157.162151611328,
+                    4952.383280273441,
+                    4358.59659277344,
+                    3748.4444116210957,
+                    3555.5771557617163,
+                    3182.882578125,
+                    2639.9729125976564,
+                    1345.1573242187494,
+                    279.9649353027344,
+                    3.894784927368164,
+                    0.3185689002275467,
+                    -0.18370281457900983,
+                    -3.652815401554105,
+                    -14.962741203308104,
+                    -27.712039394378657,
+                    -37.73174482345581,
+                    -56.02508731842041,
+                    -66.08138750457763,
+                    -77.60901469421387,
+                    -93.46171048736572,
+                    -119.65930659103394,
+                    -132.43672582817078,
+                    -147.61356391448976,
+                    -154.22733707199097
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:11 2020",
+            "title": "Dump of results from sh_03/fx.orog/orog_fx_MIROC6_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

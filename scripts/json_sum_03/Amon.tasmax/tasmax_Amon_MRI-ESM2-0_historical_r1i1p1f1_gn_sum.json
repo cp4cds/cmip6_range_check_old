@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:39:38 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmax",
+                                "MRI",
+                                "MRI-ESM2-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190222"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/eace8b52-a3be-4835-aa1d-b90b576c67d7",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    207.97552490234375,
+                    325.7789611816406,
+                    277.574951171875,
+                    283.0992431640625
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmax",
+                    "MRI",
+                    "MRI-ESM2-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190222"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0584",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0584",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0584",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486"
+                        ],
+                        [
+                            9,
+                            9,
+                            9,
+                            9,
+                            9,
+                            9,
+                            8,
+                            8,
+                            9,
+                            9
+                        ],
+                        [
+                            84,
+                            39,
+                            86,
+                            85,
+                            38,
+                            41,
+                            43,
+                            42,
+                            40,
+                            42
+                        ],
+                        [
+                            208.06210327148438,
+                            208.05300903320312,
+                            208.03851318359375,
+                            207.97552490234375,
+                            208.08847045898438,
+                            208.13182067871094,
+                            208.1290740966797,
+                            208.09934997558594,
+                            208.09609985351562,
+                            208.13436889648438
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1301",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1806",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1037",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0977",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1806",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0486",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0629",
+                            "tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1301"
+                        ],
+                        [
+                            107,
+                            104,
+                            108,
+                            107,
+                            104,
+                            104,
+                            107,
+                            109,
+                            104,
+                            104
+                        ],
+                        [
+                            64,
+                            61,
+                            64,
+                            42,
+                            61,
+                            61,
+                            43,
+                            64,
+                            61,
+                            62
+                        ],
+                        [
+                            325.77581787109375,
+                            325.4701232910156,
+                            325.7789611816406,
+                            325.325927734375,
+                            325.1108703613281,
+                            325.3623962402344,
+                            325.4769592285156,
+                            325.0850524902344,
+                            325.0273132324219,
+                            324.95074462890625
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    318.489666008604,
+                    318.3094792703256,
+                    318.1241117599498,
+                    317.927009552002,
+                    317.5549044555665,
+                    316.81038311767605,
+                    315.9615521698003,
+                    314.82993218994136,
+                    312.8935040283203,
+                    310.8303280639649,
+                    308.04126617431643,
+                    302.9445381164551,
+                    301.43136444091795,
+                    297.7654266357422,
+                    283.45408630371094,
+                    267.32918548583984,
+                    250.18158416748045,
+                    231.1231861114502,
+                    223.0403660583496,
+                    221.35486297607423,
+                    220.06528667449953,
+                    219.54228805541993,
+                    219.31841017913817,
+                    219.17094341659543,
+                    219.08281109924317,
+                    219.0474946006775,
+                    219.0101181163788,
+                    218.97256012435912,
+                    218.96339308555602
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:34:32 2020",
+            "title": "Dump of results from sh_03/Amon.tasmax/tasmax_Amon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

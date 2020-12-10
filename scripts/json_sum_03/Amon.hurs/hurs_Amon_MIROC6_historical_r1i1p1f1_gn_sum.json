@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:56:42 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "hurs",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/daff8f65-1cef-4ee3-a421-30da634c8c02",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:56:58 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "hurs",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/195dc2b8-f203-4c25-880a-47558d11edef",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    2.3689253330230713,
+                    202.79803466796875,
+                    80.2116928100586,
+                    84.87384796142578
+                ],
+                "drs": [
+                    "Amon",
+                    "hurs",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181212"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:629",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0185",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:629",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:629",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:629",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:629",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0679",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:629",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:173",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0437"
+                        ],
+                        [
+                            84,
+                            84,
+                            83,
+                            83,
+                            83,
+                            84,
+                            84,
+                            85,
+                            84,
+                            84
+                        ],
+                        [
+                            37,
+                            37,
+                            38,
+                            39,
+                            37,
+                            38,
+                            36,
+                            36,
+                            37,
+                            37
+                        ],
+                        [
+                            2.433372974395752,
+                            2.402831554412842,
+                            2.3689253330230713,
+                            2.519303321838379,
+                            2.4978208541870117,
+                            2.5327298641204834,
+                            2.6183669567108154,
+                            2.5622684955596924,
+                            2.603236675262451,
+                            2.6272037029266357
+                        ]
+                    ],
+                    [
+                        [
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:523",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:523",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:523",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1015",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1015",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:523",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1015",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1015",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1015",
+                            "hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1015"
+                        ],
+                        [
+                            7,
+                            7,
+                            7,
+                            5,
+                            5,
+                            7,
+                            5,
+                            5,
+                            5,
+                            6
+                        ],
+                        [
+                            32,
+                            31,
+                            33,
+                            55,
+                            54,
+                            30,
+                            53,
+                            56,
+                            52,
+                            61
+                        ],
+                        [
+                            202.79803466796875,
+                            202.2834014892578,
+                            200.7913055419922,
+                            199.48793029785156,
+                            199.5565185546875,
+                            199.80470275878906,
+                            199.31500244140625,
+                            199.24940490722656,
+                            199.06752014160156,
+                            199.05560302734375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    164.45629316154435,
+                    164.39349757797288,
+                    164.09485270920558,
+                    162.91600657501266,
+                    161.52110195007296,
+                    159.23166540908812,
+                    156.3025928649904,
+                    153.23798506164553,
+                    143.45919315338142,
+                    133.6695954132079,
+                    125.35743431091308,
+                    109.55944671630866,
+                    101.86146240234375,
+                    90.04053497314453,
+                    81.84444618225098,
+                    76.1616439819336,
+                    65.42800064086916,
+                    43.186959838867196,
+                    20.811033210754395,
+                    13.579184188842774,
+                    10.286059300899506,
+                    8.04501606321335,
+                    7.07335155415535,
+                    6.40428438937664,
+                    5.860738122558594,
+                    5.5682010042190555,
+                    5.362896926617622,
+                    5.2358037123250964,
+                    5.215481988978386
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:48:15 2020",
+            "title": "Dump of results from sh_03/Amon.hurs/hurs_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

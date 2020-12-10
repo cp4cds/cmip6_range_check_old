@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 20:08:31 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "MOHC",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20190406"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/106c7177-efbe-4698-bb67-b7c33668cdb7",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 20:11:05 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "MOHC",
+                                "UKESM1-0-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20190406"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/f0830b1f-f827-4e18-9ffd-6eec77c05862",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    48.6212158203125,
+                    13.358652135231317,
+                    19.25023705281888
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "MOHC",
+                    "UKESM1-0-LL",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gn",
+                    "v20190406"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:119",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:119",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:120",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:119"
+                        ],
+                        [
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11,
+                            11
+                        ],
+                        [
+                            115,
+                            114,
+                            121,
+                            117,
+                            118,
+                            119,
+                            115,
+                            116,
+                            113,
+                            124
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:025",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:264",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0865",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0361",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc:0301",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:000",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:337",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:673",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:229",
+                            "mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_195001-201412.nc:697"
+                        ],
+                        [
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110
+                        ],
+                        [
+                            18,
+                            18,
+                            18,
+                            18,
+                            18,
+                            18,
+                            18,
+                            18,
+                            18,
+                            18
+                        ],
+                        [
+                            48.6212158203125,
+                            48.62115478515625,
+                            48.62109375,
+                            48.62115478515625,
+                            48.6212158203125,
+                            48.6212158203125,
+                            48.620849609375,
+                            48.62054443359375,
+                            48.62017822265625,
+                            48.6201171875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    46.843713854980436,
+                    46.83159274902357,
+                    46.7952252990725,
+                    46.7220931945802,
+                    46.424793084716924,
+                    46.24293374633789,
+                    46.14275402832032,
+                    45.87924975585938,
+                    45.60865737915039,
+                    45.50327545166016,
+                    45.13495666503906,
+                    44.13912353515626,
+                    41.37587280273438,
+                    32.45958709716797,
+                    13.325607299804688,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:41:46 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

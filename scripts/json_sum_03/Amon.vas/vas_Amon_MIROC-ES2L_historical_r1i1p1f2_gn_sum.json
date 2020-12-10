@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:06:40 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "vas",
+                                "MIROC",
+                                "MIROC-ES2L",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20190823"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/c584e708-43c5-4ee4-9b5e-5ca6cbf4c3c1",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -14.98980712890625,
+                    15.472155570983887,
+                    1.7123501300811768,
+                    2.7105674743652344
+                ],
+                "drs": [
+                    "Amon",
+                    "vas",
+                    "MIROC",
+                    "MIROC-ES2L",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gn",
+                    "v20190823"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0178",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1166",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1379",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1586",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1379",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1586",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1586",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1379",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1379",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1166"
+                        ],
+                        [
+                            53,
+                            58,
+                            54,
+                            58,
+                            53,
+                            58,
+                            58,
+                            54,
+                            53,
+                            58
+                        ],
+                        [
+                            66,
+                            125,
+                            64,
+                            125,
+                            63,
+                            127,
+                            126,
+                            65,
+                            64,
+                            124
+                        ],
+                        [
+                            -14.4033784866333,
+                            -14.467397689819336,
+                            -14.37509822845459,
+                            -14.78608512878418,
+                            -14.642810821533203,
+                            -14.519737243652344,
+                            -14.98980712890625,
+                            -14.371857643127441,
+                            -14.33864688873291,
+                            -14.282167434692383
+                        ]
+                    ],
+                    [
+                        [
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1529",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0305",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0293",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0305",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0293",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1913",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0223",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:1913",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0305",
+                            "vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412.nc:0305"
+                        ],
+                        [
+                            5,
+                            5,
+                            5,
+                            4,
+                            5,
+                            5,
+                            4,
+                            6,
+                            4,
+                            4
+                        ],
+                        [
+                            64,
+                            61,
+                            63,
+                            62,
+                            62,
+                            63,
+                            62,
+                            61,
+                            63,
+                            64
+                        ],
+                        [
+                            15.241214752197266,
+                            15.25236701965332,
+                            15.452092170715332,
+                            15.3106050491333,
+                            15.298368453979492,
+                            15.22392463684082,
+                            15.154825210571289,
+                            15.169855117797852,
+                            15.472155570983887,
+                            15.064489364624023
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    11.518617657475414,
+                    11.51261335145005,
+                    11.459346218610301,
+                    11.29798384990698,
+                    11.15578946237595,
+                    10.794041486978598,
+                    10.398950527668053,
+                    9.771828196525588,
+                    8.769189136028292,
+                    7.685542936325074,
+                    6.51656847953797,
+                    4.883742022514344,
+                    3.6488137602806106,
+                    1.6240623593330383,
+                    0.0216328795067966,
+                    -1.4251119643449783,
+                    -3.117856800556183,
+                    -4.299476277828217,
+                    -5.824187006950378,
+                    -7.052701292037964,
+                    -8.129746983051302,
+                    -9.165789750099183,
+                    -9.622516850948333,
+                    -10.046614648342132,
+                    -10.333597873401642,
+                    -10.483439865064621,
+                    -10.600737922167777,
+                    -10.644249640579222,
+                    -10.652098994789123
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:58:02 2020",
+            "title": "Dump of results from sh_03/Amon.vas/vas_Amon_MIROC-ES2L_historical_r1i1p1f2_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

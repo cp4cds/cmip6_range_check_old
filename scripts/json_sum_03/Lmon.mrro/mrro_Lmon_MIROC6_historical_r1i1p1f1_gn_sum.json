@@ -1,0 +1,355 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:02:42 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/cd3b215d-273c-47a4-99f6-227b993f5589",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            32768,
+                            13046,
+                            13046,
+                            19722,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MIROC6_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:05:55 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrro",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/17f36200-e47b-4050-bfa2-e414cb5fdc03",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "kg m-2 s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            32768,
+                            13046,
+                            13046,
+                            19722,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MIROC6_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    0.0009018006967380643,
+                    5.333817308526197e-06,
+                    1.3260453797804876e-05
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrro",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181212"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:119",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:119",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:120",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:119"
+                        ],
+                        [
+                            81,
+                            81,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            116,
+                            119
+                        ],
+                        [
+                            31,
+                            36,
+                            234,
+                            233,
+                            232,
+                            221,
+                            240,
+                            238,
+                            236,
+                            234
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1147",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0601",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0601",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1147",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0601",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0877",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0877",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:173",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0209",
+                            "mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1021"
+                        ],
+                        [
+                            83,
+                            54,
+                            54,
+                            83,
+                            54,
+                            53,
+                            53,
+                            83,
+                            83,
+                            53
+                        ],
+                        [
+                            61,
+                            92,
+                            90,
+                            62,
+                            91,
+                            89,
+                            88,
+                            64,
+                            63,
+                            89
+                        ],
+                        [
+                            0.0007880839984863997,
+                            0.0007941257790662348,
+                            0.0007809716043993831,
+                            0.0008126005413942039,
+                            0.0009018006967380643,
+                            0.0007031800923869014,
+                            0.0006733114714734256,
+                            0.0006563622737303376,
+                            0.0006749996682628989,
+                            0.0006535803549923003
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.0026995069347321987,
+                    0.0
+                ],
+                "quantiles": [
+                    0.00035467096370556583,
+                    0.00035055020883739105,
+                    0.0003390117803064801,
+                    0.0003199193125110418,
+                    0.0002959137923025966,
+                    0.00025591698580683744,
+                    0.00022425848230342302,
+                    0.0001896510163351194,
+                    0.0001418357496731912,
+                    0.0001080807713151442,
+                    7.614483947691044e-05,
+                    3.985658395322389e-05,
+                    2.262610723846592e-05,
+                    6.282676793034625e-06,
+                    1.2081360125648644e-06,
+                    3.244477742025964e-10,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:36:25 2020",
+            "title": "Dump of results from sh_03/Lmon.mrro/mrro_Lmon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:13:26 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "contact.cmip@meteo.fr",
+                            "dimensions": [
+                                "time",
+                                "y",
+                                "x"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "siconc",
+                                "CNRM-CERFACS",
+                                "CNRM-CM6-1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f2",
+                                "gn",
+                                "v20180917"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                294,
+                                362
+                            ],
+                            "tid": "hdl:21.14100/087fa668-2047-4dea-92d1-225ed6ea2f02",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            294,
+                            362
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    99.5,
+                    8.868654646857284,
+                    21.273579977568485
+                ],
+                "drs": [
+                    "SImon",
+                    "siconc",
+                    "CNRM-CERFACS",
+                    "CNRM-CM6-1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f2",
+                    "gn",
+                    "v20180917"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1469",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1469",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1469",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1470"
+                        ],
+                        [
+                            123,
+                            123,
+                            122,
+                            122,
+                            123,
+                            123,
+                            203,
+                            123,
+                            123,
+                            123
+                        ],
+                        [
+                            41,
+                            39,
+                            295,
+                            297,
+                            37,
+                            35,
+                            113,
+                            40,
+                            31,
+                            43
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1535",
+                            "siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412.nc:1549"
+                        ],
+                        [
+                            286,
+                            286,
+                            286,
+                            286,
+                            286,
+                            287,
+                            286,
+                            286,
+                            286,
+                            286
+                        ],
+                        [
+                            238,
+                            229,
+                            227,
+                            96,
+                            233,
+                            95,
+                            235,
+                            236,
+                            237,
+                            228
+                        ],
+                        [
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5,
+                            99.5
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    99.49847958160402,
+                    99.49828664779663,
+                    99.49611787986757,
+                    99.49390991516113,
+                    99.48960739593505,
+                    99.48027908325196,
+                    99.46984350585936,
+                    99.45527653503419,
+                    99.41241744995116,
+                    99.34623863220216,
+                    99.20651000976562,
+                    98.453853225708,
+                    95.1002212524414,
+                    2.910879402406863e-05,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:12 2020",
+            "title": "Dump of results from sh_03/SImon.siconc/siconc_SImon_CNRM-CM6-1_historical_r1i1p1f2_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

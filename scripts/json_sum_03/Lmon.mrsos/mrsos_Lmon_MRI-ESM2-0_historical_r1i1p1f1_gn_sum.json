@@ -1,0 +1,264 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:36:49 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "MRI",
+                                "MRI-ESM2-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190603"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/8afa24a4-1ca4-4932-b0a8-6cdc679ce61c",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            51200,
+                            19594,
+                            19594,
+                            31606,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MRI-ESM2-0_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.004352000076323748,
+                    43.52000045776367,
+                    24.268231027355313,
+                    29.294305654792282
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "MRI",
+                    "MRI-ESM2-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190603"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0085",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0682",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0683",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0086",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0783",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1442",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0275",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1681",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1442",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:0275"
+                        ],
+                        [
+                            95,
+                            94,
+                            94,
+                            95,
+                            94,
+                            94,
+                            96,
+                            96,
+                            95,
+                            94
+                        ],
+                        [
+                            319,
+                            305,
+                            305,
+                            5,
+                            310,
+                            4,
+                            4,
+                            4,
+                            319,
+                            4
+                        ],
+                        [
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748,
+                            0.004352000076323748
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1319"
+                        ],
+                        [
+                            151,
+                            151,
+                            150,
+                            144,
+                            138,
+                            150,
+                            23,
+                            23,
+                            150,
+                            146
+                        ],
+                        [
+                            17,
+                            18,
+                            241,
+                            241,
+                            284,
+                            240,
+                            268,
+                            267,
+                            245,
+                            244
+                        ],
+                        [
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367,
+                            43.52000045776367
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.02600814402103424,
+                    0.0
+                ],
+                "quantiles": [
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.52000045776367,
+                    43.51298087120057,
+                    43.05979267120361,
+                    42.0,
+                    42.0,
+                    41.98625793457031,
+                    35.50491714477539,
+                    26.98240089416504,
+                    22.350228548049927,
+                    10.819860124588013,
+                    6.507019793987275,
+                    5.09631413936615,
+                    4.615312850475311,
+                    4.2519086790084835,
+                    3.718563363790512,
+                    2.496058954000473,
+                    0.4464667824096977,
+                    0.04973155742976815,
+                    0.01463789617852308,
+                    0.005321903803164605,
+                    0.004775193034834229,
+                    0.004617814418077469
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:41:05 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

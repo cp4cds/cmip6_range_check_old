@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 21:08:30 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Wei-Liang Lee (leelupin@gate.sinica.edu.tw)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "AS-RCEC",
+                                "TaiESM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/fb321e10-10ca-48e9-9cfa-44156c35481c",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    55.56646728515625,
+                    5.338870525360107,
+                    6.202627658843994
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "AS-RCEC",
+                    "TaiESM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200624"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1319",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1320",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1319"
+                        ],
+                        [
+                            105,
+                            105,
+                            105,
+                            105,
+                            105,
+                            105,
+                            105,
+                            105,
+                            105,
+                            105
+                        ],
+                        [
+                            178,
+                            185,
+                            183,
+                            182,
+                            181,
+                            180,
+                            188,
+                            187,
+                            185,
+                            186
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1841",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0473",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1900",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1216",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1972",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0941",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1924",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0893",
+                            "mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0364"
+                        ],
+                        [
+                            154,
+                            154,
+                            154,
+                            155,
+                            154,
+                            154,
+                            154,
+                            154,
+                            154,
+                            154
+                        ],
+                        [
+                            125,
+                            125,
+                            125,
+                            125,
+                            125,
+                            125,
+                            125,
+                            125,
+                            125,
+                            125
+                        ],
+                        [
+                            55.56646728515625,
+                            55.3182373046875,
+                            55.2624397277832,
+                            54.76837921142578,
+                            54.94904708862305,
+                            54.5689697265625,
+                            54.71939468383789,
+                            54.52638244628906,
+                            54.41110610961914,
+                            54.271507263183594
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    48.77903032998525,
+                    48.20454019756497,
+                    47.133861728671874,
+                    46.35081839847668,
+                    45.54773332023609,
+                    44.30178897857674,
+                    42.960804262161716,
+                    41.45392984390261,
+                    39.24165663719178,
+                    37.30042905807497,
+                    35.10133647918701,
+                    30.671993732452442,
+                    25.582645893096924,
+                    8.235247373580933,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:41:33 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_TaiESM1_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

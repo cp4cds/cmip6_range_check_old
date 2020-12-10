@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:54:51 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "yanluan@tsinghua.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmax",
+                                "THU",
+                                "CIESM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20200417"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/bbad7d16-498f-4319-883a-fa5c6f56612d",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    210.73455810546875,
+                    345.81280517578125,
+                    282.6396484375,
+                    289.1734619140625
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmax",
+                    "THU",
+                    "CIESM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20200417"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0548"
+                        ],
+                        [
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            6,
+                            7,
+                            6
+                        ],
+                        [
+                            93,
+                            92,
+                            90,
+                            91,
+                            87,
+                            88,
+                            89,
+                            84,
+                            86,
+                            85
+                        ],
+                        [
+                            210.7440185546875,
+                            210.73455810546875,
+                            210.92538452148438,
+                            210.81675720214844,
+                            210.94699096679688,
+                            211.00238037109375,
+                            211.030029296875,
+                            211.11993408203125,
+                            211.04100036621094,
+                            211.12045288085938
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1542",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1830",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1530",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1387",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1973",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1830",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0979",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0355",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:0355",
+                            "tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412.nc:1829"
+                        ],
+                        [
+                            120,
+                            120,
+                            120,
+                            120,
+                            122,
+                            122,
+                            122,
+                            120,
+                            122,
+                            120
+                        ],
+                        [
+                            46,
+                            46,
+                            46,
+                            46,
+                            31,
+                            31,
+                            31,
+                            46,
+                            31,
+                            46
+                        ],
+                        [
+                            345.497802734375,
+                            345.5909118652344,
+                            345.81280517578125,
+                            345.7121887207031,
+                            345.49432373046875,
+                            345.40838623046875,
+                            345.3786315917969,
+                            345.26165771484375,
+                            345.2289733886719,
+                            345.17919921875
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    340.07535094375413,
+                    339.76384866790886,
+                    339.14904697036786,
+                    338.49746792602673,
+                    337.61342416381797,
+                    336.4240629577637,
+                    335.2646178436288,
+                    333.709267883301,
+                    330.42791748046875,
+                    326.80755844116214,
+                    323.2752349853516,
+                    314.23394775390625,
+                    305.28711700439453,
+                    300.06352615356445,
+                    288.7843780517578,
+                    273.2547035217285,
+                    259.4675979614258,
+                    239.18936920166016,
+                    230.1213348388672,
+                    226.87988243103027,
+                    224.78965530395507,
+                    223.46824630737305,
+                    222.8290240097046,
+                    222.1722504043579,
+                    221.69789639282226,
+                    221.52880041885376,
+                    221.39203638839723,
+                    221.2712465751648,
+                    221.23009642715454
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:32:56 2020",
+            "title": "Dump of results from sh_03/Amon.tasmax/tasmax_Amon_CIESM_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

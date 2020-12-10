@@ -1,0 +1,264 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 17:50:35 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "siconc",
+                                "CSIRO",
+                                "ACCESS-ESM1-5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200817"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                300,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/931b0664-d90c-46d5-b9fb-f7f17b8cefd5",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            108000,
+                            69782,
+                            69782,
+                            38218,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_ACCESS-ESM1-5_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            300,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    99.99952697753906,
+                    12.115178341119487,
+                    18.451491788713422
+                ],
+                "drs": [
+                    "SImon",
+                    "siconc",
+                    "CSIRO",
+                    "ACCESS-ESM1-5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200817"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1182",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1182",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1182",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1191"
+                        ],
+                        [
+                            130,
+                            130,
+                            130,
+                            130,
+                            130,
+                            130,
+                            130,
+                            130,
+                            130,
+                            130
+                        ],
+                        [
+                            115,
+                            113,
+                            137,
+                            136,
+                            110,
+                            109,
+                            142,
+                            114,
+                            106,
+                            111
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0216",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0216",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0216",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0216",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0086",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0216",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0216",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:1427",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0409",
+                            "siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412.nc:0482"
+                        ],
+                        [
+                            299,
+                            299,
+                            298,
+                            299,
+                            299,
+                            299,
+                            293,
+                            289,
+                            260,
+                            289
+                        ],
+                        [
+                            149,
+                            157,
+                            140,
+                            219,
+                            149,
+                            140,
+                            158,
+                            141,
+                            213,
+                            141
+                        ],
+                        [
+                            99.99952697753906,
+                            99.99923706054688,
+                            99.99919128417969,
+                            99.99900817871094,
+                            99.99899291992188,
+                            99.99908447265625,
+                            99.99910736083984,
+                            99.99897766113281,
+                            99.99897766113281,
+                            99.99897766113281
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    100.0,
+                    0.0
+                ],
+                "quantiles": [
+                    99.99351159000398,
+                    99.99204257514954,
+                    99.98604522609712,
+                    99.97836646575928,
+                    99.96647134780883,
+                    99.93572043418885,
+                    99.8848465499878,
+                    99.81772451782226,
+                    99.7153992843628,
+                    99.62486026763915,
+                    99.51095771789551,
+                    98.98068275451661,
+                    93.38069381713868,
+                    0.019389132037758827,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:03 2020",
+            "title": "Dump of results from sh_03/SImon.siconc/siconc_SImon_ACCESS-ESM1-5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

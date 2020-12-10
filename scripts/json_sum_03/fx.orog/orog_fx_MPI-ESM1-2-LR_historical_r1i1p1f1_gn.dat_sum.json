@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:15:31 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "cmip6-mpi-esm@dkrz.de",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "orog",
+                                "MPI-M",
+                                "MPI-ESM1-2-LR",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190710"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/647b3e53-ad43-4bef-8c3e-c812275ac431",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -523.5621337890625,
+                    5491.43798828125,
+                    387.840576171875,
+                    387.840576171875
+                ],
+                "drs": [
+                    "fx",
+                    "orog",
+                    "MPI-M",
+                    "MPI-ESM1-2-LR",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190710"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            34,
+                            82,
+                            41,
+                            81,
+                            38,
+                            33,
+                            40,
+                            35,
+                            37,
+                            30
+                        ],
+                        [
+                            153,
+                            174,
+                            149,
+                            173,
+                            152,
+                            153,
+                            150,
+                            150,
+                            153,
+                            152
+                        ],
+                        [
+                            -433.0113220214844,
+                            -316.25384521484375,
+                            -301.06005859375,
+                            -274.24151611328125,
+                            -324.3096008300781,
+                            -336.85211181640625,
+                            -274.955322265625,
+                            -301.1620178222656,
+                            -523.5621337890625,
+                            -263.5345153808594
+                        ]
+                    ],
+                    [
+                        [
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0",
+                            "orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            64,
+                            65,
+                            64,
+                            66,
+                            66,
+                            65,
+                            64,
+                            64,
+                            64,
+                            67
+                        ],
+                        [
+                            45,
+                            43,
+                            46,
+                            42,
+                            43,
+                            44,
+                            47,
+                            48,
+                            49,
+                            47
+                        ],
+                        [
+                            5330.83251953125,
+                            5414.6533203125,
+                            5491.43798828125,
+                            5420.4658203125,
+                            5397.52197265625,
+                            5282.90576171875,
+                            5334.70751953125,
+                            5225.49609375,
+                            5222.3349609375,
+                            5222.130859375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    5478.3571080028905,
+                    5465.276227724789,
+                    5426.033586889711,
+                    5415.56530156251,
+                    5354.418694921868,
+                    5221.845174560549,
+                    4890.666957519547,
+                    4468.519588867171,
+                    3761.476070556646,
+                    3582.191584472656,
+                    3181.105673828125,
+                    2624.6791259765632,
+                    1330.3736694335953,
+                    274.2638244628906,
+                    19.844633102416992,
+                    -6.769959449768066,
+                    -26.858369827270508,
+                    -44.193546295166016,
+                    -78.18884338378906,
+                    -110.78815406799316,
+                    -145.72566635131835,
+                    -190.8111936340332,
+                    -224.4882442626953,
+                    -262.01824848937986,
+                    -318.7817413269043,
+                    -351.93949189758297,
+                    -440.1150332046509,
+                    -490.1832935552979,
+                    -506.8727136721802
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:12 2020",
+            "title": "Dump of results from sh_03/fx.orog/orog_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

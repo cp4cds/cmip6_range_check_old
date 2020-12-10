@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:19:59 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "T. Lovato",
+                            "dimensions": [
+                                "time",
+                                "i",
+                                "j"
+                            ],
+                            "drs": [
+                                "SImon",
+                                "sithick",
+                                "CMCC",
+                                "CMCC-CM2-SR5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200616"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                291,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/c0bb96a0-6dd6-4b06-99cb-2630e17e89a3",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            291,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.009999999776482582,
+                    25.922929763793945,
+                    0.9139030166387024,
+                    1.6868113688818875
+                ],
+                "drs": [
+                    "SImon",
+                    "sithick",
+                    "CMCC",
+                    "CMCC-CM2-SR5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200616"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0824",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0824",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0830",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0830",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0830",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0830",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0824",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0830",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0824",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0824"
+                        ],
+                        [
+                            273,
+                            54,
+                            59,
+                            51,
+                            49,
+                            53,
+                            268,
+                            58,
+                            54,
+                            60
+                        ],
+                        [
+                            231,
+                            66,
+                            306,
+                            68,
+                            46,
+                            158,
+                            268,
+                            296,
+                            65,
+                            264
+                        ],
+                        [
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582,
+                            0.009999999776482582
+                        ]
+                    ],
+                    [
+                        [
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0670",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0284",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0213",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1943",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0141",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1968",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1950",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1967",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0275",
+                            "sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0669"
+                        ],
+                        [
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22,
+                            22
+                        ],
+                        [
+                            214,
+                            214,
+                            214,
+                            214,
+                            214,
+                            214,
+                            214,
+                            214,
+                            214,
+                            214
+                        ],
+                        [
+                            25.5280704498291,
+                            25.531692504882812,
+                            25.812313079833984,
+                            25.79572105407715,
+                            25.54094886779785,
+                            25.89337921142578,
+                            25.8270206451416,
+                            25.922929763793945,
+                            25.57189178466797,
+                            25.500627517700195
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    23.468464188001125,
+                    23.11508018330075,
+                    22.122218847516162,
+                    20.983863726043346,
+                    19.59505228157323,
+                    10.18406362342892,
+                    4.835073883533543,
+                    4.224310201644904,
+                    3.77801498830318,
+                    3.4441995835304255,
+                    3.1477539682388302,
+                    2.6419594228267695,
+                    2.3000964641571047,
+                    1.627047449350357,
+                    1.0521990358829498,
+                    0.5444058924913406,
+                    0.234813329577446,
+                    0.14432453848421573,
+                    0.0849660012125969,
+                    0.059726779107004406,
+                    0.04524213338270784,
+                    0.02991469357162714,
+                    0.02273794661462307,
+                    0.01655091785034165,
+                    0.010000983753986656,
+                    0.009999999776482582,
+                    0.009999999776482582,
+                    0.009999999776482582,
+                    0.009999999776482582
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:49 2020",
+            "title": "Dump of results from sh_03/SImon.sithick/sithick_SImon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

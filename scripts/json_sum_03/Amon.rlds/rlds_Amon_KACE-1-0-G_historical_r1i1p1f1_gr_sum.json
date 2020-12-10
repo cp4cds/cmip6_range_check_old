@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:09:38 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Yoon-Jin Lim (yoonjin.lim@korea.kr)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rlds",
+                                "NIMS-KMA",
+                                "KACE-1-0-G",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20190910"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/127c9d67-aa30-4699-9c47-ba3e1057ab9c",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    60.474365234375,
+                    475.401123046875,
+                    284.15863037109375,
+                    318.9071044921875
+                ],
+                "drs": [
+                    "Amon",
+                    "rlds",
+                    "NIMS-KMA",
+                    "KACE-1-0-G",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20190910"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0619",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1519",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1519",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0796",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0796",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0796",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1519",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1229",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1229",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1229"
+                        ],
+                        [
+                            7,
+                            6,
+                            6,
+                            7,
+                            7,
+                            7,
+                            6,
+                            6,
+                            6,
+                            6
+                        ],
+                        [
+                            30,
+                            32,
+                            31,
+                            28,
+                            29,
+                            30,
+                            30,
+                            41,
+                            40,
+                            39
+                        ],
+                        [
+                            60.554443359375,
+                            60.509521484375,
+                            60.474365234375,
+                            60.4765625,
+                            60.4765625,
+                            60.510498046875,
+                            60.587158203125,
+                            60.625244140625,
+                            60.62255859375,
+                            60.653076171875
+                        ]
+                    ],
+                    [
+                        [
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1830",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1627",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1925",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1974",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1830",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1925",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1229",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1853",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1830",
+                            "rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1974"
+                        ],
+                        [
+                            92,
+                            97,
+                            91,
+                            91,
+                            91,
+                            92,
+                            91,
+                            91,
+                            92,
+                            91
+                        ],
+                        [
+                            45,
+                            39,
+                            47,
+                            47,
+                            47,
+                            46,
+                            47,
+                            48,
+                            46,
+                            48
+                        ],
+                        [
+                            468.697509765625,
+                            470.2744140625,
+                            475.401123046875,
+                            470.37548828125,
+                            468.570556640625,
+                            466.51220703125,
+                            465.755126953125,
+                            465.659423828125,
+                            465.216796875,
+                            464.999267578125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    438.9955770251453,
+                    438.601496623541,
+                    436.622102746596,
+                    434.6671866699219,
+                    433.3404143066408,
+                    431.9647266235354,
+                    430.6586741943362,
+                    429.4900710449219,
+                    427.3437316894531,
+                    425.4169763183594,
+                    422.1834399414063,
+                    415.7292602539062,
+                    406.056298828125,
+                    367.52947998046875,
+                    311.50006103515625,
+                    235.92172241210938,
+                    162.43955078124998,
+                    112.25678710937501,
+                    92.91241455078125,
+                    85.63296020507812,
+                    80.99669921875,
+                    78.03652612304688,
+                    76.67890173339845,
+                    76.04716821289063,
+                    75.31286572265626,
+                    75.10006798095704,
+                    74.82339216308594,
+                    74.69905501953124,
+                    74.69608512695314
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:08:16 2020",
+            "title": "Dump of results from sh_03/Amon.rlds/rlds_Amon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

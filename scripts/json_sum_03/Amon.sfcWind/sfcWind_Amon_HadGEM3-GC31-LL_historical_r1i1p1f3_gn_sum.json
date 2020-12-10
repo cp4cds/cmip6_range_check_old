@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:27:29 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "sfcWind",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/f946bd86-02e2-47d6-a24c-43e6b596b050",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:27:47 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "sfcWind",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/cdcbc33c-1540-48fe-a0a2-fcf90e352d75",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.4330596923828125,
+                    16.319381713867188,
+                    5.755147933959961,
+                    6.505772113800049
+                ],
+                "drs": [
+                    "Amon",
+                    "sfcWind",
+                    "MOHC",
+                    "HadGEM3-GC31-LL",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f3",
+                    "gn",
+                    "v20190624"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:682",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1174",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0010",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0325",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0844",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0782",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1114",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0325",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:544",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:010"
+                        ],
+                        [
+                            73,
+                            73,
+                            73,
+                            72,
+                            73,
+                            73,
+                            73,
+                            71,
+                            73,
+                            73
+                        ],
+                        [
+                            61,
+                            61,
+                            61,
+                            60,
+                            61,
+                            61,
+                            61,
+                            60,
+                            61,
+                            61
+                        ],
+                        [
+                            0.43637847900390625,
+                            0.4330596923828125,
+                            0.4439697265625,
+                            0.44770050048828125,
+                            0.45391845703125,
+                            0.4614715576171875,
+                            0.4613494873046875,
+                            0.4621429443359375,
+                            0.4640960693359375,
+                            0.4644317626953125
+                        ]
+                    ],
+                    [
+                        [
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0392",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1085",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0392",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1085",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0392",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:565",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0392",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0392",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0392",
+                            "sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:565"
+                        ],
+                        [
+                            35,
+                            14,
+                            35,
+                            14,
+                            36,
+                            115,
+                            35,
+                            36,
+                            36,
+                            116
+                        ],
+                        [
+                            47,
+                            18,
+                            45,
+                            19,
+                            47,
+                            182,
+                            46,
+                            46,
+                            48,
+                            181
+                        ],
+                        [
+                            15.773674011230469,
+                            16.319381713867188,
+                            15.822746276855469,
+                            16.098114013671875,
+                            15.726890563964844,
+                            15.716636657714844,
+                            15.871131896972656,
+                            15.713592529296875,
+                            15.683013916015625,
+                            15.670814514160156
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    14.05857975482937,
+                    14.03082091651934,
+                    13.963907661247504,
+                    13.874674690246607,
+                    13.698785112762469,
+                    13.556893600463946,
+                    13.375996276855542,
+                    13.14422393798827,
+                    12.77108922958374,
+                    12.383082847595212,
+                    11.91765647888184,
+                    11.04908275604248,
+                    10.12368278503418,
+                    8.323342323303223,
+                    6.303842544555664,
+                    4.132662773132324,
+                    2.3307445526123045,
+                    1.7363002777099612,
+                    1.3394890594482423,
+                    1.1217364883422851,
+                    0.9579428100585937,
+                    0.8039198608398437,
+                    0.7231852035522461,
+                    0.6647144966125489,
+                    0.6111483894348144,
+                    0.5761677097320557,
+                    0.5517064071655273,
+                    0.537976171875,
+                    0.5321254693984986
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:26:18 2020",
+            "title": "Dump of results from sh_03/Amon.sfcWind/sfcWind_Amon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

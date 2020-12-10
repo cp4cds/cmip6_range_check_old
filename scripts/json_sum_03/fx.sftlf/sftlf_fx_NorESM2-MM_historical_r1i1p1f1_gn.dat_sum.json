@@ -1,0 +1,247 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:17:06 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Please send any requests or bug reports to noresm-ncc@met.no.",
+                            "dimensions": [
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "fx",
+                                "sftlf",
+                                "NCC",
+                                "NorESM2-MM",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20191108"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/223a547e-6916-4b55-98b2-855b25e494f4",
+                            "units": "%"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    100.0,
+                    34.39955520629883,
+                    34.39955520629883
+                ],
+                "drs": [
+                    "fx",
+                    "sftlf",
+                    "NCC",
+                    "NorESM2-MM",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20191108"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            104,
+                            104,
+                            104,
+                            104,
+                            104,
+                            104,
+                            104,
+                            104,
+                            104,
+                            104
+                        ],
+                        [
+                            120,
+                            121,
+                            113,
+                            114,
+                            115,
+                            116,
+                            117,
+                            118,
+                            119,
+                            111
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0",
+                            "sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn.nc:0"
+                        ],
+                        [
+                            151,
+                            151,
+                            151,
+                            151,
+                            151,
+                            151,
+                            151,
+                            151,
+                            151,
+                            151
+                        ],
+                        [
+                            204,
+                            206,
+                            197,
+                            198,
+                            199,
+                            200,
+                            201,
+                            202,
+                            203,
+                            195
+                        ],
+                        [
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0,
+                            100.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:32:27 2020",
+            "title": "Dump of results from sh_03/fx.sftlf/sftlf_fx_NorESM2-MM_historical_r1i1p1f1_gn..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

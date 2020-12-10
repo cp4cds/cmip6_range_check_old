@@ -1,0 +1,264 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 18:45:19 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "MRI",
+                                "MRI-ESM2-0",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190603"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                160,
+                                320
+                            ],
+                            "tid": "hdl:21.14100/a1ead141-1e08-4b4c-960b-7a6a79155d74",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "mask_mismatch",
+                            51200,
+                            19594,
+                            19594,
+                            31606,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftlf_fx_MRI-ESM2-0_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            160,
+                            320
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    10000.0,
+                    2989.2365009696846,
+                    3072.134735122997
+                ],
+                "drs": [
+                    "LImon",
+                    "snw",
+                    "MRI",
+                    "MRI-ESM2-0",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190603"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1453",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1453",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1453",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455"
+                        ],
+                        [
+                            105,
+                            105,
+                            81,
+                            81,
+                            105,
+                            105,
+                            81,
+                            105,
+                            105,
+                            41
+                        ],
+                        [
+                            39,
+                            37,
+                            261,
+                            254,
+                            36,
+                            35,
+                            260,
+                            38,
+                            42,
+                            262
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1453",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1453",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1453",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455",
+                            "snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412.nc:1455"
+                        ],
+                        [
+                            8,
+                            8,
+                            2,
+                            2,
+                            8,
+                            8,
+                            2,
+                            8,
+                            8,
+                            8
+                        ],
+                        [
+                            186,
+                            184,
+                            74,
+                            73,
+                            178,
+                            177,
+                            79,
+                            185,
+                            175,
+                            188
+                        ],
+                        [
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0,
+                            10000.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_dont_match",
+                    0.02600814402103424,
+                    0.0
+                ],
+                "quantiles": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    9999.944702148438,
+                    18.147212505340576,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:34 2020",
+            "title": "Dump of results from sh_03/LImon.snw/snw_LImon_MRI-ESM2-0_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

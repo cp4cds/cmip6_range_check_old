@@ -1,0 +1,355 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:48:50 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                330,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/c0e6fdf3-4ca0-41f0-b29c-9eed850f9f54",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            65183,
+                            65183,
+                            65183,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_HadGEM3-GC31-LL_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            330,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:49:09 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "j",
+                                "i"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "MOHC",
+                                "HadGEM3-GC31-LL",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f3",
+                                "gn",
+                                "v20190624"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                330,
+                                360
+                            ],
+                            "tid": "hdl:21.14100/5870cd2c-5a52-41f5-b7bd-4c048ab1f7d0",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "mask_rep": [
+                            "masks_match",
+                            65183,
+                            65183,
+                            65183,
+                            0,
+                            0
+                        ],
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_file": "../esgf_fetch/data_files_2/sftof_Ofx_HadGEM3-GC31-LL_piControl_r1i1p1f1_gn.nc",
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            330,
+                            360
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.9940871000289917,
+                    1.2032735347747803,
+                    0.6527444847582958,
+                    0.7008786800239326
+                ],
+                "drs": [
+                    "Omon",
+                    "zos",
+                    "MOHC",
+                    "HadGEM3-GC31-LL",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f3",
+                    "gn",
+                    "v20190624"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0777",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0777",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_195001-201412.nc:631",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0777"
+                        ],
+                        [
+                            94,
+                            80,
+                            94,
+                            80,
+                            81,
+                            80,
+                            81,
+                            81,
+                            80,
+                            95
+                        ],
+                        [
+                            293,
+                            264,
+                            294,
+                            263,
+                            263,
+                            262,
+                            264,
+                            262,
+                            265,
+                            294
+                        ],
+                        [
+                            -1.9940871000289917,
+                            -1.9936069250106812,
+                            -1.992894172668457,
+                            -1.993712306022644,
+                            -1.9928100109100342,
+                            -1.9924131631851196,
+                            -1.9922809600830078,
+                            -1.992512822151184,
+                            -1.9920459985733032,
+                            -1.9919002056121826
+                        ]
+                    ],
+                    [
+                        [
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1027",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1027",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:1027",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211",
+                            "zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912.nc:0211"
+                        ],
+                        [
+                            229,
+                            230,
+                            223,
+                            222,
+                            223,
+                            231,
+                            228,
+                            232,
+                            229,
+                            230
+                        ],
+                        [
+                            58,
+                            60,
+                            50,
+                            50,
+                            51,
+                            61,
+                            56,
+                            62,
+                            59,
+                            59
+                        ],
+                        [
+                            1.1893870830535889,
+                            1.1922284364700317,
+                            1.191578984260559,
+                            1.2032735347747803,
+                            1.2017717361450195,
+                            1.192407488822937,
+                            1.1889704465866089,
+                            1.188797950744629,
+                            1.1857457160949707,
+                            1.1857410669326782
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "masks_all_match",
+                    100.0,
+                    null
+                ],
+                "quantiles": [
+                    1.0767284416532186,
+                    1.0709657647753008,
+                    1.066378589999687,
+                    1.0547309990167633,
+                    1.0445737506389623,
+                    1.0216446263194106,
+                    0.9978346694111843,
+                    0.9641178176403045,
+                    0.9157484158873547,
+                    0.8585470312833785,
+                    0.7853399622440339,
+                    0.6903347671031952,
+                    0.6043986022472382,
+                    0.36238642036914825,
+                    -0.08900371938943863,
+                    -0.8925401717424393,
+                    -1.6301826119422913,
+                    -1.720690166950226,
+                    -1.798099000453949,
+                    -1.8424506950378419,
+                    -1.8659782707691193,
+                    -1.8824422643184662,
+                    -1.8900482234954834,
+                    -1.8966414013504982,
+                    -1.9013923098564147,
+                    -1.9050208034038545,
+                    -1.9057246666669845,
+                    -1.9062884688520432,
+                    -1.9066078571391105
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:53:12 2020",
+            "title": "Dump of results from sh_03/Omon.zos/zos_Omon_HadGEM3-GC31-LL_historical_r1i1p1f3_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

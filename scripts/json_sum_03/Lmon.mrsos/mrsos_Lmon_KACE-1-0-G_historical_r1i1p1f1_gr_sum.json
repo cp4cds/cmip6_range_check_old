@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 20:56:01 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Hyun Min, Sung (sunghm122@korea.kr)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Lmon",
+                                "mrsos",
+                                "NIMS-KMA",
+                                "KACE-1-0-G",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr",
+                                "v20191002"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                144,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/81c2f470-bac8-4f1b-ba45-b906f33254bd",
+                            "time_intervals": [
+                                30.0,
+                                30.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            144,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.01806640625,
+                    48.78997802734375,
+                    10.685315748267591,
+                    23.45529051172708
+                ],
+                "drs": [
+                    "Lmon",
+                    "mrsos",
+                    "NIMS-KMA",
+                    "KACE-1-0-G",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr",
+                    "v20191002"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1496",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1395",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1000",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0952",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0794",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0268",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0856",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0703",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1624",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1340"
+                        ],
+                        [
+                            92,
+                            88,
+                            88,
+                            87,
+                            88,
+                            87,
+                            87,
+                            92,
+                            87,
+                            92
+                        ],
+                        [
+                            14,
+                            15,
+                            17,
+                            26,
+                            17,
+                            27,
+                            26,
+                            14,
+                            27,
+                            14
+                        ],
+                        [
+                            0.018310546875,
+                            0.01806640625,
+                            0.01837158203125,
+                            0.0184326171875,
+                            0.0184326171875,
+                            0.0185546875,
+                            0.018798828125,
+                            0.01904296875,
+                            0.01910400390625,
+                            0.01934814453125
+                        ]
+                    ],
+                    [
+                        [
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0144",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0373",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1261",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1728",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0181",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1141",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0613",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0516",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:0948",
+                            "mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412.nc:1033"
+                        ],
+                        [
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110,
+                            110
+                        ],
+                        [
+                            19,
+                            19,
+                            19,
+                            19,
+                            19,
+                            19,
+                            19,
+                            19,
+                            19,
+                            19
+                        ],
+                        [
+                            48.78997802734375,
+                            48.78997802734375,
+                            48.78997802734375,
+                            48.78997802734375,
+                            48.7899169921875,
+                            48.78997802734375,
+                            48.78997802734375,
+                            48.7899169921875,
+                            48.7899169921875,
+                            48.78985595703125
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    46.30318422668447,
+                    46.29316893066418,
+                    46.26507618560804,
+                    46.1998302185059,
+                    46.1303047180176,
+                    46.077619400024425,
+                    45.81500244140625,
+                    45.777910400390624,
+                    45.55335128784179,
+                    45.077254638671874,
+                    44.022932739257804,
+                    41.66923217773438,
+                    39.23683166503906,
+                    33.49146270751953,
+                    20.159042358398438,
+                    5.224739074707031,
+                    1.010809326171875,
+                    0.44543914794921885,
+                    0.19069763183593752,
+                    0.1230059814453125,
+                    0.09116149902343751,
+                    0.06952197265625,
+                    0.05980349731445313,
+                    0.05286376953125,
+                    0.04635946044921875,
+                    0.043565142822265625,
+                    0.04205730743408203,
+                    0.0410463623046875,
+                    0.040746333923339845
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:40:29 2020",
+            "title": "Dump of results from sh_03/Lmon.mrsos/mrsos_Lmon_KACE-1-0-G_historical_r1i1p1f1_gr_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

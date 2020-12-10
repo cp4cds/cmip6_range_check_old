@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:32:59 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Wei-Liang Lee (leelupin@gate.sinica.edu.tw)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsus",
+                                "AS-RCEC",
+                                "TaiESM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200623"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/3c706403-0abf-450b-95b7-47e0beb6714a",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    393.05523681640625,
+                    22.293014526367188,
+                    58.27108383178711
+                ],
+                "drs": [
+                    "Amon",
+                    "rsus",
+                    "AS-RCEC",
+                    "TaiESM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200623"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1281",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1291",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1281",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1281",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1281",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1281",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1291",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1291",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1291",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1281"
+                        ],
+                        [
+                            189,
+                            6,
+                            189,
+                            189,
+                            189,
+                            189,
+                            6,
+                            6,
+                            6,
+                            189
+                        ],
+                        [
+                            107,
+                            190,
+                            101,
+                            95,
+                            103,
+                            99,
+                            192,
+                            196,
+                            193,
+                            97
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1739",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1739",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1727",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1727",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1919",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1919",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1739",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1919",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1739",
+                            "rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1919"
+                        ],
+                        [
+                            5,
+                            1,
+                            7,
+                            7,
+                            5,
+                            6,
+                            1,
+                            7,
+                            7,
+                            5
+                        ],
+                        [
+                            97,
+                            224,
+                            81,
+                            75,
+                            97,
+                            109,
+                            234,
+                            85,
+                            81,
+                            108
+                        ],
+                        [
+                            392.80126953125,
+                            392.31298828125,
+                            392.5265197753906,
+                            392.2869567871094,
+                            393.05523681640625,
+                            391.99102783203125,
+                            391.82855224609375,
+                            391.9105224609375,
+                            391.9132995605469,
+                            391.7874755859375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    275.65074160766557,
+                    275.53905497894607,
+                    274.3983912887609,
+                    273.709993385316,
+                    272.5517894744872,
+                    270.9505844879151,
+                    269.3690383148198,
+                    267.39930938720715,
+                    261.8702346801758,
+                    236.07266883850167,
+                    204.23335342407222,
+                    192.80262947082525,
+                    164.6359748840332,
+                    29.122960805892944,
+                    11.741291046142578,
+                    8.434840202331543,
+                    0.36413733661174774,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:23:13 2020",
+            "title": "Dump of results from sh_03/Amon.rsus/rsus_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

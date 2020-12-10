@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:34:26 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "Dr. Wei-Liang Lee (leelupin@gate.sinica.edu.tw)",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tauu",
+                                "AS-RCEC",
+                                "TaiESM1",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200623"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/f2ee528f-aaf5-485b-9d4f-943e73e0b2b2",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 0001-01-01 00:00:00",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -0.6481209397315979,
+                    1.1643282175064087,
+                    0.04348292201757431,
+                    0.06454379856586456
+                ],
+                "drs": [
+                    "Amon",
+                    "tauu",
+                    "AS-RCEC",
+                    "TaiESM1",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200623"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0966",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0643",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1554",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1554",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0966",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0643",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0412",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1554",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0966",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1554"
+                        ],
+                        [
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10
+                        ],
+                        [
+                            264,
+                            264,
+                            264,
+                            265,
+                            265,
+                            265,
+                            265,
+                            266,
+                            263,
+                            263
+                        ],
+                        [
+                            -0.6425542831420898,
+                            -0.6338187456130981,
+                            -0.6457036733627319,
+                            -0.6481209397315979,
+                            -0.6376110911369324,
+                            -0.6296071410179138,
+                            -0.6215487122535706,
+                            -0.6209553480148315,
+                            -0.6098538041114807,
+                            -0.6067197918891907
+                        ]
+                    ],
+                    [
+                        [
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1543",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0414",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0776",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0776",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0414",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0414",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0414",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:1543",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0043",
+                            "tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412.nc:0043"
+                        ],
+                        [
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10,
+                            10
+                        ],
+                        [
+                            126,
+                            125,
+                            127,
+                            126,
+                            128,
+                            127,
+                            126,
+                            127,
+                            126,
+                            127
+                        ],
+                        [
+                            1.045751929283142,
+                            1.0672050714492798,
+                            1.0254089832305908,
+                            1.0262097120285034,
+                            1.0914924144744873,
+                            1.1643282175064087,
+                            1.1476473808288574,
+                            1.0527130365371704,
+                            1.0207281112670898,
+                            1.0069475173950195
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.5017582142717901,
+                    0.4967362505093661,
+                    0.4789591057934256,
+                    0.44168654356901416,
+                    0.41054716035723204,
+                    0.36820997614413825,
+                    0.3423955093324197,
+                    0.3222573453187949,
+                    0.2932971093803646,
+                    0.26198519244790125,
+                    0.23059050738811482,
+                    0.1766829378902917,
+                    0.11903395876288414,
+                    0.03415560582652688,
+                    -0.0014129147748462856,
+                    -0.032774115446954966,
+                    -0.06997387483716011,
+                    -0.0925345541909337,
+                    -0.11944519616663456,
+                    -0.13835984319448472,
+                    -0.15753851383924483,
+                    -0.1878969369828701,
+                    -0.21999873694032432,
+                    -0.2553454995155334,
+                    -0.28693861185014247,
+                    -0.3088211038410663,
+                    -0.323610734667629,
+                    -0.3402300723403692,
+                    -0.3453549426972866
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:40:23 2020",
+            "title": "Dump of results from sh_03/Amon.tauu/tauu_Amon_TaiESM1_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:29:41 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "sfcWind",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/31e5b106-cffd-46ab-a6f3-b2af3a38a4b5",
+                            "time_intervals": [
+                                30.436196830692243,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 13:29:57 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": null,
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "sfcWind",
+                                "MIROC",
+                                "MIROC6",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20181212"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                128,
+                                256
+                            ],
+                            "tid": "hdl:21.14100/b99d3a26-0790-499b-92a9-d8aeaab923e2",
+                            "time_intervals": [
+                                30.43645699614891,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-1-1",
+                            "units": "m s-1"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            128,
+                            256
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0007666163146495819,
+                    17.97771644592285,
+                    5.426133155822754,
+                    5.941370964050293
+                ],
+                "drs": [
+                    "Amon",
+                    "sfcWind",
+                    "MIROC",
+                    "MIROC6",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20181212"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0329",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1086",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0329",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1086",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0329",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0329",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0329",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0329",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0449",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0449"
+                        ],
+                        [
+                            64,
+                            64,
+                            66,
+                            64,
+                            64,
+                            64,
+                            64,
+                            65,
+                            64,
+                            64
+                        ],
+                        [
+                            216,
+                            215,
+                            82,
+                            214,
+                            217,
+                            214,
+                            213,
+                            82,
+                            213,
+                            214
+                        ],
+                        [
+                            0.0008329739794135094,
+                            0.0007666163146495819,
+                            0.0008329739794135094,
+                            0.0007666163146495819,
+                            0.0008329739794135094,
+                            0.0008329739794135094,
+                            0.0008329739794135094,
+                            0.0008329739794135094,
+                            0.0008392233867198229,
+                            0.0008392233867198229
+                        ]
+                    ],
+                    [
+                        [
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0977",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:127",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:127",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1086",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1086",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:605",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1086",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:0977",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912.nc:1086",
+                            "sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_195001-201412.nc:185"
+                        ],
+                        [
+                            72,
+                            71,
+                            72,
+                            72,
+                            71,
+                            72,
+                            70,
+                            71,
+                            71,
+                            72
+                        ],
+                        [
+                            39,
+                            38,
+                            39,
+                            39,
+                            38,
+                            39,
+                            38,
+                            38,
+                            39,
+                            39
+                        ],
+                        [
+                            17.953248977661133,
+                            17.97771644592285,
+                            17.709716796875,
+                            17.699892044067383,
+                            17.789466857910156,
+                            17.668941497802734,
+                            17.54218292236328,
+                            17.551652908325195,
+                            17.39261817932129,
+                            17.321264266967773
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    14.67933861390574,
+                    14.625790615034777,
+                    14.541756070518515,
+                    14.47983230862619,
+                    14.242352620315536,
+                    13.834543885469438,
+                    13.515527441501636,
+                    13.227990664482121,
+                    12.714239847660068,
+                    12.278320512771604,
+                    11.748564224243164,
+                    10.859295797348024,
+                    9.915133714675903,
+                    7.978897988796234,
+                    5.4658448696136475,
+                    3.4927040338516235,
+                    2.0136401057243347,
+                    1.4458441853523256,
+                    0.3479202815890313,
+                    0.02652508411556483,
+                    0.003519250351237134,
+                    0.001856937538832426,
+                    0.0016098172054626048,
+                    0.001472913776524365,
+                    0.0013627047794754618,
+                    0.001292885688599199,
+                    0.0012444340391084552,
+                    0.0012265685945749283,
+                    0.001211805094499141
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:26:21 2020",
+            "title": "Dump of results from sh_03/Amon.sfcWind/sfcWind_Amon_MIROC6_historical_r1i1p1f1_gn_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

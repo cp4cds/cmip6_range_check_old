@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:26:05 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "T. Lovato",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "rsdt",
+                                "CMCC",
+                                "CMCC-CM2-SR5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20200616"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                192,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/579b7213-6c42-4557-8f69-1de849591606",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01",
+                            "units": "W m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            192,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    0.0,
+                    549.1564331054688,
+                    274.019775390625,
+                    325.87103271484375
+                ],
+                "drs": [
+                    "Amon",
+                    "rsdt",
+                    "CMCC",
+                    "CMCC-CM2-SR5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20200616"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1344",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1344",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1344",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:1343"
+                        ],
+                        [
+                            186,
+                            183,
+                            187,
+                            173,
+                            186,
+                            173,
+                            168,
+                            178,
+                            187,
+                            173
+                        ],
+                        [
+                            184,
+                            135,
+                            240,
+                            151,
+                            265,
+                            225,
+                            200,
+                            128,
+                            229,
+                            220
+                        ],
+                        [
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    ],
+                    [
+                        [
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131",
+                            "rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412.nc:0131"
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            167,
+                            97,
+                            66,
+                            113,
+                            166,
+                            184,
+                            135,
+                            43,
+                            240,
+                            235
+                        ],
+                        [
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688,
+                            549.1564331054688
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    461.55720567550645,
+                    461.5435654144288,
+                    461.5097553520204,
+                    461.49211926269527,
+                    461.4637382659912,
+                    461.39878986358644,
+                    461.33830474853517,
+                    461.25648757934573,
+                    461.06967582702634,
+                    460.8326225280762,
+                    460.4463226318359,
+                    459.39006423950195,
+                    455.450439453125,
+                    427.708065032959,
+                    337.7758331298828,
+                    165.54839515686035,
+                    16.616264820098877,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:18:23 2020",
+            "title": "Dump of results from sh_03/Amon.rsdt/rsdt_Amon_CMCC-CM2-SR5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

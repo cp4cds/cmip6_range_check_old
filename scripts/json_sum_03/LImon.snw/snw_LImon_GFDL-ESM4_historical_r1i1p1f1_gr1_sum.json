@@ -1,0 +1,337 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:11:04 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "NOAA-GFDL",
+                                "GFDL-ESM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190726"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1200,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/ff6a55a6-8e7a-4f84-91af-5976fffe46f5",
+                            "time_intervals": [
+                                30.416180150125104,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1200,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                },
+                "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Mon Dec  7 19:11:36 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "gfdl.climate.model.info@noaa.gov",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "LImon",
+                                "snw",
+                                "NOAA-GFDL",
+                                "GFDL-ESM4",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gr1",
+                                "v20190726"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                780,
+                                180,
+                                288
+                            ],
+                            "tid": "hdl:21.14100/8f215bfa-1c8a-41d7-8000-d1146b50caa6",
+                            "time_intervals": [
+                                30.41591784338896,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "kg m-2"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            780,
+                            180,
+                            288
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -0.4149097800254822,
+                    1000.0,
+                    115.71054077148438,
+                    134.28155517578125
+                ],
+                "drs": [
+                    "LImon",
+                    "snw",
+                    "NOAA-GFDL",
+                    "GFDL-ESM4",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gr1",
+                    "v20190726"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0041",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:018",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:482",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0523",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0815",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0343",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0817",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0764",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912.nc:0343",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:771"
+                        ],
+                        [
+                            133,
+                            135,
+                            44,
+                            136,
+                            63,
+                            134,
+                            63,
+                            135,
+                            138,
+                            44
+                        ],
+                        [
+                            85,
+                            73,
+                            234,
+                            63,
+                            232,
+                            81,
+                            232,
+                            73,
+                            63,
+                            234
+                        ],
+                        [
+                            -0.3692517578601837,
+                            -0.4149097800254822,
+                            -0.3387131690979004,
+                            -0.3494260907173157,
+                            -0.3468812108039856,
+                            -0.3412269651889801,
+                            -0.36268362402915955,
+                            -0.36274638772010803,
+                            -0.3482748866081238,
+                            -0.33842670917510986
+                        ]
+                    ],
+                    [
+                        [
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:128",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:128",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:128",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134",
+                            "snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_195001-201412.nc:134"
+                        ],
+                        [
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7,
+                            7
+                        ],
+                        [
+                            27,
+                            29,
+                            112,
+                            104,
+                            34,
+                            36,
+                            102,
+                            28,
+                            33,
+                            31
+                        ],
+                        [
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0,
+                            1000.0
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    999.9998168945312,
+                    999.7260589599609,
+                    0.12547398917376995,
+                    0.0,
+                    0.0,
+                    0.0,
+                    -0.0013497707230271765,
+                    -0.018215237595140935,
+                    -0.034938373360782864,
+                    -0.053346452508121735,
+                    -0.07914834436774254,
+                    -0.10187578393146396,
+                    -0.1280442701764405,
+                    -0.15434322599470615,
+                    -0.17651496595516802,
+                    -0.19558009695559742,
+                    -0.22026385132610798,
+                    -0.23741021901465953
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:35:18 2020",
+            "title": "Dump of results from sh_03/LImon.snw/snw_LImon_GFDL-ESM4_historical_r1i1p1f1_gr1_185001-194912..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

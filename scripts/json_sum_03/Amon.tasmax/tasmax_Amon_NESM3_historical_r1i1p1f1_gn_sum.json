@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:36:55 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "esmc@nuist.edu.cn",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "tasmax",
+                                "NUIST",
+                                "NESM3",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190630"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                96,
+                                192
+                            ],
+                            "tid": "hdl:21.14100/d75b08b7-c7c4-420b-acd6-6819b0d7bebf",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "K"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            96,
+                            192
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    198.22830200195312,
+                    320.3602294921875,
+                    274.6075134277344,
+                    281.8683776855469
+                ],
+                "drs": [
+                    "Amon",
+                    "tasmax",
+                    "NUIST",
+                    "NESM3",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190630"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0307",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0499",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0499",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0764",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0499",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0307",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1519",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0307"
+                        ],
+                        [
+                            5,
+                            5,
+                            4,
+                            4,
+                            5,
+                            5,
+                            4,
+                            5,
+                            5,
+                            5
+                        ],
+                        [
+                            24,
+                            23,
+                            44,
+                            43,
+                            25,
+                            24,
+                            45,
+                            50,
+                            50,
+                            51
+                        ],
+                        [
+                            198.4274444580078,
+                            198.3869171142578,
+                            198.263916015625,
+                            198.35862731933594,
+                            198.42678833007812,
+                            198.22830200195312,
+                            198.45606994628906,
+                            198.47100830078125,
+                            198.47264099121094,
+                            198.50027465820312
+                        ]
+                    ],
+                    [
+                        [
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1613",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0461",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0281",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1961",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0498",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0389",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:0341",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1219",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1446",
+                            "tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412.nc:1050"
+                        ],
+                        [
+                            64,
+                            64,
+                            64,
+                            64,
+                            64,
+                            64,
+                            64,
+                            64,
+                            64,
+                            64
+                        ],
+                        [
+                            39,
+                            39,
+                            39,
+                            39,
+                            39,
+                            39,
+                            39,
+                            25,
+                            39,
+                            39
+                        ],
+                        [
+                            318.95611572265625,
+                            318.8214111328125,
+                            318.9648132324219,
+                            320.3602294921875,
+                            319.38134765625,
+                            319.1417541503906,
+                            319.22857666015625,
+                            318.53607177734375,
+                            318.4533996582031,
+                            318.4430847167969
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    311.1980595335387,
+                    311.1598615759279,
+                    311.02862752990745,
+                    310.7054522552495,
+                    310.213548928833,
+                    309.4531749725346,
+                    308.81167912292483,
+                    308.06118081665034,
+                    306.22252037048344,
+                    304.0711923217773,
+                    302.27518341064456,
+                    300.9286712646484,
+                    300.1058227539063,
+                    296.7476043701172,
+                    282.03853607177734,
+                    264.36733627319336,
+                    248.12347030639648,
+                    230.11830863952636,
+                    219.29737838745115,
+                    216.80860176086426,
+                    213.3905584335327,
+                    210.56967401123046,
+                    209.60155445861818,
+                    209.14265837860108,
+                    208.22227469329835,
+                    208.07217927780152,
+                    207.92495303764343,
+                    207.81248304611205,
+                    207.77499304893496
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:34:33 2020",
+            "title": "Dump of results from sh_03/Amon.tasmax/tasmax_Amon_NESM3_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

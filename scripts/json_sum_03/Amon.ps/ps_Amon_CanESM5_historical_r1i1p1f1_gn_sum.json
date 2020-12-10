@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:57:31 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "ec.cccma.info-info.ccmac.ec@canada.ca",
+                            "dimensions": [
+                                "time",
+                                "lat",
+                                "lon"
+                            ],
+                            "drs": [
+                                "Amon",
+                                "ps",
+                                "CCCma",
+                                "CanESM5",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20190429"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                64,
+                                128
+                            ],
+                            "tid": "hdl:21.14100/fbafebd7-4e82-4dc0-b23f-caf1c042ce08",
+                            "time_intervals": [
+                                30.416371905002528,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 0:0:0.0",
+                            "units": "Pa"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            64,
+                            128
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    50892.16015625,
+                    104193.6328125,
+                    96532.3359375,
+                    96927.1171875
+                ],
+                "drs": [
+                    "Amon",
+                    "ps",
+                    "CCCma",
+                    "CanESM5",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20190429"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1273",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0540",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0084",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0601",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0288",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0588",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0336",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:0252",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1430"
+                        ],
+                        [
+                            44,
+                            44,
+                            44,
+                            44,
+                            44,
+                            44,
+                            44,
+                            44,
+                            44,
+                            44
+                        ],
+                        [
+                            31,
+                            31,
+                            31,
+                            31,
+                            31,
+                            31,
+                            31,
+                            31,
+                            31,
+                            31
+                        ],
+                        [
+                            51016.6484375,
+                            50892.16015625,
+                            51020.78515625,
+                            51074.09765625,
+                            51151.52734375,
+                            51160.6640625,
+                            51179.7109375,
+                            51182.59765625,
+                            51214.51171875,
+                            51222.05078125
+                        ]
+                    ],
+                    [
+                        [
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068",
+                            "ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412.nc:1068"
+                        ],
+                        [
+                            60,
+                            60,
+                            59,
+                            59,
+                            60,
+                            59,
+                            60,
+                            59,
+                            59,
+                            60
+                        ],
+                        [
+                            42,
+                            43,
+                            45,
+                            46,
+                            44,
+                            43,
+                            41,
+                            44,
+                            54,
+                            45
+                        ],
+                        [
+                            104090.4140625,
+                            104094.5546875,
+                            104177.6796875,
+                            104078.875,
+                            104074.046875,
+                            104086.484375,
+                            104056.859375,
+                            104193.6328125,
+                            104045.5625,
+                            104039.4609375
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    103016.17888328113,
+                    103007.14541156255,
+                    102992.73511445314,
+                    102973.78139179689,
+                    102939.0834421875,
+                    102879.50982812501,
+                    102835.36781640627,
+                    102764.96514843752,
+                    102659.4704296875,
+                    102537.17726562501,
+                    102402.967109375,
+                    102169.9189453125,
+                    101917.7484375,
+                    101367.34765625,
+                    100501.478515625,
+                    97548.337890625,
+                    85082.28125,
+                    70385.73710937501,
+                    65147.7765625,
+                    62618.81265625,
+                    60928.39447265625,
+                    58325.151394531254,
+                    55433.61283007813,
+                    55054.90148828125,
+                    54577.51964765625,
+                    53558.901350390624,
+                    52947.24563642578,
+                    52584.70730246093,
+                    52464.87025279296
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 15:00:38 2020",
+            "title": "Dump of results from sh_03/Amon.ps/ps_Amon_CanESM5_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}

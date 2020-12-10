@@ -1,0 +1,255 @@
+{
+    "data": {
+        "data": {
+            "headers": {
+                "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412": {
+                    "info": {
+                        "script_version": "0.1.0",
+                        "source": "local_utilities.VariableSampler",
+                        "time": "Tue Dec  8 14:28:48 2020",
+                        "title": "Scanning set of data files"
+                    },
+                    "tech": {
+                        "extremes": 10,
+                        "file_info": {
+                            "contact": "ipsl-cmip6@listes.ipsl.fr",
+                            "dimensions": [
+                                "time",
+                                "y",
+                                "x"
+                            ],
+                            "drs": [
+                                "Omon",
+                                "zos",
+                                "IPSL",
+                                "IPSL-CM6A-LR",
+                                "CMIP",
+                                "historical",
+                                "r1i1p1f1",
+                                "gn",
+                                "v20180803"
+                            ],
+                            "fill_value": 1.0000000200408773e+20,
+                            "shape": [
+                                1980,
+                                332,
+                                362
+                            ],
+                            "tid": "hdl:21.14100/46cb0315-15df-4bc7-b165-aff7ebe6127b",
+                            "time_intervals": [
+                                30.436584133400707,
+                                31.0
+                            ],
+                            "time_units": "days since 1850-01-01 00:00:00",
+                            "units": "m"
+                        },
+                        "fill_value": 1.0000000200408773e+20,
+                        "quantiles": [
+                            0.9999899999999999,
+                            0.9999800000000001,
+                            0.9999500000000001,
+                            0.9999,
+                            0.9998,
+                            0.9995,
+                            0.9990000000000001,
+                            0.998,
+                            0.995,
+                            0.99,
+                            0.98,
+                            0.9500000000000001,
+                            0.9,
+                            0.75,
+                            0.5,
+                            0.25,
+                            0.1,
+                            0.05,
+                            0.02,
+                            0.01,
+                            0.005,
+                            0.002,
+                            0.001,
+                            0.0005,
+                            0.0002,
+                            0.0001,
+                            5e-05,
+                            2e-05,
+                            1e-05
+                        ],
+                        "ref_mask_threshold": 0.0,
+                        "shape": [
+                            1980,
+                            332,
+                            362
+                        ],
+                        "with_time": 1
+                    }
+                }
+            },
+            "summary": {
+                "basic": [
+                    -1.9962483644485474,
+                    1.1146326065063477,
+                    0.6235763910160198,
+                    0.6589404151798022
+                ],
+                "drs": [
+                    "Omon",
+                    "zos",
+                    "IPSL",
+                    "IPSL-CM6A-LR",
+                    "CMIP",
+                    "historical",
+                    "r1i1p1f1",
+                    "gn",
+                    "v20180803"
+                ],
+                "extremes": [
+                    [
+                        [
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1072"
+                        ],
+                        [
+                            84,
+                            85,
+                            84,
+                            84,
+                            84,
+                            85,
+                            85,
+                            85,
+                            85,
+                            84
+                        ],
+                        [
+                            268,
+                            268,
+                            267,
+                            266,
+                            269,
+                            267,
+                            269,
+                            266,
+                            270,
+                            265
+                        ],
+                        [
+                            -1.9959588050842285,
+                            -1.9959211349487305,
+                            -1.9962483644485474,
+                            -1.9952590465545654,
+                            -1.9947996139526367,
+                            -1.9956408739089966,
+                            -1.9956061840057373,
+                            -1.9942609071731567,
+                            -1.9936715364456177,
+                            -1.9935871362686157
+                        ]
+                    ],
+                    [
+                        [
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:0803",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:0803",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:0803",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1490",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1490",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:0803",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1119",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1490",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:0803",
+                            "zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412.nc:1490"
+                        ],
+                        [
+                            207,
+                            205,
+                            206,
+                            133,
+                            134,
+                            203,
+                            134,
+                            133,
+                            208,
+                            134
+                        ],
+                        [
+                            28,
+                            29,
+                            28,
+                            317,
+                            318,
+                            30,
+                            318,
+                            318,
+                            28,
+                            317
+                        ],
+                        [
+                            1.1061888933181763,
+                            1.101243495941162,
+                            1.1146326065063477,
+                            1.1133500337600708,
+                            1.1123135089874268,
+                            1.0985862016677856,
+                            1.0957881212234497,
+                            1.09499990940094,
+                            1.093795895576477,
+                            1.092159628868103
+                        ]
+                    ]
+                ],
+                "mask": [
+                    "no_report",
+                    null,
+                    null
+                ],
+                "quantiles": [
+                    0.9862499829128082,
+                    0.981254446724724,
+                    0.9707191741973515,
+                    0.9540976616799608,
+                    0.9322832513511248,
+                    0.8913649748712814,
+                    0.8675332522392412,
+                    0.8392585619688026,
+                    0.7974536950886244,
+                    0.7607206013798714,
+                    0.7200608849525452,
+                    0.6565692588686944,
+                    0.5685768157243729,
+                    0.33512893691658974,
+                    -0.0629313699901104,
+                    -0.787858210504055,
+                    -1.677693772315979,
+                    -1.7576102554798128,
+                    -1.8225248992443084,
+                    -1.8596257901191713,
+                    -1.8828105357289315,
+                    -1.8982897313833236,
+                    -1.9045281017422675,
+                    -1.9093476780653,
+                    -1.9128243726611138,
+                    -1.914625015705824,
+                    -1.9156940286338329,
+                    -1.9159703081977368,
+                    -1.9160916265928747
+                ]
+            }
+        },
+        "header": {
+            "source": "consol_to_json.py",
+            "time": "Thu Dec 10 14:53:16 2020",
+            "title": "Dump of results from sh_03/Omon.zos/zos_Omon_IPSL-CM6A-LR_historical_r1i1p1f1_gn_185001-201412..."
+        }
+    },
+    "info": {
+        "title": "Simulation-table-variable summary"
+    }
+}
