@@ -15,6 +15,8 @@ ex_tas = "http://esgf-index1.ceda.ac.uk/esg-search/search/?offset=0&limit=500&ty
 filters_tas = 'table_id=Amon&mip_era=CMIP6&variable_id=tas&experiment_id=historical'
 tmpl_tas = "http://esgf-index1.ceda.ac.uk/esg-search/search/?offset=0&limit=500&type=Dataset&replica=false&latest=true&project%%21=input4mips&activity_id=CMIP&%(filters)s&facets=mip_era%%2Cactivity_id%%2Cmodel_cohort%%2Cproduct%%2Csource_id%%2Cinstitution_id%%2Csource_type%%2Cnominal_resolution%%2Cexperiment_id%%2Csub_experiment_id%%2Cvariant_label%%2Cgrid_label%%2Ctable_id%%2Cfrequency%%2Crealm%%2Cvariable_id%%2Ccf_standard_name%%2Cdata_node&format=application%%2Fsolr%%2Bjson"
 
+tmpl_isi = "https://esg.pik-potsdam.de/esg-search/search/?offset=0&limit=500&type=Dataset&replica=false&latest=true&project=ISIMIP2b&facets=size%%2Cproduct%%2C%%2Cexperiment&format=application%%2Fsolr%%2Bjson"
+
 ex2 = "http://esgf3.dkrz.de/thredds/fileServer/cmip6/CMIP/MPI-M/MPI-ESM1-2-LR/historical/r1i1p1f1/fx/areacella/gn/v20190710/areacella_fx_MPI-ESM1-2-LR_historical_r1i1p1f1_gn.nc"
 
 temp2 = "http://%{node}s.de/thredds/fileServer/cmip6/CMIP/%{institute_id}s/%{source_id}s/%{experiment_id}s/%{variant_id}s/%{table_id}s/%{var}s/%{grid_id}s/%{version}s/%(file_name}s"
@@ -119,18 +121,23 @@ class ESGF_Query(object):
     with urllib.request.urlopen(query) as response:
        self.json_string = response.read()
 
+    print( len(self.json_string ) )
+    print( self.json_string[:1000] )
     self.js = json.loads( self.json_string )
     self.resp = self.js["response"]
     self.docs = self.resp["docs"]
     self.drs_dict = dict()
 
   def get_drs(self, verbose=True):
+    ss = 0
     for doc in self.docs:
+      ss+= doc.get("size",0)
       datasetid = doc["id"]
       drs, node = get_drs( datasetid )
       if verbose:
         print ( datasetid, drs )
       self.drs_dict[datasetid] = (drs,node)
+    print ("Size: %8.2fGB (%s)" % (ss*1.e-9,ss) )
 
   def get_file(self):
     for k,tt in self.drs_dict.items():
@@ -182,6 +189,6 @@ class Scanner(object):
           oo.close()
 
 if __name__ == "__main__":
-  eq = ESGF_Query(query=ex_tas)
+  eq = ESGF_Query(query=tmpl_tas, filters=filters_tas)
   eq.get_drs()
   ##eq.get_file()
