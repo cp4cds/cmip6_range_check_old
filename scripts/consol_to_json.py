@@ -10,6 +10,12 @@ def apply_to_list( f, ll, if_empty):
   else:
     return f(ll)
 
+def safe_minus(x):
+  try:
+    return -x
+  except:
+    return x
+
 class JsonAggregate(object):
   def __init__(self, input_files ):
     self.data = dict()
@@ -232,12 +238,16 @@ class ShToJson(object):
       drs = sdrs.pop()
 
 
+## count of empty records
+##
+      empty_count = len( [k for k,this in self.records.items() if this['empty'] ] )
       try:
-         summary = dict( drs=drs, quantiles=[numpy.median( [this['quantiles'][i] for k,this in self.records.items()] ) for i in range(self.npct) ] )
+         quantiles=[numpy.median( [this['quantiles'][i] for k,this in self.records.items() if not this['empty']] ) for i in range(self.npct) ]
       except:
-         print ([(k,list(this.keys())) for k,this in self.records.items()])
-         print (self.input_file )
+         print ('ERROR: quantiles: ',self.input_file )
+         print ('ERROR: quantiles: ',[(k,list(this.keys())) for k,this in self.records.items()])
          raise
+      summary = dict( drs=drs, quantiles=quantiles, empty_count=empty_count )
 
       basic_maps = [(numpy.min,0), (numpy.max,1), (numpy.min,2), (numpy.max,2) ]
       summary['basic'] = [f( [this['basic'][i] for k,this in self.records.items()] ) for  f,i in basic_maps]
@@ -252,14 +262,14 @@ class ShToJson(object):
         extr_min[0] += [k,]*self.nextremes
         extr_max[0] += [k,]*self.nextremes
 
-      extr_max[3] = [-x for x in extr_max[3]]
+      extr_max[3] = [safe_minus(x) for x in extr_max[3]]
       flat_indices_min = numpy.argpartition(extr_min[3], self.nextremes-1)[:self.nextremes]
       flat_indices_max = numpy.argpartition(extr_max[3], self.nextremes-1)[:self.nextremes]
 
       extremes = [  [ [ extr_min[i][k] for k in flat_indices_min] for i in range(4) ],
                     [ [ extr_max[i][k] for k in flat_indices_max] for i in range(4) ] ]
 
-      extremes[1][3] = [-x for x in extremes[1][3]]
+      extremes[1][3] = [safe_minus(x) for x in extremes[1][3]]
       summary['extremes'] = extremes
 
       if all( ['mask_ok' in this and 'fraction' in this for k,this in self.records.items() ] ):
