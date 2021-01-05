@@ -7,6 +7,15 @@ BASE_DIR = '/badc/cmip6/data/'
 
 TEMPLATE = '%(base)s/%(era)s/%(mip)s/%(inst)s/%(model)s/%(expt)s/%(variant)s/%(table)s/%(var)s/%(grid)s/%(version)s/'
 
+json_templates = {
+      "dset_id": "<id>",
+      "qc_status": "pass|fail",
+      "dataset_qc": {
+        "error_severity": "na|minor|major|unknown",
+        "error_message": "<output from check>|na"
+      },
+      }
+
 class Rprep( object ):
     def __init__(self,with_limits=True, group=1):
         ee = json.load( open( 'data/handle_scan_report_20200710.json', 'r' ) )
@@ -15,6 +24,7 @@ class Rprep( object ):
         nf2 = 0
         np2 = 0
         lims = lu.get_new_ranges()
+        ds_pass_msg = dict( error_severity='na', error_message='No handle registry errors detected' )
         for h,d in ee['results'].items():
             if d['qc_status'] == 'pass':
                 ds = d['dset_id']
@@ -27,13 +37,13 @@ class Rprep( object ):
                     nf1 += 1
                     if nf1 == 5000:
                        sys.exit(0)
-                    this['qc_status'] = 'ERROR'
+                    this['qc_status'] = 'fail'
                     this['qc_message'] = 'Dataset not present at STFC'
                 else:
                     fl = glob.glob( '%s/*.nc' % p1 )
                     if len( fl ) == 0:
-                      this['qc_status'] = 'ERROR'
-                      this['qc_message'] = 'Dataset at STFC empty'
+                      this['qc_status'] = 'fail'
+                      this['dataset_qc'] = dict( error_severity='unknown', error_message='Dataset at STFC empty', error_category='workflow' )
                     else:
                       this['qc_status'] = 'pass'
                       this['files'] = [x.rpartition('/')[-1] for x in sorted( list( fl) )] 
@@ -41,13 +51,14 @@ class Rprep( object ):
                 if this['qc_status'] == 'pass' and with_limits:
                    var_id = '%s.%s' % (table,var)
                    if var_id not in lims:
-                      this['qc_status'] = 'ERROR'
-                      this['qc_message'] = 'No variable limits provided'
+                      this['qc_status'] = 'fail'
+                      this['dataset_qc'] = dict( error_severity='unknown', error_message='No variable limits provided', error_category='range-check workflow' )
 
                 if this['qc_status'] != 'pass':
                    print (ds,this['qc_status'])
                    nf2 += 1
                 else:
+                   this['dataset_qc'] = ds_pass_msg
                    np2 += 1
                 ff[h] = this
         print( np2, nf2 )
