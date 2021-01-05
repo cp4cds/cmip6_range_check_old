@@ -21,18 +21,23 @@ def filter_listings( ddir, frequency=None, experiment="historical", listing_grou
   oo = open( "%s/table_var_summary.json" % ddir, "w" )
   json.dump( {'info':{"title":"Table-variable summary"}, 'data':ee}, oo, indent=4, sort_keys=True )
 
-def exec_bsub(table, comment):
+def exec_bsub(table, comment, is_file=False):
+  if is_file:
+    cfile = table
+  else:
+    cfile = "BS/batch_scan_%s.txt" % table
+
   if os.path.isfile( ".bsub_log" ):
     os.unlink( ".bsub_log" )
-  cmd = "sbatch BS/batch_scan_%s.txt > .bsub_log" % table
+  cmd = "sbatch %s > .bsub_log" % cfile
   print ('Executing cmd: ',cmd )
   os.popen( cmd ).read()
   ii = open( ".bsub_log" ).readlines()
   words = ii[0].split()
-  jobid = words[1][1:-1]
-  print ("batch_scan_%s.txt run as job %s" % (table,jobid) )
+  jobid = words[-1]
+  print ("%s run as job %s" % (cfile,jobid) )
   oo = open( "batch_scan_log.txt", "a" )
-  oo.write( "%s: batch_scan_%s.txt run as job %s: %s\n" % (time.ctime(),table,jobid,comment) )
+  oo.write( "%s: %s: %s run: %s\n" % (jobid, time.ctime(),cfile,comment) )
   oo.close()
   
 
@@ -54,15 +59,18 @@ if __name__ == "__main__":
   import sys
   if sys.argv[1] == "-p":
     filter_listings( "inputs/historical/byvar" )
-  elif sys.argv[1] == "-x":
+  elif sys.argv[1] in ["-x","-f"]:
     table, comment = sys.argv[2:4]
-    if table in table_list or any( [table.find(x) == 0 for x in table_list] ) or table[:4] in ['Misc', 'Fixe']:
-      exec_bsub( table, comment )
-    elif table == "ALL":
-      for table in table_list:
-        exec_bsub( table, comment )
+    if sys.argv[1] == '-f':
+       exec_bsub( table, comment, is_file=True )
     else:
-      print( "ERROR: table not recognised: %s" % table )
+      if table in table_list or any( [table.find(x) == 0 for x in table_list] ) or table[:4] in ['Misc', 'Fixe']:
+        exec_bsub( table, comment )
+      elif table == "ALL":
+        for table in table_list:
+          exec_bsub( table, comment )
+      else:
+        print( "ERROR: table not recognised: %s" % table )
   elif sys.argv[1] == "-a":
     table, comment = sys.argv[2:4]
     exec_bsub( table, comment )

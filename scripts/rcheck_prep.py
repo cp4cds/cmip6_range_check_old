@@ -18,22 +18,37 @@ json_templates = {
 
 class Rprep( object ):
     def __init__(self,with_limits=True, group=1):
-        ee = json.load( open( 'data/handle_scan_report_20200710.json', 'r' ) )
+        ee01 = json.load( open( 'data/c3s34g_variables.json', 'r' ) )
+        req = ee01['requested']
+        sreq = set()
+        for t,l in req.items():
+          for v in l:
+            sreq.add( '%s.%s' % (t,v) )
+        jfile = "handle_scan_report_20201019.json"
+        ee = json.load( open( 'data/%s' % jfile, 'r' ) )
         ff = dict()
         nf1 = 0
         nf2 = 0
         np2 = 0
         lims = lu.get_new_ranges()
-        ds_pass_msg = dict( error_severity='na', error_message='No handle registry errors detected' )
-        for h,d in ee['results'].items():
-            if d['qc_status'] == 'pass':
-                ds = d['dset_id']
-                this = dict( dset_id=ds )
-                era,mip,inst,model,expt,variant,table,var,grid,version = ds.split('.')
+        kkkk = 0
+        print( sreq )
+        print ( len( ee['results'].keys() ) )
+        ##sys.exit(0)
+        for h in ee['results'].keys():
+            print (kkkk,h)
+            d = ee['results'][h]
+            kkkk += 1
+            if d['qc_status'] == 'pass' or d['dataset_qc']['error_severity'] != 'major':
+              ds = d['dset_id']
+              this = dict( dset_id=ds )
+              era,mip,inst,model,expt,variant,table,var,grid,version = ds.split('.')
+              ##if '%s.%s' % (table,var) in sreq and mip == 'CMIP':
+              if True:
                 base=BASE_DIR
                 p1 = TEMPLATE % locals()
                 if not os.path.isdir( p1 ):
-                    print ('NOT FOUND: %s' % p1 )
+                    ## print ('NOT FOUND: %s' % p1 )
                     nf1 += 1
                     if nf1 == 5000:
                        sys.exit(0)
@@ -55,13 +70,14 @@ class Rprep( object ):
                       this['dataset_qc'] = dict( error_severity='unknown', error_message='No variable limits provided', error_category='range-check workflow' )
 
                 if this['qc_status'] != 'pass':
-                   print (ds,this['qc_status'])
+                 ##  print (ds,this['qc_status'])
                    nf2 += 1
                 else:
                    this['dataset_qc'] = ds_pass_msg
                    np2 += 1
                 ff[h] = this
-        print( np2, nf2 )
+
+        print( np2, nf2, nf1 )
         oo = open( 'scanned_dset_for_qc_%2.2i.json' % group, 'w' )
         json.dump( {'info':{"title":"List of Scanned Datasets and their Files"}, 'data':ff}, oo, indent=4, sort_keys=True )
         oo.close()
@@ -69,16 +85,19 @@ class Rprep( object ):
 class Rsplat(object):
   def __init__(self,group=1):
      self.group=group
-     ee = json.load( open( 'scanned_dset_for_qc_%2.2i.json' % group, 'r' ) )
+     jfile = "handle_scan_report_extended_20201019.json"
+     jfile = 'scanned_dset_for_qc_%2.2i.json' % group
+     ee = json.load( open( jfile, 'r' ) )
      cc = collections.defaultdict( list )
      ff = collections.defaultdict( list )
+     __all__ = True
      for h,d in ee['data'].items():
        ds = d['dset_id']
        era,mip,inst,model,expt,variant,table,var,grid,version = ds.split('.')
-       if d['qc_status'] == 'pass':
+       if d['qc_status'] == 'pass' or (__all__ and d['qc_status'] != 'ERROR'):
          cc[(expt,table,var)].append( d )
        elif d['qc_message'] == 'No variable limits provided':
-         ff[(table,var)].append(ds)
+           ff[(table,var)].append(ds)
      self.cc = cc
      self.ff = ff
 
@@ -104,7 +123,7 @@ class Rsplat(object):
        
 
 if __name__ == '__main__':
-    rp = Rprep(with_limits=False, group=2)
-    r = Rsplat(group=2)
+    ##rp = Rprep(with_limits=False, group=3)
+    r = Rsplat(group=3)
     r.splat()
     r.analysis()

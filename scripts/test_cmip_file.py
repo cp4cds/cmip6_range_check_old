@@ -1,10 +1,8 @@
-
 import logging
 from local_pytest_utils import BaseClassTS, Check3, BaseClassCheck, LogReporter
 import numpy, netCDF4, pytest, sys, os, time
 from local_utilities import Sampler, VariableSampler, WGIPriority, get_new_ranges, MaskLookUp
 from utils import mode_by_table
-
 
 
 examples_masks = {('E3SM-1-1-ECA','piControl','Lmon','mrsos','gr'):'../esgf_fetch/data_files_2/sftlf_fx_E3SM-1-1-ECA_piControl_r1i1p1f1_gr.nc'}
@@ -314,6 +312,8 @@ class ConcTestCmipFile(TestCmipFile):
     def __init__(self):
         pass
 
+NO_REPEAT_TEST = True
+
 if __name__ == "__main__":
 ##
 ##
@@ -325,7 +325,8 @@ if __name__ == "__main__":
 
 #vname, table, model, expt, vnt_id, grid = fname.rpartition('.')[0].split('_')[0:6]
     import generic_utils
-    log_dir = 'logs_03'
+    group = 3
+    log_dir = 'logs_%2.2i' % group
     log_factory = generic_utils.LogFactory(dir=log_dir)
 
     date_ymd = '%s%2.2i%2.2i' % time.gmtime()[:3] 
@@ -336,51 +337,54 @@ if __name__ == "__main__":
 
     t = ConcTestCmipFile()
     fstem = fname.rpartition( '.' )[0]
-    od1 = 'out_01/%s.%s' % (table,vname)
-    od2 = 'sh_01/%s.%s' % (table,vname)
+    od1 = 'out_%2.2i/%s.%s' % (group,table,vname)
+    od2 = 'sh_%2.2i/%s.%s' % (group,table,vname)
     if not os.path.isdir( od1 ):
       os.mkdir(od1)
     if not os.path.isdir( od2 ):
       os.mkdir(od2)
     t.shdir = od2
     of1 = '%s/%s' % (od1,fstem)
-    oo1 = open( of1, 'w' )
-    oo1.write( '#FILE: %s\n' % CMIP_FILE )
-    oo1.write( '#DATE: %s\n' % time.ctime() )
-    oo1.write( '#SOURCE: %s\n' % 'test_cmip_file.py: as script' )
-    cmt = None
-    wcmt = ''
+    if os.path.isfile( of1 ) and NO_REPEAT_TEST: 
+      print( 'Test for %s already complete' % fstem )
+    else:
+      oo1 = open( of1, 'w' )
+      oo1.write( '#FILE: %s\n' % CMIP_FILE )
+      oo1.write( '#DATE: %s\n' % time.ctime() )
+      oo1.write( '#SOURCE: %s\n' % 'test_cmip_file.py: as script' )
+      cmt = None
+      wcmt = ''
     ##RAISE_FIRST = True
-    RAISE_FIRST = False
-    for m in [t.test_file, t.test_ranges, t.test_masks, t.test_fraction, t.test_wrapup]:
-       ret = m.__annotations__['return']
-       try:
-         m()
-         res = 'OK'
-       except:
-         res='FAIL'
-         if RAISE_FIRST:
-            oo1.write( '%s: %s: %s \n' % (res,ret['id'],ret['ov'] ) )
-            oo1.write( 'ABANDON TESTS\n' )
-            oo1.close()
-            raise
-       res2 = None
-       if 'tc' in m.__annotations__:
-         tc = m.__annotations__['tc']
-         if hasattr( tc, 'result' ):
-           res2 = tc.result
-       if res2 == None:
-         msg = '--NO RESULT FOUND--'
-       else:
+      RAISE_FIRST = False
+      for m in [t.test_file, t.test_ranges, t.test_masks, t.test_fraction, t.test_wrapup]:
+         ret = m.__annotations__['return']
          try:
-           msg,cmt = res2
+           m()
+           res = 'OK'
          except:
-           msg = str(res2 )
+           res='FAIL'
+           if RAISE_FIRST:
+              oo1.write( '%s: %s: %s \n' % (res,ret['id'],ret['ov'] ) )
+              oo1.write( 'ABANDON TESTS\n' )
+              oo1.close()
+              raise
+         res2 = None
+         if 'tc' in m.__annotations__:
+           tc = m.__annotations__['tc']
+           if hasattr( tc, 'result' ):
+             res2 = tc.result
+         if res2 == None:
+           msg = '--NO RESULT FOUND--'
+         else:
+           try:
+             msg,cmt = res2
+           except:
+             msg = str(res2 )
        
-       if cmt != None:
-         wcmt = ' | %s' % cmt
-       print ( '%s: %s: %s -- %s%s' % (res,ret['id'],ret['ov'], msg, wcmt ) )
-       oo1.write( '%s: %s: %s -- %s%s\n' % (res,ret['id'],ret['ov'], msg, wcmt ) )
-       res2 = None
-    oo1.close()
+         if cmt != None:
+           wcmt = ' | %s' % cmt
+         print ( '%s: %s: %s -- %s%s' % (res,ret['id'],ret['ov'], msg, wcmt ) )
+         oo1.write( '%s: %s: %s -- %s%s\n' % (res,ret['id'],ret['ov'], msg, wcmt ) )
+         res2 = None
+      oo1.close()
     ##t.test_file()
